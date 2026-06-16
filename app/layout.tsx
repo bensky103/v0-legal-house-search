@@ -1,0 +1,367 @@
+import type React from "react"
+import type { Metadata } from "next"
+import { Heebo } from "next/font/google"
+import Script from "next/script"
+import "./globals.css"
+import { LanguageProvider } from "@/contexts/language-context"
+
+const heebo = Heebo({
+  subsets: ["hebrew", "latin"],
+  display: "swap",
+  variable: "--font-heebo",
+})
+
+export const metadata: Metadata = {
+  title: "בדק בית - איתור ליקויי בנייה וחוות דעת נגדית | מומחה מוסמך",
+  description:
+    "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום. שירות מקצועי ומהיר בכל הארץ.",
+  keywords: [
+    "בדק בית",
+    "בדיקת בנייה",
+    "מומחה בדק בית",
+    "איתור ליקויי בנייה",
+    "חוות דעת נגדית",
+    "בדיקת דירה לפני קנייה",
+    "איתור רטיבות",
+    "בעיות איטום",
+    "ביקורת מבנים",
+    "בדיקת דירה חדשה",
+    "מומחה בנייה",
+    "יגאל בנסקי",
+    "בדק בית ישראל",
+    "בדיקת איכות בנייה",
+    "מומחה איתור ליקויי בניה",
+    "בדיקת נכס לאחר רכישה",
+    "חוות דעת נגדית",
+    "בדיקת נכס עבור ועד הבית",
+    "בדיקת מבנה מקצועית",
+    "איתור ליקויי קונסטרוקציה",
+    "בדיקת איכות בנייה מקצועית",
+    "מומחה בדיקות בנייה ישראל",
+  ],
+  authors: [{ name: "יגאל בנסקי - מומחה בדק בית" }],
+  creator: "יגאל בנסקי",
+  publisher: "בדק בית Legal",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#3B82F6",
+  openGraph: {
+    type: "website",
+    locale: "he_IL",
+    url: "https://legalbedek.co.il",
+    siteName: "בדק בית Legal - איתור ליקויי בנייה",
+    title: "בדק בית - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
+    description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום.",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "בדק בית Legal - מומחה לאיתור ליקויי בנייה",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "בדק בית - מומחה לאיתור ליקויי בנייה",
+    description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית בכל הארץ",
+    images: ["/logo.png"],
+  },
+  alternates: {
+    canonical: "https://legalbedek.co.il",
+    languages: {
+      "he-IL": "https://legalbedek.co.il",
+    },
+  },
+  other: {
+    keywords: "חוות דעת נגדית, בדק בית, בדיקת נכס לאחר רכישה, בדיקת נכס עבור ועד הבית",
+    subject: "בדיקות בנייה מקצועיות וחוות דעת נגדית",
+    abstract: "חוות דעת נגדית מקצועית מהימנה לבדיקת נכס לאחר רכישה ובדיקת נכס עבור ועד הבית",
+  },
+    generator: 'v0.app'
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="he" dir="rtl" className={heebo.variable}>
+      <head>
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKMW6NCK');`}
+        </Script>
+
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17703305821" strategy="afterInteractive" />
+        <Script id="gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-17703305821');`}
+        </Script>
+
+        <meta
+          name="keywords"
+          content="חוות דעת נגדית, בדק בית, בדיקת נכס לאחר רכישה, בדיקת נכס עבור ועד הבית, בדיקות בנייה מקצועיות"
+        />
+        <meta name="subject" content="בדיקות בנייה מקצועיות וחוות דעת נגדית" />
+        <meta
+          name="abstract"
+          content="חוות דעת נגדית מקצועית מהימנה לבדיקת נכס לאחר רכישה ובדיקת נכס עבור ועד הבית"
+        />
+        <meta name="topic" content="בדיקות בנייה, איתור ליקויי בניה, חוות דעת נגדית" />
+        <meta
+          name="summary"
+          content="שירותי בדיקת נכס מקצועיים: מומחה איתור ליקויי בניה, בדיקת נכס לאחר רכישה, חוות דעת נגדית ובדיקות עבור ועד הבית"
+        />
+
+        <meta
+          name="geo.placename"
+          content="תל אביב, ירושלים, חיפה, ראשון לציון, פתח תקווה, אשדוד, נתניה, באר שבע, בני ברק, חולון, רמת גן, אשקלון, רחובות, בת ים, כפר סבא, הרצליה, חדרה, מודיעין, נצרת, לוד, רעננה, רמלה, רחובות, גבעתיים, הוד השרון, קריית אתא, נהריה, קריית גת, קריית מוצקין, יבנה, רמת השרון, אור יהודה, צפת, אילת, עכו, כרמיאל, יקנעם, קריית ביאליק, קריית ים, קריית שמונה, מגדל העמק, טבריה, דימונה, שדרות, קריית מלאכי, נס ציונה, עפולה, ערד, טירה, קלנסווה, אום אל-פחם, סחנין, שפרעם, אופקים, מעלה אדומים, מעלות תרשיחא, בית שמש, זכרון יעקב, גני תקווה"
+        />
+
+        <Script id="structured-data" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "בדק בית Legal - יגאל בנסקי",
+              description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוו״ד נגדית",
+              url: "https://legalbedek.co.il",
+              telephone: "+972-50-627-7858",
+              email: "yigalbensky@gmail.com",
+              sameAs: [
+                "https://www.youtube.com/@LegalBedekBayit",
+                "https://share.google/Xs39vbL4NPtrMLrFZ"
+              ],
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "IL",
+                addressLocality: "ישראל",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "31.0461",
+                longitude: "34.8516",
+              },
+              openingHours: "Mo-Su 08:00-20:00",
+              priceRange: "$$",
+              serviceArea: [
+                { "@type": "City", name: "תל אביב" },
+                { "@type": "City", name: "ירושלים" },
+                { "@type": "City", name: "חיפה" },
+                { "@type": "City", name: "ראשון לציון" },
+                { "@type": "City", name: "פתח תקווה" },
+                { "@type": "City", name: "אשדוד" },
+                { "@type": "City", name: "נתניה" },
+                { "@type": "City", name: "באר שבע" },
+                { "@type": "City", name: "בני ברק" },
+                { "@type": "City", name: "חולון" },
+                { "@type": "City", name: "רמת גן" },
+                { "@type": "City", name: "אשקלון" },
+                { "@type": "City", name: "רחובות" },
+                { "@type": "City", name: "בת ים" },
+                { "@type": "City", name: "כפר סבא" },
+                { "@type": "City", name: "הרצליה" },
+                { "@type": "City", name: "חדרה" },
+                { "@type": "City", name: "מודיעין" },
+                { "@type": "City", name: "נצרת" },
+                { "@type": "City", name: "לוד" },
+                { "@type": "City", name: "רעננה" },
+                { "@type": "City", name: "רמלה" },
+                { "@type": "City", name: "גבעתיים" },
+                { "@type": "City", name: "הוד השרון" },
+                { "@type": "City", name: "קריית אתא" },
+                { "@type": "City", name: "נהריה" },
+                { "@type": "City", name: "קריית גת" },
+                { "@type": "City", name: "קריית מוצקין" },
+                { "@type": "City", name: "יבנה" },
+                { "@type": "City", name: "רמת השרון" },
+                { "@type": "City", name: "אור יהודה" },
+                { "@type": "City", name: "צפת" },
+                { "@type": "City", name: "אילת" },
+                { "@type": "City", name: "עכו" },
+                { "@type": "City", name: "כרמיאל" },
+                { "@type": "City", name: "יקנעם" },
+                { "@type": "City", name: "קריית ביאליק" },
+                { "@type": "City", name: "קריית ים" },
+                { "@type": "City", name: "קריית שמונה" },
+                { "@type": "City", name: "מגדל העמק" },
+                { "@type": "City", name: "טבריה" },
+                { "@type": "City", name: "דימונה" },
+                { "@type": "City", name: "שדרות" },
+                { "@type": "City", name: "קריית מלאכי" },
+                { "@type": "City", name: "נס ציונה" },
+                { "@type": "City", name: "עפולה" },
+                { "@type": "City", name: "ערד" },
+                { "@type": "City", name: "טירה" },
+                { "@type": "City", name: "קלנסווה" },
+                { "@type": "City", name: "אום אל-פחם" },
+                { "@type": "City", name: "סחנין" },
+                { "@type": "City", name: "שפרעם" },
+                { "@type": "City", name: "אופקים" },
+                { "@type": "City", name: "מעלה אדומים" },
+                { "@type": "City", name: "מעלות תרשיחא" },
+                { "@type": "City", name: "בית שמש" },
+                { "@type": "City", name: "זכרון יעקב" },
+                { "@type": "City", name: "גני תקווה" },
+              ],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "שירותי בדיקת בנייה",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "חוות דעת נגדית",
+                      description: "חוות דעת נגדית מקצועית מהימנה לבדיקות קיימות ודוחות בדיקה",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "בדיקת נכס לאחר רכישה",
+                      description: "בדיקה מקיפה של נכס לאחר רכישה לאיתור ליקויים נסתרים",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "בדיקת נכס עבור ועד הבית",
+                      description: "בדיקות מקצועיות עבור ועד הבית לאיתור ליקויים במבנה המשותף",
+                    },
+                  },
+                ],
+              },
+              hasPart: [
+                {
+                  "@type": "WebPage",
+                  name: "בדק בית מקצועי",
+                  url: "https://legalbedek.co.il/#services",
+                  description: "בדיקת בנייה מלאה עם דוח מפורט ממומחה מוסמך",
+                  inLanguage: "he",
+                  alternateName: "שירותי בדיקה מקצועיים",
+                },
+                {
+                  "@type": "WebPage",
+                  name: "איתור ליקויי בנייה",
+                  url: "https://legalbedek.co.il/#inspection",
+                  description: "זיהוי מומחה של כל סוגי ליקויי הבנייה והקונסטרוקציה בנכס",
+                  inLanguage: "he",
+                  alternateName: "בדיקת איתור ליקויים",
+                },
+                {
+                  "@type": "WebPage",
+                  name: "חוות דעת נגדית",
+                  url: "https://legalbedek.co.il/#counter-opinion",
+                  description: "דעה מקצועית בלתי תלויה על הנכס לצורך משפטי וביטוחי",
+                  inLanguage: "he",
+                  alternateName: "חוו״ד נגדית מוסמכת",
+                },
+                {
+                  "@type": "WebPage",
+                  name: "בדיקת נכס לאחר רכישה",
+                  url: "https://legalbedek.co.il/#post-purchase",
+                  description: "וודא את איכות הנכס שקנית בדיקה מקיפה תוך 7 ימים מהקנייה",
+                  inLanguage: "he",
+                  alternateName: "בדיקה לרוכשי דירות ובתים",
+                },
+                {
+                  "@type": "WebPage",
+                  name: "בדיקה עבור ועד הבית",
+                  url: "https://legalbedek.co.il/#building-committee",
+                  description: "בדיקת המבנה המשותף לטובת תוכניות שיפוצים וביטחון התושבים",
+                  inLanguage: "he",
+                  alternateName: "בדיקה שוטפת עבור ועדות",
+                },
+                {
+                  "@type": "WebPage",
+                  name: "צור קשר עכשיו",
+                  url: "https://legalbedek.co.il/#contact",
+                  description: "קבל הצעת מחיר בחינם וקבע פגישה עם מומחה בתוך שעה",
+                  inLanguage: "he",
+                  alternateName: "יצירת קשר עם המומחה",
+                },
+                {
+                  "@type": "Article",
+                  name: "בדק בית בדירה חדשה - מדריך מקיף",
+                  url: "https://legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
+                  description: "מדריך מקיף לבדק בית בדירה חדשה - איך לא לקנות חתול בשק ולנהל משא ומתן חכם",
+                  inLanguage: "he",
+                },
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "5",
+                reviewCount: "50",
+              },
+            })}
+        </Script>
+      </head>
+      <body className={heebo.className}>
+        <LanguageProviderWrapper>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KKMW6NCK"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
+        <div
+          style={{ display: "none", visibility: "hidden", position: "absolute", left: "-9999px" }}
+          aria-hidden="true"
+        >
+          <span>חוות דעת נגדית מקצועית מהימנה</span>
+          <span>בדק בית מוסמך ומנוסה</span>
+          <span>בדיקת נכס לאחר רכישה מקיפה</span>
+          <span>חוות דעת נגדית מקצועית ומהימנה</span>
+          <span>בדיקת נכס עבור ועד הבית</span>
+          <span>איתור ליקויי בנייה וקונסטרוקציה</span>
+          <span>בדיקות בנייה מקצועיות בכל הארץ</span>
+
+          {/* Cities list for local SEO */}
+          <div itemScope itemType="https://schema.org/Service">
+            <h2>בדק בית בערים בישראל</h2>
+            <p itemProp="areaServed">
+              בדק בית תל אביב, בדק בית ירושלים, בדק בית חיפה, בדק בית ראשון לציון, בדק בית פתח תקווה, בדק בית אשדוד, בדק
+              בית נתניה, בדק בית באר שבע, בדק בית בני ברק, בדק בית חולון, בדק בית רמת גן, בדק בית אשקלון, בדק בית
+              רחובות, בדק בית בת ים, בדק בית כפר סבא, בדק בית הרצליה, בדק בית חדרה, בדק בית מודיעין, בדק בית נצרת, בדק
+              בית לוד, בדק בית רעננה, בדק בית רמלה, בדק בית גבעתיים, בדק בית הוד השרון, בדק בית קריית אתא, בדק בית
+              נהריה, בדק בית קריית גת, בדק בית קריית מוצקין, בדק בית יבנה, בדק בית רמת השרון, בדק בית אור יהודה, בדק בית
+              צפת, בדק בית אילת, בדק בית עכו, בדק בית כרמיאל, בדק בית יקנעם, בדק בית קריית ביאליק, בדק בית קריית ים, בדק
+              בית קריית שמונה, בדק בית מגדל העמק, בדק בית טבריה, בדק בית דימונה, בדק בית שדרות, בדק בית קריית מלאכי, בדק
+              בית נס ציונה, בדק בית עפולה, בדק בית ערד, בדק בית טירה, בדק בית קלנסווה, בדק בית אום אל-פחם, בדק בית
+              סחנין, בדק בית שפרעם, בדק בית אופקים, בדק בית מעלה אדומים, בדק בית מעלות תרשיחא, בדק בית בית שמש, בדק בית
+              זכרון יעקב, בדק בית גני תקווה
+            </p>
+            <p>
+              איתור ליקויי בנייה תל אביב, איתור ליקויי בנייה ירושלים, איתור ליקויי בנייה חיפה, איתור ליקויי בנייה ראשון
+              לציון, איתור ליקויי בנייה פתח תקווה, איתור ליקויי בנייה אשדוד, חוות דעת נגדית תל אביב, חוות דעת נגדית
+              ירושלים, חוות דעת נגדית חיפה, בדיקת נכס לאחר רכישה תל אביב, בדיקת נכס לאחר רכישה ירושלים, בדיקת נכס עבור
+              ועד הבית תל אביב, מומחה בדק בית תל אביב, מומחה בדק בית ירושלים
+            </p>
+          </div>
+        </div>
+        {children}
+        </LanguageProviderWrapper>
+      </body>
+    </html>
+  )
+}
+
+function LanguageProviderWrapper({ children }: { children: React.ReactNode }) {
+  return (
+    <LanguageProvider>
+      {children}
+    </LanguageProvider>
+  )
+}

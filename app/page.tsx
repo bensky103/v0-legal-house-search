@@ -768,7 +768,7 @@ export default function HomePage() {
             </h2>
             <p className="text-lg md:text-xl mb-6 md:mb-8 text-white">
               {
-                'בדק בית עכשיו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
+                'בדק בית עכ��יו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
               }
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
@@ -883,17 +883,17 @@ export default function HomePage() {
                   </a>
                 </li>
                 <li>
-                  <a href="/projects/mehir-lamishtaken" className="text-blue-400 hover:text-blue-300 hover:underline">
+                  <a href="/services/mehir-lamishtaken" className="text-blue-400 hover:text-blue-300 hover:underline">
                     בדק בית מחיר למשתכן
                   </a>
                 </li>
                 <li>
-                  <a href="/projects/pinui-binui" className="text-blue-400 hover:text-blue-300 hover:underline">
+                  <a href="/services/pinui-binui" className="text-blue-400 hover:text-blue-300 hover:underline">
                     בדק בית פינוי בינוי
                   </a>
                 </li>
                 <li>
-                  <a href="/projects/tama-38" className="text-blue-400 hover:text-blue-300 hover:underline">
+                  <a href="/services/tama-38" className="text-blue-400 hover:text-blue-300 hover:underline">
                     בדק בית תמ&quot;א 38
                   </a>
                 </li>

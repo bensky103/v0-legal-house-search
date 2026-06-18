@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { galleryImages } from "@/lib/gallery-images"
+import { absoluteUrl } from "@/lib/site-images"
 
 export const metadata: Metadata = {
   title: "גלריית בדק בית - תיעוד בדיקות ואיתור ליקויי בנייה בכל הארץ | Legal בדק בית",
@@ -30,7 +31,9 @@ export const metadata: Metadata = {
     locale: "he_IL",
     url: "https://legalbedek.co.il/gallery",
     siteName: "בדק בית Legal",
-    images: galleryImages.slice(0, 4).map((img) => ({ url: img.src, alt: img.alt })),
+    images: galleryImages
+      .slice(0, 4)
+      .map((img) => ({ url: absoluteUrl(img.src), width: img.width, height: img.height, alt: img.alt })),
   },
   alternates: {
     canonical: "https://legalbedek.co.il/gallery",
@@ -48,10 +51,16 @@ export default function GalleryLayout({ children }: { children: React.ReactNode 
     url: "https://legalbedek.co.il/gallery",
     image: galleryImages.map((img) => ({
       "@type": "ImageObject",
-      contentUrl: img.src,
+      contentUrl: absoluteUrl(img.src),
+      url: absoluteUrl(img.src),
       name: img.title,
       description: img.alt,
+      caption: img.caption,
+      width: img.width,
+      height: img.height,
+      encodingFormat: "image/webp",
       keywords: img.keywords.join(", "),
+      representativeOfPage: img.category === "hero",
     })),
   }
 

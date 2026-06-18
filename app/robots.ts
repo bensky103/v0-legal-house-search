@@ -16,7 +16,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://legalbedek.co.il/sitemap.xml",
+    sitemap: ["https://legalbedek.co.il/sitemap.xml", "https://legalbedek.co.il/image-sitemap.xml"],
     host: "https://legalbedek.co.il",
   }
 }

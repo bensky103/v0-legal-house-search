@@ -20,7 +20,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 py-4">
           <Link href="/" className="flex items-center gap-4">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית"
               width={80}
               height={80}

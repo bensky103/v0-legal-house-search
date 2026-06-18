@@ -42,7 +42,7 @@ export default function GalleryPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
                 width={64}
                 height={64}

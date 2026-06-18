@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום.",
     images: [
       {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
+        url: "/logo.webp",
+        width: 1124,
+        height: 901,
         alt: "בדק בית Legal - מומחה לאיתור ליקויי בנייה",
       },
     ],
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "בדק בית - מומחה לאיתור ליקויי בנייה",
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית בכל הארץ",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
   alternates: {
     canonical: "https://legalbedek.co.il",
@@ -102,6 +102,37 @@ gtag('config', 'AW-17703305821');`}
               name: "בדק בית Legal - יגאל בנסקי",
               description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוו״ד נגדית",
               url: "https://legalbedek.co.il",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://legalbedek.co.il/logo.webp",
+                contentUrl: "https://legalbedek.co.il/logo.webp",
+                caption: "בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
+                width: 1124,
+                height: 901,
+                encodingFormat: "image/webp",
+              },
+              image: [
+                {
+                  "@type": "ImageObject",
+                  url: "https://legalbedek.co.il/images/binyanim-moderniim-israel-bedek-bayit.webp",
+                  contentUrl: "https://legalbedek.co.il/images/binyanim-moderniim-israel-bedek-bayit.webp",
+                  caption:
+                    "בדק בית ובדיקת איכות בנייה של דירות חדשות ומבנים בישראל לפני מסירה מהקבלן",
+                  width: 1229,
+                  height: 752,
+                  encodingFormat: "image/webp",
+                  representativeOfPage: true,
+                },
+                {
+                  "@type": "ImageObject",
+                  url: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                  contentUrl: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                  caption: "יגאל בנסקי - מומחה בדק בית מוסמך עם קסדת מגן וציוד בדיקה הנדסי",
+                  width: 1086,
+                  height: 1448,
+                  encodingFormat: "image/webp",
+                },
+              ],
               telephone: "+972-50-627-7858",
               email: "yigalbensky@gmail.com",
               sameAs: [

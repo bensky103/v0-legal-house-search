@@ -14,7 +14,7 @@ export default function ArticleBedekBayitDiraHadasha() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Legal בדק בית - לוגו"
                 width={50}
                 height={50}

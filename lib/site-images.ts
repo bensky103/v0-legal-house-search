@@ -3,6 +3,15 @@
 // image sitemap so every image contributes to Google Image Search visibility.
 // All assets are compressed WebP with SEO-friendly filenames.
 
+import { galleryImages } from "@/lib/gallery-images"
+
+/** Canonical production origin, used to build absolute image URLs for SEO. */
+export const SITE_URL = "https://legalbedek.co.il"
+
+/** Absolute URL helper for an asset path. */
+export const absoluteUrl = (path: string): string =>
+  path.startsWith("http") ? path : `${SITE_URL}${path.startsWith("/") ? "" : "/"}${path}`
+
 export interface SiteImage {
   /** Local WebP path with SEO-friendly filename. */
   src: string
@@ -79,3 +88,37 @@ export const siteImages = {
 } as const satisfies Record<string, SiteImage>
 
 export const allSiteImages: SiteImage[] = Object.values(siteImages)
+
+/** Unified shape for SEO consumers (sitemap + ImageObject schema). */
+export interface SeoImage {
+  loc: string // absolute image URL
+  title: string
+  caption: string
+  width: number
+  height: number
+  pageUrl: string // absolute URL of the page the image appears on
+}
+
+/**
+ * Every indexable image across the site, with absolute URLs, captions and
+ * dimensions. Combines branding/hero/testimonial images with the full gallery
+ * so a single list powers both the image sitemap and ImageObject schema.
+ */
+export const seoImages: SeoImage[] = [
+  ...allSiteImages.map((img) => ({
+    loc: absoluteUrl(img.src),
+    title: img.alt,
+    caption: img.caption,
+    width: img.width,
+    height: img.height,
+    pageUrl: absoluteUrl(img.page),
+  })),
+  ...galleryImages.map((img) => ({
+    loc: absoluteUrl(img.src),
+    title: img.title,
+    caption: img.caption,
+    width: img.width,
+    height: img.height,
+    pageUrl: absoluteUrl("/gallery"),
+  })),
+]

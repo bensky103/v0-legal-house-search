@@ -21,10 +21,12 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4 space-x-reverse">
               <Image
-                src="/logo.png"
-                alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית"
+                src="/logo.webp"
+                alt="בדק בית Legal - מומחה מוסמך לאיתור ליקויי בנייה וחוות דעת הנדסית נגדית"
+                title="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
                 width={80}
                 height={80}
+                priority
                 className="object-contain w-12 h-12 md:w-20 md:h-20"
               />
               <div>
@@ -46,9 +48,11 @@ export default function HomePage() {
         {/* Buildings Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/image.png"
-            alt="בניינים מודרניים בישראל - בדיקת איכות בנייה ומבנים"
+            src="/images/binyanim-moderniim-israel-bedek-bayit.webp"
+            alt="בניינים מודרניים בישראל - בדק בית ובדיקת איכות בנייה של דירות חדשות ומבנים לפני מסירה מהקבלן"
+            title="בדק בית ובדיקת איכות בנייה למבנים ודירות חדשות"
             fill
+            sizes="100vw"
             className="object-cover brightness-125 contrast-110"
             priority
           />
@@ -587,13 +591,19 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-3 font-medium">
                   {"\"הבדיקה שלכם הייתה מקצועית ומדויקת מאוד. הקבלן תיקן את כל הליקויים שהוצאו בדוח. לאחר ביצוע הבדק נוכחתי שחובה לבצע בדיקה חדשה. תודה רבה!\""}
                 </p>
-                <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <img
-                    src="/images/review-benny.jpeg"
-                    alt="ביקורת בדק בית מלקוח מרוצה - בדיקה מקצועית ומדויקת הקבלן תיקן את כל הליקויים"
+                    src="/images/bikoret-bedek-bayit-benny.webp"
+                    alt="ביקורת בדק בית מלקוח מרוצה - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים שאותרו בדוח"
+                    title="ביקורת לקוח על שירות בדק בית"
+                    width={1220}
+                    height={1155}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
-                </div>
+                  <figcaption className="sr-only">ביקורת לקוח - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים</figcaption>
+                </figure>
                 <p className="font-semibold text-gray-900 mt-3">בני</p>
               </CardContent>
             </Card>
@@ -618,13 +628,19 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-3 font-medium">
                   {"\"קיבלנו דוח מפורט, ברור ומסודר. יגאל הסביר לנו בשפה פשוטה מה המשמעות של כל ממצא. ממליצים בחום לכל מי שמקבל דירה חדשה!\""}
                 </p>
-                <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <img
-                    src="/images/review-mike.jpeg"
-                    alt="ביקורת בדק בית - דוח מפורט וברור ממליצים בחום לכל מי שמקבל דירה חדשה"
+                    src="/images/bikoret-bedek-bayit-mike.webp"
+                    alt="ביקורת בדק בית מלקוח מרוצה - דוח מפורט וברור, ממליצים בחום לכל מי שמקבל דירה חדשה מקבלן"
+                    title="ביקורת לקוח על דוח בדק בית מפורט"
+                    width={1600}
+                    height={720}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
-                </div>
+                  <figcaption className="sr-only">ביקורת לקוח - דוח מפורט וברור, ממליצים בחום למקבלי דירה חדשה</figcaption>
+                </figure>
                 <p className="font-semibold text-gray-900 mt-3">מייק</p>
               </CardContent>
             </Card>
@@ -649,13 +665,19 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-3 font-medium">
                   {"\"אין לי מילים חוץ מלומר לך שאתה תותח! אני ממליץ עליך בחום.\""}
                 </p>
-                <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <img
-                    src="/images/review-yaakov.jpeg"
-                    alt="ביקורת בדק בית - המלצה חמה על שירות מקצועי"
+                    src="/images/bikoret-bedek-bayit-yaakov.webp"
+                    alt="ביקורת בדק בית מלקוח מרוצה - המלצה חמה על שירות בדק בית מקצועי ואמין"
+                    title="המלצת לקוח על שירות בדק בית"
+                    width={1201}
+                    height={758}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
-                </div>
+                  <figcaption className="sr-only">ביקורת לקוח - המלצה חמה על שירות בדק בית מקצועי ואמין</figcaption>
+                </figure>
                 <p className="font-semibold text-gray-900 mt-3">יעקב</p>
               </CardContent>
             </Card>
@@ -680,13 +702,19 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-3 font-medium">
                   {"\"תודה רבה שוב, עבודה מקצועית ומדויקת.\""}
                 </p>
-                <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <img
-                    src="/images/whatsapp-review.jpeg"
-                    alt="ביקורת בדק בית - עבודה מקצועית ומדויקת"
+                    src="/images/bikoret-bedek-bayit-whatsapp.webp"
+                    alt="ביקורת בדק בית בוואטסאפ מלקוח מרוצה - עבודה מקצועית ומדויקת באיתור ליקויי בנייה"
+                    title="ביקורת לקוח בוואטסאפ על בדק בית"
+                    width={1220}
+                    height={817}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
-                </div>
+                  <figcaption className="sr-only">ביקורת לקוח בוואטסאפ - עבודה מקצועית ומדויקת</figcaption>
+                </figure>
                 <p className="font-semibold text-gray-900 mt-3">איתן</p>
               </CardContent>
             </Card>
@@ -711,13 +739,19 @@ export default function HomePage() {
                 <p className="text-gray-700 mb-3 font-medium">
                   {"\"בוקר טוב יגאל, תודה רבה מעריך את ההשקעה, שבוע טוב!\""}
                 </p>
-                <div className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <img
-                    src="/testimonials/whatsapp-testimonial-investment.png"
-                    alt="ביקורת בדק בית מלקוח מרוצה - תודה רבה מעריך את ההשקעה בבדק הבית"
+                    src="/images/bikoret-bedek-bayit-hashkaa.webp"
+                    alt="ביקורת בדק בית מלקוח מרוצה - תודה רבה, הלקוח מעריך את ההשקעה בבדק הבית שחסך כסף וליקויים"
+                    title="ביקורת לקוח על ההשקעה בבדק בית"
+                    width={405}
+                    height={73}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
-                </div>
+                  <figcaption className="sr-only">ביקורת לקוח - תודה רבה, מעריך את ההשקעה בבדק הבית</figcaption>
+                </figure>
                 <p className="font-semibold text-gray-900 mt-3">לקוח מרוצה</p>
               </CardContent>
             </Card>
@@ -768,7 +802,7 @@ export default function HomePage() {
             </h2>
             <p className="text-lg md:text-xl mb-6 md:mb-8 text-white">
               {
-                'בדק בית עכ��יו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
+                'בדק בית עכ����יו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
               }
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">

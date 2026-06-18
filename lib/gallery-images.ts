@@ -71,8 +71,8 @@ export const galleryImages: GalleryImage[] = [
   // ---------- TEAM ----------
   {
     src: "/gallery/guy-mumche-bedek-bayit.webp",
-    width: 1448,
-    height: 1086,
+    width: 1200,
+    height: 1600,
     category: "team",
     title: "גיא - מומחה בדק בית מוסמך",
     alt: "גיא מומחה בדק בית מוסמך עם קסדת מגן בעת ביצוע בדיקת נכס לאיתור ליקויי בנייה בתל אביב, רמת גן, גבעתיים, הרצליה, רעננה, כפר סבא, ראש העין, בת ים, חולון, פתח תקווה, באר שבע ואשקלון",
@@ -103,7 +103,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/gallery/elena-mumchit-bedek-bayit.webp",
-    width: 1600,
+    width: 1200,
     height: 1600,
     category: "team",
     title: "אלנה - מומחית בדק בית מוסמכת",
@@ -136,7 +136,7 @@ export const galleryImages: GalleryImage[] = [
   },
   {
     src: "/gallery/yuval-mumche-bedek-bayit.webp",
-    width: 913,
+    width: 1200,
     height: 1600,
     category: "team",
     title: "יובל - מומחה בדק בית מוסמך",

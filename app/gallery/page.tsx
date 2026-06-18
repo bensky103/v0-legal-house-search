@@ -84,15 +84,15 @@ export default function GalleryPage() {
       {heroImage && (
         <section className="py-10 md:py-14">
           <div className="container mx-auto px-4">
-            <figure className="group relative overflow-hidden rounded-2xl shadow-lg bg-white max-w-4xl mx-auto md:flex">
-              <div className="relative aspect-[4/3] md:aspect-auto md:w-1/2 overflow-hidden bg-gray-100">
+            <figure className="group relative overflow-hidden rounded-2xl shadow-lg bg-white max-w-4xl mx-auto md:flex md:items-stretch">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-auto md:w-1/2 md:min-h-[28rem] overflow-hidden bg-gray-100">
                 <Image
                   src={heroImage.src || "/placeholder.svg"}
                   alt={heroImage.alt}
                   title={heroImage.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className={`object-cover ${heroImage.objectPosition ?? ""}`}
+                  className={`object-cover object-top ${heroImage.objectPosition ?? ""}`}
                   priority
                 />
               </div>

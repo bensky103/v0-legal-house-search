@@ -9,7 +9,12 @@
 //   5. ציוד מקצועי (3)
 
 export interface GalleryImage {
+  /** Local WebP path, SEO-friendly filename, served compressed. */
   src: string
+  /** Intrinsic width of the WebP asset (px). */
+  width: number
+  /** Intrinsic height of the WebP asset (px). */
+  height: number
   alt: string
   title: string
   caption: string
@@ -25,7 +30,9 @@ export interface GalleryImage {
 export const galleryImages: GalleryImage[] = [
   // ---------- HERO ----------
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Jun%2018%2C%202026%2C%2002_03_35%20PM-pGWKw0UtdLymyvE2CbwQLW7WR44GZZ.png",
+    src: "/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+    width: 1086,
+    height: 1448,
     category: "hero",
     title: "יגאל בנסקי - מומחה בדק בית מוסמך",
     alt: "יגאל בנסקי מומחה בדק בית מוסמך על ידי איגוד המהנדסים, עם קסדת מגן בעת בדיקת דירה חדשה מקבלן, בדק בית לפני מסירה ואיתור ליקויי בנייה בכל הארץ - תל אביב, רמת גן, גבעתיים, הרצליה, רעננה, כפר סבא, ראש העין, בת ים, חולון, יהוד, אור יהודה, גבעת שמואל, קרית אונו, אזור, פתח תקווה, באר שבע ואשקלון",
@@ -63,7 +70,9 @@ export const galleryImages: GalleryImage[] = [
 
   // ---------- TEAM ----------
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ChatGPT%20Image%20Jun%2018%2C%202026%2C%2001_21_33%20PM-3rj2hpxxXYZSuctdTUss4gbqpEY5zT.png",
+    src: "/gallery/guy-mumche-bedek-bayit.webp",
+    width: 1448,
+    height: 1086,
     category: "team",
     title: "גיא - מומחה בדק בית מוסמך",
     alt: "גיא מומחה בדק בית מוסמך עם קסדת מגן בעת ביצוע בדיקת נכס לאיתור ליקויי בנייה בתל אביב, רמת גן, גבעתיים, הרצליה, רעננה, כפר סבא, ראש העין, בת ים, חולון, פתח תקווה, באר שבע ואשקלון",
@@ -95,7 +104,9 @@ export const galleryImages: GalleryImage[] = [
 
   // ---------- בדיקות אמיתיות (REAL INSPECTIONS) ----------
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20260413_103020-QEYGlLIYf3hn1XN6jwhNNQBjxP1xqC.jpg",
+    src: "/gallery/bedikat-mishoriyut-ritzuf-peles.webp",
+    width: 1600,
+    height: 1600,
     category: "inspection",
     title: "בדיקת מישוריות ריצוף בפלס ובסרגל",
     alt: "מומחה בדק בית בודק מישוריות ויישור ריצוף בעזרת פלס KAPRO וסרגל מתכת לאיתור ליקויי ריצוף בדירה חדשה",
@@ -103,7 +114,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "בדיקת ריצוף", "ליקויי ריצוף", "מישוריות ריצוף", "בדק בית דירה חדשה", "פלס"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20260123_104644-HVjbXET5A48YsWRVMms2N96KhumVPN.jpg",
+    src: "/gallery/bedikat-asla-tluya-chadar-rachatza.webp",
+    width: 1600,
+    height: 2133,
     category: "inspection",
     title: "בדיקת התקנת אסלה תלויה",
     alt: "בדק בית - בדיקת מפלס וגובה התקנת אסלה תלויה בחדר רחצה בעזרת פלס וסרט מדידה לאיתור ליקויי התקנה",
@@ -111,7 +124,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "בדיקת חדר רחצה", "ליקויי התקנה", "בדיקת אסלה", "בדק בית מקצועי"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-18%20at%2013.59.40%20%285%29-15HtcRRXDeluCIsn3mjL4QaQxRBUys.jpeg",
+    src: "/gallery/bedikat-nikuz-matzlemat-endoskop.webp",
+    width: 1600,
+    height: 1200,
     category: "inspection",
     title: "בדיקת ניקוז ואינסטלציה במצלמת אנדוסקופ",
     alt: "מומחה בדק בית בודק מחסום רצפה וניקוז בעזרת מצלמת אנדוסקופ לאיתור ליקויי אינסטלציה וסתימות נסתרות",
@@ -119,15 +134,19 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "בדיקת ניקוז", "ליקויי אינסטלציה", "מצלמת אנדוסקופ", "מחסום רצפה"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-18%20at%2013.59.39-3cybkyNPzXAGwzq4fQaKOQSIATmpdu.jpeg",
+    src: "/gallery/bedikat-chozek-maake-mirpeset.webp",
+    width: 1600,
+    height: 1600,
     category: "inspection",
     title: "בדיקת חוזק וביטחון מעקה מרפסת",
     alt: "בדק בית - בדיקת חוזק ויציבות מעקה מתכת במרפסת בעזרת מד כוח לאיתור ליקויי בטיחות ועמידה בתקן",
     caption: "בדיקת חוזק ויציבות מעקה מרפסת לעמידה בתקן הבטיחות - בדק בית הנדסי",
-    keywords: ["בדק בית", "בדיקת מעקה", "בטיחות מרפסת", "ליקויי בטיחות", "עמידה בתקן", "בדק בית מרפסת"],
+    keywords: ["בדק בית", "בדיקת מעקה", "בטיחות מרפסת", "ליק��יי בטיחות", "עמידה בתקן", "בדק בית מרפסת"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-18%20at%2013.59.40-JEN0WRnW02UzFGdrQRdjEH32Y3X5nG.jpeg",
+    src: "/gallery/bedikat-tzanrat-instalatzia.webp",
+    width: 1600,
+    height: 1600,
     category: "inspection",
     title: "בדיקת צנרת ומערכת אינסטלציה",
     alt: "מומחה בדק בית מודד ובודק צנרת מים ומערכת אינסטלציה בעזרת סרט מדידה לאיתור ליקויי אינסטלציה",
@@ -135,7 +154,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "בדיקת אינסטלציה", "צנרת מים", "ליקויי אינסטלציה", "בדק בית דירה"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20260130_101536-74GGDPha2EYXmdyZBRifJmXxhOlUSJ.jpg",
+    src: "/gallery/bedikat-tikrat-mirpeset-mad-temperatura.webp",
+    width: 1600,
+    height: 2133,
     category: "inspection",
     title: "בדיקת תקרת מרפסת במד טמפרטורה",
     alt: "מומחה בדק בית בודק תקרת מרפסת וחיבורי חלונות בעזרת מד טמפרטורה אינפרא אדום לאיתור גשרי קור וליקויי בידוד",
@@ -145,7 +166,9 @@ export const galleryImages: GalleryImage[] = [
 
   // ---------- ליקויי בנייה (BUILDING DEFECTS) ----------
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-02%20at%2010.33.34-urGLPlIPXHdlv2oXoPxhIExNsi3ndW.jpeg",
+    src: "/gallery/likui-retivut-hitporerut-tiyach.webp",
+    width: 1536,
+    height: 2048,
     category: "defect",
     title: "ליקוי רטיבות והתפוררות טיח",
     alt: "ליקוי בנייה - רטיבות גבוהה והתפוררות טיח בקיר, נמדד בעזרת מד לחות מקצועי המציג ערך רטיבות גבוה בבדק בית",
@@ -153,7 +176,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "ליקוי רטיבות", "רטיבות בקיר", "התפוררות טיח", "מד לחות", "ליקויי בנייה"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20260123_100046-VLB7UTzwculmLQywXPab1YbRAv0WYk.jpg",
+    src: "/gallery/likui-sedek-kir-hitzoni.webp",
+    width: 1600,
+    height: 2133,
     category: "defect",
     title: "ליקוי סדק בקיר חיצוני",
     alt: "ליקוי בנייה - סדק בקיר חיצוני ליד מזגן עיבוי, נבדק על ידי מומחה בדק בית עם זכוכית מגדלת לאבחון סדיקה",
@@ -161,7 +186,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "ליקוי סדק", "סדק בקיר", "סדיקה מבנית", "ליקויי בנייה", "בדיקת קיר חיצוני"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-18%20at%2013.59.40%20%284%29-h9iytfUbZzIQKDIuANe1Oeejah5CHf.jpeg",
+    src: "/gallery/bedikat-luach-chashmal.webp",
+    width: 1600,
+    height: 1200,
     category: "defect",
     title: "בדיקת לוח חשמל ומערכת חשמל",
     alt: "בדק בית - בדיקת לוח חשמל, מפסקים, ממסר פחת ומעגלי חשמל לאיתור ליקויי חשמל ובטיחות חשמלית בדירה",
@@ -169,7 +196,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "ליקויי חשמל", "לוח חשמל", "ממסר פחת", "בטיחות חשמל", "בדיקת חשמל"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20260123_105435-qAMNABFCLfPNLibkIWEDbr968SM0gg.jpg",
+    src: "/gallery/likui-nikuz-stima-tzanrat.webp",
+    width: 1600,
+    height: 1200,
     category: "defect",
     title: "ליקוי ניקוז וסתימה בצנרת",
     alt: "ליקוי בנייה - שאריות פסולת וסתימה במחסום רצפה שאותרו בעזרת מצלמת אנדוסקופ בבדק בית לאיתור ליקויי אינסטלציה",
@@ -179,7 +208,9 @@ export const galleryImages: GalleryImage[] = [
 
   // ---------- ציוד מקצועי (PROFESSIONAL EQUIPMENT) ----------
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-18%20at%2013.59.40%20%281%29-9YXrFokzGNasSXorxmhDkc11Cl1llw.jpeg",
+    src: "/gallery/peles-digitali-tziyud-bedek-bayit.webp",
+    width: 1600,
+    height: 1600,
     category: "equipment",
     title: "פלס דיגיטלי - מדידת שיפועים",
     alt: "ציוד בדק בית מקצועי - פלס דיגיטלי אלקטרוני למדידת שיפועים, מפלסים וזוויות בדיוק גבוה לאיתור ליקויי בנייה",
@@ -187,7 +218,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "פלס דיגיטלי", "ציוד בדק בית", "בדיקת שיפועים", "מדידת מפלסים", "ציוד מקצועי"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-02%20at%2010.33.34%20%281%29-8zUspsLnAz592ynX00IMlLUwyCounT.jpeg",
+    src: "/gallery/matzlema-termit-itur-retivut.webp",
+    width: 1200,
+    height: 1600,
     category: "equipment",
     title: "מצלמה תרמית - איתור רטיבות וכשל בידוד",
     alt: "ציוד בדק בית מקצועי - מצלמה תרמית לאיתור דליפות מים, רטיבות נסתרת, גשרי קור וכשלי בידוד בקירות ובתקרות",
@@ -195,7 +228,9 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "מצלמה תרמית", "בדיקה תרמוגרפית", "איתור רטיבות", "גשר קור", "ציוד מקצועי"],
   },
   {
-    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-18%20at%2013.59.40%20%283%29-A5AM5IklNjMdjBrDRU64h4TruPp9PE.jpeg",
+    src: "/gallery/mad-koach-digitali-bedikat-chozek.webp",
+    width: 1536,
+    height: 2048,
     category: "equipment",
     title: "מד כוח דיגיטלי - בדיקת חוזק ועוגנים",
     alt: "ציוד בדק בית מקצועי - מד כוח דיגיטלי SHIMPO לבדיקת חוזק חיבורים, עיגון מעקות ואלמנטים לעמידה בתקן הבטיחות",

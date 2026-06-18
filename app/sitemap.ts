@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next"
 import { cities, projectTypes, contractors } from "@/lib/seo-locations"
+import { defects } from "@/lib/defects"
+import { getProjectCities } from "@/lib/projects"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
@@ -9,8 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const projectPages: MetadataRoute.Sitemap = projectTypes.map((p) => ({
-    url: `https://legalbedek.co.il/projects/${p.slug}`,
+  // Project-type pages now live under /services
+  const servicePages: MetadataRoute.Sitemap = projectTypes.map((p) => ({
+    url: `https://legalbedek.co.il/services/${p.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,
@@ -21,6 +24,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly",
     priority: 0.8,
+  }))
+
+  const defectPages: MetadataRoute.Sitemap = defects.map((d) => ({
+    url: `https://legalbedek.co.il/likuyey-bniya/${d.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }))
+
+  const projectCityPages: MetadataRoute.Sitemap = getProjectCities().map((c) => ({
+    url: `https://legalbedek.co.il/projects/${c.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
   }))
 
   return [
@@ -42,9 +59,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: "https://legalbedek.co.il/likuyey-bniya",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "https://legalbedek.co.il/projects",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     ...cityPages,
-    ...projectPages,
+    ...servicePages,
     ...contractorPages,
+    ...defectPages,
+    ...projectCityPages,
     {
       url: "https://legalbedek.co.il/blog",
       lastModified: new Date(),

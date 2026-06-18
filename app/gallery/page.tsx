@@ -73,12 +73,6 @@ export default function GalleryPage() {
                     loading={index < 6 ? "eager" : "lazy"}
                   />
                 </div>
-                {/* SEO keywords - present in HTML for search engines but hidden from visitors */}
-                <ul className="sr-only">
-                  {image.keywords.map((kw, i) => (
-                    <li key={i}>{kw}</li>
-                  ))}
-                </ul>
                 <figcaption className="p-4">
                   <h3 className="text-base font-semibold text-gray-900 mb-1">{image.title}</h3>
                   <p className="text-sm text-gray-700 leading-relaxed">{image.caption}</p>

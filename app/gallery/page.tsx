@@ -124,7 +124,11 @@ export default function GalleryPage() {
                       key={index}
                       className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white"
                     >
-                      <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                      <div
+                        className={`relative overflow-hidden bg-gray-100 ${
+                          image.category === "team" ? "aspect-[3/4]" : "aspect-[4/3]"
+                        }`}
+                      >
                         <Image
                           src={image.src || "/placeholder.svg"}
                           alt={image.alt}
@@ -133,7 +137,7 @@ export default function GalleryPage() {
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           className={`transition-transform duration-500 group-hover:scale-105 ${
                             image.fitContain ? "object-contain" : "object-cover"
-                          } ${image.objectPosition ?? ""}`}
+                          } ${image.objectPosition ?? "object-center"}`}
                           loading="lazy"
                         />
                       </div>

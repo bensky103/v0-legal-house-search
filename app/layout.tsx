@@ -73,6 +73,9 @@ export const metadata: Metadata = {
       "he-IL": "https://legalbedek.co.il",
     },
   },
+  verification: {
+    google: "CMIAgCXv6V9ZyaL206bc7tU3VNWXMArFrtydXSnTMQY",
+  },
   other: {
     keywords: "חוות דעת נגדית, בדק בית, בדיקת נכס לאחר רכישה, בדיקת נכס עבור ועד הבית",
     subject: "בדיקות בנייה מקצועיות וחוות דעת נגדית",
@@ -320,7 +323,7 @@ gtag('config', 'AW-17703305821');`}
           style={{ display: "none", visibility: "hidden", position: "absolute", left: "-9999px" }}
           aria-hidden="true"
         >
-          <span>חוות דעת נגדית מקצועית מהימנה</span>
+          <span>��וות דעת נגדית מקצועית מהימנה</span>
           <span>בדק בית מוסמך ומנוסה</span>
           <span>בדיקת נכס לאחר רכישה מקיפה</span>
           <span>חוות דעת נגדית מקצועית ומהימנה</span>

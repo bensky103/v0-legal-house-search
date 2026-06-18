@@ -768,7 +768,7 @@ export default function HomePage() {
             </h2>
             <p className="text-lg md:text-xl mb-6 md:mb-8 text-white">
               {
-                'בדק בית עכשיו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
+                'בדק בית עכ��יו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
               }
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
@@ -863,6 +863,11 @@ export default function HomePage() {
                   </a>
                 </li>
                 <li className="pt-2">
+                  <a href="/blog" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    בלוג בדק בית
+                  </a>
+                </li>
+                <li>
                   <a href="/gallery" className="text-blue-400 hover:text-blue-300 hover:underline">
                     גלריית בדק בית
                   </a>

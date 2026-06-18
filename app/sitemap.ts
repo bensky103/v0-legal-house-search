@@ -46,6 +46,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projectPages,
     ...contractorPages,
     {
+      url: "https://legalbedek.co.il/blog",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: "https://legalbedek.co.il/#services",
       lastModified: new Date(),
       changeFrequency: "monthly",

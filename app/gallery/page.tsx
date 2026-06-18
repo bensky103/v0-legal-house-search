@@ -118,11 +118,11 @@ export default function GalleryPage() {
                   <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 text-balance">{heading}</h2>
                   <p className="text-sm md:text-base text-gray-600 leading-relaxed text-pretty">{description}</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+                <div className="flex flex-wrap justify-center gap-6">
                   {grouped[key].map((image, index) => (
                     <figure
                       key={index}
-                      className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white"
+                      className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
                     >
                       <div
                         className={`relative overflow-hidden bg-gray-100 ${

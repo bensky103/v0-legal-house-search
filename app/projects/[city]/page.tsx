@@ -87,6 +87,7 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
           ],
         },
         ...areasSection,
+        ...(idx?.extraSections ?? []),
       ]}
       faq={[
         {

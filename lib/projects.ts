@@ -12,6 +12,10 @@ export interface CityProjectIndex {
   // Optional notable area/neighborhood names where new construction is concentrated.
   // These are general, publicly-known area names — not specific project claims.
   buildingAreas?: string[]
+  // Optional deeper, city-specific content sections (e.g. the engineering angle of
+  // new construction in this city). General professional content — no fabricated
+  // project names, dates, or unit counts.
+  extraSections?: { heading: string; paragraphs: string[] }[]
 }
 
 export const cityProjectIndexes: CityProjectIndex[] = [

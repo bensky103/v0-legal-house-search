@@ -12,6 +12,11 @@ interface Breadcrumb {
   href: string
 }
 
+interface BulletSection {
+  heading: string
+  items: string[]
+}
+
 interface SeoLandingTemplateProps {
   badge: string
   title: string
@@ -25,6 +30,10 @@ interface SeoLandingTemplateProps {
   relatedLinks?: { label: string; href: string }[]
   breadcrumbs?: Breadcrumb[]
   canonicalUrl?: string
+  // Optional list-style sections (e.g. symptoms / causes), rendered after content sections.
+  bulletSections?: BulletSection[]
+  // Optional label shown above the features grid (defaults to a generic heading).
+  featuresHeading?: string
 }
 
 export function SeoLandingTemplate({
@@ -40,6 +49,8 @@ export function SeoLandingTemplate({
   relatedLinks = [],
   breadcrumbs = [],
   canonicalUrl,
+  bulletSections = [],
+  featuresHeading = "מה כולל שירות בדק הבית שלנו?",
 }: SeoLandingTemplateProps) {
   const baseUrl = "https://legalbedek.co.il"
   const crumbs: Breadcrumb[] = breadcrumbs.length > 0 ? breadcrumbs : [{ label: "דף הבית", href: "/" }]
@@ -89,7 +100,7 @@ export function SeoLandingTemplate({
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-4 space-x-reverse">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
                 width={64}
                 height={64}
@@ -172,7 +183,7 @@ export function SeoLandingTemplate({
       <section className="py-10 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
-            מה כולל שירות בדק הבית שלנו?
+            {featuresHeading}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {features.map((feature, i) => (
@@ -204,6 +215,29 @@ export function SeoLandingTemplate({
           ))}
         </div>
       </section>
+
+      {/* Bullet sections (e.g. symptoms / causes) */}
+      {bulletSections.length > 0 && (
+        <section className="py-10 md:py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {bulletSections.map((section, i) => (
+                <div key={i} className="bg-blue-50 border border-blue-100 rounded-xl p-6">
+                  <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{section.heading}</h2>
+                  <ul className="space-y-3">
+                    {section.items.map((item, j) => (
+                      <li key={j} className="flex items-start gap-3 text-base text-gray-800 leading-relaxed">
+                        <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* FAQ */}
       {faq.length > 0 && (

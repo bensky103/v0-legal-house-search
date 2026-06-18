@@ -21,7 +21,7 @@ export default function CitiesIndexPage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-4 space-x-reverse">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="בדק בית Legal"
                 width={64}
                 height={64}

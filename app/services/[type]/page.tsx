@@ -21,23 +21,23 @@ export function generateMetadata({ params }: { params: { type: string } }): Meta
       description: project.description,
       type: "website",
       locale: "he_IL",
-      url: `https://legalbedek.co.il/projects/${project.slug}`,
+      url: `https://legalbedek.co.il/services/${project.slug}`,
       siteName: "בדק בית Legal",
     },
     alternates: {
-      canonical: `https://legalbedek.co.il/projects/${project.slug}`,
+      canonical: `https://legalbedek.co.il/services/${project.slug}`,
     },
     robots: "index, follow",
   }
 }
 
-export default function ProjectPage({ params }: { params: { type: string } }) {
+export default function ServicePage({ params }: { params: { type: string } }) {
   const project = projectTypes.find((p) => p.slug === params.type)
   if (!project) notFound()
 
   const relatedLinks = projectTypes
     .filter((p) => p.slug !== project.slug)
-    .map((p) => ({ label: `בדק בית ${p.name}`, href: `/projects/${p.slug}` }))
+    .map((p) => ({ label: `בדק בית ${p.name}`, href: `/services/${p.slug}` }))
 
   return (
     <SeoLandingTemplate
@@ -106,7 +106,8 @@ export default function ProjectPage({ params }: { params: { type: string } }) {
       relatedLinks={relatedLinks}
       breadcrumbs={[
         { label: "דף הבית", href: "/" },
-        { label: project.name, href: `/projects/${project.slug}` },
+        { label: "סוגי פרויקטים", href: "/services" },
+        { label: project.name, href: `/services/${project.slug}` },
       ]}
     />
   )

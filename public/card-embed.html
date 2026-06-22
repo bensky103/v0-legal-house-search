@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>כרטיס ביקור – בדק בית Legal | יגאל בנסקי</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blue-900: #1e3a8a;
+    --blue-800: #1e40af;
+    --blue-700: #1d4ed8;
+    --slate-900: #0f172a;
+    --slate-600: #475569;
+    --slate-100: #f1f5f9;
+    --white: #ffffff;
+    --green: #16a34a;
+  }
+  html, body {
+    font-family: "Heebo", system-ui, -apple-system, sans-serif;
+    background: transparent;
+    color: var(--slate-900);
+  }
+  .card {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.18);
+  }
+  .header {
+    background: linear-gradient(135deg, var(--blue-900), var(--blue-700));
+    padding: 32px 24px 64px;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+  }
+  .logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    background: var(--white);
+    border-radius: 14px;
+    padding: 8px;
+    margin: 0 auto 14px;
+    display: block;
+  }
+  .header h1 { font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+  .header p { font-size: 14px; color: #bfdbfe; margin-top: 4px; }
+  .avatar-wrap { margin-top: -48px; text-align: center; }
+  .avatar {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--white);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    background: var(--slate-100);
+  }
+  .identity { text-align: center; padding: 14px 24px 4px; }
+  .identity h2 { font-size: 24px; font-weight: 800; color: var(--slate-900); }
+  .identity .role { font-size: 15px; font-weight: 600; color: var(--blue-700); margin-top: 4px; }
+  .identity .tagline { font-size: 13.5px; color: var(--slate-600); margin-top: 10px; line-height: 1.6; }
+  .actions { padding: 18px 24px 8px; display: flex; flex-direction: column; gap: 10px; }
+  .btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 13px 16px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid var(--slate-100);
+    background: var(--white);
+    color: var(--slate-900);
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 18px rgba(15, 23, 42, 0.1); }
+  .btn .ico { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; flex: none; }
+  .btn .ico svg { width: 20px; height: 20px; }
+  .btn .txt { display: flex; flex-direction: column; line-height: 1.25; }
+  .btn .txt small { font-size: 11.5px; font-weight: 500; color: var(--slate-600); }
+  .btn-primary { background: linear-gradient(135deg, var(--blue-900), var(--blue-700)); color: var(--white); border-color: transparent; }
+  .btn-primary .txt small { color: #bfdbfe; }
+  .ico-call { background: rgba(29,78,216,0.12); color: var(--blue-700); }
+  .btn-primary .ico-call { background: rgba(255,255,255,0.2); color: #fff; }
+  .ico-wa { background: rgba(22,163,74,0.12); color: var(--green); }
+  .ico-mail { background: rgba(29,78,216,0.12); color: var(--blue-700); }
+  .ico-web { background: rgba(29,78,216,0.12); color: var(--blue-700); }
+  .ico-yt { background: rgba(220,38,38,0.12); color: #dc2626; }
+  .ico-g { background: rgba(15,23,42,0.08); color: var(--slate-900); }
+  .save {
+    margin: 6px 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 14px;
+    background: var(--slate-900);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    width: calc(100% - 48px);
+  }
+  .save svg { width: 20px; height: 20px; }
+  .foot { text-align: center; padding: 0 24px 22px; font-size: 12px; color: var(--slate-600); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <img class="logo" src="/logo.webp" alt="לוגו בדק בית Legal" />
+      <h1>בדק בית Legal</h1>
+      <p>מומחים לאיתור ליקויי בנייה וחוות דעת נגדית</p>
+    </div>
+
+    <div class="avatar-wrap">
+      <img class="avatar" src="/gallery/yigal-bensky-mumche-bedek-bayit.webp" alt="יגאל בנסקי - מומחה בדק בית מוסמך" />
+    </div>
+
+    <div class="identity">
+      <h2>יגאל בנסקי</h2>
+      <div class="role">מומחה בדק בית מוסמך</div>
+      <p class="tagline">בדיקות בדק בית לדירות חדשות ויד שנייה, איתור ליקויי בנייה וחוות דעת נגדית מקצועית — שירות בכל הארץ.</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="tel:+972506277858">
+        <span class="ico ico-call">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span class="txt">חייגו עכשיו<small>050-627-7858</small></span>
+      </a>
+
+      <a class="btn" href="https://wa.me/972506277858?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%91%D7%93%D7%A7%20%D7%91%D7%99%D7%AA" target="_blank" rel="noopener">
+        <span class="ico ico-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.74-.86-2-.96-.27-.1-.46-.15-.65.15-.2.3-.75.96-.92 1.15-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.65-1.58-.9-2.16-.24-.57-.48-.49-.65-.5h-.56c-.2 0-.5.07-.77.37s-1.02.99-1.02 2.42 1.04 2.8 1.19 3c.15.2 2.05 3.12 4.96 4.38.69.3 1.23.48 1.65.6.69.22 1.32.19 1.82.12.56-.08 1.74-.71 1.98-1.4.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.34z"/><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.26-1.38c1.45.79 3.08 1.21 4.78 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.13c-1.52 0-3-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.35c0-4.54 3.7-8.23 8.24-8.23 4.54 0 8.23 3.69 8.23 8.23 0 4.54-3.69 8.24-8.24 8.24z"/></svg>
+        </span>
+        <span class="txt">שלחו הודעת WhatsApp<small>מענה מהיר</small></span>
+      </a>
+
+      <a class="btn" href="mailto:yigalbensky@gmail.com">
+        <span class="ico ico-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </span>
+        <span class="txt">שלחו אימייל<small>yigalbensky@gmail.com</small></span>
+      </a>
+
+      <a class="btn" href="https://legalbedek.co.il" target="_blank" rel="noopener">
+        <span class="ico ico-web">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span>
+        <span class="txt">לאתר האינטרנט<small>legalbedek.co.il</small></span>
+      </a>
+
+      <a class="btn" href="https://www.youtube.com/@LegalBedekBayit" target="_blank" rel="noopener">
+        <span class="ico ico-yt">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7c-.23-.85-.9-1.52-1.75-1.75C19.3 5.1 12 5.1 12 5.1s-7.3 0-8.85.45c-.85.23-1.52.9-1.75 1.75C1 8.8 1 12 1 12s0 3.2.4 4.7c.23.85.9 1.52 1.75 1.75C4.7 18.9 12 18.9 12 18.9s7.3 0 8.85-.45c.85-.23 1.52-.9 1.75-1.75C23 15.2 23 12 23 12zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+        </span>
+        <span class="txt">ערוץ היוטיוב<small>סרטוני בדק בית</small></span>
+      </a>
+
+      <a class="btn" href="https://share.google/Xs39vbL4NPtrMLrFZ" target="_blank" rel="noopener">
+        <span class="ico ico-g">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <span class="txt">פרופיל Google העסקי<small>חוות דעת ומיקום</small></span>
+      </a>
+    </div>
+
+    <button class="save" id="saveContact" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      שמירת איש קשר
+    </button>
+
+    <div class="foot">בדק בית Legal · יגאל בנסקי · שירות בכל הארץ</div>
+  </div>
+
+  <script>
+    (function () {
+      var vcard = [
+        "BEGIN:VCARD",
+        "VERSION:3.0",
+        "N:בנסקי;יגאל;;;",
+        "FN:יגאל בנסקי - בדק בית Legal",
+        "ORG:בדק בית Legal",
+        "TITLE:מומחה בדק בית מוסמך",
+        "TEL;TYPE=CELL:+972506277858",
+        "EMAIL:yigalbensky@gmail.com",
+        "URL:https://legalbedek.co.il",
+        "END:VCARD"
+      ].join("\r\n");
+
+      var btn = document.getElementById("saveContact");
+      btn.addEventListener("click", function () {
+        var blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "yigal-bensky-legal-bedek.vcf";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+      });
+    })();
+  </script>
+</body>
+</html>

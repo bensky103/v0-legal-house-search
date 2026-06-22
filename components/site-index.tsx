@@ -24,6 +24,7 @@ export function SiteIndex() {
     { label: "פרויקטים חדשים", href: "/projects" },
     { label: "גלריית בדק בית", href: "/gallery" },
     { label: "בלוג", href: "/blog" },
+    { label: "כרטיס ביקור דיגיטלי", href: "/card" },
   ]
 
   const articles: { label: string; href: string }[] = [

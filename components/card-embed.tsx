@@ -27,7 +27,7 @@ export function CardEmbed() {
       loading="lazy"
       onLoad={resize}
       className="mx-auto block w-full"
-      style={{ maxWidth: "420px", height: "1150px", border: 0 }}
+      style={{ maxWidth: "420px", height: "1250px", border: 0 }}
     />
   )
 }

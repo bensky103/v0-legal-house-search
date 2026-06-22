@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { SiteIndex } from "@/components/site-index"
 
 interface SeoFeature {
   title: string
@@ -301,6 +302,9 @@ export function SeoLandingTemplate({
           </div>
         </section>
       )}
+
+      {/* Site index (HTML sitemap) - internal links to every page so this landing page is not a dead-end */}
+      <SiteIndex />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">

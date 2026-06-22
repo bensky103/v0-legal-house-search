@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { defects } from "@/lib/defects"
+import { SiteIndex } from "@/components/site-index"
 
 export const metadata: Metadata = {
   title: "ליקויי בנייה נפוצים בדירות - מדריך מקצועי | בדק בית Legal",
@@ -82,6 +83,8 @@ export default function DefectsIndexPage() {
           </div>
         </div>
       </section>
+
+      <SiteIndex />
 
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">

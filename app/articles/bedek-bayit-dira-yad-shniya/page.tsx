@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { SiteIndex } from "@/components/site-index"
 
 export default function BedekBayitDiraYadShniyaArticle() {
   return (
@@ -261,7 +262,7 @@ export default function BedekBayitDiraYadShniyaArticle() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                   <span className="text-blue-600 font-bold">✓</span>
-                  <span className="text-gray-700">בדיקת מערכות חשמל ולוח חשמל</span>
+                  <span className="text-gray-700">בדיקת מערכות ��שמל ולוח חשמל</span>
                 </div>
                 <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
                   <span className="text-blue-600 font-bold">✓</span>
@@ -387,6 +388,8 @@ export default function BedekBayitDiraYadShniyaArticle() {
 
         </div>
       </main>
+
+      <SiteIndex />
     </article>
   )
 }

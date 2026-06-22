@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { ContactForm } from "@/components/contact-form"
 import { LanguageSwitcher } from "@/components/language-switcher"
+import { SiteIndex } from "@/components/site-index"
 import { useLanguage } from "@/contexts/language-context"
 
 export default function HomePage() {
@@ -861,6 +862,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Site index (HTML sitemap) - internal links to every page */}
+      <SiteIndex />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 md:py-12">

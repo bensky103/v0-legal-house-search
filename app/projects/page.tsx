@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { getProjectCities } from "@/lib/projects"
 import { featuredProjects, featuredProjectsUpdated } from "@/lib/featured-projects"
+import { SiteIndex } from "@/components/site-index"
 
 export const metadata: Metadata = {
   title: "בדק בית בפרויקטים חדשים | בדיקת דירה מקבלן לפי עיר",
@@ -168,6 +169,8 @@ export default function ProjectsHubPage() {
           </ul>
         </div>
       </section>
+
+      <SiteIndex />
     </div>
   )
 }

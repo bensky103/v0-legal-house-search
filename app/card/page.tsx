@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
+import { CardEmbed } from "@/components/card-embed"
 
 export const metadata: Metadata = {
   title: "כרטיס ביקור דיגיטלי - בדק בית Legal | ליגל בדק בית",
@@ -31,13 +32,7 @@ export default function CardPage() {
       {/* Digital business card embed */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 flex flex-col items-center">
-          <iframe
-            src="https://legalbedek.co.il/card.html"
-            title="כרטיס ביקור – בדק בית Legal"
-            loading="lazy"
-            className="w-full mx-auto block rounded-3xl shadow-xl"
-            style={{ maxWidth: "420px", height: "920px", border: 0 }}
-          />
+          <CardEmbed />
 
           <Link
             href="/"

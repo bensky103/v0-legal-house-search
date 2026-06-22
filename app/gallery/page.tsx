@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { galleryImages, type GalleryImage } from "@/lib/gallery-images"
+import { SiteIndex } from "@/components/site-index"
 
 const sections: { key: GalleryImage["category"]; heading: string; description: string }[] = [
   {
@@ -179,6 +180,8 @@ export default function GalleryPage() {
           </div>
         </div>
       </section>
+
+      <SiteIndex />
     </div>
   )
 }

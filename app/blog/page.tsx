@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
+import { SiteIndex } from "@/components/site-index"
 
 export const metadata: Metadata = {
   title: "בלוג בדק בית | מאמרים על איתור ליקויי בנייה ובדיקת דירות - Legal בדק בית",
@@ -68,6 +69,8 @@ export default function BlogPage() {
         <div id="soro-blog" />
         <Script src="https://app.trysoro.com/api/embed/e50102e6-eb3c-4033-90ec-0ed818cfbcfa" strategy="afterInteractive" />
       </main>
+
+      <SiteIndex />
     </div>
   )
 }

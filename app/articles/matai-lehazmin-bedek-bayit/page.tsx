@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
+import { SiteIndex } from "@/components/site-index"
 
 export default function MataiLehazminBedekBayitPage() {
   return (
@@ -398,6 +399,8 @@ export default function MataiLehazminBedekBayitPage() {
         </section>
 
       </main>
+
+      <SiteIndex />
     </article>
   )
 }

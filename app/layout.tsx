@@ -4,6 +4,7 @@ import { Heebo } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 import { LanguageProvider } from "@/contexts/language-context"
+import ContactBar from "@/components/contact-bar"
 
 const heebo = Heebo({
   subsets: ["hebrew", "latin"],
@@ -301,7 +302,7 @@ gtag('config', 'AW-17703305821');`}
             })}
         </Script>
       </head>
-      <body className={heebo.className}>
+      <body className={`${heebo.className} pb-20 md:pb-0`}>
         <LanguageProviderWrapper>
         <noscript>
           <iframe
@@ -313,6 +314,7 @@ gtag('config', 'AW-17703305821');`}
         </noscript>
 
         {children}
+        <ContactBar />
         </LanguageProviderWrapper>
       </body>
     </html>

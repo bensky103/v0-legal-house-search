@@ -95,6 +95,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://legalbedek.co.il/card",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
       url: "https://legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
       lastModified: new Date(),
       changeFrequency: "monthly",

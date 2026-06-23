@@ -50,8 +50,8 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/binyanim-moderniim-israel-bedek-bayit.webp"
-            alt="בניינים מודרניים בישראל - בדק בית ובדיקת איכות בנייה של דירות חדשות ומבנים לפני מסירה מהקבלן"
-            title="בדק בית ובדיקת איכות בנייה למבנים ודירות חדשות"
+            alt="קו הרקיע של תל אביב עם מגדלי מגורים ובנייני יוקרה חדשים בבנייה - בדק בית, בדיקת ליקויי בנייה ובדיקת איכות בנייה של דירות חדשות ומבנים לפני מסירה מהקבלן"
+            title="בדק בית ובדיקת ליקויי בנייה במגדלי מגורים ובדירות חדשות בתל אביב ובכל הארץ"
             fill
             sizes="100vw"
             className="object-cover brightness-125 contrast-110"

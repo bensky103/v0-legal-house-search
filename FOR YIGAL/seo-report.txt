@@ -1,0 +1,137 @@
+==============================================================
+SEO REPORT - Legal Bedek Bayit website (legalbedek.co.il)
+Date: 21.06.2026
+==============================================================
+
+
+GENERAL STATUS
+--------------
+The site is already in very good SEO shape compared to most sites:
+every page has metadata, canonical, OpenGraph, structured data
+(LocalBusiness + FAQ + Breadcrumbs), a dynamic sitemap, robots,
+correct RTL, alt text on images, and 50 city landing pages.
+The foundation is excellent.
+
+The issues are mostly small fixes, plus a few things that may
+actually HURT you (hidden keyword stuffing).
+
+
+==============================================================
+CRITICAL - FIX IMMEDIATELY
+==============================================================
+
+1. Duplicate / broken sitemap.xml
+   File: app/sitemap.xml
+   You have both sitemap.ts (dynamic, correct) AND a static
+   sitemap.xml that contains "your-domain.com" (a placeholder
+   domain!). They conflict, and Google may read the broken one.
+   The static file should be deleted.
+
+2. Hidden text with keywords (risk of a Google penalty)
+   File: app/layout.tsx  (lines 319-353)
+   The div with style="display:none" containing a list of 60
+   cities, the hidden spans, and the huge geo.placename meta =
+   a hidden-text / keyword-stuffing technique. This violates
+   Google's guidelines and can trigger a manual action. Better
+   to remove it - your dedicated city pages already do this job
+   properly and legitimately.
+
+3. Fake aggregateRating in Schema
+   File: app/layout.tsx  (lines 300-304)
+   A rating of 5 with reviewCount: 50 and no real counted Review
+   objects = a violation of Rich Results policy. Can cause a
+   structured-data penalty. Must be based on real reviews or
+   removed.
+
+
+==============================================================
+IMPORTANT - REAL IMPROVEMENTS
+==============================================================
+
+4. Two H1 tags on the article page
+   File: app/articles/bedek-bayit-dira-hadasha/page.tsx
+   (line 24 + line 44). There should be one H1 per page; the H1
+   in the header should become a span/div.
+
+5. Structured data loaded with afterInteractive
+   File: app/layout.tsx  (line 128)
+   JSON-LD should be in the initial HTML (server-side) so crawlers
+   see it reliably. Better to use a plain
+   script type="application/ld+json" (as already done correctly
+   in SeoLandingTemplate).
+
+6. Missing Article schema on the articles
+   The article pages have no BlogPosting/Article JSON-LD and no
+   Breadcrumbs. Adding these will help rich appearance in results.
+
+7. viewport / themeColor in the wrong place
+   File: app/layout.tsx  (lines 46-47)
+   In Next.js 14 these belong in a separate "viewport" export
+   (currently they produce build warnings).
+
+8. Duplicate / useless keywords tags
+   File: app/layout.tsx  (lines 108-117)
+   Google completely ignores meta keywords. Not harmful, but
+   messy and duplicated.
+
+9. Unoptimized images
+   File: next.config.mjs  (images: { unoptimized: true })
+   Hurts LCP / speed. If the site runs on Vercel, optimization
+   should be enabled.
+
+10. No dedicated OG image
+    Uses logo.png (square) as a 1200x630 image. A dedicated
+    share image would be better.
+
+11. No manifest
+    There is no basic PWA manifest (favicon / app name).
+
+
+==============================================================
+TASK SPLIT
+==============================================================
+
+What Claude can do in code (automatic):
+---------------------------------------
+[1]  Delete the broken static sitemap.xml
+[2]  Remove the hidden text + keyword stuffing
+[3]  Remove/fix the fake aggregateRating
+[4]  Fix the duplicate H1 on the article pages
+[5]  Move JSON-LD to server-side rendering
+[6]  Add Article schema + Breadcrumbs to the articles
+[7]  Fix viewport / themeColor into a separate export
+[8]  Clean up the duplicate keywords tags
+[9]  Enable image optimization in next.config
+[10] Add manifest.ts
+
+
+What Yigal must do manually (outside the code):
+-----------------------------------------------
+[A] Google Search Console - verify the domain + submit sitemap.
+    Without this Google does not learn about your pages optimally.
+
+[B] Google Business Profile - create / verify it.
+    Most critical for local searches "bedek bayit [city]" - this
+    is what shows up on Maps.
+
+[C] Collect real Google reviews.
+    Replaces the fake rating and directly affects local ranking.
+
+[D] Build inbound links (business directories, forums,
+    partnerships). Domain authority.
+
+[E] Design a dedicated 1200x630 OG image.
+    Display when shared on WhatsApp/Facebook.
+
+[F] Compress the images in public/images and testimonials.
+    Loading speed (Core Web Vitals).
+
+[G] Content cadence - a new article every few weeks.
+    Google favors "living" sites.
+
+[H] NAP consistency (name/address/phone) across all guides.
+    Local trust.
+
+==============================================================
+END OF REPORT
+==============================================================

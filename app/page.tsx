@@ -44,68 +44,164 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Buildings Image Section with Parallax Effect and Overlay */}
-      <section className="relative h-[60vh] md:h-[70vh] overflow-hidden">
-        {/* Buildings Background Image */}
+      {/* Hero - layered, conversion-focused */}
+      <section className="relative overflow-hidden">
+        {/* Layer 3: blurred modern residential building (secondary, soft) */}
         <div className="absolute inset-0">
           <Image
             src="/images/binyanim-moderniim-israel-bedek-bayit.webp"
-            alt="קו הרקיע של תל אביב עם מגדלי מגורים ובנייני יוקרה חדשים בבנייה - בדק בית, בדיקת ליקויי בנייה ובדיקת איכות בנייה של דירות חדשות ומבנים לפני מסירה מהקבלן"
-            title="בדק בית ובדיקת ליקויי בנייה במגדלי מגורים ובדירות חדשות בתל אביב ובכל הארץ"
+            alt=""
+            aria-hidden="true"
             fill
             sizes="100vw"
-            className="object-cover brightness-125 contrast-110"
+            className="object-cover scale-110 blur-[3px]"
             priority
           />
+          {/* Dark overlay for premium look + text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/80 to-blue-950/85"></div>
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-800/50 to-blue-700/55"></div>
+        <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 lg:py-20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            {/* Text column */}
+            <div className="text-center lg:text-start text-white">
+              <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/20 border border-blue-300/40 px-4 py-1.5 text-sm font-semibold text-blue-50 backdrop-blur-sm mb-5">
+                <svg className="w-4 h-4 fill-blue-200" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1.2 14.5L7 11.7l1.4-1.4 2.4 2.4 5-5L17.2 9l-6.4 6.5z" />
+                </svg>
+                {t("hero.badge")}
+              </span>
 
-        {/* Content */}
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="container mx-auto px-4 text-center text-white">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">{t("hero.title")}</h2>
-            <div className="mb-6 md:mb-8 max-w-4xl mx-auto">
-              <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed font-bold drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+                {t("hero.title")}
+              </h2>
+              <p className="mt-4 text-lg md:text-xl text-blue-50/95 font-medium leading-relaxed text-pretty max-w-xl mx-auto lg:mx-0">
                 {t("hero.subtitle1")}
               </p>
-              <p className="text-base md:text-lg lg:text-xl text-white mt-2 leading-relaxed font-semibold drop-shadow-[0_3px_6px_rgba(0,0,0,0.7)]">
-                {t("hero.subtitle2")}
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+              {/* Trust elements */}
+              <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto lg:mx-0">
+                {["hero.trust1", "hero.trust2", "hero.trust3", "hero.trust4"].map((key) => (
+                  <li key={key} className="flex items-center gap-2.5 text-start">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500/90 shrink-0">
+                      <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-base md:text-lg font-semibold text-white/95">{t(key)}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* CTAs */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="#contact-section"
+                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/30"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6M9 13h6M9 17h6" />
+                  </svg>
+                  {t("hero.ctaPrimary")}
+                </a>
+                <a
+                  href="tel:+972506277858"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white/10 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  {t("hero.ctaSecondary")}
+                </a>
+              </div>
+
               <button
                 onClick={() => setVideoOpen(true)}
-                className="group bg-white/15 backdrop-blur-md border-2 border-white/50 text-white hover:bg-white/25 px-10 py-5 rounded-xl font-bold text-lg md:text-xl transition-all duration-200 transform hover:scale-105 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] shadow-lg flex items-center gap-3"
+                className="mt-5 inline-flex items-center gap-2 text-blue-100 hover:text-white text-sm font-semibold transition-colors mx-auto lg:mx-0"
                 aria-label={t("hero.moreInfo")}
               >
-                <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white/25 group-hover:bg-white/35 transition-colors shrink-0">
-                  <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24" aria-hidden="true">
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white/15 hover:bg-white/25 transition-colors shrink-0">
+                  <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </span>
                 {t("hero.moreInfo")}
               </button>
-              <a
-                href="/gallery"
-                className="group bg-white/5 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/15 px-10 py-5 rounded-xl font-bold text-lg md:text-xl transition-all duration-200 transform hover:scale-105 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] shadow-lg flex items-center gap-3"
-                aria-label="גלריית תמונות בדק בית"
-              >
-                <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors shrink-0">
-                  <svg className="w-5 h-5 stroke-white fill-none" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                    <rect x="3" y="3" width="18" height="18" rx="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <path d="M21 15l-5-5L5 21" />
+            </div>
+
+            {/* Image column - Layer 1: the inspector (dominant) */}
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+                <Image
+                  src="/gallery/yigal-bensky-mumche-bedek-bayit.webp"
+                  alt={t("hero.imageAlt")}
+                  fill
+                  sizes="(max-width: 1024px) 80vw, 40vw"
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div className="absolute inset-x-0 bottom-0 p-4 text-white text-start">
+                  <p className="text-xl font-bold drop-shadow">יגאל בנסקי</p>
+                  <p className="text-sm text-blue-100 font-medium">{t("hero.badge")}</p>
+                </div>
+              </div>
+              {/* Layer 2 reference: floating report/credential chip */}
+              <div className="hidden sm:flex absolute -top-3 -start-3 items-center gap-2 bg-white text-slate-900 rounded-xl shadow-xl px-3.5 py-2.5 ring-1 ring-black/5">
+                <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 shrink-0">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6M9 13h6M9 17h6" />
                   </svg>
                 </span>
-                גלריית תמונות
-              </a>
+                <span className="text-sm font-bold leading-tight">{t("hero.trust2")}</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent"></div>
+        {/* Decorative bottom fade */}
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      {/* Credibility strip - real photos of equipment, defects and the inspector */}
+      <section className="bg-white py-10 md:py-14 border-b border-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-balance">{t("strip.title")}</h2>
+            <p className="mt-2 text-slate-600 text-pretty">{t("strip.subtitle")}</p>
+          </div>
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { src: "/gallery/yigal-bensky-mumche-bedek-bayit.webp", label: "strip.item1" },
+              { src: "/gallery/matzlema-termit-itur-retivut.webp", label: "strip.item2" },
+              { src: "/gallery/mad-lachut-protimeter-bedek-bayit.webp", label: "strip.item3" },
+              { src: "/gallery/maflest-laser-anchiyut-bedek-bayit.webp", label: "strip.item4" },
+              { src: "/gallery/likui-sedek-kir-hitzoni.webp", label: "strip.item5" },
+            ].map((item) => (
+              <li key={item.src}>
+                <a
+                  href="/gallery"
+                  className="group block rounded-xl overflow-hidden ring-1 ring-slate-200 hover:ring-blue-400 hover:shadow-lg transition-all duration-200"
+                >
+                  <div className="relative aspect-square overflow-hidden bg-slate-100">
+                    <Image
+                      src={item.src || "/placeholder.svg"}
+                      alt={t(item.label)}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 20vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <span className="block text-center text-sm font-semibold text-slate-700 px-2 py-2.5">
+                    {t(item.label)}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
 
       {/* Business ID Card Video Dialog */}

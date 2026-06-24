@@ -15,10 +15,25 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero
     "hero.title": "בדק בית הנדסי - איתור ליקויי בניה",
-    "hero.subtitle1": "בדק בית הנדסי לדירות חדשות ויד שניה",
+    "hero.subtitle1": "איתור ליקויי בנייה לפני רכישת דירה, קבלת דירה מקבלן ובדיקת בתים פרטיים",
     "hero.subtitle2": "חוות דעת מומחה לפני או לאחר מסירת דירה | חוות דעת משפטית | חוות דעת נגדית פנים ארגונית",
     "hero.cta": "צור קשר עכשיו",
     "hero.moreInfo": "הכרות עם ליגל בדק בית - Legal",
+    "hero.trust1": "ניסיון רב-שנים בהנדסת בניין",
+    "hero.trust2": "דוחות הנדסיים מקצועיים ומפורטים",
+    "hero.trust3": "ציוד מדידה מתקדם",
+    "hero.trust4": "שירות בכל רחבי הארץ",
+    "hero.ctaPrimary": "קבלו הצעת מחיר",
+    "hero.ctaSecondary": "שיחת ייעוץ ללא התחייבות",
+    "hero.badge": "מומחה מוסמך · איגוד המהנדסים",
+    "hero.imageAlt": "יגאל בנסקי, מומחה בדק בית מוסמך, עם קסדת מגן בעת ביצוע בדיקה הנדסית ואיתור ליקויי בנייה",
+    "strip.title": "כך נראית בדיקה הנדסית מקצועית",
+    "strip.subtitle": "ציוד מדידה מתקדם ותיעוד ליקויים מדויק בכל בדיקה",
+    "strip.item1": "מומחה באתר הבדיקה",
+    "strip.item2": "מצלמה תרמית",
+    "strip.item3": "מד לחות Protimeter",
+    "strip.item4": "מפלסת לייזר",
+    "strip.item5": "תיעוד ליקוי בנייה",
     
     // Contact Section
     "contact.title": "צריכים בדק בית לנכס – דירה, בית פרטי או בניין?",
@@ -82,10 +97,25 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero
     "hero.title": "Engineering Home Inspection & Building Defect Detection",
-    "hero.subtitle1": "Engineering home inspection for new & second-hand apartments",
+    "hero.subtitle1": "Detecting building defects before buying an apartment, receiving a new apartment from the contractor, and inspecting private homes",
     "hero.subtitle2": "Expert opinion before or after apartment delivery | Legal opinion | Internal counter-opinion",
     "hero.cta": "Contact Us Now",
     "hero.moreInfo": "About Legal Bedek Bayit",
+    "hero.trust1": "Years of building-engineering experience",
+    "hero.trust2": "Professional, detailed engineering reports",
+    "hero.trust3": "Advanced measuring equipment",
+    "hero.trust4": "Service throughout Israel",
+    "hero.ctaPrimary": "Get a Quote",
+    "hero.ctaSecondary": "Free Consultation Call",
+    "hero.badge": "Certified Expert · Association of Engineers",
+    "hero.imageAlt": "Yigal Bensky, certified home-inspection expert, wearing a safety helmet during an engineering inspection",
+    "strip.title": "What a professional engineering inspection looks like",
+    "strip.subtitle": "Advanced measuring equipment and precise defect documentation in every inspection",
+    "strip.item1": "Inspector on site",
+    "strip.item2": "Thermal camera",
+    "strip.item3": "Protimeter moisture meter",
+    "strip.item4": "Laser level",
+    "strip.item5": "Documented building defect",
     
     // Contact Section
     "contact.title": "Need a home inspection – apartment, private house or building?",
@@ -149,10 +179,25 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero
     "hero.title": "Инженерная проверка дома и выявление строительных дефектов",
-    "hero.subtitle1": "Инженерная проверка для новых квартир и квартир со вторых рук",
+    "hero.subtitle1": "Выявление строительных дефектов перед покупкой квартиры, приёмкой новой квартиры у застройщика и проверкой частных домов",
     "hero.subtitle2": "Экспертное заключение до или после передачи квартиры | Юридическое заключение | Внутреннее контр-заключение",
     "hero.cta": "Связаться сейчас",
     "hero.moreInfo": "Знакомство с Legal Bedek Bayit",
+    "hero.trust1": "Многолетний опыт в строительной инженерии",
+    "hero.trust2": "Профессиональные подробные инженерные отчёты",
+    "hero.trust3": "Современное измерительное оборудование",
+    "hero.trust4": "Обслуживание по всему Израилю",
+    "hero.ctaPrimary": "Получить предложение",
+    "hero.ctaSecondary": "Бесплатная консультация",
+    "hero.badge": "Сертифицированный эксперт · Союз инженеров",
+    "hero.imageAlt": "Игаль Бенски, сертифицированный эксперт по проверке домов, в защитной каске во время инженерной проверки",
+    "strip.title": "Как выглядит профессиональная инженерная проверка",
+    "strip.subtitle": "Современное оборудование и точная документация дефектов при каждой проверке",
+    "strip.item1": "Эксперт на объекте",
+    "strip.item2": "Тепловизор",
+    "strip.item3": "Влагомер Protimeter",
+    "strip.item4": "Лазерный уровень",
+    "strip.item5": "Зафиксированный дефект",
     
     // Contact Section
     "contact.title": "Нужна проверка недвижимости – квартира, дом или здание?",
@@ -162,7 +207,7 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Peace of Mind Section
     "peace.title": "Спокойствие и профессиональная поддержка для всех типов недвижимости",
-    "peace.description": "Покупатели квартир со вторых рук - Инженерная проверка дома дает вам мощный инструмент для снижения цены на десятки тысяч шекелей. Покупатели новых квартир - Обнаруженные дефекты могут дать право на значительную компенсацию от подрядчика. С сертификатом Ассоциации инженеров и лицензией Министерства труда мы предоставляем подробные профессиональные отчеты. Для подрядчиков - Профессиональное контр-заключение.",
+    "peace.description": "Покупатели квартир со вторых рук - Инженерная проверка дома дает вам мощный инструмент для снижения цены на десятки тысяч шекелей. Покупатели новых квартир - Обнаруженные дефекты могут дать право на значительную ком��енсацию от подрядчика. С сертификатом Ассоциации инженеров и лицензией Министерства труда мы предоставляем подробные профессиональные отчеты. Для подрядчиков - Профессиональное контр-заключение.",
     
     // Short Notice Section
     "shortNotice.title": "Срочная проверка дома - Новые квартиры и квартиры со вторых рук",
@@ -197,7 +242,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "testimonials.title": "Что говорят наши клиенты",
     "testimonials.subtitle": "Реальные отзывы довольных клиентов",
     "testimonials.googleBadge": "Отзывы Google",
-    "testimonials.viewAll": "Смотреть все отзывы",
+    "testimonials.viewAll": "Смотреть все отзыв��",
     "testimonials.whatsappTitle": "Проверенные рекомендации WhatsApp",
     
     // Footer
@@ -216,10 +261,25 @@ export const translations: Record<Language, Record<string, string>> = {
     
     // Hero
     "hero.title": "Inspection Immobilière et Détection de Défauts de Construction",
-    "hero.subtitle1": "Inspection immobilière pour appartements neufs et d'occasion",
+    "hero.subtitle1": "Détection des défauts de construction avant l'achat d'un appartement, la réception d'un logement neuf et l'inspection de maisons privées",
     "hero.subtitle2": "Avis d'expert avant ou après livraison | Avis juridique | Contre-avis interne",
     "hero.cta": "Contactez-nous",
     "hero.moreInfo": "Découvrez Legal Bedek Bayit",
+    "hero.trust1": "Des années d'expérience en ingénierie du bâtiment",
+    "hero.trust2": "Rapports d'ingénierie professionnels et détaillés",
+    "hero.trust3": "Équipement de mesure avancé",
+    "hero.trust4": "Service dans tout Israël",
+    "hero.ctaPrimary": "Obtenir un devis",
+    "hero.ctaSecondary": "Appel de consultation gratuit",
+    "hero.badge": "Expert certifié · Association des ingénieurs",
+    "hero.imageAlt": "Yigal Bensky, expert certifié en inspection immobilière, portant un casque de sécurité lors d'une inspection technique",
+    "strip.title": "À quoi ressemble une inspection technique professionnelle",
+    "strip.subtitle": "Équipement de mesure avancé et documentation précise des défauts à chaque inspection",
+    "strip.item1": "Expert sur site",
+    "strip.item2": "Caméra thermique",
+    "strip.item3": "Humidimètre Protimeter",
+    "strip.item4": "Niveau laser",
+    "strip.item5": "Défaut documenté",
     
     // Contact Section
     "contact.title": "Besoin d'une inspection – appartement, maison ou immeuble?",

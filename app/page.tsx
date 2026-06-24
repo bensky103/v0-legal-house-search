@@ -18,7 +18,6 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { WhatsAppButton } from "@/components/whatsapp-button"
-import { ContactForm } from "@/components/contact-form"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SiteIndex } from "@/components/site-index"
 import { useLanguage } from "@/contexts/language-context"
@@ -345,57 +344,6 @@ export default function HomePage() {
           </div>
         </DialogContent>
       </Dialog>
-
-      {/* Contact Us Section - Top Priority */}
-      <section
-        id="contact-section"
-        className="py-12 md:py-16 bg-gradient-to-r from-blue-500 to-blue-600 text-white relative overflow-hidden"
-      >
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 text-balance">
-              {t("contact.subtitle")}
-            </h2>
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-10 md:mb-12">
-              <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-sm md:text-base font-medium">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-                התייעצות חינם
-              </span>
-              <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-sm md:text-base font-medium">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-                בדיקה הנדסית מקיפה
-              </span>
-              <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 text-sm md:text-base font-medium">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 6 9 17l-5-5" />
-                </svg>
-                שירות בכל הארץ
-              </span>
-            </div>
-
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-              {/* Contact Form */}
-              <div className="w-full max-w-md">
-                <ContactForm />
-              </div>
-
-              {/* WhatsApp Button - Positioned for better mobile/desktop experience */}
-              <div className="flex flex-col items-center gap-4">
-                <button
-                  onClick={() => window.open("https://wa.me/972506277858", "_blank")}
-                  className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 text-lg shadow-lg rounded-lg transition-colors flex items-center gap-2"
-                >
-                  WhatsApp
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-gradient-to-l from-blue-100 to-gray-50">
@@ -915,8 +863,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-12 md:py-16 bg-blue-600 text-white">
+      {/* Call to Action Section — also serves as the primary contact anchor */}
+      <section id="contact-section" className="scroll-mt-20 py-12 md:py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
@@ -929,17 +877,15 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
               <WhatsAppButton className="bg-green-500 hover:bg-green-600 w-full sm:w-auto" size="lg" />
-              <button
-                onClick={() => {
-                  const contactSection = document.getElementById("contact-section")
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: "smooth" })
-                  }
-                }}
-                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto"
+              <a
+                href="tel:+972506277858"
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors w-full sm:w-auto"
               >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
                 זימון מומחה
-              </button>
+              </a>
             </div>
           </div>
         </div>

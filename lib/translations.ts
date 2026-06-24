@@ -35,6 +35,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "strip.item3": "מד לחות Protimeter",
     "strip.item4": "מפלסת לייזר",
     "strip.item5": "תיעוד ליקוי בנייה",
+    "strip.viewGallery": "צפה בגלריה",
+    "strip.clickHint": "לחצו על תמונה למעבר לגלריה המלאה",
     
     // Contact Section
     "contact.title": "צריכים בדק בית לנכס – דירה, בית פרטי או בניין?",
@@ -118,6 +120,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "strip.item3": "Protimeter moisture meter",
     "strip.item4": "Laser level",
     "strip.item5": "Documented building defect",
+    "strip.viewGallery": "View gallery",
+    "strip.clickHint": "Tap an image to open the full gallery",
     
     // Contact Section
     "contact.title": "Need a home inspection – apartment, private house or building?",
@@ -201,6 +205,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "strip.item3": "Влагомер Protimeter",
     "strip.item4": "Лазерный уровень",
     "strip.item5": "Зафиксированный дефект",
+    "strip.viewGallery": "Открыть галерею",
+    "strip.clickHint": "Нажмите на фото, чтобы открыть всю галерею",
     
     // Contact Section
     "contact.title": "Нужна проверка недвижимости – квартира, дом или здание?",
@@ -284,6 +290,8 @@ export const translations: Record<Language, Record<string, string>> = {
     "strip.item3": "Humidimètre Protimeter",
     "strip.item4": "Niveau laser",
     "strip.item5": "Défaut documenté",
+    "strip.viewGallery": "Voir la galerie",
+    "strip.clickHint": "Cliquez sur une image pour voir toute la galerie",
     
     // Contact Section
     "contact.title": "Besoin d'une inspection – appartement, maison ou immeuble?",

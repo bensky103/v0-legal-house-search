@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { Eye } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -170,6 +171,10 @@ export default function HomePage() {
           <div className="text-center max-w-2xl mx-auto mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-balance">{t("strip.title")}</h2>
             <p className="mt-2 text-slate-600 text-pretty">{t("strip.subtitle")}</p>
+            <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-blue-600">
+              <Eye className="w-4 h-4" aria-hidden="true" />
+              {t("strip.clickHint")}
+            </p>
           </div>
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
@@ -182,7 +187,8 @@ export default function HomePage() {
               <li key={item.src}>
                 <a
                   href="/gallery"
-                  className="group block rounded-xl overflow-hidden ring-1 ring-slate-200 hover:ring-blue-400 hover:shadow-lg transition-all duration-200"
+                  aria-label={`${t(item.label)} – ${t("strip.viewGallery")}`}
+                  className="group relative block rounded-xl overflow-hidden ring-1 ring-slate-200 hover:ring-blue-400 hover:shadow-lg transition-all duration-200"
                 >
                   <div className="relative aspect-square overflow-hidden bg-slate-100">
                     <Image
@@ -192,8 +198,21 @@ export default function HomePage() {
                       sizes="(max-width: 768px) 50vw, 20vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
+
+                    {/* Persistent cue – stays visible on touch devices that have no hover */}
+                    <span className="absolute top-2 end-2 flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/55 text-white ring-1 ring-white/25 shadow-sm backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-0">
+                      <Eye className="h-4 w-4" aria-hidden="true" />
+                    </span>
+
+                    {/* Hover overlay – explicit "view gallery" call to action */}
+                    <span className="absolute inset-0 flex items-center justify-center bg-slate-900/45 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                      <span className="flex translate-y-1 items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-sm font-semibold text-slate-900 shadow-md transition-transform duration-200 group-hover:translate-y-0">
+                        <Eye className="h-4 w-4" aria-hidden="true" />
+                        {t("strip.viewGallery")}
+                      </span>
+                    </span>
                   </div>
-                  <span className="block text-center text-sm font-semibold text-slate-700 px-2 py-2.5">
+                  <span className="block text-center text-sm font-semibold text-slate-700 px-2 py-2.5 transition-colors group-hover:text-blue-600">
                     {t(item.label)}
                   </span>
                 </a>

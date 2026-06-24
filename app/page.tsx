@@ -44,51 +44,50 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero - layered, conversion-focused */}
-      <section className="relative overflow-hidden">
-        {/* Layer 3: blurred modern residential building (secondary, soft) */}
+      {/* Hero - bright, optimistic, conversion-focused */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 to-white">
+        {/* Bright modern residential tower + blue sky */}
         <div className="absolute inset-0">
           <Image
             src="/images/binyanim-moderniim-israel-bedek-bayit.webp"
-            alt=""
-            aria-hidden="true"
+            alt={t("hero.bgAlt")}
             fill
             sizes="100vw"
-            className="object-cover scale-110 blur-[3px]"
+            className="object-cover object-top"
             priority
           />
-          {/* Dark overlay for premium look + text readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/80 to-blue-950/85"></div>
+          {/* Light wash overlay - keeps the image bright while ensuring readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-sky-200/20 via-white/35 to-white/75"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-            {/* Text column */}
-            <div className="text-center lg:text-start text-white">
-              <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/20 border border-blue-300/40 px-4 py-1.5 text-sm font-semibold text-blue-50 backdrop-blur-sm mb-5">
-                <svg className="w-4 h-4 fill-blue-200" viewBox="0 0 24 24" aria-hidden="true">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Text column - frosted card for guaranteed readability */}
+            <div className="rounded-3xl bg-white/80 backdrop-blur-md ring-1 ring-white/70 shadow-xl p-6 md:p-8 text-center lg:text-start">
+              <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 border border-blue-200 px-4 py-1.5 text-sm font-semibold text-blue-700 mb-5">
+                <svg className="w-4 h-4 fill-blue-600" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1.2 14.5L7 11.7l1.4-1.4 2.4 2.4 5-5L17.2 9l-6.4 6.5z" />
                 </svg>
                 {t("hero.badge")}
               </span>
 
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-balance text-slate-900">
                 {t("hero.title")}
               </h2>
-              <p className="mt-4 text-lg md:text-xl text-blue-50/95 font-medium leading-relaxed text-pretty max-w-xl mx-auto lg:mx-0">
+              <p className="mt-4 text-lg md:text-xl text-slate-700 font-medium leading-relaxed text-pretty">
                 {t("hero.subtitle1")}
               </p>
 
               {/* Trust elements */}
-              <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto lg:mx-0">
+              <ul className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {["hero.trust1", "hero.trust2", "hero.trust3", "hero.trust4"].map((key) => (
                   <li key={key} className="flex items-center gap-2.5 text-start">
-                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500/90 shrink-0">
+                    <span className="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500 shrink-0">
                       <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
                     </span>
-                    <span className="text-base md:text-lg font-semibold text-white/95">{t(key)}</span>
+                    <span className="text-base md:text-lg font-semibold text-slate-800">{t(key)}</span>
                   </li>
                 ))}
               </ul>
@@ -97,7 +96,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="#contact-section"
-                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/30"
+                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/20"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -107,7 +106,7 @@ export default function HomePage() {
                 </a>
                 <a
                   href="tel:+972506277858"
-                  className="inline-flex items-center justify-center gap-2.5 bg-white/10 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white border-2 border-blue-600 text-blue-700 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-sm"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -118,11 +117,11 @@ export default function HomePage() {
 
               <button
                 onClick={() => setVideoOpen(true)}
-                className="mt-5 inline-flex items-center gap-2 text-blue-100 hover:text-white text-sm font-semibold transition-colors mx-auto lg:mx-0"
+                className="mt-5 inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 text-sm font-semibold transition-colors mx-auto lg:mx-0"
                 aria-label={t("hero.moreInfo")}
               >
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-white/15 hover:bg-white/25 transition-colors shrink-0">
-                  <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24" aria-hidden="true">
+                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 hover:bg-blue-200 transition-colors shrink-0">
+                  <svg className="w-3.5 h-3.5 fill-blue-700" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </span>
@@ -130,24 +129,24 @@ export default function HomePage() {
               </button>
             </div>
 
-            {/* Image column - Layer 1: the inspector (dominant) */}
-            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm lg:max-w-md">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl">
+            {/* Image column - the inspector next to the service vehicle */}
+            <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-white/70 shadow-2xl">
                 <Image
-                  src="/gallery/yigal-bensky-mumche-bedek-bayit.webp"
+                  src="/gallery/yigal-bensky-rechev-bedek-bayit.webp"
                   alt={t("hero.imageAlt")}
                   fill
-                  sizes="(max-width: 1024px) 80vw, 40vw"
+                  sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white text-start">
                   <p className="text-xl font-bold drop-shadow">יגאל בנסקי</p>
-                  <p className="text-sm text-blue-100 font-medium">{t("hero.badge")}</p>
+                  <p className="text-sm text-blue-50 font-medium drop-shadow">{t("hero.badge")}</p>
                 </div>
               </div>
-              {/* Layer 2 reference: floating report/credential chip */}
+              {/* Floating credential chip */}
               <div className="hidden sm:flex absolute -top-3 -start-3 items-center gap-2 bg-white text-slate-900 rounded-xl shadow-xl px-3.5 py-2.5 ring-1 ring-black/5">
                 <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 shrink-0">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

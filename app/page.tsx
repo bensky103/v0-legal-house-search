@@ -2,7 +2,19 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { Eye } from "lucide-react"
+import {
+  Eye,
+  Users,
+  Search,
+  HardHat,
+  DraftingCompass,
+  ShieldCheck,
+  Ruler,
+  Scale,
+  ClipboardCheck,
+  Clock,
+  ArrowLeft,
+} from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { WhatsAppButton } from "@/components/whatsapp-button"
@@ -10,6 +22,93 @@ import { ContactForm } from "@/components/contact-form"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SiteIndex } from "@/components/site-index"
 import { useLanguage } from "@/contexts/language-context"
+
+// Engineering "spec-sheet" section heading: mono index + tick + eyebrow over the title.
+function SectionHeading({
+  index,
+  eyebrow,
+  title,
+  subtitle,
+}: {
+  index: string
+  eyebrow: string
+  title: string
+  subtitle?: string
+}) {
+  return (
+    <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
+      <div className="flex items-center justify-center gap-2.5">
+        <span className="font-mono text-xs font-bold tracking-[0.25em] text-blue-600">{index}</span>
+        <span className="h-px w-8 bg-blue-600/40" aria-hidden="true" />
+        <span className="text-sm font-bold tracking-wide text-blue-700">{eyebrow}</span>
+      </div>
+      <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 text-balance">
+        {title}
+      </h2>
+      {subtitle && <p className="mt-3 text-slate-600 text-pretty leading-relaxed">{subtitle}</p>}
+    </div>
+  )
+}
+
+const AUDIENCE_ITEMS = [
+  {
+    icon: Users,
+    title: "ועדי בתים ובעלי דירות",
+    desc: "בדיקות הנדסיות מקצועיות עבור ועדי בתים, לאימות איכות הבנייה ובטיחות המבנה המשותף",
+  },
+  {
+    icon: Search,
+    title: "בעלי נכס פרטי ורוכשי דירות",
+    desc: "בדק בית מקיף לפני רכישת דירה או בית פרטי — איתור ליקויי בנייה לפני מסירה מהקבלן",
+  },
+  {
+    icon: HardHat,
+    title: "קבלנים ומתכננים",
+    desc: "ליווי הנדסי מקצועי בתהליכי שיפוץ, תכנון ובקרת איכות באתר הבנייה",
+  },
+  {
+    icon: DraftingCompass,
+    title: "יזמים ואדריכלים",
+    desc: "בדיקות באתר, פיקוח בנייה ותמונת מצב הנדסית מקצועית ללקוחות לפני ואחרי עבודות",
+  },
+]
+
+const SERVICE_ITEMS = [
+  {
+    icon: ShieldCheck,
+    title: "בדק בית הנדסי",
+    desc: "בדיקה מקיפה לאיתור ליקויים קונסטרוקטיביים, בעיות איטום, רטיבות, ליקויי גמר ובעיות בטיחות",
+    img: "/gallery/likui-sedek-kir-hitzoni.webp",
+    alt: "בדק בית הנדסי - איתור סדק בקיר חיצוני של מבנה מגורים, ליקוי בנייה קונסטרוקטיבי שאותר בבדיקה הנדסית מקצועית",
+  },
+  {
+    icon: Ruler,
+    title: "מומחה בדק בית",
+    desc: "בדיקות מקצועיות של מבנים, יציבות קונסטרוקציה, מישוריות ובטיחות מבנית",
+    img: "/gallery/bedikat-mishoriyut-ritzuf-peles-aroch.webp",
+    alt: "מומחה בדק בית בודק מישוריות ריצוף בעזרת פלס ארוך - איתור ליקויי בנייה ברצפה בבדק בית לדירה חדשה",
+  },
+  {
+    icon: Scale,
+    title: "חוות דעת נגדית מוסמכת",
+    desc: "הכנת חוות דעת הנדסית נגדית מוסמכת לצורך הליכים משפטיים, ביטוחיים או מול קבלנים",
+    img: "/gallery/matzlema-termit-itur-retivut.webp",
+    alt: "מצלמה תרמית לאיתור רטיבות ונזילות נסתרות בקיר - בדק בית מתקדם לצורך חוות דעת הנדסית נגדית מוסמכת",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "ליווי מקצועי ואיתור ליקויי בנייה",
+    desc: "ליווי וייעוץ מקצועי לאורך כל התהליך, כולל הפניה למומחים ולמעבדות מכון התקנים",
+    img: "/gallery/bedikat-nikuz-matzlemat-endoskop.webp",
+    alt: "בדיקת ניקוז וצנרת בעזרת מצלמת אנדוסקופ - איתור סתימות וליקויי אינסטלציה במסגרת בדק בית מקצועי",
+  },
+]
+
+const PRICING_ROWS = [
+  { label: "ליווי משפטי", value: 'ליווי משפטי על פי דרישה לאורך ההליך מול הקבלן' },
+  { label: "ליווי במשא ומתן", value: "ליווי וייצוג מקצועי במשא ומתן מול קבלנים" },
+  { label: "תמחור נוסף", value: 'תמחור נוסף עבור ליקויים שלא נפתרו לאחר חוות הדעת' },
+]
 
 export default function HomePage() {
   const { t, direction } = useLanguage()
@@ -312,26 +411,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Short Notice Banner */}
-      <section className="py-8 md:py-12 bg-gradient-to-l from-amber-50 to-orange-50 border-y border-amber-200">
+      {/* Short Notice Banner — engineering "field note" callout */}
+      <section className="py-8 md:py-12 bg-slate-50 border-y border-slate-200">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 text-right" dir="rtl">
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-amber-100 rounded-full flex items-center justify-center shrink-0">
-              <svg className="w-8 h-8 md:w-10 md:h-10 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                {t("shortNotice.title")}
-              </h3>
-              <div className="space-y-3">
-                <p className="text-base md:text-lg text-gray-800 leading-relaxed">
-                  <strong>{t("shortNotice.new")}</strong> {t("shortNotice.newDesc")}
-                </p>
-                <p className="text-base md:text-lg text-gray-800 leading-relaxed">
-                  <strong>{t("shortNotice.used")}</strong> {t("shortNotice.usedDesc")}
-                </p>
+          <div className="max-w-4xl mx-auto relative overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 shadow-sm">
+            {/* leading accent bar (RTL-aware) */}
+            <span className="absolute inset-y-0 start-0 w-1.5 bg-blue-600" aria-hidden="true" />
+            <div className="blueprint-grid absolute inset-0 opacity-60" aria-hidden="true" />
+            <div className="relative flex flex-col md:flex-row items-start gap-5 md:gap-6 p-6 md:p-8 text-right" dir="rtl">
+              <div className="flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-xl bg-blue-600/10 ring-1 ring-blue-600/20 shrink-0">
+                <Clock className="w-7 h-7 md:w-8 md:h-8 text-blue-700" aria-hidden="true" />
+              </div>
+              <div>
+                <span className="font-mono text-xs font-bold tracking-[0.2em] text-blue-600">חלון זמן קריטי</span>
+                <h3 className="mt-1.5 text-xl md:text-2xl font-bold text-slate-900">
+                  {t("shortNotice.title")}
+                </h3>
+                <div className="mt-3 space-y-3">
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">{t("shortNotice.new")}</strong> {t("shortNotice.newDesc")}
+                  </p>
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
+                    <strong className="text-slate-900">{t("shortNotice.used")}</strong> {t("shortNotice.usedDesc")}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -339,247 +442,111 @@ export default function HomePage() {
       </section>
 
       {/* Target Audience Section */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
-            {t("audience.title")}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 md:w-8 md:h-8 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
+          <SectionHeading index="01" eyebrow="למי זה מיועד" title={t("audience.title")} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {AUDIENCE_ITEMS.map((item, i) => {
+              const Icon = item.icon
+              return (
+                <div
+                  key={item.title}
+                  className="group spec-ticks relative overflow-hidden rounded-xl bg-white p-6 ring-1 ring-slate-200 transition-all duration-200 hover:ring-blue-300 hover:shadow-lg hover:shadow-blue-900/5"
+                >
+                  {/* top accent rule grows on hover */}
+                  <span className="absolute inset-x-0 top-0 h-1 origin-right scale-x-0 bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true" />
+                  <div className="flex items-center justify-between">
+                    <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:ring-blue-600">
+                      <Icon className="w-6 h-6 text-blue-700 transition-colors group-hover:text-white" aria-hidden="true" />
+                    </span>
+                    <span className="font-mono text-xs font-bold tracking-widest text-slate-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-base md:text-lg font-bold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm md:text-[0.95rem] text-slate-600 leading-relaxed">{item.desc}</p>
                 </div>
-                <CardTitle className="text-base md:text-lg">ועדי עובדים ובעלי דירות</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm md:text-base text-gray-800">
-                  בדיקות מקצועיות עבור ועדי עובדים לוודא איכות הבנייה ובטיחות המבנה
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 md:w-8 md:h-8 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                    />
-                  </svg>
-                </div>
-                <CardTitle className="text-base md:text-lg">בעלי נכס פרטי ורוכשי דירות</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm md:text-base text-gray-800">
-                  בדיקה מקיפה לפני רכישת דירה או בית פרטי - בדק בית מקצועי
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 md:w-8 md:h-8 text-orange-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                </div>
-                <CardTitle className="text-base md:text-lg">קבלנים ומתכננים</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm md:text-base text-gray-800">ליווי מקצועי בתהליכי שיפוץ ותכנון</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-6 h-6 md:w-8 md:h-8 text-purple-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                    />
-                  </svg>
-                </div>
-                <CardTitle className="text-base md:text-lg">{"יזמים ואדריכלים"}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm md:text-base text-gray-800">בדיקות באתר, פיקוח בנייה ותמונת מצב מקצועית ללקוחות לפני ואחרי עבודות</p>
-              </CardContent>
-            </Card>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
-            {t("services.title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center ml-3">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+      {/* Services Section — engineering service cards grounded in real field photos */}
+      <section className="relative py-14 md:py-20 bg-slate-50">
+        <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
+        <div className="relative container mx-auto px-4">
+          <SectionHeading
+            index="02"
+            eyebrow="תחומי השירות"
+            title={t("services.title")}
+            subtitle="כל בדיקה מבוצעת בכלים הנדסיים מקצועיים ומתועדת בדוח מסודר"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7 max-w-5xl mx-auto">
+            {SERVICE_ITEMS.map((item) => {
+              const Icon = item.icon
+              return (
+                <article
+                  key={item.title}
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200 transition-all duration-200 hover:ring-blue-300 hover:shadow-xl hover:shadow-blue-900/5"
+                >
+                  <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                    <Image
+                      src={item.img}
+                      alt={item.alt}
+                      title={item.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/35 to-transparent" aria-hidden="true" />
                   </div>
-                  בדק בית הנדסי
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  בדיקה מקיפה לאיתור ליקויים קונסטרוקטיביים, בעיות איטום, רטיבות, ליקויי גמר ובעיות בטיחות
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center ml-3">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
+                  <div className="flex items-start gap-3.5 p-6">
+                    <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-lg bg-blue-600/10 ring-1 ring-blue-600/15">
+                      <Icon className="w-6 h-6 text-blue-700" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <h3 className="text-lg md:text-xl font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-1.5 text-slate-600 leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                  מומחה בדק בית
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">בדיקות מקצועיות של מבנים, יציבות קונסטרוקציה ובטיחות מבנית</p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center ml-3">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                  </div>
-                  חוות דעת נגדית מוסמכת
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  הכנת חוות דעת מקצועית נגדית מוסמכת לצורך הליכים משפטיים, ביטוחיים או מול קבלנים
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center ml-3">
-                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z"
-                      />
-                    </svg>
-                  </div>
-                  ליווי מקצועי ואיתור ליקויי בנייה
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">ליווי וייעוץ מקצועי לאורך כל התהליך הפניה למומחים ולמעבדות מכון התקנים </p>
-              </CardContent>
-            </Card>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-12 md:py-16 bg-white">
+      {/* Pricing Section — "spec sheet" of pricing & add-on services */}
+      <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 md:mb-8">תמחור ושירותים נוספים</h2>
-            <Card className="text-right">
-              <CardContent className="p-4 md:p-8">
-                <div className="space-y-4 md:space-y-6">
-                  <div className="bg-blue-50 p-4 md:p-6 rounded-lg">
-                    <h3 className="text-lg md:text-xl font-semibold text-blue-900 mb-2 md:mb-3">תמחור</h3>
-                    <p className="text-sm md:text-base text-gray-800">
-                      המחיר נקבע על פי גודל הדירה/בית/בניין ומורכבות הבדיקה הנדרשת
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <div className="bg-green-50 p-4 md:p-6 rounded-lg">
-                      <h4 className="font-semibold text-green-900 mb-2">ליווי משפטי</h4>
-                      <p className="text-gray-800 text-sm">ליווי משפטי ע"פ דרישה </p>
-                    </div>
-
-                    <div className="bg-orange-50 p-4 md:p-6 rounded-lg">
-                      <h4 className="font-semibold text-orange-900 mb-2">ליווי במשא ומתן</h4>
-                      <p className="text-gray-800 text-sm">ליווי במשא ומתן עם קבלנים</p>
-                    </div>
-                  </div>
-
-                  <div className="bg-red-50 p-4 md:p-6 rounded-lg">
-                    <h4 className="font-semibold text-red-900 mb-2">תמחור נוסף</h4>
-                    <p className="text-gray-800"> תמחור נוסף עבור ליקויים שלא נפתרו לאחר חוו"ד </p>
-                  </div>
+          <SectionHeading index="03" eyebrow="תמחור הוגן ושקוף" title="תמחור ושירותים נוספים" />
+          <div className="max-w-3xl mx-auto">
+            <div className="overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm" dir="rtl">
+              {/* Headline pricing principle */}
+              <div className="relative overflow-hidden bg-slate-900 p-6 md:p-8 text-right">
+                <div className="blueprint-grid-dark pointer-events-none absolute inset-0" aria-hidden="true" />
+                <div className="relative">
+                  <span className="font-mono text-xs font-bold tracking-[0.2em] text-blue-400">איך נקבע המחיר</span>
+                  <h3 className="mt-2 text-xl md:text-2xl font-bold text-white">תמחור לפי היקף הבדיקה</h3>
+                  <p className="mt-2 text-slate-300 leading-relaxed">
+                    המחיר נקבע על פי גודל הדירה, הבית או הבניין ומורכבות הבדיקה ההנדסית הנדרשת
+                  </p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+              {/* Add-on services as spec rows */}
+              <dl className="divide-y divide-slate-200 bg-white">
+                {PRICING_ROWS.map((row) => (
+                  <div key={row.label} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 p-5 md:px-8 text-right">
+                    <dt className="sm:w-44 shrink-0 font-bold text-slate-900 flex items-center gap-2">
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-600 shrink-0" aria-hidden="true" />
+                      {row.label}
+                    </dt>
+                    <dd className="text-slate-600 leading-relaxed">{row.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </div>
         </div>
       </section>
@@ -587,11 +554,13 @@ export default function HomePage() {
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-4">
-            {t("testimonials.title")}
-          </h2>
-          <p className="text-center text-gray-600 mb-4">{t("testimonials.subtitle")}</p>
-          
+          <SectionHeading
+            index="04"
+            eyebrow="לקוחות ממליצים"
+            title={t("testimonials.title")}
+            subtitle={t("testimonials.subtitle")}
+          />
+
           {/* Google Reviews Badge */}
           <div className="flex justify-center mb-8 md:mb-12">
             <a 
@@ -916,9 +885,8 @@ export default function HomePage() {
       {/* About Section */}
       <section id="about" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
-            אודות
-          </h2>
+          <SectionHeading index="05" eyebrow="מי עומד מאחורי הבדיקה" title="אודות" />
+
           <div className="max-w-2xl mx-auto">
             <Card className="hover:shadow-xl transition-shadow border-t-4 border-t-blue-500">
               <CardContent className="p-8 md:p-10 text-right">

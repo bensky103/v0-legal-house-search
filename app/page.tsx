@@ -30,12 +30,10 @@ import { useLanguage } from "@/contexts/language-context"
 
 // Engineering "spec-sheet" section heading: mono index + tick + eyebrow over the title.
 function SectionHeading({
-  index,
   eyebrow,
   title,
   subtitle,
 }: {
-  index: string
   eyebrow: string
   title: string
   subtitle?: string
@@ -43,7 +41,6 @@ function SectionHeading({
   return (
     <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
       <div className="flex items-center justify-center gap-2.5">
-        <span className="font-mono text-xs font-bold tracking-[0.25em] text-blue-600">{index}</span>
         <span className="h-px w-8 bg-blue-600/40" aria-hidden="true" />
         <span className="text-sm font-bold tracking-wide text-blue-700">{eyebrow}</span>
       </div>
@@ -510,7 +507,6 @@ export default function HomePage() {
             {/* Intro & credentials column */}
             <div className="lg:col-span-3 text-center lg:text-start">
               <div className="flex items-center justify-center lg:justify-start gap-2.5">
-                <span className="font-mono text-xs font-bold tracking-[0.25em] text-blue-600">00</span>
                 <span className="h-px w-8 bg-blue-600/40" aria-hidden="true" />
                 <span className="text-sm font-bold tracking-wide text-blue-700">מי עומד מאחורי הבדיקה</span>
               </div>
@@ -601,7 +597,6 @@ export default function HomePage() {
       <section className="py-14 md:py-20 bg-white" dir="rtl">
         <div className="container mx-auto px-4">
           <SectionHeading
-            index="00"
             eyebrow="ניסיון מוכח בשטח"
             title="מספר רב מאוד של בדיקות — במגוון רחב של נכסים"
             subtitle="לאורך השנים ביצענו מספר רב מאוד של בדיקות בכל סוגי הנכסים: מדירות יד שנייה ודירות חדשות מקבלן, דרך בתים פרטיים ווילות ועד רכוש משותף, בדיקות במהלך בנייה וסכסוכי שכנים על רקע רטיבות"
@@ -761,7 +756,7 @@ export default function HomePage() {
       {/* Target Audience Section */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeading index="01" eyebrow="למי זה מיועד" title={t("audience.title")} />
+          <SectionHeading eyebrow="למי זה מיועד" title={t("audience.title")} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {AUDIENCE_ITEMS.map((item, i) => {
               const Icon = item.icon
@@ -794,7 +789,6 @@ export default function HomePage() {
         <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
         <div className="relative container mx-auto px-4">
           <SectionHeading
-            index="02"
             eyebrow="תחומי השירות"
             title={t("services.title")}
             subtitle="כל בדיקה מבוצעת בכלים הנדסיים מקצועיים ומתועדת בדוח מסודר"
@@ -837,7 +831,7 @@ export default function HomePage() {
       {/* Pricing Section — "spec sheet" of pricing & add-on services */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeading index="03" eyebrow="תמחור הוגן ושקוף" title="תמחור ושירותים נוספים" />
+          <SectionHeading eyebrow="תמחור הוגן ושקוף" title="תמחור ושירותים נוספים" />
           <div className="max-w-3xl mx-auto">
             <div className="overflow-hidden rounded-2xl ring-1 ring-slate-200 shadow-sm" dir="rtl">
               {/* Headline pricing principle */}
@@ -873,7 +867,6 @@ export default function HomePage() {
         <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
         <div className="relative container mx-auto px-4">
           <SectionHeading
-            index="04"
             eyebrow="אמון ואסמכתאות"
             title="הסמכות, ניסיון משפטי וציוד מקצועי"
             subtitle="האמון שלכם נבנה על הסמכה רשמית, ניסיון מוכח בבית משפט ובדיקה מתועדת בכלים הנדסיים"
@@ -983,7 +976,6 @@ export default function HomePage() {
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionHeading
-            index="05"
             eyebrow="לקוחות ממליצים"
             title={t("testimonials.title")}
             subtitle={t("testimonials.subtitle")}
@@ -1313,7 +1305,7 @@ export default function HomePage() {
       {/* About Section */}
       <section id="about" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeading index="06" eyebrow="מי עומד מאחורי הבדיקה" title="אודות" />
+          <SectionHeading eyebrow="מי עומד מאחורי הבדיקה" title="אודות" />
 
           <div className="max-w-2xl mx-auto">
             <Card className="hover:shadow-xl transition-shadow border-t-4 border-t-blue-500">
@@ -1360,7 +1352,7 @@ export default function HomePage() {
           }}
         />
         <div className="container mx-auto px-4">
-          <SectionHeading index="07" eyebrow="שאלות נפוצות" title="שאלות ותשובות על בדק בית" />
+          <SectionHeading eyebrow="שאלות נפוצות" title="שאלות ותשובות על בדק בית" />
           <div className="max-w-3xl mx-auto divide-y divide-slate-200">
             {HOMEPAGE_FAQ.map((item) => (
               <details key={item.question} className="group py-5">

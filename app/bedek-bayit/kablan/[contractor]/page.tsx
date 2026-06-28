@@ -11,8 +11,11 @@ export function generateMetadata({ params }: { params: { contractor: string } })
   const contractor = contractors.find((c) => c.slug === params.contractor)
   if (!contractor) return {}
 
+  const projectsHint = contractor.projects?.length
+    ? ` ביניהם ${contractor.projects.slice(0, 3).map((p) => p.split(",")[0].trim()).join(", ")}.`
+    : ""
   const title = `בדק בית לפרויקטים של ${contractor.name} | איתור ליקויי בנייה`
-  const description = `בדק בית הנדסי לדירות בפרויקטים של ${contractor.name} - בדיקה לפני מסירה, איתור ליקויי בנייה וחוות דעת מקצועית. מומחה מוסמך באיגוד המהנדסים. חייגו עכשיו!`
+  const description = `בדק בית הנדסי לדירות בפרויקטים של ${contractor.name} - בדיקה לפני מסירה, איתור ליקויי בנייה וחוות דעת מקצועית.${projectsHint} מומחה מוסמך באיגוד המהנדסים.`
 
   return {
     title,
@@ -53,6 +56,21 @@ export default function ContractorPage({ params }: { params: { contractor: strin
     .slice(0, 8)
     .map((c) => ({ label: `בדק בית - ${c.name}`, href: `/bedek-bayit/kablan/${c.slug}` }))
 
+  // Notable projects (public-sourced) — framed neutrally as projects we inspect,
+  // never as projects with defects, keeping the page's industry-wide framing.
+  const projects = contractor.projects ?? []
+  const projectsSection = projects.length
+    ? [
+        {
+          heading: `פרויקטים של ${contractor.name} שבהם אנו מבצעים בדק בית`,
+          paragraphs: [
+            `בין הפרויקטים הידועים של ${contractor.name} שבהם אנו מבצעים בדק בית לדירות חדשות לפני מסירה: ${projects.join("; ")}. בכל פרויקט אנו בודקים את הדירה באופן שיטתי — התאמה למפרט, ריצוף, איטום, אינסטלציה, חשמל ואלומיניום — ומתעדים כל ליקוי בדוח מקצועי.`,
+            `אם רכשתם דירה באחד הפרויקטים של ${contractor.name}, מומלץ לבצע בדק בית לפני קבלת המפתח — כדי לאתר ליקויים בזמן, בעוד תקופת הבדק והאחריות בתוקף, ולדרוש את תיקונם מהקבלן.`,
+          ],
+        },
+      ]
+    : []
+
   return (
     <SeoLandingTemplate
       badge={`בדק בית לפרויקטים של ${contractor.name}`}
@@ -86,6 +104,7 @@ export default function ContractorPage({ params }: { params: { contractor: strin
         },
       ]}
       contentSections={[
+        ...projectsSection,
         {
           heading: `למה חשוב בדק בית בפרויקט של ${contractor.name}?`,
           paragraphs: [
@@ -108,6 +127,16 @@ export default function ContractorPage({ params }: { params: { contractor: strin
           ],
         },
       ]}
+      bulletSections={
+        projects.length
+          ? [
+              {
+                heading: `בדק בית בפרויקטים של ${contractor.name}`,
+                items: projects.map((p) => `בדק בית בפרויקט ${p} של ${contractor.name}`),
+              },
+            ]
+          : undefined
+      }
       faq={[
         {
           question: `מתי כדאי לבצע בדק בית בפרויקט של ${contractor.name}?`,

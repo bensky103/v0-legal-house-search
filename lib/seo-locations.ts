@@ -280,6 +280,11 @@ export interface ContractorData {
   name: string // שם החברה
   nameWithShel: string // לשימוש אחרי "של" (של חברת אפי קפיטל)
   description: string
+  // Notable residential projects associated with the company, from public/official
+  // company sources (websites, Dun's 100, Madlan, news). Each as "שם הפרויקט, עיר".
+  // ⚠️ Sourced via public info and flagged for verification — confirm before relying
+  // on for any formal/legal claim. Used to target "בדק בית בפרויקט X" searches.
+  projects?: string[]
 }
 
 export const contractors: ContractorData[] = [
@@ -313,6 +318,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "ashdar",
+    projects: ["טאגור, יהוד מונוסון", "אשדר ארלוזורוב, רעננה", "אשדר רמב\"ם, רעננה"],
     name: "אשדר",
     nameWithShel: "אשדר",
     description:
@@ -320,6 +326,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "azorim",
+    projects: ["אזורים רחובות החדשה, רחובות", "הרצליה הילס, הרצליה", "אזורים פארק טאוור, תל אביב", "אזורים ליווינג, פתח תקווה"],
     name: "אזורים",
     nameWithShel: "אזורים",
     description:
@@ -327,6 +334,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "africa-israel",
+    projects: ["סביוני חריש, חריש", "סביוני השמורה, נתניה", "SOHO קדמת גונן, ירושלים", "סביוני קריית יובל, ירושלים"],
     name: "אפריקה ישראל מגורים",
     nameWithShel: "אפריקה ישראל מגורים",
     description:
@@ -334,6 +342,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "shikun-binui",
+    projects: ["OLAM, בקעת אונו", "חלומות קרית אונו, קרית אונו", "חלומות בן שמן", "חלומות גבעת זמר, חיפה"],
     name: "שיכון ובינוי",
     nameWithShel: "שיכון ובינוי",
     description:
@@ -341,6 +350,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "ihdmari",
+    projects: ["עיר היין, אשקלון", "סביוני ברנע, אשקלון", "רמות דמרי, באר שבע", "קריית גנים, באר שבע", "פארק הנחל, באר שבע"],
     name: "י.ח. דמרי",
     nameWithShel: "י.ח. דמרי",
     description:
@@ -348,6 +358,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "gindi",
+    projects: ["גינדי TLV, תל אביב", "גינדי מגדלי המוזיאון, ראשון לציון", "גינדי גרדנס, ראשון לציון", "גרנד גינדי, פתח תקווה", "גינדי רמת אביב, תל אביב"],
     name: "גינדי",
     nameWithShel: "גינדי",
     description:
@@ -397,6 +408,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "aura",
+    projects: ["הגנים התלויים, יהוד", "AURA The Strip, נתניה", "אאורה רמת השרון, רמת השרון", "אאורה גבעתיים, גבעתיים"],
     name: "אאורה",
     nameWithShel: "אאורה",
     description:
@@ -404,6 +416,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "rotstein",
+    projects: ["LOV, לוד", "BLUE & THE CITY, בת ים", "ERA, חדרה", "ENZO, אשדוד", "גאולים, רמת השרון"],
     name: "רוטשטיין",
     nameWithShel: "רוטשטיין",
     description:
@@ -418,6 +431,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "hanan-mor",
+    projects: ["מורשת, מודיעין", "חלומות ראש העין, ראש העין", "השכונה הירוקה, יבנה"],
     name: "חנן מור",
     nameWithShel: "חנן מור",
     description:

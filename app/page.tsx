@@ -40,8 +40,7 @@ function SectionHeading({
 }) {
   return (
     <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
-      <div className="flex items-center justify-center gap-2.5">
-        <span className="h-px w-8 bg-blue-600/40" aria-hidden="true" />
+      <div className="flex items-center justify-center">
         <span className="text-sm font-bold tracking-wide text-blue-700">{eyebrow}</span>
       </div>
       <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 text-balance">
@@ -506,8 +505,7 @@ export default function HomePage() {
 
             {/* Intro & credentials column */}
             <div className="lg:col-span-3 text-center lg:text-start">
-              <div className="flex items-center justify-center lg:justify-start gap-2.5">
-                <span className="h-px w-8 bg-blue-600/40" aria-hidden="true" />
+              <div className="flex items-center justify-center lg:justify-start">
                 <span className="text-sm font-bold tracking-wide text-blue-700">מי עומד מאחורי הבדיקה</span>
               </div>
               <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 text-balance">

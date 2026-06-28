@@ -47,7 +47,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-nitzvut-mashkof-delet-yad-shniya.webp",
-    standard: "ת״י 789 – סטיות מותרות בעבודות בנייה",
+    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
     title: "בדיקת ניצבות משקוף דלת",
     alt: "בדיקת ניצבות וזווית ישרה של משקוף דלת בעזרת זווית נגרים בדירה - איתור ליקויי התקנה בבדק בית",
     caption:

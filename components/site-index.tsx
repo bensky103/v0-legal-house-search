@@ -33,6 +33,9 @@ export function SiteIndex() {
     { label: "בדק בית בדירה חדשה", href: "/articles/bedek-bayit-dira-hadasha" },
     { label: "בדק בית לדירה יד שנייה", href: "/articles/bedek-bayit-dira-yad-shniya" },
     { label: "מתי להזמין בדק בית?", href: "/articles/matai-lehazmin-bedek-bayit" },
+    { label: "חוק המכר - תקופות בדק ואחריות", href: "/articles/chok-hamkar-dirot" },
+    { label: "תקני אינסטלציה (ת״י 1205)", href: "/articles/tikaney-instalatzia-bedek-bayit" },
+    { label: "ת״י 789 - סטיות מותרות", href: "/articles/taken-789-stiyot-mutarot" },
   ]
 
   return (

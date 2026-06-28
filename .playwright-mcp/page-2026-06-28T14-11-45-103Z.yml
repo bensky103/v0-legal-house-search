@@ -1,0 +1,1216 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - img "בדק בית Legal - מומחה מוסמך לאיתור ליקויי בנייה וחוות דעת הנדסית נגדית" [ref=e7]
+          - generic [ref=e8]:
+            - heading "בדק בית הנדסי - איתור ליקויי בניה – חוות דעת מומחה" [level=1] [ref=e9]
+            - paragraph [ref=e10]: בדק בית לדירות ונכסים חדשים ויד שניה | מומחה מטעם איגוד המהנדסים ת.ז. 17253030 | רישיון משרד העבודה 1641507
+        - generic [ref=e11]:
+          - button "Switch to עברית" [ref=e12]:
+            - generic [ref=e13]: עב
+            - img [ref=e14]
+          - button "Switch to English" [ref=e19]:
+            - generic [ref=e20]: EN
+            - img [ref=e21]
+          - button "Switch to Русский" [ref=e26]:
+            - generic [ref=e27]: РУ
+            - img [ref=e28]
+          - button "Switch to Français" [ref=e32]:
+            - generic [ref=e33]: FR
+            - img [ref=e34]
+    - generic [ref=e38]:
+      - img "מגדל מגורים חדש ומודרני בישראל על רקע שמיים כחולים - בדק בית לדירה חדשה ובדיקת איכות בנייה לפני מסירה מהקבלן" [ref=e40]
+      - generic [ref=e43]:
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - img [ref=e46]
+            - text: מומחה מוסמך · איגוד המהנדסים
+          - heading "בדק בית הנדסי - איתור ליקויי בניה" [level=2] [ref=e48]
+          - paragraph [ref=e49]: איתור ליקויי בנייה לפני רכישת דירה, קבלת דירה מקבלן ובדיקת בתים פרטיים
+          - list [ref=e50]:
+            - listitem [ref=e51]:
+              - img [ref=e53]
+              - generic [ref=e55]: ניסיון רב-שנים בהנדסת בניין
+            - listitem [ref=e56]:
+              - img [ref=e58]
+              - generic [ref=e60]: דוחות הנדסיים מקצועיים ומפורטים
+            - listitem [ref=e61]:
+              - img [ref=e63]
+              - generic [ref=e65]: ציוד מדידה מתקדם
+            - listitem [ref=e66]:
+              - img [ref=e68]
+              - generic [ref=e70]: שירות בכל רחבי הארץ
+          - generic [ref=e71]:
+            - link "קבלו הצעת מחיר" [ref=e72] [cursor=pointer]:
+              - /url: "#contact-section"
+              - img [ref=e73]
+              - text: קבלו הצעת מחיר
+            - link "שיחת ייעוץ ללא התחייבות" [ref=e76] [cursor=pointer]:
+              - /url: tel:+972506277858
+              - img [ref=e77]
+              - text: שיחת ייעוץ ללא התחייבות
+          - button "הכרות עם ליגל בדק בית - Legal" [ref=e79]:
+            - img [ref=e81]
+            - text: הכרות עם ליגל בדק בית - Legal
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - img "יגאל בנסקי, מומחה בדק בית מוסמך מטעם איגוד המהנדסים, ליד רכב השירות של בדק בית Legal בפרויקט מגורים חדש - בדק בית, איתור ליקויי בנייה ובדיקת דירה מקבלן" [ref=e85]
+            - generic [ref=e87]:
+              - paragraph [ref=e88]: יגאל בנסקי
+              - paragraph [ref=e89]: מומחה מוסמך · איגוד המהנדסים
+          - generic [ref=e90]:
+            - img [ref=e92]
+            - generic [ref=e95]: דוחות הנדסיים מקצועיים ומפורטים
+    - generic [ref=e99]:
+      - generic [ref=e101]:
+        - img "יגאל בנסקי — מומחה בדק בית מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל, עם קסדת מגן בעת בדיקת דירה ואיתור ליקויי בנייה" [ref=e103]
+        - generic [ref=e104]:
+          - img [ref=e106]
+          - generic [ref=e109]:
+            - text: איגוד המהנדסים
+            - generic [ref=e110]: "17253030"
+        - generic [ref=e111]:
+          - img [ref=e113]
+          - generic [ref=e116]:
+            - text: רישיון משרד העבודה
+            - generic [ref=e117]: "1641507"
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: "00"
+          - generic [ref=e122]: מי עומד מאחורי הבדיקה
+        - heading "יגאל בנסקי — מומחה בדק בית מוסמך" [level=2] [ref=e123]
+        - paragraph [ref=e124]: שמי יגאל בנסקי, מומחה בדק בית מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל ובעל רישיון בודק ממשרד העבודה. לאורך שנות ניסיון רבות ליוויתי רוכשי דירות, ועדי בתים וקבלנים באיתור ליקויי בנייה — גלויים ונסתרים כאחד — שאיתורם המוקדם חוסך עשרות אלפי שקלים ועוגמת נפש. כל בדיקה מתבצעת על ידי באופן אישי, בעזרת ציוד הנדסי מתקדם, ומסוכמת בדוח מפורט וקביל שניתן להגישו כראיה בבית משפט.
+        - list [ref=e125]:
+          - listitem [ref=e126]:
+            - img [ref=e128]
+            - generic [ref=e130]: מומחה מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל (מס׳ 17253030)
+          - listitem [ref=e131]:
+            - img [ref=e133]
+            - generic [ref=e135]: בעל רישיון בודק ממשרד העבודה (1641507)
+          - listitem [ref=e136]:
+            - img [ref=e138]
+            - generic [ref=e140]: חוות דעת הנדסית מפורטת וקבילה כראיה בבית משפט
+          - listitem [ref=e141]:
+            - img [ref=e143]
+            - generic [ref=e145]: ציוד מדידה ובדיקה הנדסי מתקדם — מצלמה תרמית, מד לחות, אנדוסקופ ועוד
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - img [ref=e148]
+            - generic [ref=e150]: "5.0"
+            - generic [ref=e151]: דירוג Google
+          - generic [ref=e152]:
+            - img [ref=e153]
+            - generic [ref=e156]: איגוד המהנדסים
+            - generic [ref=e157]: מומחה מוסמך
+          - generic [ref=e158]:
+            - img [ref=e159]
+            - generic [ref=e162]: רישיון משרד העבודה
+            - generic [ref=e163]: בודק מורשה
+          - generic [ref=e164]:
+            - img [ref=e165]
+            - generic [ref=e168]: בכל הארץ
+            - generic [ref=e169]: צפון · מרכז · דרום
+        - generic [ref=e170]:
+          - paragraph [ref=e171]: תחומי מומחיות
+          - list [ref=e172]:
+            - listitem [ref=e173]: בדק בית לפני מסירה
+            - listitem [ref=e174]: בדיקת דירה יד שנייה
+            - listitem [ref=e175]: חוות דעת נגדית מוסמכת
+            - listitem [ref=e176]: חוות דעת לבית משפט
+            - listitem [ref=e177]: איתור רטיבות ואיטום
+            - listitem [ref=e178]: בדיקות תרמוגרפיות
+            - listitem [ref=e179]: ליקויי קונסטרוקציה וסדקים
+            - listitem [ref=e180]: בדיקת חשמל ואינסטלציה
+        - generic [ref=e181]:
+          - link "קבלו הצעת מחיר" [ref=e182] [cursor=pointer]:
+            - /url: "#contact-section"
+            - img [ref=e183]
+            - text: קבלו הצעת מחיר
+          - link "שיחת ייעוץ ללא התחייבות" [ref=e186] [cursor=pointer]:
+            - /url: tel:+972506277858
+            - img [ref=e187]
+            - text: שיחת ייעוץ ללא התחייבות
+    - generic [ref=e190]:
+      - generic [ref=e191]:
+        - generic [ref=e192]:
+          - generic [ref=e193]: "00"
+          - generic [ref=e195]: ניסיון מוכח בשטח
+        - heading "מספר רב מאוד של בדיקות — במגוון רחב של נכסים" [level=2] [ref=e196]
+        - paragraph [ref=e197]: "לאורך השנים ביצענו מספר רב מאוד של בדיקות בכל סוגי הנכסים: מדירות יד שנייה ודירות חדשות מקבלן, דרך בתים פרטיים ווילות ועד רכוש משותף, בדיקות במהלך בנייה וסכסוכי שכנים על רקע רטיבות"
+      - generic [ref=e198]:
+        - generic [ref=e199]:
+          - generic [ref=e200]:
+            - img [ref=e202]
+            - generic [ref=e205]: "01"
+          - heading "דירות יד שנייה" [level=3] [ref=e206]
+          - paragraph [ref=e207]: בדיקה מקיפה לפני רכישת דירה יד שנייה — איתור ליקויים נסתרים, רטיבות ובלאי שמשפיעים על שווי הנכס ועל עלויות התיקון.
+        - generic [ref=e208]:
+          - generic [ref=e209]:
+            - img [ref=e211]
+            - generic [ref=e215]: "02"
+          - heading "דירות חדשות מקבלן — לפני ואחרי מסירה" [level=3] [ref=e216]
+          - paragraph [ref=e217]: בדק בית לדירה חדשה מקבלן, לפני מסירה ואחריה, לאיתור ליקויי בנייה ואי-התאמות למפרט בתוך תקופת הבדק והאחריות.
+        - generic [ref=e218]:
+          - generic [ref=e219]:
+            - img [ref=e221]
+            - generic [ref=e226]: "03"
+          - heading "בתים פרטיים, וילות ובתים דו-משפחתיים" [level=3] [ref=e227]
+          - paragraph [ref=e228]: בדיקה הנדסית של בתים פרטיים, וילות ובתים דו-משפחתיים — קונסטרוקציה, איטום, גגות, מערכות וגמר, על כל מורכבותם.
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - img [ref=e232]
+            - generic [ref=e237]: "04"
+          - heading "רכוש משותף וועדי בתים" [level=3] [ref=e238]
+          - paragraph [ref=e239]: בדיקות רכוש משותף עבור ועדי בתים — לובי, חדרי מדרגות, חניונים, גגות וקירות חוץ — לאיתור ליקויים ותכנון שיפוצים.
+        - generic [ref=e240]:
+          - generic [ref=e241]:
+            - img [ref=e243]
+            - generic [ref=e249]: "05"
+          - heading "בדיקות במהלך שיפוץ ובנייה" [level=3] [ref=e250]
+          - paragraph [ref=e251]: פיקוח ובדיקות איכות במהלך שיפוץ או בנייה, לאיתור ליקויים בזמן אמת — לפני שהם מתכסים ולפני שהם הופכים יקרים לתיקון.
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - img [ref=e255]
+            - generic [ref=e259]: "06"
+          - heading "סכסוכי שכנים — נזילות ורטיבות" [level=3] [ref=e260]
+          - paragraph [ref=e261]: בדיקה וחוות דעת בסכסוכי שכנים על רקע נזילות ורטיבות, לקביעת מקור הנזק והאחריות לתשלום — ועד הבית או בעל הדירה.
+    - generic [ref=e263]:
+      - generic [ref=e264]:
+        - heading "כך נראית בדיקה הנדסית מקצועית" [level=2] [ref=e265]
+        - paragraph [ref=e266]: ציוד מדידה מתקדם ותיעוד ליקויים מדויק בכל בדיקה
+        - paragraph [ref=e267]:
+          - img [ref=e268]
+          - text: לחצו על תמונה למעבר לגלריה המלאה
+      - list [ref=e271]:
+        - listitem [ref=e272]:
+          - link "מומחה באתר הבדיקה – צפה בגלריה" [ref=e273] [cursor=pointer]:
+            - /url: /gallery
+            - generic [ref=e274]:
+              - img "מומחה באתר הבדיקה" [ref=e275]
+              - img [ref=e277]
+              - generic [ref=e281]:
+                - img [ref=e282]
+                - text: צפה בגלריה
+            - generic [ref=e285]: מומחה באתר הבדיקה
+        - listitem [ref=e286]:
+          - link "מצלמה תרמית – צפה בגלריה" [ref=e287] [cursor=pointer]:
+            - /url: /gallery
+            - generic [ref=e288]:
+              - img "מצלמה תרמית" [ref=e289]
+              - img [ref=e291]
+              - generic [ref=e295]:
+                - img [ref=e296]
+                - text: צפה בגלריה
+            - generic [ref=e299]: מצלמה תרמית
+        - listitem [ref=e300]:
+          - link "מד לחות Protimeter – צפה בגלריה" [ref=e301] [cursor=pointer]:
+            - /url: /gallery
+            - generic [ref=e302]:
+              - img "מד לחות Protimeter" [ref=e303]
+              - img [ref=e305]
+              - generic [ref=e309]:
+                - img [ref=e310]
+                - text: צפה בגלריה
+            - generic [ref=e313]: מד לחות Protimeter
+        - listitem [ref=e314]:
+          - link "מפלסת לייזר – צפה בגלריה" [ref=e315] [cursor=pointer]:
+            - /url: /gallery
+            - generic [ref=e316]:
+              - img "מפלסת לייזר" [ref=e317]
+              - img [ref=e319]
+              - generic [ref=e323]:
+                - img [ref=e324]
+                - text: צפה בגלריה
+            - generic [ref=e327]: מפלסת לייזר
+        - listitem [ref=e328]:
+          - link "תיעוד ליקוי בנייה – צפה בגלריה" [ref=e329] [cursor=pointer]:
+            - /url: /gallery
+            - generic [ref=e330]:
+              - img "תיעוד ליקוי בנייה" [ref=e331]
+              - img [ref=e333]
+              - generic [ref=e337]:
+                - img [ref=e338]
+                - text: צפה בגלריה
+            - generic [ref=e341]: תיעוד ליקוי בנייה
+    - generic [ref=e344]:
+      - heading "שקט נפשי וליווי מקצועי בבדיקת כל סוגי הנכסים" [level=2] [ref=e345]
+      - paragraph [ref=e346]: רוכשי דירה יד שניה - בדק בית הנדסי מעניק לכם כלי מיקוח רב עוצמה להורדת מחיר הנכס בעשרות אלפי שקלים. רוכשי דירה חדשה - ליקויי בנייה שנמצאים בבדיקה עשויים לזכות אתכם בפיצוי כספי משמעותי מהקבלן. עם הסמכת איגוד המהנדסים ורישיון משרד העבודה, אנו מספקים דוח מקצועי מפורט שחוסך לכם כסף רב. לקבלנים - חוות דעת נגדית מקצועית להתמודדות מול חוות דעת אחרות.
+    - generic [ref=e352]:
+      - img [ref=e354]
+      - generic [ref=e357]:
+        - text: חלון זמן קריטי
+        - heading "בדק בית בהתראה קצרה - דירות חדשות ויד שניה" [level=3] [ref=e358]
+        - generic [ref=e359]:
+          - paragraph [ref=e360]:
+            - strong [ref=e361]: "דירה חדשה:"
+            - text: הקבלן מבקש למסור את הדירה בהתראה קצרה? אנו מספקים בדק בית הנדסי תוך ימים ספורים, כך שתקבלו את הדירה בביטחון מלא.
+          - paragraph [ref=e362]:
+            - strong [ref=e363]: "דירה יד שניה:"
+            - text: נמצאים במשא ומתן על רכישת נכס? מומחה בדק בית זמין מהיום למחר - נעזור לכם להבין את מצב הדירה האמיתי ולחסוך אלפי שקלים במשא ומתן מול המוכר.
+    - generic [ref=e365]:
+      - generic [ref=e366]:
+        - generic [ref=e367]:
+          - generic [ref=e368]: "01"
+          - generic [ref=e370]: למי זה מיועד
+        - heading "למי מיועדים שירותי בדיקת בנייה?" [level=2] [ref=e371]
+      - generic [ref=e372]:
+        - generic [ref=e373]:
+          - generic [ref=e374]:
+            - img [ref=e376]
+            - generic [ref=e381]: "01"
+          - heading "ועדי בתים ובעלי דירות" [level=3] [ref=e382]
+          - paragraph [ref=e383]: בדיקות הנדסיות מקצועיות עבור ועדי בתים, לאימות איכות הבנייה ובטיחות המבנה המשותף
+        - generic [ref=e384]:
+          - generic [ref=e385]:
+            - img [ref=e387]
+            - generic [ref=e390]: "02"
+          - heading "בעלי נכס פרטי ורוכשי דירות" [level=3] [ref=e391]
+          - paragraph [ref=e392]: בדק בית מקיף לפני רכישת דירה או בית פרטי — איתור ליקויי בנייה לפני מסירה מהקבלן
+        - generic [ref=e393]:
+          - generic [ref=e394]:
+            - img [ref=e396]
+            - generic [ref=e401]: "03"
+          - heading "קבלנים ומתכננים" [level=3] [ref=e402]
+          - paragraph [ref=e403]: ליווי הנדסי מקצועי בתהליכי שיפוץ, תכנון ובקרת איכות באתר הבנייה
+        - generic [ref=e404]:
+          - generic [ref=e405]:
+            - img [ref=e407]
+            - generic [ref=e413]: "04"
+          - heading "יזמים ואדריכלים" [level=3] [ref=e414]
+          - paragraph [ref=e415]: בדיקות באתר, פיקוח בנייה ותמונת מצב הנדסית מקצועית ללקוחות לפני ואחרי עבודות
+    - generic [ref=e417]:
+      - generic [ref=e418]:
+        - generic [ref=e419]:
+          - generic [ref=e420]: "02"
+          - generic [ref=e422]: תחומי השירות
+        - heading "שירותי ליקויי בנייה" [level=2] [ref=e423]
+        - paragraph [ref=e424]: כל בדיקה מבוצעת בכלים הנדסיים מקצועיים ומתועדת בדוח מסודר
+      - generic [ref=e425]:
+        - article [ref=e426]:
+          - img "בדק בית הנדסי - איתור סדק בקיר חיצוני של מבנה מגורים, ליקוי בנייה קונסטרוקטיבי שאותר בבדיקה הנדסית מקצועית" [ref=e428]
+          - generic [ref=e430]:
+            - img [ref=e432]
+            - generic [ref=e435]:
+              - heading "בדק בית הנדסי" [level=3] [ref=e436]
+              - paragraph [ref=e437]: בדיקה מקיפה לאיתור ליקויים קונסטרוקטיביים, בעיות איטום, רטיבות, ליקויי גמר ובעיות בטיחות
+        - article [ref=e438]:
+          - img "מומחה בדק בית בודק מישוריות ריצוף בעזרת פלס ארוך - איתור ליקויי בנייה ברצפה בבדק בית לדירה חדשה" [ref=e440]
+          - generic [ref=e442]:
+            - img [ref=e444]
+            - generic [ref=e450]:
+              - heading "מומחה בדק בית" [level=3] [ref=e451]
+              - paragraph [ref=e452]: בדיקות מקצועיות של מבנים, יציבות קונסטרוקציה, מישוריות ובטיחות מבנית
+        - article [ref=e453]:
+          - img "מצלמה תרמית לאיתור רטיבות ונזילות נסתרות בקיר - בדק בית מתקדם לצורך חוות דעת הנדסית נגדית מוסמכת" [ref=e455]
+          - generic [ref=e457]:
+            - img [ref=e459]
+            - generic [ref=e463]:
+              - heading "חוות דעת נגדית מוסמכת" [level=3] [ref=e464]
+              - paragraph [ref=e465]: הכנת חוות דעת הנדסית נגדית מוסמכת לצורך הליכים משפטיים, ביטוחיים או מול קבלנים
+        - article [ref=e466]:
+          - img "בדיקת ניקוז וצנרת בעזרת מצלמת אנדוסקופ - איתור סתימות וליקויי אינסטלציה במסגרת בדק בית מקצועי" [ref=e468]
+          - generic [ref=e470]:
+            - img [ref=e472]
+            - generic [ref=e476]:
+              - heading "ליווי מקצועי ואיתור ליקויי בנייה" [level=3] [ref=e477]
+              - paragraph [ref=e478]: ליווי וייעוץ מקצועי לאורך כל התהליך, כולל הפניה למומחים ולמעבדות מכון התקנים
+    - generic [ref=e480]:
+      - generic [ref=e481]:
+        - generic [ref=e482]:
+          - generic [ref=e483]: "03"
+          - generic [ref=e485]: תמחור הוגן ושקוף
+        - heading "תמחור ושירותים נוספים" [level=2] [ref=e486]
+      - generic [ref=e488]:
+        - generic [ref=e490]:
+          - text: איך נקבע המחיר
+          - heading "תמחור לפי היקף הבדיקה" [level=3] [ref=e491]
+          - paragraph [ref=e492]: המחיר נקבע על פי גודל הדירה, הבית או הבניין ומורכבות הבדיקה ההנדסית הנדרשת
+        - generic [ref=e493]:
+          - generic [ref=e494]:
+            - term [ref=e495]: ליווי משפטי
+            - definition [ref=e497]: ליווי משפטי על פי דרישה לאורך ההליך מול הקבלן
+          - generic [ref=e498]:
+            - term [ref=e499]: ליווי במשא ומתן
+            - definition [ref=e501]: ליווי וייצוג מקצועי במשא ומתן מול קבלנים
+          - generic [ref=e502]:
+            - term [ref=e503]: תמחור נוסף
+            - definition [ref=e505]: תמחור נוסף עבור ליקויים שלא נפתרו לאחר חוות הדעת
+    - generic [ref=e507]:
+      - generic [ref=e508]:
+        - generic [ref=e509]:
+          - generic [ref=e510]: "04"
+          - generic [ref=e512]: אמון ואסמכתאות
+        - heading "הסמכות, ניסיון משפטי וציוד מקצועי" [level=2] [ref=e513]
+        - paragraph [ref=e514]: האמון שלכם נבנה על הסמכה רשמית, ניסיון מוכח בבית משפט ובדיקה מתועדת בכלים הנדסיים
+      - generic [ref=e515]:
+        - generic [ref=e516]:
+          - img [ref=e518]
+          - heading "הסמכות מקצועיות" [level=3] [ref=e521]
+          - paragraph [ref=e522]: מומחה מוסמך ומורשה — הסמכה רשמית המקנה תוקף מקצועי ומשפטי לכל חוות דעת.
+          - generic [ref=e523]:
+            - generic [ref=e524]:
+              - term [ref=e525]: איגוד המהנדסים והאדריכלים
+              - definition [ref=e526]: "17253030"
+            - generic [ref=e527]:
+              - term [ref=e528]: רישיון משרד העבודה
+              - definition [ref=e529]: "1641507"
+        - generic [ref=e530]:
+          - img [ref=e532]
+          - heading "ניסיון בבית משפט" [level=3] [ref=e538]
+          - paragraph [ref=e539]: חוות דעת הנדסית מפורטת, מנומקת וקבילה כראיה — לצד ליווי בהליכים מול קבלנים, חברות בנייה ומשרדי עורכי דין.
+          - list [ref=e540]:
+            - listitem [ref=e541]:
+              - img [ref=e542]
+              - text: חוות דעת נגדית מוסמכת
+            - listitem [ref=e545]:
+              - img [ref=e546]
+              - text: חוות דעת לבית משפט
+            - listitem [ref=e549]:
+              - img [ref=e550]
+              - text: ליווי מול הקבלן עד לתיקון
+        - generic [ref=e553]:
+          - img [ref=e555]
+          - heading "ציוד הנדסי מתקדם" [level=3] [ref=e558]
+          - paragraph [ref=e559]: כל בדיקה מבוצעת בכלים מקצועיים שמאתרים ליקויים נסתרים שהעין אינה רואה.
+          - list [ref=e560]:
+            - listitem [ref=e561]: מצלמה תרמית
+            - listitem [ref=e562]: מד לחות
+            - listitem [ref=e563]: מצלמת אנדוסקופ
+            - listitem [ref=e564]: מד כוח דיגיטלי
+            - listitem [ref=e565]: מפלסת לייזר
+      - generic [ref=e566]:
+        - generic [ref=e567]:
+          - heading "בדיקות מתועדות מהשטח" [level=3] [ref=e568]
+          - link "לגלריית הבדיקות המלאה" [ref=e569] [cursor=pointer]:
+            - /url: /gallery
+            - img [ref=e570]
+            - text: לגלריית הבדיקות המלאה
+        - list [ref=e573]:
+          - listitem [ref=e574]:
+            - link "בדיקת חוזק מעקות במד כוח דיגיטלי – לגלריית הבדיקות" [ref=e575] [cursor=pointer]:
+              - /url: /gallery
+              - img "בדיקת חוזק מעקות במד כוח דיגיטלי" [ref=e577]
+              - generic [ref=e578]: בדיקת חוזק מעקות במד כוח דיגיטלי
+          - listitem [ref=e579]:
+            - link "בדיקת לוח חשמל וממסר פחת – לגלריית הבדיקות" [ref=e580] [cursor=pointer]:
+              - /url: /gallery
+              - img "בדיקת לוח חשמל וממסר פחת" [ref=e582]
+              - generic [ref=e583]: בדיקת לוח חשמל וממסר פחת
+          - listitem [ref=e584]:
+            - link "בדיקת צנרת וביוב במצלמת אנדוסקופ – לגלריית הבדיקות" [ref=e585] [cursor=pointer]:
+              - /url: /gallery
+              - img "בדיקת צנרת וביוב במצלמת אנדוסקופ" [ref=e587]
+              - generic [ref=e588]: בדיקת צנרת וביוב במצלמת אנדוסקופ
+          - listitem [ref=e589]:
+            - link "בדיקת אנכיות ומישוריות קירות – לגלריית הבדיקות" [ref=e590] [cursor=pointer]:
+              - /url: /gallery
+              - img "בדיקת אנכיות ומישוריות קירות" [ref=e592]
+              - generic [ref=e593]: בדיקת אנכיות ומישוריות קירות
+          - listitem [ref=e594]:
+            - link "תיעוד וניתוח סדק בקיר חיצוני – לגלריית הבדיקות" [ref=e595] [cursor=pointer]:
+              - /url: /gallery
+              - img "תיעוד וניתוח סדק בקיר חיצוני" [ref=e597]
+              - generic [ref=e598]: תיעוד וניתוח סדק בקיר חיצוני
+          - listitem [ref=e599]:
+            - link "מדידת שיפועים בפלס דיגיטלי – לגלריית הבדיקות" [ref=e600] [cursor=pointer]:
+              - /url: /gallery
+              - img "מדידת שיפועים בפלס דיגיטלי" [ref=e602]
+              - generic [ref=e603]: מדידת שיפועים בפלס דיגיטלי
+    - generic [ref=e605]:
+      - generic [ref=e606]:
+        - generic [ref=e607]:
+          - generic [ref=e608]: "05"
+          - generic [ref=e610]: לקוחות ממליצים
+        - heading "מה אומרים הלקוחות שלנו" [level=2] [ref=e611]
+        - paragraph [ref=e612]: ביקורות אמיתיות מלקוחות מרוצים
+      - link "צפה בביקורות שלנו בגוגל מפס" [ref=e614] [cursor=pointer]:
+        - /url: https://share.google/UEfYIc6AgM0BAcvgS
+        - generic [ref=e615]:
+          - img [ref=e616]
+          - generic [ref=e621]:
+            - generic [ref=e622]:
+              - generic [ref=e623]: "5.0"
+              - generic [ref=e624]:
+                - img [ref=e625]
+                - img [ref=e627]
+                - img [ref=e629]
+                - img [ref=e631]
+                - img [ref=e633]
+            - paragraph [ref=e635]: ביקורות Google
+        - generic [ref=e636]: צפה בכל הביקורות
+      - generic [ref=e637]:
+        - generic [ref=e639]:
+          - generic [ref=e641]:
+            - img [ref=e642]
+            - img [ref=e644]
+            - img [ref=e646]
+            - img [ref=e648]
+            - img [ref=e650]
+          - paragraph [ref=e652]: "\"קיבלתי חוו\"ד עם ליקויים רבים, להפתעתי חברת אלקטרה תיקנו את הכל ללא כל ויכוח בהתאם לדוח.\""
+          - paragraph [ref=e653]: בינימין
+        - generic [ref=e655]:
+          - generic [ref=e657]:
+            - img [ref=e658]
+            - img [ref=e660]
+            - img [ref=e662]
+            - img [ref=e664]
+            - img [ref=e666]
+          - paragraph [ref=e668]: "\"הזמנו בדק בית לבניין מטעם ועד הבית. מרוצים מאוד מהתוצאה, התגלו ליקויים שאם לא היינו מטפלים בהם היה נגרם נזק עצום בעתיד.\""
+          - paragraph [ref=e669]: יוסף אבוטבול
+        - generic [ref=e671]:
+          - generic [ref=e673]:
+            - img [ref=e674]
+            - img [ref=e676]
+            - img [ref=e678]
+            - img [ref=e680]
+            - img [ref=e682]
+          - paragraph [ref=e684]: "\"אני קבלן ביצוע, הצלחתי בזכות חוו\"ד נגדית לצמצם את עלויות התיקונים בעשרות אלפי שקלים.\""
+          - paragraph [ref=e685]: מנחם
+      - heading "המלצות מאומתות מוואטסאפ" [level=3] [ref=e686]
+      - generic [ref=e687]:
+        - generic [ref=e689]:
+          - generic [ref=e690]:
+            - generic [ref=e691]:
+              - img [ref=e692]
+              - img [ref=e694]
+              - img [ref=e696]
+              - img [ref=e698]
+              - img [ref=e700]
+            - generic [ref=e702]:
+              - img [ref=e703]
+              - text: WhatsApp
+          - paragraph [ref=e705]: "\"הבדיקה שלכם הייתה מקצועית ומדויקת מאוד. הקבלן תיקן את כל הליקויים שהוצאו בדוח. לאחר ביצוע הבדק נוכחתי שחובה לבצע בדיקה חדשה. תודה רבה!\""
+          - figure "ביקורת לקוח - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים" [ref=e706]:
+            - img "ביקורת בדק בית מלקוח מרוצה - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים שאותרו בדוח" [ref=e707]
+            - generic [ref=e708]: ביקורת לקוח - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים
+          - paragraph [ref=e709]: בני
+        - generic [ref=e711]:
+          - generic [ref=e712]:
+            - generic [ref=e713]:
+              - img [ref=e714]
+              - img [ref=e716]
+              - img [ref=e718]
+              - img [ref=e720]
+              - img [ref=e722]
+            - generic [ref=e724]:
+              - img [ref=e725]
+              - text: WhatsApp
+          - paragraph [ref=e727]: "\"קיבלנו דוח מפורט, ברור ומסודר. יגאל הסביר לנו בשפה פשוטה מה המשמעות של כל ממצא. ממליצים בחום לכל מי שמקבל דירה חדשה!\""
+          - figure "ביקורת לקוח - דוח מפורט וברור, ממליצים בחום למקבלי דירה חדשה" [ref=e728]:
+            - img "ביקורת בדק בית מלקוח מרוצה - דוח מפורט וברור, ממליצים בחום לכל מי שמקבל דירה חדשה מקבלן" [ref=e729]
+            - generic [ref=e730]: ביקורת לקוח - דוח מפורט וברור, ממליצים בחום למקבלי דירה חדשה
+          - paragraph [ref=e731]: מייק
+        - generic [ref=e733]:
+          - generic [ref=e734]:
+            - generic [ref=e735]:
+              - img [ref=e736]
+              - img [ref=e738]
+              - img [ref=e740]
+              - img [ref=e742]
+              - img [ref=e744]
+            - generic [ref=e746]:
+              - img [ref=e747]
+              - text: WhatsApp
+          - paragraph [ref=e749]: "\"אין לי מילים חוץ מלומר לך שאתה תותח! אני ממליץ עליך בחום.\""
+          - figure "ביקורת לקוח - המלצה חמה על שירות בדק בית מקצועי ואמין" [ref=e750]:
+            - img "ביקורת בדק בית מלקוח מרוצה - המלצה חמה על שירות בדק בית מקצועי ואמין" [ref=e751]
+            - generic [ref=e752]: ביקורת לקוח - המלצה חמה על שירות בדק בית מקצועי ואמין
+          - paragraph [ref=e753]: יעקב
+        - generic [ref=e755]:
+          - generic [ref=e756]:
+            - generic [ref=e757]:
+              - img [ref=e758]
+              - img [ref=e760]
+              - img [ref=e762]
+              - img [ref=e764]
+              - img [ref=e766]
+            - generic [ref=e768]:
+              - img [ref=e769]
+              - text: WhatsApp
+          - paragraph [ref=e771]: "\"תודה רבה שוב, עבודה מקצועית ומדויקת.\""
+          - figure "ביקורת לקוח בוואטסאפ - עבודה מקצועית ומדויקת" [ref=e772]:
+            - img "ביקורת בדק בית בוואטסאפ מלקוח מרוצה - עבודה מקצועית ומדויקת באיתור ליקויי בנייה" [ref=e773]
+            - generic [ref=e774]: ביקורת לקוח בוואטסאפ - עבודה מקצועית ומדויקת
+          - paragraph [ref=e775]: איתן
+        - generic [ref=e777]:
+          - generic [ref=e778]:
+            - generic [ref=e779]:
+              - img [ref=e780]
+              - img [ref=e782]
+              - img [ref=e784]
+              - img [ref=e786]
+              - img [ref=e788]
+            - generic [ref=e790]:
+              - img [ref=e791]
+              - text: WhatsApp
+          - paragraph [ref=e793]: "\"בוקר טוב יגאל, תודה רבה מעריך את ההשקעה, שבוע טוב!\""
+          - figure "ביקורת לקוח - תודה רבה, מעריך את ההשקעה בבדק הבית" [ref=e794]:
+            - img "ביקורת בדק בית מלקוח מרוצה - תודה רבה, הלקוח מעריך את ההשקעה בבדק הבית שחסך כסף וליקויים" [ref=e795]
+            - generic [ref=e796]: ביקורת לקוח - תודה רבה, מעריך את ההשקעה בבדק הבית
+          - paragraph [ref=e797]: לקוח מרוצה
+        - generic [ref=e799]:
+          - generic [ref=e800]:
+            - generic [ref=e801]:
+              - img [ref=e802]
+              - img [ref=e804]
+              - img [ref=e806]
+              - img [ref=e808]
+              - img [ref=e810]
+            - generic [ref=e812]:
+              - img [ref=e813]
+              - text: WhatsApp
+          - paragraph [ref=e815]: "\"טרם הסתכלתי בבדק בית אך היית אמין סבלני ומקצועי, תודה רבה.\""
+          - figure "ביקורת לקוחה בוואטסאפ - שירות אמין, סבלני ומקצועי בבדק בית לדירה חדשה במרכז הארץ" [ref=e816]:
+            - img "ביקורת בדק בית בוואטסאפ ממאשה מאזור מרכז הארץ לאחר בדק בית לדירה חדשה - שירות אמין סבלני ומקצועי" [ref=e817]
+            - generic [ref=e818]: ביקורת לקוחה בוואטסאפ - שירות אמין, סבלני ומקצועי בבדק בית לדירה חדשה במרכז הארץ
+          - paragraph [ref=e819]: מאשה, מרכז הארץ
+    - generic [ref=e821]:
+      - generic [ref=e822]:
+        - generic [ref=e823]:
+          - generic [ref=e824]: "06"
+          - generic [ref=e826]: מי עומד מאחורי הבדיקה
+        - heading "אודות" [level=2] [ref=e827]
+      - generic [ref=e828]:
+        - generic [ref=e830]:
+          - img [ref=e832]
+          - heading "יגאל בנסקי" [level=3] [ref=e834]
+          - paragraph [ref=e835]: מומחה בדק בית מוסמך מטעם משרד העבודה ואיגוד המהנדסים הישראלי. בעל ניסיון רב שנים באיתור ליקויי בנייה, הכנת חוות דעת מקצועיות וליווי לקוחות בהליכים מול קבלנים ומשרדי עורכי דין.
+          - generic [ref=e836]:
+            - paragraph [ref=e837]: רישיון משרד העבודה
+            - paragraph [ref=e838]: "1641507"
+        - paragraph [ref=e840]: אני מספק שירותי בדק בית מקצועיים ומקיפים בכל הארץ, עם מחויבות לאיכות, מקצועיות ושקיפות מלאה כלפי הלקוחות.
+    - generic [ref=e842]:
+      - generic [ref=e843]:
+        - generic [ref=e844]:
+          - generic [ref=e845]: "07"
+          - generic [ref=e847]: שאלות נפוצות
+        - heading "שאלות ותשובות על בדק בית" [level=2] [ref=e848]
+      - generic [ref=e849]:
+        - group [ref=e850]:
+          - generic "מה זה בדק בית ולמה הוא חשוב?" [ref=e851] [cursor=pointer]:
+            - heading "מה זה בדק בית ולמה הוא חשוב?" [level=3] [ref=e852]
+            - img [ref=e854]
+        - group [ref=e856]:
+          - generic "מתי כדאי לבצע בדק בית?" [ref=e857] [cursor=pointer]:
+            - heading "מתי כדאי לבצע בדק בית?" [level=3] [ref=e858]
+            - img [ref=e860]
+        - group [ref=e862]:
+          - generic "כמה זמן לוקחת הבדיקה ומתי מקבלים דוח?" [ref=e863] [cursor=pointer]:
+            - heading "כמה זמן לוקחת הבדיקה ומתי מקבלים דוח?" [level=3] [ref=e864]
+            - img [ref=e866]
+        - group [ref=e868]:
+          - generic "האם הדוח קביל בבית משפט?" [ref=e869] [cursor=pointer]:
+            - heading "האם הדוח קביל בבית משפט?" [level=3] [ref=e870]
+            - img [ref=e872]
+        - group [ref=e874]:
+          - generic "באילו אזורים אתם מבצעים בדק בית?" [ref=e875] [cursor=pointer]:
+            - heading "באילו אזורים אתם מבצעים בדק בית?" [level=3] [ref=e876]
+            - img [ref=e878]
+        - group [ref=e880]:
+          - generic "מה עושים אם מתגלים ליקויים בבדיקה?" [ref=e881] [cursor=pointer]:
+            - heading "מה עושים אם מתגלים ליקויים בבדיקה?" [level=3] [ref=e882]
+            - img [ref=e884]
+    - generic [ref=e888]:
+      - heading "שקט נפשי מתחיל בבדק בית מקצועי - צרו קשר עכשיו" [level=2] [ref=e889]
+      - paragraph [ref=e890]: בדק בית עכשיו = שקט נפשי אחר כך. תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה. חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף ודאגות בעתיד.
+      - generic [ref=e891]:
+        - button "WhatsApp" [ref=e892]:
+          - img
+          - generic [ref=e893]: WhatsApp
+        - link "זימון מומחה" [ref=e894] [cursor=pointer]:
+          - /url: tel:+972506277858
+          - img [ref=e895]
+          - text: זימון מומחה
+    - navigation "מפת אתר - כל עמודי האתר" [ref=e897]:
+      - generic [ref=e898]:
+        - heading "מפת אתר - כל עמודי האתר" [level=2] [ref=e899]
+        - paragraph [ref=e900]: מצאתם אותנו דרך עמוד מסוים? כאן תוכלו לעבור לכל עמודי האתר - בדק בית לפי עיר, לפי קבלן, סוגי בדיקות, ליקויי בנייה ופרויקטים חדשים.
+        - generic [ref=e901]:
+          - generic [ref=e902]:
+            - heading "עמודים ראשיים" [level=3] [ref=e903]
+            - list [ref=e904]:
+              - listitem [ref=e905]:
+                - link "דף הבית" [ref=e906] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e907]:
+                - link "אודות" [ref=e908] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e909]:
+                - link "שירותי בדק בית" [ref=e910] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e911]:
+                - link "בדק בית לפי עיר" [ref=e912] [cursor=pointer]:
+                  - /url: /bedek-bayit
+              - listitem [ref=e913]:
+                - link "בדק בית לפי קבלן" [ref=e914] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan
+              - listitem [ref=e915]:
+                - link "ליקויי בנייה" [ref=e916] [cursor=pointer]:
+                  - /url: /likuyey-bniya
+              - listitem [ref=e917]:
+                - link "פרויקטים חדשים" [ref=e918] [cursor=pointer]:
+                  - /url: /projects
+              - listitem [ref=e919]:
+                - link "גלריית בדק בית" [ref=e920] [cursor=pointer]:
+                  - /url: /gallery
+              - listitem [ref=e921]:
+                - link "בלוג" [ref=e922] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e923]:
+                - link "כרטיס ביקור דיגיטלי" [ref=e924] [cursor=pointer]:
+                  - /url: /card
+            - heading "מאמרים" [level=3] [ref=e925]
+            - list [ref=e926]:
+              - listitem [ref=e927]:
+                - link "בדק בית בדירה חדשה" [ref=e928] [cursor=pointer]:
+                  - /url: /articles/bedek-bayit-dira-hadasha
+              - listitem [ref=e929]:
+                - link "בדק בית לדירה יד שנייה" [ref=e930] [cursor=pointer]:
+                  - /url: /articles/bedek-bayit-dira-yad-shniya
+              - listitem [ref=e931]:
+                - link "מתי להזמין בדק בית?" [ref=e932] [cursor=pointer]:
+                  - /url: /articles/matai-lehazmin-bedek-bayit
+            - heading "שירותי בדק בית" [level=3] [ref=e933]
+            - list [ref=e934]:
+              - listitem [ref=e935]:
+                - link "בדק בית לפני קנייה" [ref=e936] [cursor=pointer]:
+                  - /url: /services/bedek-bayit-lifnei-kniya
+              - listitem [ref=e937]:
+                - link "בדק בית לפני מסירה" [ref=e938] [cursor=pointer]:
+                  - /url: /services/bedek-bayit-lifnei-mesira
+              - listitem [ref=e939]:
+                - link "בדיקת דירה יד שנייה" [ref=e940] [cursor=pointer]:
+                  - /url: /services/bdikat-dira-yad-shniya
+              - listitem [ref=e941]:
+                - link "בדיקת בית פרטי" [ref=e942] [cursor=pointer]:
+                  - /url: /services/bdikat-bayit-prati
+              - listitem [ref=e943]:
+                - link "חוות דעת מומחה" [ref=e944] [cursor=pointer]:
+                  - /url: /services/chavat-daat-mumche
+              - listitem [ref=e945]:
+                - link "חוות דעת לבית משפט" [ref=e946] [cursor=pointer]:
+                  - /url: /services/chavat-daat-beit-mishpat
+              - listitem [ref=e947]:
+                - link "איתור ליקויי בנייה" [ref=e948] [cursor=pointer]:
+                  - /url: /services/itur-likuyey-bniya
+              - listitem [ref=e949]:
+                - link "הערכת עלויות תיקון" [ref=e950] [cursor=pointer]:
+                  - /url: /services/haarachat-aluyot-tikun
+            - heading "סוגי בדק בית" [level=3] [ref=e951]
+            - list [ref=e952]:
+              - listitem [ref=e953]:
+                - link "בדק בית שכונות חדשות" [ref=e954] [cursor=pointer]:
+                  - /url: /services/shechunot-hadashot
+              - listitem [ref=e955]:
+                - link "בדק בית מחיר למשתכן" [ref=e956] [cursor=pointer]:
+                  - /url: /services/mehir-lamishtaken
+              - listitem [ref=e957]:
+                - link "בדק בית פינוי בינוי" [ref=e958] [cursor=pointer]:
+                  - /url: /services/pinui-binui
+              - listitem [ref=e959]:
+                - link "בדק בית תמ\"א 38" [ref=e960] [cursor=pointer]:
+                  - /url: /services/tama-38
+          - generic [ref=e961]:
+            - heading "בדק בית לפי עיר" [level=3] [ref=e962]
+            - list [ref=e963]:
+              - listitem [ref=e964]:
+                - link "תל אביב" [ref=e965] [cursor=pointer]:
+                  - /url: /bedek-bayit/tel-aviv
+              - listitem [ref=e966]:
+                - link "ירושלים" [ref=e967] [cursor=pointer]:
+                  - /url: /bedek-bayit/jerusalem
+              - listitem [ref=e968]:
+                - link "חיפה" [ref=e969] [cursor=pointer]:
+                  - /url: /bedek-bayit/haifa
+              - listitem [ref=e970]:
+                - link "ראשון לציון" [ref=e971] [cursor=pointer]:
+                  - /url: /bedek-bayit/rishon-lezion
+              - listitem [ref=e972]:
+                - link "פתח תקווה" [ref=e973] [cursor=pointer]:
+                  - /url: /bedek-bayit/petah-tikva
+              - listitem [ref=e974]:
+                - link "נתניה" [ref=e975] [cursor=pointer]:
+                  - /url: /bedek-bayit/netanya
+              - listitem [ref=e976]:
+                - link "באר שבע" [ref=e977] [cursor=pointer]:
+                  - /url: /bedek-bayit/beer-sheva
+              - listitem [ref=e978]:
+                - link "אשדוד" [ref=e979] [cursor=pointer]:
+                  - /url: /bedek-bayit/ashdod
+              - listitem [ref=e980]:
+                - link "רחובות" [ref=e981] [cursor=pointer]:
+                  - /url: /bedek-bayit/rehovot
+              - listitem [ref=e982]:
+                - link "הרצליה" [ref=e983] [cursor=pointer]:
+                  - /url: /bedek-bayit/herzliya
+              - listitem [ref=e984]:
+                - link "כפר סבא" [ref=e985] [cursor=pointer]:
+                  - /url: /bedek-bayit/kfar-saba
+              - listitem [ref=e986]:
+                - link "רעננה" [ref=e987] [cursor=pointer]:
+                  - /url: /bedek-bayit/raanana
+              - listitem [ref=e988]:
+                - link "חולון" [ref=e989] [cursor=pointer]:
+                  - /url: /bedek-bayit/holon
+              - listitem [ref=e990]:
+                - link "רמת גן" [ref=e991] [cursor=pointer]:
+                  - /url: /bedek-bayit/ramat-gan
+              - listitem [ref=e992]:
+                - link "בת ים" [ref=e993] [cursor=pointer]:
+                  - /url: /bedek-bayit/bat-yam
+              - listitem [ref=e994]:
+                - link "מודיעין" [ref=e995] [cursor=pointer]:
+                  - /url: /bedek-bayit/modiin
+              - listitem [ref=e996]:
+                - link "ראש העין" [ref=e997] [cursor=pointer]:
+                  - /url: /bedek-bayit/rosh-haayin
+              - listitem [ref=e998]:
+                - link "יהוד" [ref=e999] [cursor=pointer]:
+                  - /url: /bedek-bayit/yehud
+              - listitem [ref=e1000]:
+                - link "אור יהודה" [ref=e1001] [cursor=pointer]:
+                  - /url: /bedek-bayit/or-yehuda
+              - listitem [ref=e1002]:
+                - link "גבעת שמואל" [ref=e1003] [cursor=pointer]:
+                  - /url: /bedek-bayit/givat-shmuel
+              - listitem [ref=e1004]:
+                - link "קרית אונו" [ref=e1005] [cursor=pointer]:
+                  - /url: /bedek-bayit/kiryat-ono
+              - listitem [ref=e1006]:
+                - link "אזור" [ref=e1007] [cursor=pointer]:
+                  - /url: /bedek-bayit/azor
+              - listitem [ref=e1008]:
+                - link "גבעתיים" [ref=e1009] [cursor=pointer]:
+                  - /url: /bedek-bayit/givatayim
+              - listitem [ref=e1010]:
+                - link "הוד השרון" [ref=e1011] [cursor=pointer]:
+                  - /url: /bedek-bayit/hod-hasharon
+              - listitem [ref=e1012]:
+                - link "רמת השרון" [ref=e1013] [cursor=pointer]:
+                  - /url: /bedek-bayit/ramat-hasharon
+              - listitem [ref=e1014]:
+                - link "חדרה" [ref=e1015] [cursor=pointer]:
+                  - /url: /bedek-bayit/hadera
+              - listitem [ref=e1016]:
+                - link "הקריות" [ref=e1017] [cursor=pointer]:
+                  - /url: /bedek-bayit/kiryot
+              - listitem [ref=e1018]:
+                - link "נהריה" [ref=e1019] [cursor=pointer]:
+                  - /url: /bedek-bayit/nahariya
+              - listitem [ref=e1020]:
+                - link "עכו" [ref=e1021] [cursor=pointer]:
+                  - /url: /bedek-bayit/akko
+              - listitem [ref=e1022]:
+                - link "יבנה" [ref=e1023] [cursor=pointer]:
+                  - /url: /bedek-bayit/yavne
+              - listitem [ref=e1024]:
+                - link "אשקלון" [ref=e1025] [cursor=pointer]:
+                  - /url: /bedek-bayit/ashkelon
+              - listitem [ref=e1026]:
+                - link "נתיבות" [ref=e1027] [cursor=pointer]:
+                  - /url: /bedek-bayit/netivot
+              - listitem [ref=e1028]:
+                - link "אופקים" [ref=e1029] [cursor=pointer]:
+                  - /url: /bedek-bayit/ofakim
+              - listitem [ref=e1030]:
+                - link "נשר" [ref=e1031] [cursor=pointer]:
+                  - /url: /bedek-bayit/nesher
+              - listitem [ref=e1032]:
+                - link "נוף הגליל" [ref=e1033] [cursor=pointer]:
+                  - /url: /bedek-bayit/nof-hagalil
+          - generic [ref=e1034]:
+            - heading "בדק בית לפי קבלן" [level=3] [ref=e1035]
+            - list [ref=e1036]:
+              - listitem [ref=e1037]:
+                - link "אפי קפיטל" [ref=e1038] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/afi-capital
+              - listitem [ref=e1039]:
+                - link "פרשקובסקי" [ref=e1040] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/prashkovsky
+              - listitem [ref=e1041]:
+                - link "רמי שבירו" [ref=e1042] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/rami-shbiro
+              - listitem [ref=e1043]:
+                - link "אבני דרך" [ref=e1044] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/avney-derech
+              - listitem [ref=e1045]:
+                - link "אשדר" [ref=e1046] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/ashdar
+              - listitem [ref=e1047]:
+                - link "אזורים" [ref=e1048] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/azorim
+              - listitem [ref=e1049]:
+                - link "אפריקה ישראל מגורים" [ref=e1050] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/africa-israel
+              - listitem [ref=e1051]:
+                - link "שיכון ובינוי" [ref=e1052] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/shikun-binui
+              - listitem [ref=e1053]:
+                - link "י.ח. דמרי" [ref=e1054] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/ihdmari
+              - listitem [ref=e1055]:
+                - link "גינדי" [ref=e1056] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/gindi
+              - listitem [ref=e1057]:
+                - link "אשטרום" [ref=e1058] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/ashtrom
+              - listitem [ref=e1059]:
+                - link "עץ השקד" [ref=e1060] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/etz-hashaked
+              - listitem [ref=e1061]:
+                - link "תדהר" [ref=e1062] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/tidhar
+              - listitem [ref=e1063]:
+                - link "אלקטרה נדל\"ן" [ref=e1064] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/electra
+              - listitem [ref=e1065]:
+                - link "דניה סיבוס" [ref=e1066] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/danya-cebus
+              - listitem [ref=e1067]:
+                - link "ישראל קנדה" [ref=e1068] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/israel-canada
+              - listitem [ref=e1069]:
+                - link "אאורה" [ref=e1070] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/aura
+              - listitem [ref=e1071]:
+                - link "רוטשטיין" [ref=e1072] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/rotstein
+              - listitem [ref=e1073]:
+                - link "צמח המרמן" [ref=e1074] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/zemach-hammerman
+              - listitem [ref=e1075]:
+                - link "חנן מור" [ref=e1076] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/hanan-mor
+              - listitem [ref=e1077]:
+                - link "ב. יאיר" [ref=e1078] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/b-yair
+              - listitem [ref=e1079]:
+                - link "מצלאוי" [ref=e1080] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/mitzlawi
+              - listitem [ref=e1081]:
+                - link "צרפתי שמעון" [ref=e1082] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/tzarfati
+              - listitem [ref=e1083]:
+                - link "אחים דוניץ" [ref=e1084] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/dunietz
+              - listitem [ref=e1085]:
+                - link "אלמוגים" [ref=e1086] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/almogim
+              - listitem [ref=e1087]:
+                - link "בוני התיכון" [ref=e1088] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/boney-hatichon
+              - listitem [ref=e1089]:
+                - link "נתנאל גרופ" [ref=e1090] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/nethanel-group
+              - listitem [ref=e1091]:
+                - link "קבוצת חג'ג'" [ref=e1092] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/hagag
+              - listitem [ref=e1093]:
+                - link "קבוצת עמוס לוזון" [ref=e1094] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/amos-luzon
+              - listitem [ref=e1095]:
+                - link "מרדכי אביב" [ref=e1096] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/mordechai-aviv
+              - listitem [ref=e1097]:
+                - link "משולם לוינשטין" [ref=e1098] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/levinstein
+              - listitem [ref=e1099]:
+                - link "שטרן גרופ" [ref=e1100] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/stern-group
+              - listitem [ref=e1101]:
+                - link "אביסרור משה ובניו" [ref=e1102] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/avisror
+              - listitem [ref=e1103]:
+                - link "קן התור" [ref=e1104] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/ken-hator
+              - listitem [ref=e1105]:
+                - link "עומר הנדסה" [ref=e1106] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/omer
+              - listitem [ref=e1107]:
+                - link "אסום" [ref=e1108] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/asum
+              - listitem [ref=e1109]:
+                - link "קרדן נדל\"ן" [ref=e1110] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/kardan
+              - listitem [ref=e1111]:
+                - link "קבוצת שפיר" [ref=e1112] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/shapir
+              - listitem [ref=e1113]:
+                - link "בסט" [ref=e1114] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/bst
+              - listitem [ref=e1115]:
+                - link "אקרו" [ref=e1116] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/acro
+              - listitem [ref=e1117]:
+                - link "קבוצת אורון" [ref=e1118] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/oron
+              - listitem [ref=e1119]:
+                - link "גשם למשתכן" [ref=e1120] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/geshem
+              - listitem [ref=e1121]:
+                - link "מנרב" [ref=e1122] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/minrav
+              - listitem [ref=e1123]:
+                - link "קבוצת מזרחי ובניו" [ref=e1124] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/mizrahi
+              - listitem [ref=e1125]:
+                - link "בראל" [ref=e1126] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan/barel
+          - generic [ref=e1127]:
+            - heading "ליקויי בנייה" [level=3] [ref=e1128]
+            - list [ref=e1129]:
+              - listitem [ref=e1130]:
+                - link "רטיבות" [ref=e1131] [cursor=pointer]:
+                  - /url: /likuyey-bniya/retivut
+              - listitem [ref=e1132]:
+                - link "סדקים" [ref=e1133] [cursor=pointer]:
+                  - /url: /likuyey-bniya/sdakim
+              - listitem [ref=e1134]:
+                - link "עובש" [ref=e1135] [cursor=pointer]:
+                  - /url: /likuyey-bniya/ovesh
+              - listitem [ref=e1136]:
+                - link "איטום" [ref=e1137] [cursor=pointer]:
+                  - /url: /likuyey-bniya/itum
+              - listitem [ref=e1138]:
+                - link "ריצוף וחיפוי" [ref=e1139] [cursor=pointer]:
+                  - /url: /likuyey-bniya/ritzuf
+              - listitem [ref=e1140]:
+                - link "אינסטלציה" [ref=e1141] [cursor=pointer]:
+                  - /url: /likuyey-bniya/instalatzia
+              - listitem [ref=e1142]:
+                - link "חשמל" [ref=e1143] [cursor=pointer]:
+                  - /url: /likuyey-bniya/chashmal
+              - listitem [ref=e1144]:
+                - link "בידוד אקוסטי" [ref=e1145] [cursor=pointer]:
+                  - /url: /likuyey-bniya/bidud-akusti
+              - listitem [ref=e1146]:
+                - link "התאמה למפרט" [ref=e1147] [cursor=pointer]:
+                  - /url: /likuyey-bniya/i-hatama-lemifrat
+              - listitem [ref=e1148]:
+                - link "בידוד תרמי" [ref=e1149] [cursor=pointer]:
+                  - /url: /likuyey-bniya/bidud-termi
+              - listitem [ref=e1150]:
+                - link "אלומיניום" [ref=e1151] [cursor=pointer]:
+                  - /url: /likuyey-bniya/aluminium
+              - listitem [ref=e1152]:
+                - link "חלונות" [ref=e1153] [cursor=pointer]:
+                  - /url: /likuyey-bniya/chalonot
+              - listitem [ref=e1154]:
+                - link "דלתות" [ref=e1155] [cursor=pointer]:
+                  - /url: /likuyey-bniya/dlatot
+              - listitem [ref=e1156]:
+                - link "ממ\"ד" [ref=e1157] [cursor=pointer]:
+                  - /url: /likuyey-bniya/mamad
+              - listitem [ref=e1158]:
+                - link "מרפסות" [ref=e1159] [cursor=pointer]:
+                  - /url: /likuyey-bniya/mirpasot
+              - listitem [ref=e1160]:
+                - link "גגות" [ref=e1161] [cursor=pointer]:
+                  - /url: /likuyey-bniya/gagot
+              - listitem [ref=e1162]:
+                - link "מדרגות" [ref=e1163] [cursor=pointer]:
+                  - /url: /likuyey-bniya/madregot
+              - listitem [ref=e1164]:
+                - link "מעקות" [ref=e1165] [cursor=pointer]:
+                  - /url: /likuyey-bniya/maakot
+              - listitem [ref=e1166]:
+                - link "חיפויים" [ref=e1167] [cursor=pointer]:
+                  - /url: /likuyey-bniya/chipuyim
+              - listitem [ref=e1168]:
+                - link "טיח" [ref=e1169] [cursor=pointer]:
+                  - /url: /likuyey-bniya/tiyach
+              - listitem [ref=e1170]:
+                - link "צבע" [ref=e1171] [cursor=pointer]:
+                  - /url: /likuyey-bniya/tzeva
+              - listitem [ref=e1172]:
+                - link "פרגולות" [ref=e1173] [cursor=pointer]:
+                  - /url: /likuyey-bniya/pergolot
+              - listitem [ref=e1174]:
+                - link "חצרות" [ref=e1175] [cursor=pointer]:
+                  - /url: /likuyey-bniya/chatzerot
+              - listitem [ref=e1176]:
+                - link "ניקוז" [ref=e1177] [cursor=pointer]:
+                  - /url: /likuyey-bniya/nikuz
+            - heading "פרויקטים לפי עיר" [level=3] [ref=e1178]
+            - list [ref=e1179]:
+              - listitem [ref=e1180]:
+                - link "פרויקטים בתל אביב" [ref=e1181] [cursor=pointer]:
+                  - /url: /projects/tel-aviv
+              - listitem [ref=e1182]:
+                - link "פרויקטים בירושלים" [ref=e1183] [cursor=pointer]:
+                  - /url: /projects/jerusalem
+              - listitem [ref=e1184]:
+                - link "פרויקטים בחיפה" [ref=e1185] [cursor=pointer]:
+                  - /url: /projects/haifa
+              - listitem [ref=e1186]:
+                - link "פרויקטים בראשון לציון" [ref=e1187] [cursor=pointer]:
+                  - /url: /projects/rishon-lezion
+              - listitem [ref=e1188]:
+                - link "פרויקטים בפתח תקווה" [ref=e1189] [cursor=pointer]:
+                  - /url: /projects/petah-tikva
+              - listitem [ref=e1190]:
+                - link "פרויקטים בנתניה" [ref=e1191] [cursor=pointer]:
+                  - /url: /projects/netanya
+              - listitem [ref=e1192]:
+                - link "פרויקטים בבאר שבע" [ref=e1193] [cursor=pointer]:
+                  - /url: /projects/beer-sheva
+              - listitem [ref=e1194]:
+                - link "פרויקטים באשדוד" [ref=e1195] [cursor=pointer]:
+                  - /url: /projects/ashdod
+              - listitem [ref=e1196]:
+                - link "פרויקטים ברחובות" [ref=e1197] [cursor=pointer]:
+                  - /url: /projects/rehovot
+              - listitem [ref=e1198]:
+                - link "פרויקטים בהרצליה" [ref=e1199] [cursor=pointer]:
+                  - /url: /projects/herzliya
+              - listitem [ref=e1200]:
+                - link "פרויקטים בכפר סבא" [ref=e1201] [cursor=pointer]:
+                  - /url: /projects/kfar-saba
+              - listitem [ref=e1202]:
+                - link "פרויקטים ברעננה" [ref=e1203] [cursor=pointer]:
+                  - /url: /projects/raanana
+              - listitem [ref=e1204]:
+                - link "פרויקטים בחולון" [ref=e1205] [cursor=pointer]:
+                  - /url: /projects/holon
+              - listitem [ref=e1206]:
+                - link "פרויקטים ברמת גן" [ref=e1207] [cursor=pointer]:
+                  - /url: /projects/ramat-gan
+              - listitem [ref=e1208]:
+                - link "פרויקטים בבת ים" [ref=e1209] [cursor=pointer]:
+                  - /url: /projects/bat-yam
+              - listitem [ref=e1210]:
+                - link "פרויקטים במודיעין" [ref=e1211] [cursor=pointer]:
+                  - /url: /projects/modiin
+              - listitem [ref=e1212]:
+                - link "פרויקטים בראש העין" [ref=e1213] [cursor=pointer]:
+                  - /url: /projects/rosh-haayin
+              - listitem [ref=e1214]:
+                - link "פרויקטים ביהוד" [ref=e1215] [cursor=pointer]:
+                  - /url: /projects/yehud
+              - listitem [ref=e1216]:
+                - link "פרויקטים באור יהודה" [ref=e1217] [cursor=pointer]:
+                  - /url: /projects/or-yehuda
+              - listitem [ref=e1218]:
+                - link "פרויקטים בגבעת שמואל" [ref=e1219] [cursor=pointer]:
+                  - /url: /projects/givat-shmuel
+              - listitem [ref=e1220]:
+                - link "פרויקטים בקרית אונו" [ref=e1221] [cursor=pointer]:
+                  - /url: /projects/kiryat-ono
+              - listitem [ref=e1222]:
+                - link "פרויקטים באזור" [ref=e1223] [cursor=pointer]:
+                  - /url: /projects/azor
+              - listitem [ref=e1224]:
+                - link "פרויקטים בגבעתיים" [ref=e1225] [cursor=pointer]:
+                  - /url: /projects/givatayim
+              - listitem [ref=e1226]:
+                - link "פרויקטים בהוד השרון" [ref=e1227] [cursor=pointer]:
+                  - /url: /projects/hod-hasharon
+              - listitem [ref=e1228]:
+                - link "פרויקטים ברמת השרון" [ref=e1229] [cursor=pointer]:
+                  - /url: /projects/ramat-hasharon
+              - listitem [ref=e1230]:
+                - link "פרויקטים בחדרה" [ref=e1231] [cursor=pointer]:
+                  - /url: /projects/hadera
+              - listitem [ref=e1232]:
+                - link "פרויקטים בהקריות" [ref=e1233] [cursor=pointer]:
+                  - /url: /projects/kiryot
+              - listitem [ref=e1234]:
+                - link "פרויקטים בנהריה" [ref=e1235] [cursor=pointer]:
+                  - /url: /projects/nahariya
+              - listitem [ref=e1236]:
+                - link "פרויקטים בעכו" [ref=e1237] [cursor=pointer]:
+                  - /url: /projects/akko
+              - listitem [ref=e1238]:
+                - link "פרויקטים ביבנה" [ref=e1239] [cursor=pointer]:
+                  - /url: /projects/yavne
+              - listitem [ref=e1240]:
+                - link "פרויקטים באשקלון" [ref=e1241] [cursor=pointer]:
+                  - /url: /projects/ashkelon
+              - listitem [ref=e1242]:
+                - link "פרויקטים בנתיבות" [ref=e1243] [cursor=pointer]:
+                  - /url: /projects/netivot
+              - listitem [ref=e1244]:
+                - link "פרויקטים באופקים" [ref=e1245] [cursor=pointer]:
+                  - /url: /projects/ofakim
+    - contentinfo [ref=e1246]:
+      - generic [ref=e1247]:
+        - generic [ref=e1248]:
+          - generic [ref=e1249]:
+            - heading "פרטי התקשרות - בדק בית מקצועי" [level=3] [ref=e1250]
+            - generic [ref=e1251]:
+              - paragraph [ref=e1252]: 📞 073-3745044 - טלפון המשרד
+              - paragraph [ref=e1253]: 📞 050-6277858 - מומחה בדק בית
+              - paragraph [ref=e1254]: 📍 שירות בכל הארץ - צפון, מרכז, דרום
+            - generic [ref=e1255]:
+              - link "ערוץ היוטיוב שלנו - סרטוני בדק בית" [ref=e1256] [cursor=pointer]:
+                - /url: https://www.youtube.com/@LegalBedekBayit
+                - img [ref=e1257]
+                - text: YouTube
+              - link "ביקורות גוגל - בדק בית Legal" [ref=e1259] [cursor=pointer]:
+                - /url: https://share.google/Xs39vbL4NPtrMLrFZ
+                - img [ref=e1260]
+                - text: Google Maps
+              - link "TikTok - בדק בית Legal" [ref=e1262] [cursor=pointer]:
+                - /url: https://autocoachapp.com/autocoachapp-heb-lp/
+                - img [ref=e1263]
+                - text: TikTok
+          - generic [ref=e1265]:
+            - heading "שירותים ומאמרים" [level=3] [ref=e1266]
+            - list [ref=e1267]:
+              - listitem [ref=e1268]:
+                - link "כל שירותי בדק בית" [ref=e1269] [cursor=pointer]:
+                  - /url: /services
+              - listitem [ref=e1270]:
+                - link "בדק בית לפני קנייה" [ref=e1271] [cursor=pointer]:
+                  - /url: /services/bedek-bayit-lifnei-kniya
+              - listitem [ref=e1272]:
+                - link "בדק בית לפני מסירה" [ref=e1273] [cursor=pointer]:
+                  - /url: /services/bedek-bayit-lifnei-mesira
+              - listitem [ref=e1274]:
+                - link "חוות דעת לבית משפט" [ref=e1275] [cursor=pointer]:
+                  - /url: /services/chavat-daat-beit-mishpat
+              - listitem [ref=e1276]: בדיקות הנדסיות ובטיחות
+              - listitem [ref=e1277]:
+                - 'link "מאמר: בדק בית בדירה חדשה" [ref=e1278] [cursor=pointer]':
+                  - /url: /articles/bedek-bayit-dira-hadasha
+              - listitem [ref=e1279]:
+                - 'link "מאמר: בדק בית לדירה יד שניה" [ref=e1280] [cursor=pointer]':
+                  - /url: /articles/bedek-bayit-dira-yad-shniya
+              - listitem [ref=e1281]:
+                - 'link "מאמר: מתי להזמין בדק בית?" [ref=e1282] [cursor=pointer]':
+                  - /url: /articles/matai-lehazmin-bedek-bayit
+              - listitem [ref=e1283]:
+                - link "בלוג בדק בית" [ref=e1284] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e1285]:
+                - link "גלריית בדק בית" [ref=e1286] [cursor=pointer]:
+                  - /url: /gallery
+              - listitem [ref=e1287]:
+                - link "בדק בית לפי עיר" [ref=e1288] [cursor=pointer]:
+                  - /url: /bedek-bayit
+              - listitem [ref=e1289]:
+                - link "בדק בית לפי קבלן" [ref=e1290] [cursor=pointer]:
+                  - /url: /bedek-bayit/kablan
+              - listitem [ref=e1291]:
+                - link "בדק בית מחיר למשתכן" [ref=e1292] [cursor=pointer]:
+                  - /url: /services/mehir-lamishtaken
+              - listitem [ref=e1293]:
+                - link "בדק בית פינוי בינוי" [ref=e1294] [cursor=pointer]:
+                  - /url: /services/pinui-binui
+              - listitem [ref=e1295]:
+                - link "בדק בית תמ\"א 38" [ref=e1296] [cursor=pointer]:
+                  - /url: /services/tama-38
+          - generic [ref=e1297]:
+            - heading "אודותינו" [level=3] [ref=e1298]
+            - paragraph [ref=e1299]: חברה המתמחה בבדק בית מומחיה מוסמכים מטעם משרד העבודה ואיגוד המהנדסים הישראלי לבדיקות איכות הבניה, איתור ליקויי בנייה וחוות דעת נגדית בכל הארץ.
+        - generic [ref=e1300]:
+          - paragraph [ref=e1301]: © 2020 בדק בית Legal - כל הזכויות שמורות.
+          - paragraph:
+            - link:
+              - /url: "#"
+  - link "ייעוץ חינם בוואטסאפ" [ref=e1302] [cursor=pointer]:
+    - /url: https://wa.me/972506277858?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%AA%D7%90%D7%9D%20%D7%91%D7%93%D7%A7%20%D7%91%D7%99%D7%AA%20%2F%20%D7%99%D7%99%D7%A2%D7%95%D7%A5%20%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99.
+    - img [ref=e1304]
+  - alert [ref=e1306]

@@ -1481,6 +1481,21 @@ export default function HomePage() {
                     מאמר: מתי להזמין בדק בית?
                   </a>
                 </li>
+                <li>
+                  <a href="/articles/chok-hamkar-dirot" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    מאמר: חוק המכר - תקופות בדק ואחריות
+                  </a>
+                </li>
+                <li>
+                  <a href="/articles/tikaney-instalatzia-bedek-bayit" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    מאמר: תקני אינסטלציה (ת&quot;י 1205)
+                  </a>
+                </li>
+                <li>
+                  <a href="/articles/taken-789-stiyot-mutarot" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    מאמר: ת&quot;י 789 - סטיות מותרות
+                  </a>
+                </li>
                 <li className="pt-2">
                   <a href="/blog" className="text-blue-400 hover:text-blue-300 hover:underline">
                     בלוג בדק בית

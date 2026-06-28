@@ -14,7 +14,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-pilus-ritzpa-laser-matai.webp",
-    standard: "ת״י 789 – סטיות מותרות בעבודות בנייה",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
     title: "בדיקת מפלס רצפה בלייזר",
     alt: "בדיקת מפלס ומישוריות רצפה בעזרת מאזנת לייזר ירוקה בדירה - איתור שיפועים וליקויי ריצוף בבדק בית",
     caption:

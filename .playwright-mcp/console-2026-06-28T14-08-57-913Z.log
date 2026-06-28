@@ -1,0 +1,22 @@
+[     844ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/css/8d6d41f027d6c449.css:0
+[     847ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/css/3ec2da31938e860b.css:0
+[     995ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/webpack-ffc9268659d8dc9a.js:0
+[     995ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/manifest.webmanifest:0
+[     995ms] [ERROR] Manifest fetch from http://localhost:3100/manifest.webmanifest failed, code 500 @ http://localhost:3100/:2
+[     996ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/fd9d1056-9e191f0896c1d560.js:0
+[     996ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/117-010bd86c194e7b3b.js:0
+[     996ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/main-app-41bc1f337eb4a98b.js:0
+[     996ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/972-6a26b59e737c605e.js:0
+[     997ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/878-02eda72be12905c7.js:0
+[     997ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/622-dc42ab2f6db4232d.js:0
+[     997ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/460-65a3d52cfc73cb2e.js:0
+[     998ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/445-cb290d04cff38cf3.js:0
+[     998ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/880-c3e814a317ac6dcd.js:0
+[     999ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/app/page-54e90908a75c146e.js:0
+[     999ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/3-7cb3932dac3a9b2c.js:0
+[     999ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/_next/static/chunks/app/layout-5eaef280c14f2e92.js:0
+[   11191ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/manifest.webmanifest:0
+[   11194ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3100/favicon.ico:0
+[   11195ms] [ERROR] Manifest fetch from http://localhost:3100/manifest.webmanifest failed, code 500 @ http://localhost:3100/:0
+[   14636ms] [WARNING] The resource https://www.googletagmanager.com/gtag/js?id=AW-17703305821 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3100/:0
+[   19586ms] [WARNING] The resource https://www.googletagmanager.com/gtag/js?id=AW-17703305821 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3100/:0

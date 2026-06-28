@@ -42,7 +42,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-mad-shipua-mishoriyut-dira-hadasha.webp",
-    standard: "ת״י 789 – סטיות מותרות בעבודות בנייה",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
     title: "מדידת שיפוע ומישוריות",
     alt: "מד שיפוע דיגיטלי אינקלינומטר מודד שיפוע ומישוריות משטח בדירה חדשה - בדק בית ואיתור ליקויי ריצוף לפני מסירה",
     caption:

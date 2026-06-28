@@ -20,10 +20,12 @@ export function SiteIndex() {
     { label: "דף הבית", href: "/" },
     { label: "אודות", href: "/about" },
     { label: "שירותי בדק בית", href: "/services" },
+    { label: "כמה עולה בדק בית", href: "/mehir-bedek-bayit" },
     { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
     { label: "בדק בית לפי קבלן", href: "/bedek-bayit/kablan" },
     { label: "ליקויי בנייה", href: "/likuyey-bniya" },
     { label: "פרויקטים חדשים", href: "/projects" },
+    { label: "מאמרים ומדריכים", href: "/articles" },
     { label: "גלריית בדק בית", href: "/gallery" },
     { label: "בלוג", href: "/blog" },
     { label: "כרטיס ביקור דיגיטלי", href: "/card" },
@@ -77,6 +79,7 @@ export function SiteIndex() {
                 <li key={s.slug}>
                   <Link
                     href={`/services/${s.slug}`}
+                    prefetch={false}
                     className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
                   >
                     {s.name}
@@ -91,6 +94,7 @@ export function SiteIndex() {
                 <li key={p.slug}>
                   <Link
                     href={`/services/${p.slug}`}
+                    prefetch={false}
                     className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
                   >
                     בדק בית {p.name}
@@ -107,6 +111,7 @@ export function SiteIndex() {
                 <li key={c.slug}>
                   <Link
                     href={`/bedek-bayit/${c.slug}`}
+                    prefetch={false}
                     className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
                   >
                     {c.nameSimple}
@@ -123,6 +128,7 @@ export function SiteIndex() {
                 <li key={c.slug}>
                   <Link
                     href={`/bedek-bayit/kablan/${c.slug}`}
+                    prefetch={false}
                     className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
                   >
                     {c.name}
@@ -139,6 +145,7 @@ export function SiteIndex() {
                 <li key={d.slug}>
                   <Link
                     href={`/likuyey-bniya/${d.slug}`}
+                    prefetch={false}
                     className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
                   >
                     {d.name}

@@ -177,7 +177,27 @@ export default function CityPage({ params }: { params: { city: string } }) {
     ? profile.intro
     : `${city.description} משרד בדק בית Legal מספק שירותי בדק בית הנדסי מקיפים ב${city.name} ובכל אזור ${city.region}. בין אם רכשתם דירה חדשה מקבלן או דירת יד שניה, אנו נבדוק את הנכס ביסודיות, נאתר ליקויי בנייה ונספק לכם חוות דעת מקצועית שתסייע לכם להבטיח את ההשקעה שלכם.`
 
+  // Per-city Service schema (P-Schema 4): targets the city explicitly via areaServed.
+  const cityServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `בדק בית ב${city.name}`,
+    serviceType: "בדק בית ואיתור ליקויי בנייה",
+    description: `בדק בית הנדסי מקצועי ב${city.name} — בדיקת דירות חדשות ויד שנייה, איתור ליקויי בנייה וחוות דעת קבילה.`,
+    url: `https://legalbedek.co.il/bedek-bayit/${city.slug}`,
+    areaServed: { "@type": "City", name: city.nameSimple },
+    provider: {
+      "@type": "ProfessionalService",
+      "@id": "https://legalbedek.co.il/#organization",
+      name: "בדק בית Legal - יגאל בנסקי",
+      url: "https://legalbedek.co.il",
+      telephone: "+972-50-627-7858",
+    },
+  }
+
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cityServiceSchema) }} />
     <SeoLandingTemplate
       badge={`שירות ב${city.name} וב${city.region}`}
       title={`בדק בית ב${city.name} - מומחה לאיתור ליקויי בנייה`}
@@ -196,5 +216,6 @@ export default function CityPage({ params }: { params: { city: string } }) {
         { label: city.name, href: `/bedek-bayit/${city.slug}` },
       ]}
     />
+    </>
   )
 }

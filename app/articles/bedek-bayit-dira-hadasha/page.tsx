@@ -91,9 +91,9 @@ export default function ArticleBedekBayitDiraHadasha() {
                 className="object-contain"
               />
               <div className="text-right">
-                <h1 className="text-lg font-bold text-gray-900">
+                <span className="block text-lg font-bold text-gray-900">
                   בדק בית ואיתור ליקויי בניה
-                </h1>
+                </span>
               </div>
             </Link>
             <Button

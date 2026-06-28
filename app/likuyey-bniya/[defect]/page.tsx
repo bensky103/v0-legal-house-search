@@ -4,6 +4,7 @@ import { defects, getDefect } from "@/lib/defects"
 import { defectStandards } from "@/lib/defect-standards"
 import { services } from "@/lib/services"
 import { cities } from "@/lib/seo-locations"
+import { getArticlesForDefect } from "@/lib/articles"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
 export function generateStaticParams() {
@@ -80,7 +81,12 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
     .slice(0, 4)
     .map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
 
-  const relatedLinks = [...serviceLinks, ...relatedDefectLinks, ...cityLinks]
+  const articleLinks = getArticlesForDefect(defect.slug).map((a) => ({
+    label: `מאמר: ${a.title}`,
+    href: `/articles/${a.slug}`,
+  }))
+
+  const relatedLinks = [...serviceLinks, ...articleLinks, ...relatedDefectLinks, ...cityLinks]
 
   // P7 — Service schema for the defect-inspection service this page describes.
   const serviceSchema = {
@@ -93,8 +99,9 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
     areaServed: { "@type": "Country", name: "ישראל" },
     provider: {
       "@type": "ProfessionalService",
-      name: "בדק בית Legal - יגאל בנסקי",
       "@id": "https://legalbedek.co.il/#organization",
+      name: "בדק בית Legal - יגאל בנסקי",
+      url: "https://legalbedek.co.il",
       telephone: "+972-50-627-7858",
     },
   }

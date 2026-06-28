@@ -175,6 +175,19 @@ const HOMEPAGE_FAQ = [
   },
 ]
 
+// Real on-page testimonials, emitted as Review + AggregateRating schema (all 5★).
+// These are the same reviews displayed in the testimonials section below.
+const HOMEPAGE_REVIEWS = [
+  { author: "בינימין", body: "קיבלתי חוות דעת עם ליקויים רבים, להפתעתי חברת אלקטרה תיקנו את הכל ללא כל ויכוח בהתאם לדוח." },
+  { author: "יוסף אבוטבול", body: "הזמנו בדק בית לבניין מטעם ועד הבית. מרוצים מאוד מהתוצאה, התגלו ליקויים שאם לא היינו מטפלים בהם היה נגרם נזק עצום בעתיד." },
+  { author: "מנחם", body: "אני קבלן ביצוע, הצלחתי בזכות חוות דעת נגדית לצמצם את עלויות התיקונים בעשרות אלפי שקלים." },
+  { author: "בני", body: "הבדיקה שלכם הייתה מקצועית ומדויקת מאוד. הקבלן תיקן את כל הליקויים שהוצאו בדוח. תודה רבה!" },
+  { author: "מייק", body: "קיבלנו דוח מפורט, ברור ומסודר. יגאל הסביר לנו בשפה פשוטה מה המשמעות של כל ממצא. ממליצים בחום!" },
+  { author: "יעקב", body: "אין לי מילים חוץ מלומר לך שאתה תותח! אני ממליץ עליך בחום." },
+  { author: "איתן", body: "תודה רבה שוב, עבודה מקצועית ומדויקת." },
+  { author: "מאשה", body: "טרם הסתכלתי בבדק בית אך היית אמין, סבלני ומקצועי, תודה רבה." },
+]
+
 // EEAT — breadth of real-world inspection experience across property types.
 const PROPERTY_EXPERIENCE = [
   {
@@ -267,9 +280,28 @@ export default function HomePage() {
                 telephone: "+972-50-627-7858",
                 email: "yigalbensky@gmail.com",
                 priceRange: "$$",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "IL",
+                  addressRegion: "ישראל",
+                },
+                geo: { "@type": "GeoCoordinates", latitude: "31.0461", longitude: "34.8516" },
+                openingHours: "Mo-Su 08:00-20:00",
                 founder: { "@id": "https://legalbedek.co.il/#yigal-bensky" },
                 employee: { "@id": "https://legalbedek.co.il/#yigal-bensky" },
                 areaServed: { "@type": "Country", name: "ישראל" },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  reviewCount: String(HOMEPAGE_REVIEWS.length),
+                },
+                review: HOMEPAGE_REVIEWS.map((r) => ({
+                  "@type": "Review",
+                  author: { "@type": "Person", name: r.author },
+                  reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+                  reviewBody: r.body,
+                })),
                 sameAs: [
                   "https://www.youtube.com/@LegalBedekBayit",
                   "https://share.google/Xs39vbL4NPtrMLrFZ",
@@ -326,7 +358,6 @@ export default function HomePage() {
                 title="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
                 width={80}
                 height={80}
-                priority
                 className="object-contain w-12 h-12 md:w-20 md:h-20"
               />
               <div>
@@ -437,7 +468,7 @@ export default function HomePage() {
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover"
-                  priority
+                  loading="eager"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white text-start">
@@ -1094,14 +1125,13 @@ export default function HomePage() {
                   {"\"הבדיקה שלכם הייתה מקצועית ומדויקת מאוד. הקבלן תיקן את כל הליקויים שהוצאו בדוח. לאחר ביצוע הבדק נוכחתי שחובה לבצע בדיקה חדשה. תודה רבה!\""}
                 </p>
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img
+                  <Image
                     src="/images/bikoret-bedek-bayit-benny.webp"
                     alt="ביקורת בדק בית מלקוח מרוצה - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים שאותרו בדוח"
                     title="ביקורת לקוח על שירות בדק בית"
                     width={1220}
                     height={1155}
                     loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
                   <figcaption className="sr-only">ביקורת לקוח - בדיקה מקצועית ומדויקת, הקבלן תיקן את כל הליקויים</figcaption>
@@ -1131,14 +1161,13 @@ export default function HomePage() {
                   {"\"קיבלנו דוח מפורט, ברור ומסודר. יגאל הסביר לנו בשפה פשוטה מה המשמעות של כל ממצא. ממליצים בחום לכל מי שמקבל דירה חדשה!\""}
                 </p>
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img
+                  <Image
                     src="/images/bikoret-bedek-bayit-mike.webp"
                     alt="ביקורת בדק בית מלקוח מרוצה - דוח מפורט וברור, ממליצים בחום לכל מי שמקבל דירה חדשה מקבלן"
                     title="ביקורת לקוח על דוח בדק בית מפורט"
                     width={1600}
                     height={720}
                     loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
                   <figcaption className="sr-only">ביקורת לקוח - דוח מפורט וברור, ממליצים בחום למקבלי דירה חדשה</figcaption>
@@ -1168,14 +1197,13 @@ export default function HomePage() {
                   {"\"אין לי מילים חוץ מלומר לך שאתה תותח! אני ממליץ עליך בחום.\""}
                 </p>
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img
+                  <Image
                     src="/images/bikoret-bedek-bayit-yaakov.webp"
                     alt="ביקורת בדק בית מלקוח מרוצה - המלצה חמה על שירות בדק בית מקצועי ואמין"
                     title="המלצת לקוח על שירות בדק בית"
                     width={1201}
                     height={758}
                     loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
                   <figcaption className="sr-only">ביקורת לקוח - המלצה חמה על שירות בדק בית מקצועי ואמין</figcaption>
@@ -1205,14 +1233,13 @@ export default function HomePage() {
                   {"\"תודה רבה שוב, עבודה מקצועית ומדויקת.\""}
                 </p>
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img
+                  <Image
                     src="/images/bikoret-bedek-bayit-whatsapp.webp"
                     alt="ביקורת בדק בית בוואטסאפ מלקוח מרוצה - עבודה מקצועית ומדויקת באיתור ליקויי בנייה"
                     title="ביקורת לקוח בוואטסאפ על בדק בית"
                     width={1220}
                     height={817}
                     loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
                   <figcaption className="sr-only">ביקורת לקוח בוואטסאפ - עבודה מקצועית ומדויקת</figcaption>
@@ -1242,14 +1269,13 @@ export default function HomePage() {
                   {"\"בוקר טוב יגאל, תודה רבה מעריך את ההשקעה, שבוע טוב!\""}
                 </p>
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img
+                  <Image
                     src="/images/bikoret-bedek-bayit-hashkaa.webp"
                     alt="ביקורת בדק בית מלקוח מרוצה - תודה רבה, הלקוח מעריך את ההשקעה בבדק הבית שחסך כסף וליקויים"
                     title="ביקורת לקוח על ההשקעה בבדק בית"
                     width={405}
                     height={73}
                     loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
                   <figcaption className="sr-only">ביקורת לקוח - תודה רבה, מעריך את ההשקעה בבדק הבית</figcaption>
@@ -1279,14 +1305,13 @@ export default function HomePage() {
                   {"\"טרם הסתכלתי בבדק בית אך היית אמין סבלני ומקצועי, תודה רבה.\""}
                 </p>
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
-                  <img
+                  <Image
                     src="/images/bikoret-bedek-bayit-masha.webp"
                     alt="ביקורת בדק בית בוואטסאפ ממאשה מאזור מרכז הארץ לאחר בדק בית לדירה חדשה - שירות אמין סבלני ומקצועי"
                     title="ביקורת לקוחה בוואטסאפ על בדק בית לדירה חדשה"
                     width={597}
                     height={140}
                     loading="lazy"
-                    decoding="async"
                     className="w-full h-auto object-cover"
                   />
                   <figcaption className="sr-only">

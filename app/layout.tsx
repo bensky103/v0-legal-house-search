@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום.",
     images: [
       {
-        url: "/logo.webp",
-        width: 1124,
-        height: 901,
-        alt: "בדק בית Legal - מומחה לאיתור ליקויי בנייה",
+        url: "/images/binyanim-moderniim-israel-bedek-bayit.webp",
+        width: 1229,
+        height: 752,
+        alt: "בדק בית Legal - בדיקת איכות בנייה של דירות חדשות ומבנים בישראל",
       },
     ],
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "בדק בית - מומחה לאיתור ליקויי בנייה",
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית בכל הארץ",
-    images: ["/logo.webp"],
+    images: ["/images/binyanim-moderniim-israel-bedek-bayit.webp"],
   },
   alternates: {
     canonical: "https://legalbedek.co.il",
@@ -80,6 +80,11 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className={heebo.variable}>
       <head>
+        {/* Resource hints — connect early to analytics + the hero video host (faster LCP / video open) */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" crossOrigin="anonymous" />
+
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -100,6 +105,7 @@ gtag('config', 'AW-17703305821');`}
           {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
+              "@id": "https://legalbedek.co.il/#organization",
               name: "בדק בית Legal - יגאל בנסקי",
               description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוו״ד נגדית",
               url: "https://legalbedek.co.il",

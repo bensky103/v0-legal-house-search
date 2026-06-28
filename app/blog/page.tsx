@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
+import { articles } from "@/lib/articles"
 import { SiteIndex } from "@/components/site-index"
 
 export const metadata: Metadata = {
@@ -61,6 +62,32 @@ export default function BlogPage() {
           <p className="mt-3 text-lg text-blue-100 max-w-2xl mx-auto text-pretty">
             מאמרים, טיפים ומדריכים מקצועיים בנושא איתור ליקויי בנייה, בדיקת דירה חדשה מקבלן ובדק בית לפני מסירה.
           </p>
+        </div>
+      </section>
+
+      {/* Internal articles & guides */}
+      <section className="container mx-auto px-4 py-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">מאמרים ומדריכים מקצועיים</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {articles.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/articles/${a.slug}`}
+              className="group flex flex-col rounded-2xl bg-white p-6 ring-1 ring-slate-200 hover:ring-blue-300 hover:shadow-lg transition-all"
+            >
+              <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors">{a.title}</h3>
+              <p className="mt-2 text-sm text-slate-600 leading-relaxed flex-1">{a.description}</p>
+              <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-blue-600">
+                קראו את המאמר
+                <span aria-hidden="true">←</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link href="/articles" className="text-blue-600 hover:text-blue-800 font-semibold hover:underline">
+            לכל המאמרים והמדריכים ←
+          </Link>
         </div>
       </section>
 

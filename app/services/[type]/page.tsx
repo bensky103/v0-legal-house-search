@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { projectTypes } from "@/lib/seo-locations"
 import { services, getServiceBySlug } from "@/lib/services"
+import { getArticlesForService } from "@/lib/articles"
 import { defects } from "@/lib/defects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
@@ -154,8 +155,14 @@ function DedicatedService({ slug }: { slug: string }) {
     .filter((d): d is NonNullable<typeof d> => Boolean(d))
     .map((d) => ({ label: `ליקויי ${d.name}`, href: `/likuyey-bniya/${d.slug}` }))
 
+  const articleLinks = getArticlesForService(service.slug).map((a) => ({
+    label: `מאמר: ${a.title}`,
+    href: `/articles/${a.slug}`,
+  }))
+
   const relatedLinks = [
     ...relatedServiceLinks,
+    ...articleLinks,
     ...relatedDefectLinks,
     { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
     { label: "מאגר ליקויי הבנייה", href: "/likuyey-bniya" },
@@ -171,8 +178,9 @@ function DedicatedService({ slug }: { slug: string }) {
     areaServed: { "@type": "Country", name: "ישראל" },
     provider: {
       "@type": "ProfessionalService",
-      name: "בדק בית Legal - יגאל בנסקי",
       "@id": `${baseUrl}/#organization`,
+      name: "בדק בית Legal - יגאל בנסקי",
+      url: baseUrl,
       telephone: "+972-50-627-7858",
     },
   }

@@ -50,7 +50,7 @@ export function ArticleLayout({
             <Link href="/" className="flex items-center gap-3">
               <Image src="/logo.webp" alt="Legal בדק בית - לוגו" width={50} height={50} className="object-contain" />
               <div className="text-right">
-                <h1 className="text-lg font-bold text-gray-900">בדק בית ואיתור ליקויי בניה</h1>
+                <span className="text-lg font-bold text-gray-900">בדק בית ואיתור ליקויי בניה</span>
               </div>
             </Link>
             <a

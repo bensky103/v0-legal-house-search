@@ -67,7 +67,7 @@ export function ArticleJsonLd({
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "דף הבית", item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: "מאמרים", item: `${BASE_URL}/blog` },
+      { "@type": "ListItem", position: 2, name: "מאמרים", item: `${BASE_URL}/articles` },
       { "@type": "ListItem", position: 3, name: breadcrumbLabel, item: url },
     ],
   }

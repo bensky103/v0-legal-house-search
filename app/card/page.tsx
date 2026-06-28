@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description:
     "כרטיס הביקור הדיגיטלי של בדק בית Legal - מומחים לאיתור ליקויי בנייה וחוות דעת נגדית מוסמכת. שמרו את הפרטים ליצירת קשר ישירה.",
   alternates: { canonical: "https://legalbedek.co.il/card" },
+  // Thin utility page (embedded business card) — keep out of the index, allow link-following.
+  robots: { index: false, follow: true },
   openGraph: {
     title: "כרטיס ביקור דיגיטלי - בדק בית Legal",
     description: "כרטיס הביקור הדיגיטלי של בדק בית Legal - מומחים לאיתור ליקויי בנייה וחוות דעת נגדית מוסמכת.",

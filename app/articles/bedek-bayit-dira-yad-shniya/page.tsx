@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticleJsonLd } from "@/components/article-jsonld"
 
 const DEFECTS_YAD_SHNIYA = [
   {
@@ -66,6 +67,14 @@ const DEFECTS_YAD_SHNIYA = [
 export default function BedekBayitDiraYadShniyaArticle() {
   return (
     <article className="min-h-screen bg-gray-50" dir="rtl">
+      <ArticleJsonLd
+        headline="בדק בית לדירה יד שניה: חיסכון עשרות אלפי שקלים"
+        description="מדריך מקיף על בדק בית לדירה יד שניה - איך לחסוך הוצאות עתידיות על ליקויים סמויים, לדעת מה בדיוק קונים ולהוריד את מחיר הדירה במשא ומתן."
+        slug="bedek-bayit-dira-yad-shniya"
+        breadcrumbLabel="בדק בית לדירה יד שניה"
+        datePublished="2026-06-16"
+        dateModified="2026-06-28"
+      />
       {/* Header */}
       <header className="bg-gradient-to-l from-blue-700 to-blue-600 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">

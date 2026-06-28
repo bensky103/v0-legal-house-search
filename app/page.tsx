@@ -296,6 +296,25 @@ export default function HomePage() {
                   })),
                 },
               },
+              {
+                "@type": "WebSite",
+                "@id": "https://legalbedek.co.il/#website",
+                name: "בדק בית Legal - יגאל בנסקי",
+                url: "https://legalbedek.co.il",
+                inLanguage: "he",
+                publisher: { "@id": "https://legalbedek.co.il/#organization" },
+              },
+              {
+                "@type": "VideoObject",
+                name: "בדק בית Legal - יגאל בנסקי, מומחה לאיתור ליקויי בנייה",
+                description:
+                  "סרטון היכרות עם שירותי בדק בית של יגאל בנסקי: איתור ליקויי בנייה, בדיקת דירה לפני מסירה וחוות דעת הנדסית קבילה.",
+                thumbnailUrl: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                uploadDate: "2026-06-16",
+                contentUrl:
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%AA%D7%A8-W1e4mWhh4SZfg8W0g0azc15TRMW1fZ.mp4",
+                publisher: { "@id": "https://legalbedek.co.il/#organization" },
+              },
             ],
           }),
         }}

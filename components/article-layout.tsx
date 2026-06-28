@@ -2,11 +2,13 @@ import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { SiteIndex } from "@/components/site-index"
+import { ArticleJsonLd } from "@/components/article-jsonld"
 
 /**
  * Shared chrome for long-form article pages (server component, SEO-friendly).
  * Provides the header, title block, author byline, CTA, author bio and footer,
  * so each article page only supplies metadata + body content.
+ * When `slug` is supplied it also emits Article + Author + Breadcrumb JSON-LD.
  */
 export function ArticleLayout({
   title,
@@ -14,15 +16,33 @@ export function ArticleLayout({
   children,
   ctaTitle = "צריכים בדק בית מקצועי?",
   ctaText = "צרו קשר עוד היום לתיאום בדיקה הנדסית מקיפה ולקבלת חוות דעת מקצועית.",
+  slug,
+  description,
+  datePublished,
+  dateModified,
 }: {
   title: string
   subtitle?: string
   children: ReactNode
   ctaTitle?: string
   ctaText?: string
+  slug?: string
+  description?: string
+  datePublished?: string
+  dateModified?: string
 }) {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      {slug && (
+        <ArticleJsonLd
+          headline={title}
+          description={description ?? subtitle ?? title}
+          slug={slug}
+          breadcrumbLabel={title}
+          datePublished={datePublished}
+          dateModified={dateModified}
+        />
+      )}
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3">

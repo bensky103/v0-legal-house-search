@@ -6,6 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticleJsonLd } from "@/components/article-jsonld"
 
 const DEFECTS_DIRA_HADASHA = [
   {
@@ -69,6 +70,14 @@ const DEFECTS_DIRA_HADASHA = [
 export default function ArticleBedekBayitDiraHadasha() {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
+      <ArticleJsonLd
+        headline="בדק בית בדירה חדשה: למה זה קריטי ואיך זה עוזר במשא ומתן"
+        description="מדריך מקיף על בדק בית בדירה חדשה - למה חשוב לא לקנות חתול בשק, איך בדיקת נכס עוזרת במשא ומתן על המחיר, ומה בדק בית מקצועי חושף."
+        slug="bedek-bayit-dira-hadasha"
+        breadcrumbLabel="בדק בית בדירה חדשה"
+        datePublished="2026-06-16"
+        dateModified="2026-06-28"
+      />
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-3">

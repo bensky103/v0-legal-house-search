@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticleJsonLd } from "@/components/article-jsonld"
 
 const DEFECTS_MATAI = [
   {
@@ -65,6 +66,14 @@ const DEFECTS_MATAI = [
 export default function MataiLehazminBedekBayitPage() {
   return (
     <article className="min-h-screen bg-gray-50" dir="rtl">
+      <ArticleJsonLd
+        headline="מתי כדאי להזמין בדק בית? המדריך המלא לעיתוי נכון"
+        description="מתי הזמן הנכון להזמין בדק בית? לפני מסירה, ביום המסירה או אחריה? מדריך מקצועי לעיתוי הנכון של בדיקה הנדסית שיחסוך לכם עשרות אלפי שקלים."
+        slug="matai-lehazmin-bedek-bayit"
+        breadcrumbLabel="מתי להזמין בדק בית"
+        datePublished="2026-06-16"
+        dateModified="2026-06-28"
+      />
       {/* Hero Section */}
       <header className="bg-gradient-to-b from-blue-900 to-blue-800 text-white py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl">

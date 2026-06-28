@@ -236,6 +236,11 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "רובע הפארק", area: "מתחמי מגורים חדשים, פארק העיר" },
     { name: "מישור הגפן", area: "שכונת מגורים חדשה" },
   ],
+  "bnei-brak": [
+    { name: "BBC Living", area: "מגורים ליד מתחם העסקים BBC" },
+    { name: "מגדלי לייף", area: "מגורים ומסחר, מתחם BBC" },
+    { name: "פרדס דכה", area: "שכונת מגורים חדשה בצפון העיר" },
+  ],
 }
 
 export function getCityProjects(slug: string): CityProject[] {

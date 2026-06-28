@@ -2,6 +2,10 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { cities } from "@/lib/seo-locations"
 import { getCityProfile } from "@/lib/city-profiles"
+import { getCityProjectIndex } from "@/lib/projects"
+import { getCityProjects } from "@/lib/city-projects"
+import { defects } from "@/lib/defects"
+import { services } from "@/lib/services"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
 export function generateStaticParams() {
@@ -15,6 +19,12 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   const title = `בדק בית ב${city.name} | מומחה בדק בית לדירות חדשות ויד שניה`
   const description = `בדק בית הנדסי ב${city.name} - איתור ליקויי בנייה, בדיקת דירה לפני מסירה ובדיקת נכס יד שניה. מומחה מוסמך באיגוד המהנדסים, שירות מקצועי ב${city.region}. חייגו עכשיו!`
 
+  // Real project names become keywords so "<project> בדק בית" searches match this page.
+  const projectKeywords = getCityProjects(city.slug).flatMap((p) => [
+    `בדק בית ${p.name}`,
+    `${p.name} ${city.nameSimple}`,
+  ])
+
   return {
     title,
     description,
@@ -25,6 +35,7 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
       `בדיקת דירה ${city.nameSimple}`,
       `בדק בית דירה חדשה ${city.nameSimple}`,
       `בדק בית יד שניה ${city.nameSimple}`,
+      ...projectKeywords,
       "בדק בית",
       "מומחה בדק בית",
     ],
@@ -49,11 +60,47 @@ export default function CityPage({ params }: { params: { city: string } }) {
   if (!city) notFound()
 
   const profile = getCityProfile(city.slug)
+  const projectIndex = getCityProjectIndex(city.slug)
+  const cityProjectList = getCityProjects(city.slug)
 
-  const relatedLinks = cities
-    .filter((c) => c.slug !== city.slug)
-    .slice(0, 8)
+  // Named real projects rendered as H3 sub-headings (the site owner's data) — targets
+  // "<project name> בדק בית" long-tail searches by residents of those projects.
+  const projectsSection =
+    cityProjectList.length > 0
+      ? {
+          heading: `בדק בית בפרויקטים חדשים ב${city.name}`,
+          intro: `אנו מבצעים בדק בית ובדיקת מסירה בפרויקטים החדשים הבולטים ב${city.name}. אם רכשתם דירה באחד מהפרויקטים הבאים, אנו נלווה אתכם בבדיקה הנדסית מקצועית לפני קבלת המפתח ובאיתור ליקויי בנייה מול הקבלן:`,
+          projects: cityProjectList,
+        }
+      : undefined
+
+  // Contextual internal links (P2): the city's real new-construction projects, related
+  // construction defects, core services and nearby cities — 10+ links per page.
+  const nearbyCityLinks = cities
+    .filter((c) => c.slug !== city.slug && c.region === city.region)
+    .slice(0, 5)
     .map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
+
+  const otherCityLinks = cities
+    .filter((c) => c.slug !== city.slug && c.region !== city.region)
+    .slice(0, 3)
+    .map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
+
+  const defectLinks = defects
+    .slice(0, 4)
+    .map((d) => ({ label: `ליקויי ${d.name}`, href: `/likuyey-bniya/${d.slug}` }))
+
+  const serviceLinks = services
+    .slice(0, 3)
+    .map((s) => ({ label: s.name, href: `/services/${s.slug}` }))
+
+  const relatedLinks = [
+    ...(projectIndex ? [{ label: `פרויקטים חדשים ב${city.nameSimple}`, href: `/projects/${city.slug}` }] : []),
+    ...serviceLinks,
+    ...defectLinks,
+    ...nearbyCityLinks,
+    ...otherCityLinks,
+  ]
 
   // Generic, name-interpolated content used for cities without a dedicated profile.
   const genericFeatures = [
@@ -138,6 +185,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
       intro={intro}
       features={profile ? profile.features : genericFeatures}
       contentSections={profile ? profile.sections : genericSections}
+      projectsSection={projectsSection}
       faq={profile ? profile.faq : genericFaq}
       ctaTitle={`צריכים בדק בית ב${city.name}?`}
       ctaText={`צרו קשר עוד היום לתיאום בדיקה הנדסית מקצועית של הנכס שלכם ב${city.name}. מומחה מוסמך, שירות מהיר וחוות דעת מקצועית.`}

@@ -14,6 +14,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-pilus-ritzpa-laser-matai.webp",
+    standard: "ת״י 789 – סטיות מותרות בעבודות בנייה",
     title: "בדיקת מפלס רצפה בלייזר",
     alt: "בדיקת מפלס ומישוריות רצפה בעזרת מאזנת לייזר ירוקה בדירה - איתור שיפועים וליקויי ריצוף בבדק בית",
     caption:
@@ -21,6 +22,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-bdikat-delet-knisa-plada-matai.webp",
+    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
     title: "בדיקת דלת כניסה (פלדלת)",
     alt: "מומחה בדק בית בודק דלת כניסה פלדלת, מנעול ומשקוף בדירה - איתור ליקויי התקנה ובטיחות בבדק בית",
     caption:
@@ -28,6 +30,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/likui-srita-delet-plada-knisa-matai.webp",
+    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
     title: "שריטה ופגם בדלת פלדה",
     alt: "שריטה ופגם גמר בדלת כניסת פלדה בדירה חדשה - איתור ליקויי גמר ואסתטיקה בבדק בית לפני מסירה מקבלן",
     caption:
@@ -35,6 +38,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-bdikat-mashkof-delet-knisa-matai.webp",
+    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
     title: "מדידת משקוף ופתח דלת",
     alt: "מדידת מידות וניצבות פתח ומשקוף דלת כניסה בעזרת פלס בדירה - איתור ליקויי התקנה בבדק בית",
     caption:
@@ -42,6 +46,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-bdikat-chalon-tris-matai.webp",
+    standard: "ת״י 1509 – תריסים",
     title: "בדיקת חלון ותריס",
     alt: "מומחית בדק בית בודקת תפקוד חלון, תריס ומסילה בדירה - איתור ליקויי התקנה ואיטום בחלונות בבדק בית",
     caption:
@@ -49,6 +54,7 @@ const DEFECTS_MATAI = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-mishoriyut-mishak-ritzuf-matai.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
     title: "מישוריות ומישק ריצוף",
     alt: "בדיקת מישוריות והפרשי מפלס בין אריחי ריצוף בעזרת פלס וסרגל - איתור ליקויי ריצוף בבדק בית",
     caption:

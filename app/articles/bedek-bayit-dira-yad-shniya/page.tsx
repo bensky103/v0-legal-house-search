@@ -7,6 +7,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 const DEFECTS_YAD_SHNIYA = [
   {
     src: "/articles/likuyim/bedek-bayit-mishoriyut-ritzpa-peles-aroch-yad-shniya.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
     title: "בדיקת מישוריות ריצוף",
     alt: "בדיקת מישוריות רצפה וריצוף בעזרת פלס ארוך בדירה - איתור ליקויי ריצוף, שקיעות והפרשי גובה בבדק בית",
     caption:
@@ -14,6 +15,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/likui-shevev-sedek-ariach-ritzuf-yad-shniya.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
     title: "שבב וסדק באריח ריצוף",
     alt: "מדידת שבב וסדק באריח ריצוף בעזרת זכוכית מגדלת עם סרגל מדידה - איתור ליקויי ריצוף בבדק בית",
     caption:
@@ -21,6 +23,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/likui-pgam-shiyuf-even-ritzuf-yad-shniya.webp",
+    standard: "ת״י 5566 – ריצוף אבן",
     title: "פגם בליטוש אבן וריצוף",
     alt: "פגם בליטוש משטח אבן ושבב בקצה אריח ריצוף - איתור ליקויי גמר וריצוף בבדק בית לדירה",
     caption:
@@ -28,6 +31,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/likui-sedek-luach-even-yad-shniya.webp",
+    standard: "ת״י 2378 – חיפוי אבן טבעית",
     title: "סדק בלוח אבן",
     alt: "סדק עובר בלוח אבן או שיש בדירה - איתור ליקויי בנייה וגמר באבן בבדק בית",
     caption:
@@ -35,6 +39,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/likui-sedek-saf-even-yad-shniya.webp",
+    standard: "ת״י 2378 – חיפוי אבן טבעית",
     title: "סדק בסף ואדן אבן",
     alt: "סדק לאורך סף או אדן חלון מאבן בדירה - איתור ליקויי בנייה ואיטום בבדק בית",
     caption:
@@ -42,6 +47,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-nitzvut-mashkof-delet-yad-shniya.webp",
+    standard: "ת״י 789 – סטיות מותרות בעבודות בנייה",
     title: "בדיקת ניצבות משקוף דלת",
     alt: "בדיקת ניצבות וזווית ישרה של משקוף דלת בעזרת זווית נגרים בדירה - איתור ליקויי התקנה בבדק בית",
     caption:
@@ -49,6 +55,7 @@ const DEFECTS_YAD_SHNIYA = [
   },
   {
     src: "/articles/likuyim/likui-mishak-ritzuf-mad-pgam-yad-shniya.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
     title: "מדידת מישק וריווח ריצוף",
     alt: "מדידת רוחב מישק וריווח בין אריחי ריצוף בעזרת פלס וסרגל - איתור ליקויי ריצוף ופוגות לא אחידות בבדק בית",
     caption:

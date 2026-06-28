@@ -10,6 +10,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 const DEFECTS_DIRA_HADASHA = [
   {
     src: "/articles/likuyim/likui-itum-chalon-aluminium-dira-hadasha.webp",
+    standard: "ת״י 1068 – חלונות אלומיניום",
     title: "ליקוי איטום בחלון אלומיניום",
     alt: "ליקוי איטום וסיליקון לקוי בשפת זכוכית חלון אלומיניום בדירה חדשה - איתור ליקויי בנייה בבדק בית לפני מסירה מקבלן",
     caption:
@@ -17,6 +18,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-chalon-aluminium-mirpeset-dira-hadasha.webp",
+    standard: "ת״י 1068 – חלונות אלומיניום",
     title: "בדיקת חלון אלומיניום במרפסת",
     alt: "מומחה בדק בית בודק חלון ודלת אלומיניום ואיטום בתקרת מרפסת בדירה חדשה - איתור ליקויי בנייה לפני מסירה מקבלן",
     caption:
@@ -24,6 +26,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-mad-koach-chalon-dira-hadasha.webp",
+    standard: "ת״י 1068 – חלונות",
     title: "מדידת כוח הפעלת חלון",
     alt: "מדידת הכוח הנדרש להפעלת חלון בעזרת מד כוח דיגיטלי בבדק בית לדירה חדשה - בדיקת תקינות חלונות לפי תקן לפני מסירה",
     caption:
@@ -31,6 +34,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-mashkof-delet-knisa-dira-hadasha.webp",
+    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
     title: "בדיקת פילוס משקוף דלת",
     alt: "מומחה בדק בית בודק פילוס משקוף דלת בעזרת פלס בדירה חדשה - איתור ליקויי התקנה לפני מסירה מקבלן",
     caption:
@@ -38,6 +42,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/bedek-bayit-mad-shipua-mishoriyut-dira-hadasha.webp",
+    standard: "ת״י 789 – סטיות מותרות בעבודות בנייה",
     title: "מדידת שיפוע ומישוריות",
     alt: "מד שיפוע דיגיטלי אינקלינומטר מודד שיפוע ומישוריות משטח בדירה חדשה - בדק בית ואיתור ליקויי ריצוף לפני מסירה",
     caption:
@@ -45,6 +50,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/likui-mervach-saf-even-dira-hadasha.webp",
+    standard: "ת״י 2378 – חיפוי אבן טבעית",
     title: "מרווח לקוי בסף אבן",
     alt: "מדידת מרווח לקוי בין סף אבן וחיפוי לתקרה בדירה חדשה - איתור ליקויי גמר והרכבה בבדק בית לפני מסירה מקבלן",
     caption:
@@ -52,6 +58,7 @@ const DEFECTS_DIRA_HADASHA = [
   },
   {
     src: "/articles/likuyim/likui-mervach-chipuy-even-dira-hadasha.webp",
+    standard: "ת״י 2378 – חיפוי אבן טבעית",
     title: "מרווח בחיפוי אבן חיצוני",
     alt: "מרווח ומישק לא אחיד בין לוחות חיפוי אבן בקיר חיצוני של מבנה חדש - איתור ליקויי בנייה בבדק בית",
     caption:

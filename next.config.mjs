@@ -4,7 +4,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    // Image optimization ON: Next/Vercel generates a responsive srcset + modern formats,
+    // so mobile devices no longer download desktop-size images (improves LCP / Core Web Vitals).
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920],
   },
  
   eslint: {

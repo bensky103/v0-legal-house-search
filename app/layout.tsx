@@ -211,6 +211,8 @@ gtag('config', 'AW-17703305821');`}
                 { "@type": "City", name: "בית שמש" },
                 { "@type": "City", name: "זכרון יעקב" },
                 { "@type": "City", name: "גני תקווה" },
+                { "@type": "City", name: "נשר" },
+                { "@type": "City", name: "נוף הגליל" },
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",

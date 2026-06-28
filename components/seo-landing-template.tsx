@@ -35,6 +35,12 @@ interface SeoLandingTemplateProps {
   bulletSections?: BulletSection[]
   // Optional label shown above the features grid (defaults to a generic heading).
   featuresHeading?: string
+  // Optional real, named projects rendered as H3 sub-headings (city pages, P9/P10).
+  projectsSection?: {
+    heading: string
+    intro: string
+    projects: { name: string; area: string }[]
+  }
 }
 
 export function SeoLandingTemplate({
@@ -52,6 +58,7 @@ export function SeoLandingTemplate({
   canonicalUrl,
   bulletSections = [],
   featuresHeading = "מה כולל שירות בדק הבית שלנו?",
+  projectsSection,
 }: SeoLandingTemplateProps) {
   const baseUrl = "https://legalbedek.co.il"
   const crumbs: Breadcrumb[] = breadcrumbs.length > 0 ? breadcrumbs : [{ label: "דף הבית", href: "/" }]
@@ -216,6 +223,24 @@ export function SeoLandingTemplate({
           ))}
         </div>
       </section>
+
+      {/* Named real projects (city pages) — each project name as an H3 for "<project> בדק בית" search */}
+      {projectsSection && projectsSection.projects.length > 0 && (
+        <section className="py-10 md:py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{projectsSection.heading}</h2>
+            <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-6">{projectsSection.intro}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {projectsSection.projects.map((p, i) => (
+                <div key={i} className="bg-blue-50 border border-blue-100 rounded-xl p-5">
+                  <h3 className="text-lg font-bold text-blue-900">בדק בית בפרויקט {p.name}</h3>
+                  <p className="mt-1 text-sm md:text-base text-gray-700 leading-relaxed">{p.area}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Bullet sections (e.g. symptoms / causes) */}
       {bulletSections.length > 0 && (

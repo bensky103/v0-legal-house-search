@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { cities, contractors, projectTypes } from "@/lib/seo-locations"
 import { defects } from "@/lib/defects"
+import { services } from "@/lib/services"
 import { getProjectCities } from "@/lib/projects"
 
 /**
@@ -18,6 +19,7 @@ export function SiteIndex() {
   const mainPages: { label: string; href: string }[] = [
     { label: "דף הבית", href: "/" },
     { label: "אודות", href: "/about" },
+    { label: "שירותי בדק בית", href: "/services" },
     { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
     { label: "בדק בית לפי קבלן", href: "/bedek-bayit/kablan" },
     { label: "ליקויי בנייה", href: "/likuyey-bniya" },
@@ -61,6 +63,20 @@ export function SiteIndex() {
                 <li key={a.href}>
                   <Link href={a.href} className="text-sm text-gray-400 hover:text-blue-400 hover:underline">
                     {a.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-sm font-bold text-white uppercase tracking-wide mt-6 mb-3">שירותי בדק בית</h3>
+            <ul className="space-y-2">
+              {services.map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
+                  >
+                    {s.name}
                   </Link>
                 </li>
               ))}

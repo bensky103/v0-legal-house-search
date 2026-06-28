@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { cities, projectTypes, contractors } from "@/lib/seo-locations"
 import { defects } from "@/lib/defects"
+import { services } from "@/lib/services"
 import { getProjectCities } from "@/lib/projects"
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,7 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  // Project-type pages now live under /services
+  // Dedicated service pages (P8) — high priority core service landing pages.
+  const dedicatedServicePages: MetadataRoute.Sitemap = services.map((s) => ({
+    url: `https://legalbedek.co.il/services/${s.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }))
+
+  // Project-type pages also live under /services
   const servicePages: MetadataRoute.Sitemap = projectTypes.map((p) => ({
     url: `https://legalbedek.co.il/services/${p.slug}`,
     lastModified: new Date(),
@@ -71,7 +80,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: "https://legalbedek.co.il/services",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     ...cityPages,
+    ...dedicatedServicePages,
     ...servicePages,
     ...contractorPages,
     ...defectPages,

@@ -1,13 +1,35 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { projectTypes } from "@/lib/seo-locations"
+import { services, getServiceBySlug } from "@/lib/services"
+import { defects } from "@/lib/defects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
 export function generateStaticParams() {
-  return projectTypes.map((p) => ({ type: p.slug }))
+  return [...services.map((s) => ({ type: s.slug })), ...projectTypes.map((p) => ({ type: p.slug }))]
 }
 
 export function generateMetadata({ params }: { params: { type: string } }): Metadata {
+  const service = getServiceBySlug(params.type)
+  if (service) {
+    return {
+      title: service.title,
+      description: service.metaDescription,
+      keywords: [...service.keywords, "בדק בית", "מומחה בדק בית", "איתור ליקויי בנייה"],
+      authors: [{ name: "יגאל בנסקי" }],
+      openGraph: {
+        title: service.title,
+        description: service.metaDescription,
+        type: "website",
+        locale: "he_IL",
+        url: `https://legalbedek.co.il/services/${service.slug}`,
+        siteName: "בדק בית Legal",
+      },
+      alternates: { canonical: `https://legalbedek.co.il/services/${service.slug}` },
+      robots: "index, follow",
+    }
+  }
+
   const project = projectTypes.find((p) => p.slug === params.type)
   if (!project) return {}
 
@@ -32,6 +54,9 @@ export function generateMetadata({ params }: { params: { type: string } }): Meta
 }
 
 export default function ServicePage({ params }: { params: { type: string } }) {
+  const service = getServiceBySlug(params.type)
+  if (service) return <DedicatedService slug={service.slug} />
+
   const project = projectTypes.find((p) => p.slug === params.type)
   if (!project) notFound()
 
@@ -110,5 +135,70 @@ export default function ServicePage({ params }: { params: { type: string } }) {
         { label: project.name, href: `/services/${project.slug}` },
       ]}
     />
+  )
+}
+
+// Rich, dedicated service page (P8) — full content from lib/services.ts plus Service schema.
+function DedicatedService({ slug }: { slug: string }) {
+  const service = getServiceBySlug(slug)!
+  const baseUrl = "https://legalbedek.co.il"
+
+  // Contextual internal links (P2): other services + related construction defects.
+  const relatedServiceLinks = (service.relatedServices ?? [])
+    .map((s) => services.find((x) => x.slug === s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s))
+    .map((s) => ({ label: s.name, href: `/services/${s.slug}` }))
+
+  const relatedDefectLinks = (service.relatedDefects ?? [])
+    .map((d) => defects.find((x) => x.slug === d))
+    .filter((d): d is NonNullable<typeof d> => Boolean(d))
+    .map((d) => ({ label: `ליקויי ${d.name}`, href: `/likuyey-bniya/${d.slug}` }))
+
+  const relatedLinks = [
+    ...relatedServiceLinks,
+    ...relatedDefectLinks,
+    { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
+    { label: "מאגר ליקויי הבנייה", href: "/likuyey-bniya" },
+  ]
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    serviceType: service.name,
+    description: service.metaDescription,
+    url: `${baseUrl}/services/${service.slug}`,
+    areaServed: { "@type": "Country", name: "ישראל" },
+    provider: {
+      "@type": "ProfessionalService",
+      name: "בדק בית Legal - יגאל בנסקי",
+      "@id": `${baseUrl}/#organization`,
+      telephone: "+972-50-627-7858",
+    },
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <SeoLandingTemplate
+        badge={service.badge}
+        title={service.title}
+        subtitle={service.subtitle}
+        intro={service.intro}
+        featuresHeading={`מה כולל שירות ${service.name}?`}
+        features={service.features}
+        contentSections={service.contentSections}
+        bulletSections={service.bulletSections}
+        faq={service.faq}
+        ctaTitle={`צריכים ${service.name}?`}
+        ctaText="צרו קשר עוד היום לתיאום ולקבלת הצעת מחיר. מומחה מוסמך, שירות מהיר וחוות דעת מקצועית בכל הארץ."
+        relatedLinks={relatedLinks}
+        breadcrumbs={[
+          { label: "דף הבית", href: "/" },
+          { label: "שירותי בדק בית", href: "/services" },
+          { label: service.name, href: `/services/${service.slug}` },
+        ]}
+      />
+    </>
   )
 }

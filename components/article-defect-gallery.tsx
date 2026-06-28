@@ -11,6 +11,8 @@ export type DefectItem = {
   title: string
   /** Descriptive, keyword-rich caption explaining the defect */
   caption: string
+  /** Optional relevant Israeli standard, e.g. "ת״י 1068 – חלונות" */
+  standard?: string
 }
 
 /**
@@ -75,6 +77,12 @@ export function ArticleDefectGallery({
               <figcaption className="p-4">
                 <p className="font-bold text-slate-900">{it.title}</p>
                 <p className="mt-1 text-sm leading-relaxed text-slate-600">{it.caption}</p>
+                {it.standard && (
+                  <p className="mt-2.5 inline-flex items-center gap-1.5 rounded-md bg-blue-50 px-2 py-1 text-xs font-semibold text-blue-700 ring-1 ring-blue-100">
+                    <span className="text-blue-400">תקן:</span>
+                    {it.standard}
+                  </p>
+                )}
               </figcaption>
             </figure>
           ),

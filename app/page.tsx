@@ -14,6 +14,12 @@ import {
   ClipboardCheck,
   Clock,
   ArrowLeft,
+  Award,
+  BadgeCheck,
+  Gavel,
+  Star,
+  MapPin,
+  Camera,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
@@ -109,12 +115,191 @@ const PRICING_ROWS = [
   { label: "תמחור נוסף", value: 'תמחור נוסף עבור ליקויים שלא נפתרו לאחר חוות הדעת' },
 ]
 
+// EEAT — areas of expertise shown as chips in the expert profile below the hero.
+const EXPERTISE_TAGS = [
+  "בדק בית לפני מסירה",
+  "בדיקת דירה יד שנייה",
+  "חוות דעת נגדית מוסמכת",
+  "חוות דעת לבית משפט",
+  "איתור רטיבות ואיטום",
+  "בדיקות תרמוגרפיות",
+  "ליקויי קונסטרוקציה וסדקים",
+  "בדיקת חשמל ואינסטלציה",
+]
+
+// EEAT — verifiable trust signals (no fabricated counts) shown beneath the intro.
+const EEAT_STATS = [
+  { icon: Star, value: "5.0", label: "דירוג Google" },
+  { icon: Award, value: "איגוד המהנדסים", label: "מומחה מוסמך" },
+  { icon: BadgeCheck, value: "רישיון משרד העבודה", label: "בודק מורשה" },
+  { icon: MapPin, value: "בכל הארץ", label: "צפון · מרכז · דרום" },
+]
+
+// P12 Trust — real inspection & equipment photos used as documented evidence.
+const TRUST_EVIDENCE = [
+  { src: "/gallery/mad-koach-digitali-bedikat-chozek.webp", label: "בדיקת חוזק מעקות במד כוח דיגיטלי" },
+  { src: "/gallery/bedikat-luach-chashmal.webp", label: "בדיקת לוח חשמל וממסר פחת" },
+  { src: "/gallery/matzlemat-tzanrat-endoskop-bedek-bayit.webp", label: "בדיקת צנרת וביוב במצלמת אנדוסקופ" },
+  { src: "/gallery/bedikat-nichuchiyut-kir-peles.webp", label: "בדיקת אנכיות ומישוריות קירות" },
+  { src: "/gallery/likui-sedek-kir-hitzoni.webp", label: "תיעוד וניתוח סדק בקיר חיצוני" },
+  { src: "/gallery/peles-digitali-tziyud-bedek-bayit.webp", label: "מדידת שיפועים בפלס דיגיטלי" },
+]
+
+// Homepage FAQ — also emitted as FAQPage schema (P5) for rich results.
+const HOMEPAGE_FAQ = [
+  {
+    question: "מה זה בדק בית ולמה הוא חשוב?",
+    answer:
+      "בדק בית הוא בדיקה הנדסית מקצועית של נכס לאיתור ליקויי בנייה גלויים ונסתרים. הבדיקה חושפת רטיבות, סדקים, כשלי איטום וליקויי מערכות לפני שהם הופכים לנזק יקר, ומספקת דוח מפורט המאפשר לדרוש תיקונים מהקבלן או להוריד את מחיר הנכס.",
+  },
+  {
+    question: "מתי כדאי לבצע בדק בית?",
+    answer:
+      "בדירה חדשה מקבלן — לפני מסירה, כשהאחריות עדיין על הקבלן. בדירה יד שנייה או בית פרטי — לפני חתימת חוזה הרכישה, כדי לדעת בדיוק מה אתם קונים ולקבל כלי מיקוח על המחיר.",
+  },
+  {
+    question: "כמה זמן לוקחת הבדיקה ומתי מקבלים דוח?",
+    answer:
+      "בדיקת דירה ממוצעת אורכת כשעתיים עד מספר שעות, בהתאם לגודל הנכס ומורכבותו. בית פרטי דורש זמן רב יותר. הדוח המפורט והמצולם נמסר בסמוך לאחר הבדיקה.",
+  },
+  {
+    question: "האם הדוח קביל בבית משפט?",
+    answer:
+      "כן. הדוח וחוות הדעת נערכים על ידי מומחה מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל ובעל רישיון ממשרד העבודה, והם קבילים כראיה מול קבלנים ובבתי משפט.",
+  },
+  {
+    question: "באילו אזורים אתם מבצעים בדק בית?",
+    answer:
+      "אנו מספקים שירותי בדק בית בכל הארץ — בצפון, במרכז ובדרום — לדירות חדשות ויד שנייה, בתים פרטיים ווילות, ורכוש משותף עבור ועדי בתים.",
+  },
+  {
+    question: "מה עושים אם מתגלים ליקויים בבדיקה?",
+    answer:
+      "מקבלים דוח מפורט המתעד כל ליקוי, ועל בסיסו ניתן לדרוש מהקבלן לתקן, לנהל משא ומתן על מחיר הנכס, או להכין חוות דעת והערכת עלויות תיקון. אנו מלווים את הלקוח בתהליך מול הקבלן עד לתיקון.",
+  },
+]
+
+// EEAT — breadth of real-world inspection experience across property types.
+const PROPERTY_EXPERIENCE = [
+  {
+    icon: Search,
+    title: "דירות יד שנייה",
+    desc: "בדיקה מקיפה לפני רכישת דירה יד שנייה — איתור ליקויים נסתרים, רטיבות ובלאי שמשפיעים על שווי הנכס ועל עלויות התיקון.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "דירות חדשות מקבלן — לפני ואחרי מסירה",
+    desc: "בדק בית לדירה חדשה מקבלן, לפני מסירה ואחריה, לאיתור ליקויי בנייה ואי-התאמות למפרט בתוך תקופת הבדק והאחריות.",
+  },
+  {
+    icon: HardHat,
+    title: "בתים פרטיים, וילות ובתים דו-משפחתיים",
+    desc: "בדיקה הנדסית של בתים פרטיים, וילות ובתים דו-משפחתיים — קונסטרוקציה, איטום, גגות, מערכות וגמר, על כל מורכבותם.",
+  },
+  {
+    icon: Users,
+    title: "רכוש משותף וועדי בתים",
+    desc: "בדיקות רכוש משותף עבור ועדי בתים — לובי, חדרי מדרגות, חניונים, גגות וקירות חוץ — לאיתור ליקויים ותכנון שיפוצים.",
+  },
+  {
+    icon: DraftingCompass,
+    title: "בדיקות במהלך שיפוץ ובנייה",
+    desc: "פיקוח ובדיקות איכות במהלך שיפוץ או בנייה, לאיתור ליקויים בזמן אמת — לפני שהם מתכסים ולפני שהם הופכים יקרים לתיקון.",
+  },
+  {
+    icon: Scale,
+    title: "סכסוכי שכנים — נזילות ורטיבות",
+    desc: "בדיקה וחוות דעת בסכסוכי שכנים על רקע נזילות ורטיבות, לקביעת מקור הנזק והאחריות לתשלום — ועד הבית או בעל הדירה.",
+  },
+]
+
 export default function HomePage() {
   const { t, direction } = useLanguage()
   const [videoOpen, setVideoOpen] = useState(false)
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir={direction}>
+      {/* EEAT structured data — Person (the expert) + ProfessionalService */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Person",
+                "@id": "https://legalbedek.co.il/#yigal-bensky",
+                name: "יגאל בנסקי",
+                jobTitle: "מומחה בדק בית מוסמך",
+                description:
+                  "מומחה בדק בית מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל ובעל רישיון בודק ממשרד העבודה, עם ניסיון רב באיתור ליקויי בנייה והכנת חוות דעת הנדסיות קבילות.",
+                image: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                telephone: "+972-50-627-7858",
+                email: "yigalbensky@gmail.com",
+                url: "https://legalbedek.co.il",
+                knowsAbout: [
+                  "בדק בית",
+                  "איתור ליקויי בנייה",
+                  "חוות דעת הנדסית",
+                  "בדיקות רטיבות ואיטום",
+                  "בדיקות תרמוגרפיות",
+                  "חוות דעת לבית משפט",
+                ],
+                hasCredential: [
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    credentialCategory: "מומחה מטעם איגוד המהנדסים והאדריכלים בישראל",
+                    identifier: "17253030",
+                  },
+                  {
+                    "@type": "EducationalOccupationalCredential",
+                    credentialCategory: "רישיון בודק מטעם משרד העבודה",
+                    identifier: "1641507",
+                  },
+                ],
+                worksFor: { "@id": "https://legalbedek.co.il/#organization" },
+              },
+              {
+                "@type": ["ProfessionalService", "LocalBusiness"],
+                "@id": "https://legalbedek.co.il/#organization",
+                name: "בדק בית Legal - יגאל בנסקי",
+                description:
+                  "שירותי בדק בית מקצועיים בכל הארץ: בדיקת דירות חדשות ויד שנייה, בתים פרטיים ורכוש משותף, איתור ליקויי בנייה וחוות דעת הנדסית קבילה בבית משפט.",
+                url: "https://legalbedek.co.il",
+                logo: "https://legalbedek.co.il/logo.webp",
+                image: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                telephone: "+972-50-627-7858",
+                email: "yigalbensky@gmail.com",
+                priceRange: "$$",
+                founder: { "@id": "https://legalbedek.co.il/#yigal-bensky" },
+                employee: { "@id": "https://legalbedek.co.il/#yigal-bensky" },
+                areaServed: { "@type": "Country", name: "ישראל" },
+                sameAs: [
+                  "https://www.youtube.com/@LegalBedekBayit",
+                  "https://share.google/Xs39vbL4NPtrMLrFZ",
+                ],
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "שירותי בדק בית",
+                  itemListElement: [
+                    "בדק בית לפני קנייה",
+                    "בדק בית לפני מסירה מהקבלן",
+                    "בדיקת דירה יד שנייה",
+                    "בדיקת בית פרטי ווילה",
+                    "חוות דעת מומחה",
+                    "חוות דעת לבית משפט",
+                    "איתור ליקויי בנייה",
+                    "הערכת עלויות תיקון",
+                  ].map((name) => ({
+                    "@type": "Offer",
+                    itemOffered: { "@type": "Service", name },
+                  })),
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {/* Header */}
       <header className="bg-white shadow-sm border-b relative z-10">
         <div className="container mx-auto px-4 py-4">
@@ -261,6 +446,171 @@ export default function HomePage() {
 
         {/* Decorative bottom fade */}
         <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      {/* EEAT — expert profile directly below the hero, building trust before users scroll on */}
+      <section className="relative bg-white py-12 md:py-16 border-b border-slate-100" dir="rtl">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            {/* Portrait column with floating credential chips */}
+            <div className="lg:col-span-2">
+              <div className="relative mx-auto w-full max-w-sm">
+                <div className="relative aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-xl">
+                  <Image
+                    src="/gallery/yigal-bensky-mumche-bedek-bayit.webp"
+                    alt="יגאל בנסקי — מומחה בדק בית מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל, עם קסדת מגן בעת בדיקת דירה ואיתור ליקויי בנייה"
+                    title="יגאל בנסקי — מומחה בדק בית מוסמך"
+                    fill
+                    sizes="(max-width: 1024px) 80vw, 40vw"
+                    className="object-cover object-top"
+                  />
+                </div>
+                {/* engineers-association chip */}
+                <div className="hidden sm:flex absolute -bottom-4 -start-3 items-center gap-2 bg-white text-slate-900 rounded-xl shadow-xl px-3.5 py-2.5 ring-1 ring-black/5">
+                  <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-blue-600 shrink-0">
+                    <Award className="w-4 h-4 text-white" aria-hidden="true" />
+                  </span>
+                  <span className="text-xs font-bold leading-tight">
+                    איגוד המהנדסים
+                    <span className="block font-mono text-[0.7rem] text-slate-500">17253030</span>
+                  </span>
+                </div>
+                {/* ministry-of-labor chip */}
+                <div className="hidden sm:flex absolute -top-4 -end-3 items-center gap-2 bg-white text-slate-900 rounded-xl shadow-xl px-3.5 py-2.5 ring-1 ring-black/5">
+                  <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-500 shrink-0">
+                    <BadgeCheck className="w-4 h-4 text-white" aria-hidden="true" />
+                  </span>
+                  <span className="text-xs font-bold leading-tight">
+                    רישיון משרד העבודה
+                    <span className="block font-mono text-[0.7rem] text-slate-500">1641507</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Intro & credentials column */}
+            <div className="lg:col-span-3 text-center lg:text-start">
+              <div className="flex items-center justify-center lg:justify-start gap-2.5">
+                <span className="font-mono text-xs font-bold tracking-[0.25em] text-blue-600">00</span>
+                <span className="h-px w-8 bg-blue-600/40" aria-hidden="true" />
+                <span className="text-sm font-bold tracking-wide text-blue-700">מי עומד מאחורי הבדיקה</span>
+              </div>
+              <h2 className="mt-3 text-2xl md:text-3xl lg:text-4xl font-extrabold text-slate-900 text-balance">
+                יגאל בנסקי — מומחה בדק בית מוסמך
+              </h2>
+              <p className="mt-4 text-base md:text-lg text-slate-700 leading-relaxed text-pretty">
+                שמי יגאל בנסקי, מומחה בדק בית מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל ובעל רישיון בודק
+                ממשרד העבודה. לאורך שנות ניסיון רבות ליוויתי רוכשי דירות, ועדי בתים וקבלנים באיתור ליקויי
+                בנייה — גלויים ונסתרים כאחד — שאיתורם המוקדם חוסך עשרות אלפי שקלים ועוגמת נפש. כל בדיקה
+                מתבצעת על ידי באופן אישי, בעזרת ציוד הנדסי מתקדם, ומסוכמת בדוח מפורט וקביל שניתן להגישו
+                כראיה בבית משפט.
+              </p>
+
+              {/* Credentials */}
+              <ul className="mt-6 space-y-2.5 text-start max-w-xl mx-auto lg:mx-0">
+                {[
+                  "מומחה מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל (מס׳ 17253030)",
+                  "בעל רישיון בודק ממשרד העבודה (1641507)",
+                  "חוות דעת הנדסית מפורטת וקבילה כראיה בבית משפט",
+                  "ציוד מדידה ובדיקה הנדסי מתקדם — מצלמה תרמית, מד לחות, אנדוסקופ ועוד",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2.5">
+                    <span className="mt-0.5 flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500 shrink-0">
+                      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-sm md:text-base font-medium text-slate-700">{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Trust signal stats */}
+              <dl className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {EEAT_STATS.map((stat) => {
+                  const Icon = stat.icon
+                  return (
+                    <div key={stat.label} className="rounded-xl bg-slate-50 ring-1 ring-slate-200 p-3 text-center">
+                      <Icon className="w-5 h-5 text-blue-600 mx-auto" aria-hidden="true" />
+                      <div className="mt-1.5 text-sm font-extrabold text-slate-900 leading-tight">{stat.value}</div>
+                      <div className="text-[0.7rem] text-slate-500 leading-tight">{stat.label}</div>
+                    </div>
+                  )
+                })}
+              </dl>
+
+              {/* Areas of expertise */}
+              <div className="mt-6">
+                <p className="text-sm font-bold text-slate-900 mb-2.5 text-start">תחומי מומחיות</p>
+                <ul className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  {EXPERTISE_TAGS.map((tag) => (
+                    <li key={tag} className="rounded-full bg-blue-50 ring-1 ring-blue-200 px-3 py-1 text-xs md:text-sm font-semibold text-blue-700">
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTAs */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a
+                  href="#contact-section"
+                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-7 py-3.5 rounded-xl font-bold text-base md:text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/20"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                    <path d="M14 2v6h6M9 13h6M9 17h6" />
+                  </svg>
+                  קבלו הצעת מחיר
+                </a>
+                <a
+                  href="tel:+972506277858"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white border-2 border-blue-600 text-blue-700 hover:bg-blue-50 px-7 py-3.5 rounded-xl font-bold text-base md:text-lg transition-all duration-200 transform hover:scale-105 shadow-sm"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  שיחת ייעוץ ללא התחייבות
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Proven experience across property types — strong EEAT "experience" signal */}
+      <section className="py-14 md:py-20 bg-white" dir="rtl">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            index="00"
+            eyebrow="ניסיון מוכח בשטח"
+            title="מספר רב מאוד של בדיקות — במגוון רחב של נכסים"
+            subtitle="לאורך השנים ביצענו מספר רב מאוד של בדיקות בכל סוגי הנכסים: מדירות יד שנייה ודירות חדשות מקבלן, דרך בתים פרטיים ווילות ועד רכוש משותף, בדיקות במהלך בנייה וסכסוכי שכנים על רקע רטיבות"
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+            {PROPERTY_EXPERIENCE.map((item, i) => {
+              const Icon = item.icon
+              return (
+                <div
+                  key={item.title}
+                  className="group relative overflow-hidden rounded-xl bg-white p-6 ring-1 ring-slate-200 transition-all duration-200 hover:ring-blue-300 hover:shadow-lg hover:shadow-blue-900/5"
+                >
+                  <span className="absolute inset-x-0 top-0 h-1 origin-right scale-x-0 bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true" />
+                  <div className="flex items-center justify-between">
+                    <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:ring-blue-600">
+                      <Icon className="w-6 h-6 text-blue-700 transition-colors group-hover:text-white" aria-hidden="true" />
+                    </span>
+                    <span className="font-mono text-xs font-bold tracking-widest text-slate-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-base md:text-lg font-bold text-slate-900">{item.title}</h3>
+                  <p className="mt-2 text-sm md:text-[0.95rem] text-slate-600 leading-relaxed">{item.desc}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
       </section>
 
       {/* Credibility strip - real photos of equipment, defects and the inspector */}
@@ -499,11 +849,122 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trust Section (P12) — certifications, court experience, equipment & documented evidence */}
+      <section className="relative py-14 md:py-20 bg-slate-50 border-y border-slate-200">
+        <div className="blueprint-grid pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
+        <div className="relative container mx-auto px-4">
+          <SectionHeading
+            index="04"
+            eyebrow="אמון ואסמכתאות"
+            title="הסמכות, ניסיון משפטי וציוד מקצועי"
+            subtitle="האמון שלכם נבנה על הסמכה רשמית, ניסיון מוכח בבית משפט ובדיקה מתועדת בכלים הנדסיים"
+          />
+
+          {/* Three trust pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto" dir="rtl">
+            {/* Certifications */}
+            <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
+              <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600/10 ring-1 ring-blue-600/15">
+                <Award className="w-6 h-6 text-blue-700" aria-hidden="true" />
+              </span>
+              <h3 className="mt-4 text-lg font-bold text-slate-900">הסמכות מקצועיות</h3>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                מומחה מוסמך ומורשה — הסמכה רשמית המקנה תוקף מקצועי ומשפטי לכל חוות דעת.
+              </p>
+              <dl className="mt-4 space-y-3">
+                <div className="flex items-center justify-between gap-3 rounded-lg bg-slate-50 px-3.5 py-2.5 ring-1 ring-slate-200">
+                  <dt className="text-sm font-semibold text-slate-700">איגוד המהנדסים והאדריכלים</dt>
+                  <dd className="font-mono text-sm font-bold text-blue-700">17253030</dd>
+                </div>
+                <div className="flex items-center justify-between gap-3 rounded-lg bg-slate-50 px-3.5 py-2.5 ring-1 ring-slate-200">
+                  <dt className="text-sm font-semibold text-slate-700">רישיון משרד העבודה</dt>
+                  <dd className="font-mono text-sm font-bold text-blue-700">1641507</dd>
+                </div>
+              </dl>
+            </div>
+
+            {/* Court experience */}
+            <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
+              <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-emerald-500/10 ring-1 ring-emerald-500/20">
+                <Gavel className="w-6 h-6 text-emerald-600" aria-hidden="true" />
+              </span>
+              <h3 className="mt-4 text-lg font-bold text-slate-900">ניסיון בבית משפט</h3>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                חוות דעת הנדסית מפורטת, מנומקת וקבילה כראיה — לצד ליווי בהליכים מול קבלנים, חברות
+                בנייה ומשרדי עורכי דין.
+              </p>
+              <ul className="mt-4 space-y-2">
+                {["חוות דעת נגדית מוסמכת", "חוות דעת לבית משפט", "ליווי מול הקבלן עד לתיקון"].map((item) => (
+                  <li key={item} className="flex items-center gap-2 text-sm font-medium text-slate-700">
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Equipment */}
+            <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-200 shadow-sm">
+              <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-600/10 ring-1 ring-blue-600/15">
+                <Camera className="w-6 h-6 text-blue-700" aria-hidden="true" />
+              </span>
+              <h3 className="mt-4 text-lg font-bold text-slate-900">ציוד הנדסי מתקדם</h3>
+              <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">
+                כל בדיקה מבוצעת בכלים מקצועיים שמאתרים ליקויים נסתרים שהעין אינה רואה.
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {["מצלמה תרמית", "מד לחות", "מצלמת אנדוסקופ", "מד כוח דיגיטלי", "מפלסת לייזר"].map((item) => (
+                  <li key={item} className="rounded-full bg-slate-100 ring-1 ring-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-700">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Documented evidence — real inspection & equipment photos */}
+          <div className="mt-10 max-w-5xl mx-auto">
+            <div className="flex items-center justify-between mb-4" dir="rtl">
+              <h3 className="text-lg font-bold text-slate-900">בדיקות מתועדות מהשטח</h3>
+              <a href="/gallery" className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                <Eye className="w-4 h-4" aria-hidden="true" />
+                לגלריית הבדיקות המלאה
+              </a>
+            </div>
+            <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {TRUST_EVIDENCE.map((item) => (
+                <li key={item.src}>
+                  <a
+                    href="/gallery"
+                    aria-label={`${item.label} – לגלריית הבדיקות`}
+                    className="group block rounded-xl overflow-hidden ring-1 ring-slate-200 hover:ring-blue-400 hover:shadow-lg transition-all duration-200 bg-white"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                      <Image
+                        src={item.src}
+                        alt={item.label}
+                        title={item.label}
+                        fill
+                        sizes="(max-width: 768px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <span className="block text-center text-xs md:text-sm font-semibold text-slate-700 px-2 py-2.5 transition-colors group-hover:text-blue-600">
+                      {item.label}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-12 md:py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <SectionHeading
-            index="04"
+            index="05"
             eyebrow="לקוחות ממליצים"
             title={t("testimonials.title")}
             subtitle={t("testimonials.subtitle")}
@@ -833,7 +1294,7 @@ export default function HomePage() {
       {/* About Section */}
       <section id="about" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeading index="05" eyebrow="מי עומד מאחורי הבדיקה" title="אודות" />
+          <SectionHeading index="06" eyebrow="מי עומד מאחורי הבדיקה" title="אודות" />
 
           <div className="max-w-2xl mx-auto">
             <Card className="hover:shadow-xl transition-shadow border-t-4 border-t-blue-500">
@@ -859,6 +1320,42 @@ export default function HomePage() {
                 אני מספק שירותי בדק בית מקצועיים ומקיפים בכל הארץ, עם מחויבות לאיכות, מקצועיות ושקיפות מלאה כלפי הלקוחות.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section — also emitted as FAQPage schema for rich results */}
+      <section className="py-14 md:py-20 bg-white" dir="rtl">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: HOMEPAGE_FAQ.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            }),
+          }}
+        />
+        <div className="container mx-auto px-4">
+          <SectionHeading index="07" eyebrow="שאלות נפוצות" title="שאלות ותשובות על בדק בית" />
+          <div className="max-w-3xl mx-auto divide-y divide-slate-200">
+            {HOMEPAGE_FAQ.map((item) => (
+              <details key={item.question} className="group py-5">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 text-right list-none">
+                  <h3 className="text-base md:text-lg font-bold text-slate-900">{item.question}</h3>
+                  <span className="flex items-center justify-center w-7 h-7 shrink-0 rounded-full bg-blue-100 text-blue-700 transition-transform duration-200 group-open:rotate-45">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+                  </span>
+                </summary>
+                <p className="mt-3 text-slate-600 leading-relaxed text-pretty">{item.answer}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -948,10 +1445,27 @@ export default function HomePage() {
             <div>
               <h3 className="text-xl font-bold mb-4">{t("footer.services")}</h3>
               <ul className="space-y-2 text-gray-200">
-                <li>בדיקת ליקויי בנייה מקצועית</li>
-                <li>חוות דעת נגדית מוסמכת</li>
-                <li>בדיקות הנדסיות ובטיחות</li>
-                <li>ליווי מקצועי ואיתור ליקויי בנייה</li>
+                <li>
+                  <a href="/services" className="text-blue-400 hover:text-blue-300 hover:underline font-semibold">
+                    כל שירותי בדק בית
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/bedek-bayit-lifnei-kniya" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    בדק בית לפני קנייה
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/bedek-bayit-lifnei-mesira" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    בדק בית לפני מסירה
+                  </a>
+                </li>
+                <li>
+                  <a href="/services/chavat-daat-beit-mishpat" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    חוות דעת לבית משפט
+                  </a>
+                </li>
+                <li className="pt-2">בדיקות הנדסיות ובטיחות</li>
                 <li className="pt-2">
                   <a href="/articles/bedek-bayit-dira-hadasha" className="text-blue-400 hover:text-blue-300 hover:underline">
                     מאמר: בדק בית בדירה חדשה

@@ -5,63 +5,7 @@ import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 
-const DEFECTS_MATAI = [
-  {
-    src: "/articles/likuyim/bedek-bayit-tiud-likuyim-doch-matai.webp",
-    title: "תיעוד ליקויים והכנת דוח",
-    alt: "מומחית בדק בית מתעדת ליקויי בנייה ומכינה דוח עם ציוד בדיקה מקצועי - בדק בית לדירה חדשה ויד שנייה",
-    caption:
-      "תיעוד הממצאים והכנת דוח בדק בית מסודר בעזרת ערכת ציוד מקצועית. דוח מפורט הוא הבסיס לדרישת תיקונים מהקבלן — לפני המסירה ואחריה.",
-  },
-  {
-    src: "/articles/likuyim/bedek-bayit-pilus-ritzpa-laser-matai.webp",
-    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
-    title: "בדיקת מפלס רצפה בלייזר",
-    alt: "בדיקת מפלס ומישוריות רצפה בעזרת מאזנת לייזר ירוקה בדירה - איתור שיפועים וליקויי ריצוף בבדק בית",
-    caption:
-      "בדיקת מפלס ומישוריות הרצפה בעזרת מאזנת לייזר. הלייזר חושף שיפועים והפרשי גובה לאורך כל החדר — שלב מרכזי בבדק בית.",
-  },
-  {
-    src: "/articles/likuyim/bedek-bayit-bdikat-delet-knisa-plada-matai.webp",
-    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
-    title: "בדיקת דלת כניסה (פלדלת)",
-    alt: "מומחה בדק בית בודק דלת כניסה פלדלת, מנעול ומשקוף בדירה - איתור ליקויי התקנה ובטיחות בבדק בית",
-    caption:
-      "בדיקת דלת הכניסה (פלדלת): פעולת המנעול, הצירים, האיטום והמשקוף. ליקויי התקנה ובטיחות בדלת הכניסה נבדקים בכל בדק בית.",
-  },
-  {
-    src: "/articles/likuyim/likui-srita-delet-plada-knisa-matai.webp",
-    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
-    title: "שריטה ופגם בדלת פלדה",
-    alt: "שריטה ופגם גמר בדלת כניסת פלדה בדירה חדשה - איתור ליקויי גמר ואסתטיקה בבדק בית לפני מסירה מקבלן",
-    caption:
-      "שריטה ופגם בגמר דלת הכניסה. פגמי גמר בדלת ובמשקוף מתועדים בבדק בית ומאפשרים לדרוש תיקון או החלפה מהקבלן.",
-  },
-  {
-    src: "/articles/likuyim/bedek-bayit-bdikat-mashkof-delet-knisa-matai.webp",
-    standard: "ת״י 1161 + 5044 – דלתות ומלבני פלדה",
-    title: "מדידת משקוף ופתח דלת",
-    alt: "מדידת מידות וניצבות פתח ומשקוף דלת כניסה בעזרת פלס בדירה - איתור ליקויי התקנה בבדק בית",
-    caption:
-      "מדידת מידות פתח הדלת והמשקוף בחלקו העליון. חריגה במידות או בניצבות הפתח היא ליקוי התקנה שמתועד בבדק בית.",
-  },
-  {
-    src: "/articles/likuyim/bedek-bayit-bdikat-chalon-tris-matai.webp",
-    standard: "ת״י 1509 – תריסים",
-    title: "בדיקת חלון ותריס",
-    alt: "מומחית בדק בית בודקת תפקוד חלון, תריס ומסילה בדירה - איתור ליקויי התקנה ואיטום בחלונות בבדק בית",
-    caption:
-      "בדיקת תפקוד החלון, התריס והמסילה. תקיעות, רעשים וליקויי איטום בחלונות ובתריסים הם ממצאים נפוצים בבדק בית.",
-  },
-  {
-    src: "/articles/likuyim/bedek-bayit-mishoriyut-mishak-ritzuf-matai.webp",
-    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
-    title: "מישוריות ומישק ריצוף",
-    alt: "בדיקת מישוריות והפרשי מפלס בין אריחי ריצוף בעזרת פלס וסרגל - איתור ליקויי ריצוף בבדק בית",
-    caption:
-      "בדיקת מישוריות והפרשי מפלס בין אריחים סמוכים בעזרת פלס וסרגל. 'שן' בולטת בין אריחים היא ליקוי ריצוף נפוץ שנבדק בבדק בית.",
-  },
-]
+import { DEFECTS_MATAI } from "@/lib/article-images"
 
 export default function MataiLehazminBedekBayitPage() {
   return (

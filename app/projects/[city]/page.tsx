@@ -12,8 +12,11 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   const city = cities.find((c) => c.slug === params.city)
   if (!city) return {}
 
+  const projects = getCityProjectIndex(city.slug)?.projects ?? []
+  const projectsHint = projects.length ? ` ביניהם ${projects.slice(0, 3).join(", ")}.` : ""
+
   const title = `בדק בית בפרויקטים חדשים ב${city.name} | בדיקת דירה מקבלן`
-  const description = `בדק בית לדירות חדשות בפרויקטים ב${city.name}. בדיקה הנדסית לפני מסירת דירה מקבלן, איתור ליקויי בנייה ופרוטוקול מסירה מקצועי.`
+  const description = `בדק בית לדירות חדשות בפרויקטים ב${city.name}.${projectsHint} בדיקה הנדסית לפני מסירת דירה מקבלן, איתור ליקויי בנייה ופרוטוקול מסירה מקצועי.`
 
   return {
     title,
@@ -40,6 +43,19 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
           paragraphs: [
             `הבנייה החדשה ב${city.name} מתרכזת באזורים ובשכונות הבאים: ${idx.buildingAreas.join(", ")}. בכל אחד מאזורים אלו אנו מבצעים בדק בית מקצועי לדירות חדשות מקבלן לפני מסירה.`,
             `מומחה בדק בית מכיר את שיטות הבנייה הנפוצות בפרויקטים חדשים ויודע לאתר את הליקויים האופייניים לדירות חדשות - מאיטום לקוי ועד סטיות במידות ובמפלסים.`,
+          ],
+        },
+      ]
+    : []
+
+  const projects = idx?.projects ?? []
+  const projectsSection = projects.length
+    ? [
+        {
+          heading: `פרויקטים חדשים ב${city.name} שבהם אנו מבצעים בדק בית`,
+          paragraphs: [
+            `${city.name} מתאפיינת בפרויקטי מגורים חדשים רבים. בין הפרויקטים והשכונות החדשות בעיר: ${projects.join(", ")}. בכל פרויקט כזה אנו מבצעים בדק בית מקצועי לדירה חדשה לפני המסירה מהקבלן — בדיקת התאמה למפרט, איתור ליקויי בנייה והכנת פרוטוקול מסירה.`,
+            `אם אתם רוכשים דירה באחד הפרויקטים החדשים ב${city.name}, חשוב לבצע בדק בית לפני קבלת המפתח — כדי לאתר את הליקויים בזמן, בעוד תקופת הבדק והאחריות בתוקף, ולחייב את הקבלן בתיקונם על חשבונו.`,
           ],
         },
       ]
@@ -86,9 +102,20 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
             `בדק בית מקצועי לפני מסירה מבטיח שתקבלו את הדירה במצב תקין, ושהקבלן יתקן על חשבונו את כל הליקויים - במקום שתגלו אותם רק לאחר שכבר נכנסתם לגור.`,
           ],
         },
+        ...projectsSection,
         ...areasSection,
         ...(idx?.extraSections ?? []),
       ]}
+      bulletSections={
+        projects.length
+          ? [
+              {
+                heading: `בדק בית בפרויקטים חדשים ב${city.name}`,
+                items: projects.map((p) => `בדק בית בפרויקט ${p} ב${city.name}`),
+              },
+            ]
+          : undefined
+      }
       faq={[
         {
           question: `מתי כדאי לבצע בדק בית לדירה חדשה ב${city.name}?`,

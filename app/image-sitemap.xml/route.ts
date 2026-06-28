@@ -1,10 +1,16 @@
 import { seoImages } from "@/lib/site-images"
+import { articleSitemapImages } from "@/lib/article-images"
 
 // Google Image sitemap (image sitemap extension). Groups every indexable image
 // under the page it appears on so all images are discoverable in Google Images.
+// Combines branding/hero/testimonial + gallery images with the article photos.
 // https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
 
 export const dynamic = "force-static"
+
+// loc + title + caption + pageUrl is all the image-sitemap XML needs.
+type SitemapImage = { loc: string; title: string; caption: string; pageUrl: string }
+const allImages: SitemapImage[] = [...seoImages, ...articleSitemapImages]
 
 function escapeXml(value: string): string {
   return value
@@ -17,8 +23,8 @@ function escapeXml(value: string): string {
 
 export function GET() {
   // Group images by the page they appear on.
-  const byPage = new Map<string, typeof seoImages>()
-  for (const img of seoImages) {
+  const byPage = new Map<string, SitemapImage[]>()
+  for (const img of allImages) {
     const list = byPage.get(img.pageUrl) ?? []
     list.push(img)
     byPage.set(img.pageUrl, list)

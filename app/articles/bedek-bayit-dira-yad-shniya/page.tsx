@@ -2,6 +2,59 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { SiteIndex } from "@/components/site-index"
+import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+
+const DEFECTS_YAD_SHNIYA = [
+  {
+    src: "/articles/likuyim/bedek-bayit-mishoriyut-ritzpa-peles-aroch-yad-shniya.webp",
+    title: "בדיקת מישוריות ריצוף",
+    alt: "בדיקת מישוריות רצפה וריצוף בעזרת פלס ארוך בדירה - איתור ליקויי ריצוף, שקיעות והפרשי גובה בבדק בית",
+    caption:
+      "בדיקת מישוריות הריצוף בעזרת פלס ארוך. שקיעות, הפרשי גובה ואריחים 'מתופפים' מאותרים בבדק בית — בדירה יד שנייה ובדירה חדשה כאחד.",
+  },
+  {
+    src: "/articles/likuyim/likui-shevev-sedek-ariach-ritzuf-yad-shniya.webp",
+    title: "שבב וסדק באריח ריצוף",
+    alt: "מדידת שבב וסדק באריח ריצוף בעזרת זכוכית מגדלת עם סרגל מדידה - איתור ליקויי ריצוף בבדק בית",
+    caption:
+      "מדידת שבב או סדק באריח בעזרת לופה עם סרגל. פגמי ריצוף, שברים ושפשופי גמר מתועדים במדויק בבדק בית — בדירה יד שנייה ובדירה חדשה.",
+  },
+  {
+    src: "/articles/likuyim/likui-pgam-shiyuf-even-ritzuf-yad-shniya.webp",
+    title: "פגם בליטוש אבן וריצוף",
+    alt: "פגם בליטוש משטח אבן ושבב בקצה אריח ריצוף - איתור ליקויי גמר וריצוף בבדק בית לדירה",
+    caption:
+      "סימן ליטוש פגום במשטח האבן ושבב בקצה האריח. ליקויי גמר באבן ובריצוף שכיחים ומאותרים בבדק בית, בדירה יד שנייה ובחדשה.",
+  },
+  {
+    src: "/articles/likuyim/likui-sedek-luach-even-yad-shniya.webp",
+    title: "סדק בלוח אבן",
+    alt: "סדק עובר בלוח אבן או שיש בדירה - איתור ליקויי בנייה וגמר באבן בבדק בית",
+    caption:
+      "סדק עובר בלוח האבן. סדקים בלוחות אבן ושיש עלולים להעיד על בעיית הרכבה או עומס — ממצא שנבדק ומתועד בבדק בית.",
+  },
+  {
+    src: "/articles/likuyim/likui-sedek-saf-even-yad-shniya.webp",
+    title: "סדק בסף ואדן אבן",
+    alt: "סדק לאורך סף או אדן חלון מאבן בדירה - איתור ליקויי בנייה ואיטום בבדק בית",
+    caption:
+      "סדק לאורך סף/אדן האבן. סדקים באדני חלונות ובספי אבן עלולים לגרום לחדירת מים — נבדקים בבדק בית בדירות יד שנייה וחדשות.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-nitzvut-mashkof-delet-yad-shniya.webp",
+    title: "בדיקת ניצבות משקוף דלת",
+    alt: "בדיקת ניצבות וזווית ישרה של משקוף דלת בעזרת זווית נגרים בדירה - איתור ליקויי התקנה בבדק בית",
+    caption:
+      "בדיקת ניצבות וזווית של משקוף הדלת בעזרת זווית נגרים. סטיות ניצבות פוגעות בסגירת הדלת — ממצא שכיח בבדק בית בדירות יד שנייה וגם חדשות.",
+  },
+  {
+    src: "/articles/likuyim/likui-mishak-ritzuf-mad-pgam-yad-shniya.webp",
+    title: "מדידת מישק וריווח ריצוף",
+    alt: "מדידת רוחב מישק וריווח בין אריחי ריצוף בעזרת פלס וסרגל - איתור ליקויי ריצוף ופוגות לא אחידות בבדק בית",
+    caption:
+      "מדידת רוחב המישק (הפוגה) בין אריחי הריצוף. מישקים לא אחידים והפרשי מפלס בין אריחים הם ליקוי ריצוף שמתועד בבדק בית.",
+  },
+]
 
 export default function BedekBayitDiraYadShniyaArticle() {
   return (
@@ -333,6 +386,13 @@ export default function BedekBayitDiraYadShniyaArticle() {
               </div>
             </div>
           </section>
+
+          {/* Documented defects from the field */}
+          <ArticleDefectGallery
+            heading="ליקויי בנייה אופייניים בדירות יד שנייה — תיעוד מהשטח"
+            intro="דוגמאות אמיתיות לליקויים שאותרו בבדק בית: ליקויי ריצוף ומישוריות, סדקים ופגמים באבן ובשיש, וליקויי התקנה. בדיקה מקצועית חושפת את מצב הנכס האמיתי לפני הרכישה."
+            items={DEFECTS_YAD_SHNIYA}
+          />
 
           {/* CTA Section */}
           <section className="mb-12">

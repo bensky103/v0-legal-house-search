@@ -5,6 +5,59 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
+import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+
+const DEFECTS_DIRA_HADASHA = [
+  {
+    src: "/articles/likuyim/likui-itum-chalon-aluminium-dira-hadasha.webp",
+    title: "ליקוי איטום בחלון אלומיניום",
+    alt: "ליקוי איטום וסיליקון לקוי בשפת זכוכית חלון אלומיניום בדירה חדשה - איתור ליקויי בנייה בבדק בית לפני מסירה מקבלן",
+    caption:
+      "איטום לקוי בשפת זיגוג חלון האלומיניום. ליקוי נפוץ בדירות חדשות שעלול לגרום לחדירת מים ורטיבות — חשוב לאתר בבדק בית לפני קבלת הדירה מהקבלן.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-chalon-aluminium-mirpeset-dira-hadasha.webp",
+    title: "בדיקת חלון אלומיניום במרפסת",
+    alt: "מומחה בדק בית בודק חלון ודלת אלומיניום ואיטום בתקרת מרפסת בדירה חדשה - איתור ליקויי בנייה לפני מסירה מקבלן",
+    caption:
+      "בדיקת התקנת פתח האלומיניום ואיטומו בחיבור לתקרת המרפסת. ליקויי התקנה ואיטום בחלונות ודלתות אלומיניום שכיחים בבדק בית לדירה חדשה.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-mad-koach-chalon-dira-hadasha.webp",
+    title: "מדידת כוח הפעלת חלון",
+    alt: "מדידת הכוח הנדרש להפעלת חלון בעזרת מד כוח דיגיטלי בבדק בית לדירה חדשה - בדיקת תקינות חלונות לפי תקן לפני מסירה",
+    caption:
+      "מדידת הכוח הנדרש להזזת והפעלת החלון בעזרת מד כוח (דינמומטר). כוח הפעלה חריג מעיד על ליקוי התקנה ואי-עמידה בתקן — נבדק בבדק בית לדירה חדשה.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-mashkof-delet-knisa-dira-hadasha.webp",
+    title: "בדיקת פילוס משקוף דלת",
+    alt: "מומחה בדק בית בודק פילוס משקוף דלת בעזרת פלס בדירה חדשה - איתור ליקויי התקנה לפני מסירה מקבלן",
+    caption:
+      "בדיקת פילוס משקוף הדלת בעזרת פלס. סטייה בהתקנת המשקוף פוגעת בתפקוד הדלת ובאיטום — ממצא חשוב בבדק בית לדירה חדשה.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-mad-shipua-mishoriyut-dira-hadasha.webp",
+    title: "מדידת שיפוע ומישוריות",
+    alt: "מד שיפוע דיגיטלי אינקלינומטר מודד שיפוע ומישוריות משטח בדירה חדשה - בדק בית ואיתור ליקויי ריצוף לפני מסירה",
+    caption:
+      "מדידת שיפוע ומישוריות בעזרת פלס דיגיטלי. סטיות שיפוע ברצפות ובאזורים רטובים הן ליקוי בנייה נפוץ הנבדק בבדק בית לדירה חדשה.",
+  },
+  {
+    src: "/articles/likuyim/likui-mervach-saf-even-dira-hadasha.webp",
+    title: "מרווח לקוי בסף אבן",
+    alt: "מדידת מרווח לקוי בין סף אבן וחיפוי לתקרה בדירה חדשה - איתור ליקויי גמר והרכבה בבדק בית לפני מסירה מקבלן",
+    caption:
+      "מדידת מרווח חריג בחיבור סף האבן לתקרה. מרווחים לא אחידים בעבודות אבן וחיפוי הם ליקוי גמר שמתועד בבדק בית לדירה חדשה.",
+  },
+  {
+    src: "/articles/likuyim/likui-mervach-chipuy-even-dira-hadasha.webp",
+    title: "מרווח בחיפוי אבן חיצוני",
+    alt: "מרווח ומישק לא אחיד בין לוחות חיפוי אבן בקיר חיצוני של מבנה חדש - איתור ליקויי בנייה בבדק בית",
+    caption:
+      "מישק לא אחיד בין לוחות חיפוי האבן בקיר החיצוני. ליקויי חיפוי אבן עלולים לסכן יציבות ואיטום — נבדקים בבדק בית, גם בדירה חדשה לפני מסירה.",
+  },
+]
 
 export default function ArticleBedekBayitDiraHadasha() {
   return (
@@ -203,6 +256,13 @@ export default function ArticleBedekBayitDiraHadasha() {
               </ul>
             </CardContent>
           </Card>
+
+          {/* Documented defects from the field */}
+          <ArticleDefectGallery
+            heading="ליקויי בנייה שאותרו בדירות חדשות — תיעוד מהשטח"
+            intro="דוגמאות אמיתיות לליקויי בנייה שאותרו בבדק בית לדירות חדשות, רבים מהם לפני מסירה מהקבלן. תיעוד מדויק של כל ליקוי הוא הבסיס לדרישת תיקונים ולמשא ומתן מול הקבלן."
+            items={DEFECTS_DIRA_HADASHA}
+          />
 
           {/* CTA */}
           <div className="bg-gradient-to-l from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white">

@@ -392,6 +392,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "tidhar",
+    projects: ["התחדשות עירונית ציר כצנלסון, גבעתיים", "התחדשות בת גלים, חיפה", "ציר קוממיות, בת ים", "מרינה הרצליה, הרצליה"],
     name: "תדהר",
     nameWithShel: "תדהר",
     description:
@@ -452,6 +453,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "b-yair",
+    projects: ["משכנות האומה, ירושלים", "שכונת הציפורים, מודיעין"],
     name: "ב. יאיר",
     nameWithShel: "ב. יאיר",
     description:
@@ -473,6 +475,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "dunietz",
+    projects: ["מתחם המרי, גבעתיים", "פסגת השרון, נתניה"],
     name: "אחים דוניץ",
     nameWithShel: "אחים דוניץ",
     description:
@@ -542,6 +545,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "avisror",
+    projects: ["אגמים, אשקלון", "עיר היין, אשקלון", "מתחם הנשיא, אשדוד", "מתחם הרצל, אשדוד"],
     name: "אביסרור משה ובניו",
     nameWithShel: "אביסרור משה ובניו",
     description:
@@ -570,6 +574,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "kardan",
+    projects: ["ALIVE, נתניה", "קרית שלום, תל אביב", "רמות ירושלים, ירושלים"],
     name: "קרדן נדל\"ן",
     nameWithShel: "קרדן נדל\"ן",
     description:
@@ -591,6 +596,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "acro",
+    projects: ["מגדל מזא\"ה, תל אביב", "אקרו בשדרה, תל אביב", "מגדלי תל אביב נחלת יצחק, תל אביב", "ACRO VIEW, תל אביב", "ALPHA TLV, תל אביב"],
     name: "אקרו",
     nameWithShel: "אקרו",
     description:

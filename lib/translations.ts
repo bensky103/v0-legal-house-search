@@ -67,7 +67,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "audience.committeesDesc": "בדיקת מבנים משותפים ותחזוקה שוטפת",
     
     // Services
-    "services.title": "שירותי ליקויי בנייה",
+    "services.title": "שירותי איתור ליקויי בנייה",
     "services.engineering": "בדק בית הנדסי",
     "services.engineeringDesc": "בדיקה מקיפה של כל מערכות הבניין, איתור ליקויים נסתרים ודוח מפורט עם המלצות לתיקון",
     "services.counterOpinion": "חוות דעת נגדית",

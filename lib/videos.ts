@@ -219,9 +219,22 @@ export const videoWatchUrl = (id: string) => `https://www.youtube.com/watch?v=${
 /** Privacy-enhanced embed URL (no cookies until play). */
 export const videoEmbedUrl = (id: string) => `https://www.youtube-nocookie.com/embed/${id}`
 
-/** Videos mapped to a given defect/service slug. */
+// Defects that have no footage of their own borrow videos from a closely-related
+// topic, so every relevant defect page still shows real inspection video.
+const relatedVideoTopics: Record<string, string[]> = {
+  retivut: ["itum"], // rטיבות ⟵ סרטוני נזילות ואיטום
+  ovesh: ["itum"], // עובש נובע מרטיבות/איטום
+  chalonot: ["aluminium"], // חלונות ⟵ סרטוני אלומיניום
+  mirpasot: ["itum"], // מרפסות ⟵ איטום מרפסת
+  gagot: ["itum"], // גגות ⟵ איטום
+}
+
+/** Videos mapped to a given defect/service slug (with related-topic fallback). */
 export function getVideosForTopic(slug: string): SiteVideo[] {
-  return videos.filter((v) => v.topic === slug)
+  const direct = videos.filter((v) => v.topic === slug)
+  if (direct.length > 0) return direct
+  const related = relatedVideoTopics[slug] ?? []
+  return videos.filter((v) => related.includes(v.topic))
 }
 
 /** VideoObject JSON-LD for a single video. */

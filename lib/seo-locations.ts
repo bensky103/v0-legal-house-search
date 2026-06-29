@@ -519,6 +519,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "mordechai-aviv",
+    projects: ["חלון ירושלים, ירושלים", "לב רחביה, ירושלים"],
     name: "מרדכי אביב",
     nameWithShel: "מרדכי אביב",
     description:
@@ -526,6 +527,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "levinstein",
+    projects: ["מתחם הנשיא, גבעת שמואל", "מתחם ריינס, רמת השרון", "מתחם שלמה המלך, לוד"],
     name: "משולם לוינשטין",
     nameWithShel: "משולם לוינשטין",
     description:
@@ -617,6 +619,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "mizrahi",
+    projects: ["SEA VIEW מגדלי פארק הים, בת ים", "מתחם הבתימון, בת ים", "ליבורנו, בת ים"],
     name: "קבוצת מזרחי ובניו",
     nameWithShel: "קבוצת מזרחי ובניו",
     description:

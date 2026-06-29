@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiteIndex } from "@/components/site-index"
+import { LiteYouTube } from "@/components/lite-youtube"
 
 interface SeoFeature {
   title: string
@@ -52,6 +53,9 @@ interface SeoLandingTemplateProps {
   // Optional real inspection photos relevant to the page topic.
   gallery?: GalleryImg[]
   galleryHeading?: string
+  // Optional YouTube inspection videos relevant to the page topic.
+  videos?: { id: string; title: string }[]
+  videosHeading?: string
 }
 
 export function SeoLandingTemplate({
@@ -72,6 +76,8 @@ export function SeoLandingTemplate({
   projectsSection,
   gallery = [],
   galleryHeading = "תמונות מבדיקות בשטח",
+  videos = [],
+  videosHeading = "סרטוני בדיקות בשטח",
 }: SeoLandingTemplateProps) {
   const baseUrl = "https://legalbedek.co.il"
   const crumbs: Breadcrumb[] = breadcrumbs.length > 0 ? breadcrumbs : [{ label: "דף הבית", href: "/" }]
@@ -312,6 +318,27 @@ export function SeoLandingTemplate({
                 לגלריית הבדיקות המלאה ←
               </Link>
             </p>
+          </div>
+        </section>
+      )}
+
+      {/* Topic-relevant inspection videos (YouTube, lazy facade) */}
+      {videos.length > 0 && (
+        <section className="py-10 md:py-16 bg-slate-50">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
+              {videosHeading}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {videos.map((v) => (
+                <figure key={v.id}>
+                  <LiteYouTube id={v.id} title={v.title} />
+                  <figcaption className="mt-3 text-sm text-gray-700 leading-relaxed font-medium">
+                    {v.title}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
       )}

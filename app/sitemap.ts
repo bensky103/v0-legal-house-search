@@ -126,6 +126,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://legalbedek.co.il/videos",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: "https://legalbedek.co.il/ezorei-sherut",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",

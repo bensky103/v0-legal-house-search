@@ -4,6 +4,7 @@ import { projectTypes } from "@/lib/seo-locations"
 import { services, getServiceBySlug } from "@/lib/services"
 import { getArticlesForService } from "@/lib/articles"
 import { getServiceImages } from "@/lib/topic-images"
+import { getVideosForTopic, videoSchema } from "@/lib/videos"
 import { defects } from "@/lib/defects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
@@ -74,7 +75,7 @@ export default function ServicePage({ params }: { params: { type: string } }) {
       intro={`משרד בדק בית Legal מתמחה בבדיקה הנדסית של דירות ב${project.name}. אנו מבצעים בדיקה מקיפה לפי תקני הבנייה הישראליים, מאתרים ליקויי בנייה ומספקים חוות דעת מקצועית הקבילה משפטית - כדי שתקבלו בדיוק את מה שמגיע לכם.`}
       features={[
         {
-          title: "בדיקה לפני מסירה",
+          title: "בדיקת מסירה",
           description: `בדיקה הנדסית מקיפה של הדירה ב${project.name} לפני מסירה, לאיתור כל הליקויים והחריגות.`,
         },
         {
@@ -117,7 +118,7 @@ export default function ServicePage({ params }: { params: { type: string } }) {
       faq={[
         {
           question: `מתי כדאי לבצע בדק בית ב${project.name}?`,
-          answer: "מומלץ לבצע את הבדיקה לפני מסירת הדירה הרשמית, כדי שתוכלו לדרוש תיקונים מהקבלן לפני קבלת המפתח.",
+          answer: "מומלץ לבצע את הבדיקה במועד מסירת הדירה הרשמית, כדי שתוכלו לדרוש תיקונים מהקבלן במעמד המסירה.",
         },
         {
           question: "מה עושים אם נמצאים ליקויים?",
@@ -186,9 +187,18 @@ function DedicatedService({ slug }: { slug: string }) {
     },
   }
 
+  const topicVideos = getVideosForTopic(service.slug)
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      {topicVideos.map((v) => (
+        <script
+          key={v.id}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(v)) }}
+        />
+      ))}
       <SeoLandingTemplate
         badge={service.badge}
         title={service.title}
@@ -198,6 +208,8 @@ function DedicatedService({ slug }: { slug: string }) {
         features={service.features}
         gallery={getServiceImages(service.slug)}
         galleryHeading={`תמונות מבדיקות בשטח - ${service.name}`}
+        videos={topicVideos.map((v) => ({ id: v.id, title: v.title }))}
+        videosHeading={`סרטוני בדיקות בשטח - ${service.name}`}
         contentSections={service.contentSections}
         bulletSections={service.bulletSections}
         faq={service.faq}

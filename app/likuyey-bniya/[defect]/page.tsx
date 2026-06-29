@@ -5,6 +5,7 @@ import { defectStandards } from "@/lib/defect-standards"
 import { services } from "@/lib/services"
 import { cities } from "@/lib/seo-locations"
 import { getArticlesForDefect } from "@/lib/articles"
+import { getDefectImages } from "@/lib/topic-images"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
 export function generateStaticParams() {
@@ -137,6 +138,8 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
         { heading: "סימנים שמעידים על הליקוי", items: defect.symptoms },
         { heading: "הגורמים הנפוצים", items: defect.causes },
       ]}
+      gallery={getDefectImages(defect.slug)}
+      galleryHeading={`תמונות מבדיקות בשטח - איתור ליקויי ${defect.name}`}
       contentSections={contentSections}
       faq={defect.faq}
       ctaTitle={`חושדים בליקוי ${defect.name} בדירה?`}

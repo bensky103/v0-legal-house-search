@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { projectTypes } from "@/lib/seo-locations"
 import { services, getServiceBySlug } from "@/lib/services"
 import { getArticlesForService } from "@/lib/articles"
+import { getServiceImages } from "@/lib/topic-images"
 import { defects } from "@/lib/defects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
@@ -195,6 +196,8 @@ function DedicatedService({ slug }: { slug: string }) {
         intro={service.intro}
         featuresHeading={`מה כולל שירות ${service.name}?`}
         features={service.features}
+        gallery={getServiceImages(service.slug)}
+        galleryHeading={`תמונות מבדיקות בשטח - ${service.name}`}
         contentSections={service.contentSections}
         bulletSections={service.bulletSections}
         faq={service.faq}

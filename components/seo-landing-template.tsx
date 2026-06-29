@@ -18,6 +18,14 @@ interface BulletSection {
   items: string[]
 }
 
+interface GalleryImg {
+  src: string
+  alt: string
+  caption: string
+  width: number
+  height: number
+}
+
 interface SeoLandingTemplateProps {
   badge: string
   title: string
@@ -41,6 +49,9 @@ interface SeoLandingTemplateProps {
     intro: string
     projects: { name: string; area: string }[]
   }
+  // Optional real inspection photos relevant to the page topic.
+  gallery?: GalleryImg[]
+  galleryHeading?: string
 }
 
 export function SeoLandingTemplate({
@@ -59,6 +70,8 @@ export function SeoLandingTemplate({
   bulletSections = [],
   featuresHeading = "מה כולל שירות בדק הבית שלנו?",
   projectsSection,
+  gallery = [],
+  galleryHeading = "תמונות מבדיקות בשטח",
 }: SeoLandingTemplateProps) {
   const baseUrl = "https://legalbedek.co.il"
   const crumbs: Breadcrumb[] = breadcrumbs.length > 0 ? breadcrumbs : [{ label: "דף הבית", href: "/" }]
@@ -261,6 +274,44 @@ export function SeoLandingTemplate({
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+      )}
+
+      {/* Real inspection photos relevant to the topic */}
+      {gallery.length > 0 && (
+        <section className="py-10 md:py-16">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8 md:mb-12">
+              {galleryHeading}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {gallery.map((img, i) => (
+                <figure
+                  key={i}
+                  className="overflow-hidden rounded-xl ring-1 ring-slate-200 bg-white shadow-sm"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="px-4 py-3 text-sm text-gray-600 leading-relaxed">
+                    {img.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+            <p className="text-center mt-6">
+              <Link href="/gallery" className="text-blue-600 hover:text-blue-800 font-semibold hover:underline">
+                לגלריית הבדיקות המלאה ←
+              </Link>
+            </p>
           </div>
         </section>
       )}

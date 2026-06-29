@@ -112,6 +112,34 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-03-08",
     topic: "general",
   },
+  {
+    id: "jxLu2s3K2Yc",
+    title: "בדק בית Legal - בדיקת אינסטלציה ומחלק מים",
+    description: "בדק בית - בדיקת מערכת האינסטלציה ומחלק המים בדירה, חיבורים ואיתור נזילות וליקויי אינסטלציה.",
+    uploadDate: "2026-06-29",
+    topic: "instalatzia",
+  },
+  {
+    id: "SSIN2yjnjLM",
+    title: "בדק בית Legal - בדיקת רכוש משותף וגג: איטום, דוד שמש ואינסטלציה",
+    description: "בדק בית - בדיקת רכוש משותף וגג הבניין: איטום, דודי שמש וצנרת אינסטלציה, לאיתור ליקויים משותפים.",
+    uploadDate: "2026-06-29",
+    topic: "itum",
+  },
+  {
+    id: "cBx3lq4bghA",
+    title: "בדיקת פתחי אור ואוורור באמבטיה - בדק בית Legal",
+    description: "בדק בית - בדיקת פתחי אור ואוורור בחדר האמבטיה והתאמתם לדרישות התקנות.",
+    uploadDate: "2026-06-29",
+    topic: "general",
+  },
+  {
+    id: "OdooBVf-luE",
+    title: "בדק בית Legal - הכירו את השירות",
+    description: "סרטון היכרות עם שירות בדק בית Legal - בדיקה הנדסית מקצועית ואיתור ליקויי בנייה בכל הארץ.",
+    uploadDate: "2026-06-29",
+    topic: "general",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

@@ -26,6 +26,11 @@ const sections: { key: GalleryImage["category"]; heading: string; description: s
     heading: "ציוד מקצועי מתקדם",
     description: "הציוד ההנדסי המתקדם שבעזרתו אנו מאתרים ליקויים סמויים בדיוק גבוה",
   },
+  {
+    key: "field",
+    heading: "תיעוד בדיקות בשטח",
+    description: "מאות תמונות אמיתיות מבדיקות בדק בית בשטח - רטיבות, איטום, אינסטלציה, ריצוף, חיפויים, אלומיניום, מעקות, טיח וכלים סניטריים",
+  },
 ]
 
 export default function GalleryPage() {

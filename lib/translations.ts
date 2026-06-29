@@ -19,7 +19,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "hero.subtitle2": "חוות דעת מומחה לפני או לאחר מסירת דירה | חוות דעת משפטית | חוות דעת נגדית פנים ארגונית",
     "hero.cta": "צור קשר עכשיו",
     "hero.moreInfo": "הכרות עם ליגל בדק בית - Legal",
-    "hero.trust1": "ניסיון רב-שנים בהנדסת בניין",
+    "hero.trust1": "ניסיון רב באיתור ליקויי בנייה",
     "hero.trust2": "דוחות הנדסיים מקצועיים ומפורטים",
     "hero.trust3": "ציוד מדידה מתקדם",
     "hero.trust4": "שירות בכל רחבי הארץ",

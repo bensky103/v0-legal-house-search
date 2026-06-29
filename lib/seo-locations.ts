@@ -461,6 +461,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "mitzlawi",
+    projects: ["רובע איילון, בת ים", "סמטת הורדים, בת ים", "מתחם רוטשילד-ארלוזורוב, בת ים"],
     name: "מצלאוי",
     nameWithShel: "מצלאוי",
     description:
@@ -468,6 +469,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "tzarfati",
+    projects: ["לוריא ארנונה, ירושלים", "NOFARIM פסגת זאב, ירושלים"],
     name: "צרפתי שמעון",
     nameWithShel: "צרפתי שמעון",
     description:
@@ -589,6 +591,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "bst",
+    projects: ["מערבה, רחובות"],
     name: "בסט",
     nameWithShel: "בסט",
     description:
@@ -604,6 +607,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "oron",
+    projects: ["סיגליות, באר שבע", "דרך השלום, תל אביב", "האלון, יבנה", "ביאליק, חולון"],
     name: "קבוצת אורון",
     nameWithShel: "קבוצת אורון",
     description:

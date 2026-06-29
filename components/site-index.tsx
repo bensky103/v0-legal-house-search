@@ -27,6 +27,7 @@ export function SiteIndex() {
     { label: "פרויקטים חדשים", href: "/projects" },
     { label: "מאמרים ומדריכים", href: "/articles" },
     { label: "גלריית בדק בית", href: "/gallery" },
+    { label: "סרטוני בדק בית", href: "/videos" },
     { label: "בלוג", href: "/blog" },
     { label: "כרטיס ביקור דיגיטלי", href: "/card" },
   ]

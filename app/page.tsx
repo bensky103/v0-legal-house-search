@@ -967,10 +967,18 @@ export default function HomePage() {
           <div className="mt-10 max-w-5xl mx-auto">
             <div className="flex items-center justify-between mb-4" dir="rtl">
               <h3 className="text-lg font-bold text-slate-900">בדיקות מתועדות מהשטח</h3>
-              <a href="/gallery" className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-                <Eye className="w-4 h-4" aria-hidden="true" />
-                לגלריית הבדיקות המלאה
-              </a>
+              <div className="flex items-center gap-4">
+                <a href="/videos" className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:text-red-700 transition-colors">
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                  לסרטוני הבדיקות
+                </a>
+                <a href="/gallery" className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors">
+                  <Eye className="w-4 h-4" aria-hidden="true" />
+                  לגלריית הבדיקות המלאה
+                </a>
+              </div>
             </div>
             <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {TRUST_EVIDENCE.map((item) => (

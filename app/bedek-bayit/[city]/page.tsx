@@ -177,6 +177,15 @@ export default function CityPage({ params }: { params: { city: string } }) {
     ? profile.intro
     : `${city.description} משרד בדק בית Legal מספק שירותי בדק בית הנדסי מקיפים ב${city.name} ובכל אזור ${city.region}. בין אם רכשתם דירה חדשה מקבלן או דירת יד שניה, אנו נבדוק את הנכס ביסודיות, נאתר ליקויי בנייה ונספק לכם חוות דעת מקצועית שתסייע לכם להבטיח את ההשקעה שלכם.`
 
+  // Timing clarification, appended to every city page (profile-based or generic).
+  const timingSection = {
+    heading: `מתי לבצע את בדק הבית ב${city.name}?`,
+    paragraphs: [
+      `נקודה חשובה שרבים אינם מודעים אליה: רוב הקבלנים אינם מאפשרים בדק בית שבועות לפני המסירה. הבדיקה נעשית במעמד מסירת הדירה עצמו, או סמוך לו ככל הניתן - ולכן כדאי לתאם את המומחה ל${city.name} למועד המסירה שנקבע.`,
+      `העיתוי הזה הוא לטובתכם: כל עוד הקבלן עדיין באתר עם צוותים וחומרים, התיקון מהיר וזול עבורו; וככל שהבדיקה סמוכה למסירה, כך נמנעת הטענה שאתם, הדיירים, גרמתם לליקוי בעצמכם. כל ליקוי שמתועד נכנס לפרוטוקול המסירה ומחייב את הקבלן בתיקון.`,
+    ],
+  }
+
   // Per-city Service schema (P-Schema 4): targets the city explicitly via areaServed.
   const cityServiceSchema = {
     "@context": "https://schema.org",
@@ -201,10 +210,10 @@ export default function CityPage({ params }: { params: { city: string } }) {
     <SeoLandingTemplate
       badge={`שירות ב${city.name} וב${city.region}`}
       title={`בדק בית ב${city.name} - מומחה לאיתור ליקויי בנייה`}
-      subtitle={`בדק בית הנדסי מקצועי ב${city.name} לדירות חדשות ויד שניה. איתור ליקויי בנייה, בדיקה לפני מסירת דירה וחוות דעת מקצועית מטעם מומחה מוסמך.`}
+      subtitle={`בדק בית הנדסי מקצועי ב${city.name} לדירות חדשות ויד שניה. איתור ליקויי בנייה, בדיקה במועד מסירת הדירה וחוות דעת מקצועית מטעם מומחה מוסמך.`}
       intro={intro}
       features={profile ? profile.features : genericFeatures}
-      contentSections={profile ? profile.sections : genericSections}
+      contentSections={[...(profile ? profile.sections : genericSections), timingSection]}
       projectsSection={projectsSection}
       faq={profile ? profile.faq : genericFaq}
       ctaTitle={`צריכים בדק בית ב${city.name}?`}

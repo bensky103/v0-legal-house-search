@@ -44,7 +44,7 @@ export default function ProjectsHubPage() {
     "@type": "ItemList",
     name: "פרויקטים חדשים לקראת מסירה - שירותי בדק בית",
     description:
-      "רשימת פרויקטי בנייה חדשים בישראל הנמצאים בשלבי בנייה מתקדמת, אכלוס ומסירה, שבהם ניתן לבצע בדק בית מקצועי לפני מסירת הדירה מהקבלן.",
+      "רשימת פרויקטי בנייה חדשים בישראל הנמצאים בשלבי בנייה מתקדמת, אכלוס ומסירה, שבהם ניתן לבצע בדק בית מקצועי במועד מסירת הדירה מהקבלן.",
     dateModified: featuredProjectsUpdated,
     numberOfItems: featuredProjects.length,
     itemListElement: featuredProjects.map((project, index) => ({
@@ -64,7 +64,7 @@ export default function ProjectsHubPage() {
         <div className="container mx-auto px-4 py-12 md:py-16 text-center">
           <h1 className="text-3xl md:text-4xl font-bold text-balance mb-4">בדק בית בפרויקטים חדשים</h1>
           <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto text-pretty">
-            בדק בית מקצועי לדירות חדשות מקבלן - בדיקה לפני מסירה, איתור ליקויי בנייה וליווי בפרוטוקול המסירה
+            בדק בית מקצועי לדירות חדשות מקבלן - בדיקת מסירה, איתור ליקויי בנייה וליווי בפרוטוקול המסירה
           </p>
         </div>
       </header>
@@ -90,7 +90,7 @@ export default function ProjectsHubPage() {
       <section className="py-10 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-8 text-center text-pretty">
-            רוכשי דירות חדשות מקבלן זקוקים לבדק בית מקצועי לפני מסירת הדירה, כדי לאתר ליקויי בנייה ולוודא שהדירה תואמת
+            רוכשי דירות חדשות מקבלן זקוקים לבדק בית מקצועי במועד מסירת הדירה, כדי לאתר ליקויי בנייה ולוודא שהדירה תואמת
             את המפרט והתקנים. בחרו את העיר שלכם כדי לקרוא על בדק בית בפרויקטים החדשים בה.
           </p>
 
@@ -104,7 +104,7 @@ export default function ProjectsHubPage() {
             </p>
             <p className="text-base text-gray-800 leading-relaxed mb-8 text-center text-pretty">
               אנו מבצעים בדק בית מקצועי לדירות חדשות בפרויקטים הבאים, הנמצאים בשלבי בנייה מתקדמת, אכלוס ומסירה. אם רכשתם
-              דירה באחד מהפרויקטים האלה - מומלץ לבצע בדק בית לפני מסירת הדירה מהקבלן.
+              דירה באחד מהפרויקטים האלה - מומלץ לבצע בדק בית במועד מסירת הדירה מהקבלן.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">

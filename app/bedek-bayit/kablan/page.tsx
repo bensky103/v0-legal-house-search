@@ -43,7 +43,7 @@ export default function ContractorsIndexPage() {
           <h1 className="text-2xl md:text-4xl font-bold mb-4 text-balance">בדק בית לפי קבלן</h1>
           <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto text-pretty leading-relaxed">
             רכשתם דירה חדשה? מחקר הטכניון מצא כי כמעט בכל דירה חדשה בישראל מתגלים ליקויי בנייה. בחרו את הקבלן שלכם וקבלו
-            שירות בדק בית הנדסי מקצועי לפני מסירת הדירה.
+            שירות בדק בית הנדסי מקצועי במועד מסירת הדירה.
           </p>
         </div>
       </section>

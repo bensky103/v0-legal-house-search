@@ -76,7 +76,7 @@ export default function ServicePage({ params }: { params: { type: string } }) {
       features={[
         {
           title: "בדיקת מסירה",
-          description: `בדיקה הנדסית מקיפה של הדירה ב${project.name} לפני מסירה, לאיתור כל הליקויים והחריגות.`,
+          description: `בדיקה הנדסית מקיפה של הדירה ב${project.name} במעמד המסירה, לאיתור כל הליקויים והחריגות.`,
         },
         {
           title: "ליווי מול הקבלן",

@@ -93,17 +93,19 @@ export default function MataiLehazminBedekBayitPage() {
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-3">
                 <span className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</span>
-                <h3 className="text-xl font-bold text-gray-900">לפני מסירת הדירה - הזמן האידיאלי ביותר</h3>
+                <h3 className="text-xl font-bold text-gray-900">במועד מסירת הדירה - הזמן האידיאלי ביותר</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                השלב הטוב ביותר להזמין מומחה בדק בית הוא <strong>מספר ימים לפני מסירת המפתח</strong>.
+                העיתוי המומלץ הוא <strong>במעמד מסירת הדירה עצמו — או סמוך לו ככל הניתן</strong>. חשוב להכיר את המציאות בשטח:
+                רוב החברות הקבלניות אינן מאפשרות לבצע בדק בית שבועות לפני המסירה, אלא במועד המסירה או מיד לאחריו. לכן
+                התיאום הנכון הוא להביא את המומחה למעמד המסירה, או למועד הקרוב אליו ביותר.
               </p>
               <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-800 mb-2">למה זה חשוב?</h4>
+                <h4 className="font-semibold text-green-800 mb-2">למה דווקא בסמוך למסירה?</h4>
                 <ul className="space-y-1 text-green-700">
-                  <li>&#10003; ניתן לאתר ליקויים מוקדם</li>
-                  <li>&#10003; הקבלן עדיין נמצא באתר עם צוותים וחומרים זמינים</li>
-                  <li>&#10003; קל יותר לדרוש תיקונים לפני קבלת הדירה</li>
+                  <li>&#10003; הליקויים נכנסים ישירות לפרוטוקול המסירה הרשמי</li>
+                  <li>&#10003; הקבלן עדיין עם צוותים וחומרים זמינים באתר — מהיר וזול לו לתקן</li>
+                  <li>&#10003; ככל שהבדיקה קרובה למסירה, כך נמנעת טענה שהדייר עצמו גרם לליקוי</li>
                 </ul>
               </div>
               <p className="text-gray-700 mt-4">
@@ -258,11 +260,11 @@ export default function MataiLehazminBedekBayitPage() {
         {/* Strategic Advantage */}
         <section className="mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            יתרון אסטרטגי: בדיקה מוקדמת לפני מסירה
+            יתרון אסטרטגי: בדיקה במעמד המסירה ובסמוך לה
           </h2>
           <Card className="bg-green-50 border-green-200">
             <CardContent className="p-6">
-              <p className="text-gray-700 mb-4">כאשר מבצעים בדק בית עוד לפני המסירה:</p>
+              <p className="text-gray-700 mb-4">כאשר מבצעים בדק בית עוד במעמד המסירה:</p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">&#10003;</span>
@@ -298,7 +300,7 @@ export default function MataiLehazminBedekBayitPage() {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <span className="bg-green-500 text-white rounded px-2 py-1 text-sm font-bold">עדיף ביותר</span>
-                  <span className="text-gray-700">לפני מסירת הדירה</span>
+                  <span className="text-gray-700">במועד מסירת הדירה</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="bg-blue-500 text-white rounded px-2 py-1 text-sm font-bold">חובה</span>
@@ -363,7 +365,7 @@ export default function MataiLehazminBedekBayitPage() {
         {/* Documented defects from the field */}
         <ArticleDefectGallery
           heading="מה בודקים בבדק בית — תיעוד ליקויים מהשטח"
-          intro="דוגמאות אמיתיות מתהליך בדק בית: בדיקת דלתות, חלונות, מרפסות ואוורור ותיעוד הליקויים בדוח. כך נראית בדיקה מקצועית שמלווה אתכם לפני המסירה מהקבלן וגם בדירה יד שנייה."
+          intro="דוגמאות אמיתיות מתהליך בדק בית: בדיקת דלתות, חלונות, מרפסות ואוורור ותיעוד הליקויים בדוח. כך נראית בדיקה מקצועית שמלווה אתכם במעמד המסירה מהקבלן וגם בדירה יד שנייה."
           items={DEFECTS_MATAI}
         />
 

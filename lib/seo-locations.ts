@@ -298,6 +298,7 @@ export interface ContractorData {
 export const contractors: ContractorData[] = [
   {
     slug: "afi-capital",
+    projects: ["Intro Tel Aviv, תל אביב", "אפי האומנים, קרית מוצקין", "אפי ברמה, בית שמש", "נווה דורון, רמלה"],
     name: "אפי קפיטל",
     nameWithShel: "אפי קפיטל",
     description:
@@ -305,6 +306,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "prashkovsky",
+    projects: ["רמת ידין, נתניה", "מתחם העלייה, נתניה", "נוף השרון, נתניה"],
     name: "פרשקובסקי",
     nameWithShel: "פרשקובסקי",
     description:
@@ -312,6 +314,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "rami-shbiro",
+    projects: ["מבואות דרומיים, חיפה"],
     name: "רמי שבירו",
     nameWithShel: "רמי שבירו",
     description:
@@ -374,6 +377,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "ashtrom",
+    projects: ["אשטרום מגורים קרית היובל, ירושלים", "אשטרום מגורים רמת אביב, תל אביב"],
     name: "אשטרום",
     nameWithShel: "אשטרום",
     description:
@@ -409,6 +413,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "israel-canada",
+    projects: ["מידטאון, תל אביב", "מגדל SHE, תל אביב", "מגדלי YAM, בת ים", "מתחם רוטשילד, בת ים"],
     name: "ישראל קנדה",
     nameWithShel: "ישראל קנדה",
     description:
@@ -475,6 +480,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "almogim",
+    projects: ["אלמוג RED, אשקלון"],
     name: "אלמוגים",
     nameWithShel: "אלמוגים",
     description:
@@ -489,6 +495,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "nethanel-group",
+    projects: ["מגדלי נתנאל, ירושלים"],
     name: "נתנאל גרופ",
     nameWithShel: "נתנאל גרופ",
     description:
@@ -496,6 +503,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "hagag",
+    projects: ["מגדלי תל אביב, תל אביב", "H מגדלי הארבעה, תל אביב", "Meier on Rothschild, תל אביב", "מגדל קריניצי, רמת גן"],
     name: "קבוצת חג'ג'",
     nameWithShel: "קבוצת חג'ג'",
     description:
@@ -503,6 +511,7 @@ export const contractors: ContractorData[] = [
   },
   {
     slug: "amos-luzon",
+    projects: ["Unik Life, יהוד"],
     name: "קבוצת עמוס לוזון",
     nameWithShel: "קבוצת עמוס לוזון",
     description:
@@ -660,3 +669,37 @@ export const projectTypes: ProjectTypeData[] = [
     keywords: ["בדק בית תמא 38", "תמא 38 ליקויי בנייה", "בדיקת דירה תמא 38"],
   },
 ]
+
+// ---- Reciprocal city ↔ contractor linking ----
+// Derives the relationship from each contractor's `projects` list. Project strings
+// are formatted "שם הפרויקט, עיר", so we read the city part (after the last comma)
+// and match it against known city names. Parsing only the city part (not the full
+// project string) avoids false positives like the city "אזור" matching "אזורים".
+
+function projectCityPart(project: string): string {
+  const i = project.lastIndexOf(",")
+  return i === -1 ? "" : project.slice(i + 1).trim()
+}
+
+/** City slugs where this contractor has known projects (only cities with a page). */
+export function getContractorCitySlugs(contractor: ContractorData): string[] {
+  if (!contractor.projects?.length) return []
+  const slugs = new Set<string>()
+  for (const project of contractor.projects) {
+    const cityPart = projectCityPart(project)
+    if (!cityPart) continue
+    for (const c of cities) {
+      if (cityPart.includes(c.nameSimple)) slugs.add(c.slug)
+    }
+  }
+  return [...slugs]
+}
+
+/** Contractors with known projects in the given city. */
+export function getContractorsForCity(citySlug: string): ContractorData[] {
+  const city = cities.find((c) => c.slug === citySlug)
+  if (!city) return []
+  return contractors.filter((ct) =>
+    ct.projects?.some((project) => projectCityPart(project).includes(city.nameSimple)),
+  )
+}

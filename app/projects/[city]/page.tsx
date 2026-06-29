@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { cities } from "@/lib/seo-locations"
+import { cities, getContractorsForCity } from "@/lib/seo-locations"
 import { getCityProjectIndex } from "@/lib/projects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
@@ -141,6 +141,10 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
       ]}
       relatedLinks={[
         { label: `בדק בית ב${city.name}`, href: `/bedek-bayit/${city.slug}` },
+        ...getContractorsForCity(city.slug).map((c) => ({
+          label: `בדק בית בפרויקטים של ${c.name}`,
+          href: `/bedek-bayit/kablan/${c.slug}`,
+        })),
         { label: "בדק בית לפני מסירה", href: "/services/shechunot-hadashot" },
         { label: "ליקויי רטיבות", href: "/likuyey-bniya/retivut" },
       ]}

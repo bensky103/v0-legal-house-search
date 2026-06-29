@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { contractors } from "@/lib/seo-locations"
+import { contractors, cities, getContractorCitySlugs } from "@/lib/seo-locations"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
 export function generateStaticParams() {
@@ -51,10 +51,19 @@ export default function ContractorPage({ params }: { params: { contractor: strin
   const contractor = contractors.find((c) => c.slug === params.contractor)
   if (!contractor) notFound()
 
-  const relatedLinks = contractors
-    .filter((c) => c.slug !== contractor.slug)
-    .slice(0, 8)
-    .map((c) => ({ label: `בדק בית - ${c.name}`, href: `/bedek-bayit/kablan/${c.slug}` }))
+  // Reciprocal links: cities where this contractor has known projects.
+  const cityLinks = getContractorCitySlugs(contractor)
+    .map((slug) => cities.find((c) => c.slug === slug))
+    .filter((c): c is NonNullable<typeof c> => Boolean(c))
+    .map((c) => ({ label: `פרויקטים חדשים ב${c.nameSimple}`, href: `/projects/${c.slug}` }))
+
+  const relatedLinks = [
+    ...cityLinks,
+    ...contractors
+      .filter((c) => c.slug !== contractor.slug)
+      .slice(0, 8)
+      .map((c) => ({ label: `בדק בית - ${c.name}`, href: `/bedek-bayit/kablan/${c.slug}` })),
+  ]
 
   // Notable projects (public-sourced) — framed neutrally as projects we inspect,
   // never as projects with defects, keeping the page's industry-wide framing.

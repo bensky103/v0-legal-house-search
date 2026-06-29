@@ -1538,6 +1538,11 @@ export default function HomePage() {
                     מאמר: ת&quot;י 789 - סטיות מותרות
                   </a>
                 </li>
+                <li>
+                  <a href="/articles/protokol-mesira" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    מאמר: פרוטוקול מסירה - מדריך
+                  </a>
+                </li>
                 <li className="pt-2">
                   <a href="/blog" className="text-blue-400 hover:text-blue-300 hover:underline">
                     בלוג בדק בית

@@ -67,6 +67,15 @@ export const articles: ArticleMeta[] = [
     relatedDefects: ["instalatzia", "retivut"],
     relatedServices: ["itur-likuyey-bniya"],
   },
+  {
+    slug: "protokol-mesira",
+    title: "פרוטוקול מסירה לדירה חדשה — מה חייב להופיע ואיך לא להיתקע",
+    description:
+      "מדריך מלא לפרוטוקול מסירת דירה מקבלן: מה חייב להופיע בו, מתי לבצע בדק בית, ואילו טעויות בחתימה עלולות לעלות עשרות אלפי שקלים.",
+    datePublished: "2026-06-29",
+    relatedServices: ["bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["i-hatama-lemifrat"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

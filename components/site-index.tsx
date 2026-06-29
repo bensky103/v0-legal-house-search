@@ -39,6 +39,7 @@ export function SiteIndex() {
     { label: "חוק המכר - תקופות בדק ואחריות", href: "/articles/chok-hamkar-dirot" },
     { label: "תקני אינסטלציה (ת״י 1205)", href: "/articles/tikaney-instalatzia-bedek-bayit" },
     { label: "ת״י 789 - סטיות מותרות", href: "/articles/taken-789-stiyot-mutarot" },
+    { label: "פרוטוקול מסירה - מדריך", href: "/articles/protokol-mesira" },
   ]
 
   return (

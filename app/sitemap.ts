@@ -3,6 +3,8 @@ import { cities, projectTypes, contractors } from "@/lib/seo-locations"
 import { defects } from "@/lib/defects"
 import { services } from "@/lib/services"
 import { getProjectCities } from "@/lib/projects"
+import { videos } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Fixed content-update date — avoids signalling "everything changed" to Google on every deploy.
@@ -52,6 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const videoPages: MetadataRoute.Sitemap = videos.map((v) => ({
+    url: `https://legalbedek.co.il/videos/${videoSlug(v)}`,
+    lastModified: LAST_UPDATED,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }))
+
   return [
     {
       url: "https://legalbedek.co.il",
@@ -95,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...contractorPages,
     ...defectPages,
     ...projectCityPages,
+    ...videoPages,
     {
       url: "https://legalbedek.co.il/blog",
       lastModified: LAST_UPDATED,

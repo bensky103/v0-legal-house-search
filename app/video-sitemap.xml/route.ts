@@ -1,4 +1,5 @@
 import { videos, videoThumb, videoEmbedUrl } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 
 // Google video sitemap. Lists every embedded YouTube video under the page it
 // appears on, so the videos are discoverable for Google video rich results.
@@ -8,9 +9,9 @@ export const dynamic = "force-static"
 
 const SITE = "https://legalbedek.co.il"
 
-// Page a video primarily appears on: its defect page, or the videos hub.
-function pageUrl(topic: string): string {
-  return topic === "general" ? `${SITE}/videos` : `${SITE}/likuyey-bniya/${topic}`
+// Each video has its own dedicated landing page.
+function pageUrl(v: (typeof videos)[number]): string {
+  return `${SITE}/videos/${videoSlug(v)}`
 }
 
 function escapeXml(value: string): string {
@@ -26,7 +27,7 @@ export function GET() {
   // Group videos by the page they appear on.
   const byPage = new Map<string, typeof videos>()
   for (const v of videos) {
-    const url = pageUrl(v.topic)
+    const url = pageUrl(v)
     const list = byPage.get(url) ?? []
     list.push(v)
     byPage.set(url, list)

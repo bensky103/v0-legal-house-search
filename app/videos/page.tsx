@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { videos } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { SiteIndex } from "@/components/site-index"
 
@@ -59,8 +60,18 @@ export default function VideosPage() {
               <figure key={v.id}>
                 <LiteYouTube id={v.id} title={v.title} />
                 <figcaption className="mt-3">
-                  <h3 className="text-base md:text-lg font-bold text-gray-900 leading-snug">{v.title}</h3>
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 leading-snug">
+                    <Link href={`/videos/${videoSlug(v)}`} className="hover:text-blue-700 hover:underline">
+                      {v.title}
+                    </Link>
+                  </h3>
                   <p className="mt-1 text-sm text-gray-600 leading-relaxed">{v.description}</p>
+                  <Link
+                    href={`/videos/${videoSlug(v)}`}
+                    className="mt-2 inline-block text-sm font-semibold text-blue-600 hover:text-blue-800 hover:underline"
+                  >
+                    לעמוד הסרטון המלא ←
+                  </Link>
                 </figcaption>
               </figure>
             ))}

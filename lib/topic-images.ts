@@ -217,6 +217,49 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-retivut-01.jpg"),
     GF("bedek-bayit-likui-retivut-02.jpg"),
   ],
+  "delet-knisa": [
+    G("zavit-nagarim-bedek-bayit"),
+    G("mad-mervachim-feeler-bedek-bayit"),
+    G("sargel-pelada-meduyak-bedek-bayit"),
+  ],
+  biyuv: [
+    G("matzlemat-tzanrat-endoskop-bedek-bayit"),
+    G("bedikat-nikuz-matzlemat-endoskop"),
+    G("likui-nikuz-stima-tzanrat"),
+    G("pkak-bedika-tzanrat-bedek-bayit"),
+  ],
+  miklachon: [
+    GF("bedek-bayit-klim-sanitariim-02.jpg"),
+    GF("bedek-bayit-klim-sanitariim-03.jpg"),
+    G("glai-zchuchit-mechusemet-merlin-bedek-bayit"),
+    G("mad-oviy-zchuchit-merlin-bedek-bayit"),
+  ],
+  "ritzuf-chutz": [
+    GF("bedek-bayit-likui-ritzuf-01.jpg"),
+    GF("bedek-bayit-likui-ritzuf-02.jpg"),
+    GF("bedek-bayit-likui-ritzuf-03.jpg"),
+    G("bedikat-mishoriyut-ritzuf-peles"),
+  ],
+  marzevim: [
+    GF("bedek-bayit-likui-itum-05.jpg"),
+    GF("bedek-bayit-likui-itum-06.jpg"),
+    G("bedikat-tikrat-mirpeset-mad-temperatura"),
+  ],
+  "kirot-tomchim": [
+    G("likui-sedek-kir-hitzoni"),
+    G("bedikat-nichuchiyut-kir-peles"),
+    G("sargel-pelada-meduyak-bedek-bayit"),
+  ],
+  "mistor-kvisa": [
+    GF("bedek-bayit-likui-instalatzia-07.jpg"),
+    GF("bedek-bayit-likui-aluminium-04.jpg"),
+    G("bedikat-tzanrat-instalatzia"),
+  ],
+  chanaya: [
+    GF("bedek-bayit-likui-ritzuf-04.jpg"),
+    G("bedikat-luach-chashmal"),
+    G("mad-otzmat-or-lux-bedek-bayit"),
+  ],
 }
 
 const FALLBACK = [

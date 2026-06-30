@@ -242,6 +242,14 @@ const relatedVideoTopics: Record<string, string[]> = {
   negarut: ["dlatot"], // נגרות ⟵ דלתות
   trisim: ["aluminium"], // תריסים ⟵ אלומיניום
   "tikrot-gevs": ["itum"], // תקרות גבס ⟵ רטיבות/איטום
+  "delet-knisa": ["dlatot"], // דלת כניסה ⟵ דלתות
+  biyuv: ["nikuz"], // ביוב ⟵ סרטוני ניקוז/מצלמת ביוב
+  miklachon: ["instalatzia"], // מקלחון ⟵ אינסטלציה/כלים סניטריים
+  "ritzuf-chutz": ["ritzuf"], // ריצוף חוץ ⟵ ריצוף
+  marzevim: ["itum"], // מרזבים ⟵ איטום/גג
+  "kirot-tomchim": ["sdakim"], // קירות תומכים ⟵ סדקים
+  "mistor-kvisa": ["instalatzia"], // מסתור כביסה ⟵ אינסטלציה
+  chanaya: ["ritzuf"], // חניה ⟵ ריצוף
 }
 
 /** Videos mapped to a given defect/service slug (with related-topic fallback). */

@@ -28,6 +28,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-retivut-09.jpg"),
   ],
   sdakim: [
+    GF("bedek-bayit-likui-sdakim-01.jpg"),
+    GF("bedek-bayit-likui-sdakim-02.jpg"),
     G("likui-sedek-kir-hitzoni"),
     G("zchuchit-magdelet-loupe-bedek-bayit"),
     G("sargel-pelada-meduyak-bedek-bayit"),
@@ -48,6 +50,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-itum-07.jpg"),
   ],
   ritzuf: [
+    GF("bedek-bayit-likui-ritzuf-19.jpg"),
+    GF("bedek-bayit-likui-ritzuf-20.jpg"),
     GF("bedek-bayit-likui-ritzuf-01.jpg"),
     GF("bedek-bayit-likui-ritzuf-02.jpg"),
     GF("bedek-bayit-likui-ritzuf-03.jpg"),
@@ -69,7 +73,14 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-instalatzia-08.jpg"),
     GF("bedek-bayit-likui-instalatzia-09.jpg"),
   ],
-  chashmal: [G("bedikat-luach-chashmal"), G("mad-krina-emf-bedek-bayit")],
+  chashmal: [
+    GF("bedek-bayit-likui-chashmal-01.jpg"),
+    GF("bedek-bayit-likui-chashmal-02.jpg"),
+    GF("bedek-bayit-likui-chashmal-03.jpg"),
+    GF("bedek-bayit-likui-chashmal-04.jpg"),
+    G("bedikat-luach-chashmal"),
+    G("mad-krina-emf-bedek-bayit"),
+  ],
   "bidud-akusti": [
     G("bedika-termit-mizug-avir-dira-hadasha"),
     G("matzlema-termit-itur-retivut"),
@@ -87,6 +98,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedikat-tikrat-mirpeset-mad-temperatura"),
   ],
   aluminium: [
+    GF("bedek-bayit-likui-aluminium-12.jpg"),
     GF("bedek-bayit-likui-aluminium-01.jpg"),
     GF("bedek-bayit-likui-aluminium-02.jpg"),
     GF("bedek-bayit-likui-aluminium-03.jpg"),
@@ -108,6 +120,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("sargel-pelada-meduyak-bedek-bayit"),
   ],
   mamad: [
+    GF("bedek-bayit-likui-mamad-03.jpg"),
     GF("bedek-bayit-likui-mamad-01.jpg"),
     GF("bedek-bayit-likui-mamad-02.jpg"),
   ],
@@ -135,6 +148,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-maakot-betichut-06.jpg"),
   ],
   chipuyim: [
+    GF("bedek-bayit-likui-chipuyim-12.jpg"),
     GF("bedek-bayit-likui-chipuyim-01.jpg"),
     GF("bedek-bayit-likui-chipuyim-02.jpg"),
     GF("bedek-bayit-likui-chipuyim-03.jpg"),
@@ -146,6 +160,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-chipuyim-09.jpg"),
   ],
   tiyach: [
+    GF("bedek-bayit-likui-tiyach-06.jpg"),
     GF("bedek-bayit-likui-tiyach-01.jpg"),
     GF("bedek-bayit-likui-tiyach-02.jpg"),
     GF("bedek-bayit-likui-tiyach-03.jpg"),
@@ -164,6 +179,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
   ],
   nikuz: [
+    GF("bedek-bayit-likui-nikuz-01.jpg"),
+    GF("bedek-bayit-likui-nikuz-02.jpg"),
     G("bedikat-nikuz-matzlemat-endoskop"),
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
     G("likui-nikuz-stima-tzanrat"),
@@ -176,6 +193,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedikat-tzanrat-instalatzia"),
   ],
   "klim-sanitariim": [
+    GF("bedek-bayit-klim-sanitariim-07.jpg"),
     GF("bedek-bayit-klim-sanitariim-01.jpg"),
     GF("bedek-bayit-klim-sanitariim-02.jpg"),
     GF("bedek-bayit-klim-sanitariim-03.jpg"),
@@ -200,6 +218,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("sargel-pelada-meduyak-bedek-bayit"),
   ],
   trisim: [
+    GF("bedek-bayit-trisim-01.jpg"),
     GF("bedek-bayit-likui-aluminium-01.jpg"),
     GF("bedek-bayit-likui-aluminium-02.jpg"),
     GF("bedek-bayit-likui-aluminium-03.jpg"),

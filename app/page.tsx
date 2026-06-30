@@ -395,7 +395,7 @@ export default function HomePage() {
         <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text column - frosted card for guaranteed readability */}
-            <div className="rounded-3xl bg-white/80 backdrop-blur-md ring-1 ring-white/70 shadow-xl p-6 md:p-8 text-center lg:text-start">
+            <div className="rounded-3xl bg-white/55 backdrop-blur-lg ring-1 ring-white/60 shadow-xl p-6 md:p-8 text-center lg:text-start">
               <span className="inline-flex items-center gap-2 rounded-full bg-blue-100 border border-blue-200 px-4 py-1.5 text-sm font-semibold text-blue-700 mb-5">
                 <svg className="w-4 h-4 fill-blue-600" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1.2 14.5L7 11.7l1.4-1.4 2.4 2.4 5-5L17.2 9l-6.4 6.5z" />

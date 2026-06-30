@@ -234,6 +234,14 @@ const relatedVideoTopics: Record<string, string[]> = {
   chalonot: ["aluminium"], // חלונות ⟵ סרטוני אלומיניום
   mirpasot: ["itum"], // מרפסות ⟵ איטום מרפסת
   gagot: ["itum"], // גגות ⟵ איטום
+  "mizug-avir": ["bidud-termi"], // מיזוג ⟵ סרטוני מיזוג/מצלמה תרמית
+  "klim-sanitariim": ["instalatzia"], // כלים סניטריים ⟵ אינסטלציה
+  mitbach: ["instalatzia"], // מטבח ⟵ אינסטלציה (מים/ניקוז)
+  "dud-shemesh": ["itum", "instalatzia"], // דוד שמש ⟵ גג/איטום + אינסטלציה
+  gaz: ["instalatzia"], // גז ⟵ אינסטלציה
+  negarut: ["dlatot"], // נגרות ⟵ דלתות
+  trisim: ["aluminium"], // תריסים ⟵ אלומיניום
+  "tikrot-gevs": ["itum"], // תקרות גבס ⟵ רטיבות/איטום
 }
 
 /** Videos mapped to a given defect/service slug (with related-topic fallback). */

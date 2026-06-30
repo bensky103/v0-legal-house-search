@@ -169,6 +169,54 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("likui-nikuz-stima-tzanrat"),
     G("mad-zavit-digitali-bedek-bayit"),
   ],
+  mitbach: [
+    GF("bedek-bayit-likui-instalatzia-01.jpg"),
+    GF("bedek-bayit-likui-instalatzia-02.jpg"),
+    GF("bedek-bayit-klim-sanitariim-01.jpg"),
+    G("bedikat-tzanrat-instalatzia"),
+  ],
+  "klim-sanitariim": [
+    GF("bedek-bayit-klim-sanitariim-01.jpg"),
+    GF("bedek-bayit-klim-sanitariim-02.jpg"),
+    GF("bedek-bayit-klim-sanitariim-03.jpg"),
+    GF("bedek-bayit-klim-sanitariim-04.jpg"),
+    GF("bedek-bayit-klim-sanitariim-05.jpg"),
+    GF("bedek-bayit-klim-sanitariim-06.jpg"),
+  ],
+  "mizug-avir": [
+    G("bedika-termit-mizug-avir-dira-hadasha"),
+    G("bedikat-tikrat-mirpeset-mad-temperatura"),
+    G("matzlema-termit-itur-retivut"),
+  ],
+  "dud-shemesh": [
+    GF("bedek-bayit-likui-itum-01.jpg"),
+    GF("bedek-bayit-likui-itum-02.jpg"),
+    GF("bedek-bayit-likui-itum-03.jpg"),
+    GF("bedek-bayit-likui-itum-04.jpg"),
+  ],
+  negarut: [
+    G("zavit-nagarim-bedek-bayit"),
+    G("mad-mervachim-feeler-bedek-bayit"),
+    G("sargel-pelada-meduyak-bedek-bayit"),
+  ],
+  trisim: [
+    GF("bedek-bayit-likui-aluminium-01.jpg"),
+    GF("bedek-bayit-likui-aluminium-02.jpg"),
+    GF("bedek-bayit-likui-aluminium-03.jpg"),
+    G("mad-oviy-zchuchit-merlin-bedek-bayit"),
+  ],
+  gaz: [
+    G("bedikat-tzanrat-instalatzia"),
+    GF("bedek-bayit-likui-instalatzia-05.jpg"),
+    GF("bedek-bayit-likui-instalatzia-06.jpg"),
+    G("matzlemat-tzanrat-endoskop-bedek-bayit"),
+  ],
+  "tikrot-gevs": [
+    G("matzlema-termit-itur-retivut"),
+    G("bedikat-tikrat-mirpeset-mad-temperatura"),
+    GF("bedek-bayit-likui-retivut-01.jpg"),
+    GF("bedek-bayit-likui-retivut-02.jpg"),
+  ],
 }
 
 const FALLBACK = [

@@ -39,6 +39,7 @@ export default function VideosPage() {
         </div>
       </header>
 
+      <main>
       {/* Intro */}
       <section className="py-10 md:py-14 bg-blue-600 text-white text-center">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -103,6 +104,8 @@ export default function VideosPage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <SiteIndex />
     </div>

@@ -99,6 +99,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
         </ol>
       </nav>
 
+      <main>
       <article className="container mx-auto px-4 py-8 max-w-3xl">
         <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-5 leading-tight text-balance">
           {video.title}
@@ -202,6 +203,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
           </a>
         </section>
       </article>
+      </main>
 
       <SiteIndex />
     </div>

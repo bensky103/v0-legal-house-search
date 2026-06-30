@@ -374,6 +374,7 @@ export default function HomePage() {
         </div>
       </header>
 
+      <main>
       {/* Hero - bright, optimistic, conversion-focused */}
       <section className="relative overflow-hidden bg-gradient-to-b from-sky-100 to-white">
         {/* Bright modern residential tower + blue sky */}
@@ -383,6 +384,7 @@ export default function HomePage() {
             alt={t("hero.bgAlt")}
             fill
             sizes="100vw"
+            quality={68}
             className="object-cover object-top"
             priority
           />
@@ -426,7 +428,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="#contact-section"
-                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/20"
+                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/20"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -570,7 +572,7 @@ export default function HomePage() {
               </ul>
 
               {/* Trust signal stats */}
-              <dl className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {EEAT_STATS.map((stat) => {
                   const Icon = stat.icon
                   return (
@@ -581,7 +583,7 @@ export default function HomePage() {
                     </div>
                   )
                 })}
-              </dl>
+              </div>
 
               {/* Areas of expertise */}
               <div className="mt-6">
@@ -599,7 +601,7 @@ export default function HomePage() {
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="#contact-section"
-                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-7 py-3.5 rounded-xl font-bold text-base md:text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/20"
+                  className="inline-flex items-center justify-center gap-2.5 bg-emerald-700 hover:bg-emerald-800 text-white px-7 py-3.5 rounded-xl font-bold text-base md:text-lg transition-all duration-200 transform hover:scale-105 shadow-xl shadow-emerald-900/20"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
@@ -643,7 +645,7 @@ export default function HomePage() {
                     <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:ring-blue-600">
                       <Icon className="w-6 h-6 text-blue-700 transition-colors group-hover:text-white" aria-hidden="true" />
                     </span>
-                    <span className="font-mono text-xs font-bold tracking-widest text-slate-300">
+                    <span className="font-mono text-xs font-bold tracking-widest text-slate-500">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
@@ -800,7 +802,7 @@ export default function HomePage() {
                     <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:ring-blue-600">
                       <Icon className="w-6 h-6 text-blue-700 transition-colors group-hover:text-white" aria-hidden="true" />
                     </span>
-                    <span className="font-mono text-xs font-bold tracking-widest text-slate-300">
+                    <span className="font-mono text-xs font-bold tracking-widest text-slate-500">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </div>
@@ -1122,7 +1124,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-green-600 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
@@ -1158,7 +1160,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-green-600 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
@@ -1194,7 +1196,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-green-600 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
@@ -1230,7 +1232,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-green-600 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
@@ -1266,7 +1268,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-green-600 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
@@ -1302,7 +1304,7 @@ export default function HomePage() {
                       </svg>
                     ))}
                   </div>
-                  <span className="text-sm text-green-600 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     </svg>
@@ -1430,6 +1432,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      </main>
+
       {/* Site index (HTML sitemap) - internal links to every page */}
       <SiteIndex />
 
@@ -1461,7 +1465,7 @@ export default function HomePage() {
                   href="https://share.google/Xs39vbL4NPtrMLrFZ" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
                   aria-label="ביקורות גוגל - בדק בית Legal"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -1592,11 +1596,6 @@ export default function HomePage() {
 
           <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-300">
             <p className="text-sm text-gray-200">© 2020 בדק בית Legal - {t("footer.rights")}.</p>
-            <p className="mt-2">
-              <a href="#" className="hover:text-white transition-colors text-sm">
-                {/* Additional content can be added here */}
-              </a>
-            </p>
           </div>
         </div>
       </footer>

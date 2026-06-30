@@ -40,7 +40,7 @@ export default function ArticleBedekBayitDiraHadasha() {
               </div>
             </Link>
             <Button
-              className="bg-green-500 hover:bg-green-600 text-white"
+              className="bg-green-700 hover:bg-green-800 text-white"
               onClick={() => window.open("tel:+972506277858", "_self")}
             >
               התקשר עכשיו
@@ -233,7 +233,7 @@ export default function ArticleBedekBayitDiraHadasha() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg"
+                className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg"
                 onClick={() => window.open("tel:+972506277858", "_self")}
               >
                 התקשרו עכשיו: 050-627-7858

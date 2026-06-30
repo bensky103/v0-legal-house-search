@@ -15,7 +15,7 @@ export function WhatsAppButton({ className = "", size = "default" }: WhatsAppBut
   return (
     <Button
       onClick={handleWhatsAppClick}
-      className={`bg-green-500 hover:bg-green-600 text-white ${className}`}
+      className={`bg-green-700 hover:bg-green-800 text-white ${className}`}
       size={size}
     >
       <svg className={`${size === "sm" ? "w-4 h-4" : "w-5 h-5"} ml-2`} fill="currentColor" viewBox="0 0 24 24">

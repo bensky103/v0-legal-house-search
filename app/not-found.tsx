@@ -53,7 +53,7 @@ export default function NotFound() {
         <div className="mt-10">
           <a
             href="tel:+972506277858"
-            className="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg transition-colors"
           >
             צריכים בדק בית? חייגו 050-6277858
           </a>

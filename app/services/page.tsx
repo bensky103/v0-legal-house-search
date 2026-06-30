@@ -156,7 +156,7 @@ export default function ServicesHubPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="tel:+972506277858"
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg transition-colors"
+              className="bg-green-700 hover:bg-green-800 text-white font-semibold px-8 py-4 rounded-lg text-lg shadow-lg transition-colors"
             >
               חייגו עכשיו: 050-6277858
             </a>

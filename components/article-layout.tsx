@@ -55,7 +55,7 @@ export function ArticleLayout({
             </Link>
             <a
               href="tel:+972506277858"
-              className="inline-flex items-center rounded-md bg-green-500 hover:bg-green-600 text-white px-4 py-2 text-sm font-semibold transition-colors"
+              className="inline-flex items-center rounded-md bg-green-700 hover:bg-green-800 text-white px-4 py-2 text-sm font-semibold transition-colors"
             >
               התקשרו עכשיו
             </a>
@@ -90,7 +90,7 @@ export function ArticleLayout({
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+972506277858"
-                className="inline-flex items-center justify-center rounded-lg bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-semibold transition-colors"
+                className="inline-flex items-center justify-center rounded-lg bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg font-semibold transition-colors"
               >
                 התקשרו עכשיו: 050-627-7858
               </a>

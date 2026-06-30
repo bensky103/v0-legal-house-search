@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { ArticleJsonLd } from "@/components/article-jsonld"
 
 export const metadata: Metadata = {
   title: "מתי כדאי להזמין בדק בית? המדריך המלא לעיתוי נכון | Legal בדק בית",
@@ -33,5 +34,17 @@ export const metadata: Metadata = {
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <>
+      <ArticleJsonLd
+        headline="מתי כדאי להזמין בדק בית? המדריך המלא לעיתוי נכון"
+        description="מתי הזמן הנכון להזמין בדק בית? לפני מסירה, ביום המסירה או אחריה? מדריך מקצועי לעיתוי הנכון של בדיקה הנדסית שיחסוך לכם עשרות אלפי שקלים."
+        slug="matai-lehazmin-bedek-bayit"
+        breadcrumbLabel="מתי להזמין בדק בית"
+        datePublished="2026-06-28"
+        dateModified="2026-06-28"
+      />
+      {children}
+    </>
+  )
 }

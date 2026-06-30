@@ -468,7 +468,7 @@ export default function HomePage() {
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover"
-                  loading="eager"
+                  priority
                 />
                 <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white text-start">

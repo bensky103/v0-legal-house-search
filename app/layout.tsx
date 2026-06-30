@@ -80,12 +80,13 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className={heebo.variable}>
       <head>
-        {/* Resource hints — connect early to analytics + the hero video host (faster LCP / video open) */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {/* dns-prefetch only — GTM itself is deferred to lazyOnload, so we keep the DNS
+            warm without opening an early connection that competes with the LCP image. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" crossOrigin="anonymous" />
 
-        <Script id="gtm" strategy="afterInteractive">
+        {/* Analytics + Google Ads loaded after the page is idle, so they no longer block
+            the main thread during the critical render (better LCP / TBT). Tracking still fires. */}
+        <Script id="gtm" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -93,8 +94,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KKMW6NCK');`}
         </Script>
 
-        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17703305821" strategy="afterInteractive" />
-        <Script id="gtag" strategy="afterInteractive">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=AW-17703305821" strategy="lazyOnload" />
+        <Script id="gtag" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());

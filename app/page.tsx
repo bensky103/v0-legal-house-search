@@ -466,9 +466,9 @@ export default function HomePage() {
                   src="/gallery/yigal-bensky-rechev-bedek-bayit.webp"
                   alt={t("hero.imageAlt")}
                   fill
-                  sizes="(max-width: 1024px) 90vw, 45vw"
+                  sizes="(max-width: 1024px) 28rem, 32rem"
                   className="object-cover"
-                  priority
+                  loading="lazy"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white text-start">

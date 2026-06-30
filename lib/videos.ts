@@ -210,6 +210,13 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-06-29",
     topic: "itum",
   },
+  {
+    id: "ND1KckpOO7g",
+    title: "מה חשוב לבדוק בדירה חדשה - ליקויי אלומיניום וחלונות",
+    description: "בדק בית בדירה חדשה - מה חשוב לבדוק בעבודות האלומיניום והחלונות לפני מסירת הדירה, ואיתור ליקויי אלומיניום נפוצים.",
+    uploadDate: "2026-06-30",
+    topic: "aluminium",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */
@@ -222,7 +229,7 @@ export const videoEmbedUrl = (id: string) => `https://www.youtube-nocookie.com/e
 // Defects that have no footage of their own borrow videos from a closely-related
 // topic, so every relevant defect page still shows real inspection video.
 const relatedVideoTopics: Record<string, string[]> = {
-  retivut: ["itum"], // rטיבות ⟵ סרטוני נזילות ואיטום
+  retivut: ["itum"], // רטיבות ⟵ סרטוני נזילות ואיטום
   ovesh: ["itum"], // עובש נובע מרטיבות/איטום
   chalonot: ["aluminium"], // חלונות ⟵ סרטוני אלומיניום
   mirpasot: ["itum"], // מרפסות ⟵ איטום מרפסת

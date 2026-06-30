@@ -7,6 +7,7 @@ import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
+import { ArticleFaq } from "@/components/article-faq"
 
 import { DEFECTS_DIRA_HADASHA } from "@/lib/article-images"
 
@@ -223,8 +224,34 @@ export default function ArticleBedekBayitDiraHadasha() {
             items={DEFECTS_DIRA_HADASHA}
           />
 
+          {/* FAQ */}
+          <ArticleFaq
+            items={[
+              {
+                question: "האם צריך בדק בית גם לדירה חדשה מקבלן?",
+                answer:
+                  "כן, ודווקא בדירה חדשה הבדיקה קריטית. גם בדירות חדשות נמצאים ליקויי בנייה רבים — איטום לקוי, ריצוף לא ישר, חיבורי אינסטלציה וחשמל לא תקינים וסטיות מהמפרט. איתורם במעמד המסירה מחייב את הקבלן לתקן על חשבונו לפי חוק המכר.",
+              },
+              {
+                question: "מה ההבדל בין בדק בית לדירה חדשה לדירה יד שנייה?",
+                answer:
+                  "בדירה חדשה הבדיקה מתמקדת בהתאמה למפרט ובאיכות הביצוע של הקבלן, והליקויים מתוקנים על חשבונו. בדירה יד שנייה הבדיקה מתמקדת בבלאי, ברטיבות סמויה ובמערכות ישנות, ומשמשת בעיקר ככלי מיקוח על המחיר מול המוכר.",
+              },
+              {
+                question: "איך בדק בית עוזר לי במשא ומתן מול הקבלן?",
+                answer:
+                  "דוח בדק בית הנדסי ומפורט מתעד כל ליקוי באופן מקצועי וקביל. כשהליקויים מצורפים לפרוטוקול המסירה, הקבלן אינו יכול להתחמק מהתיקון, ואתם נכנסים למשא ומתן מעמדה חזקה במקום מ\"תחושות\" שקל לדחות.",
+              },
+              {
+                question: "מה בודקים בבדק בית לדירה חדשה?",
+                answer:
+                  "הבדיקה כוללת ריצוף ומישוריות, איטום ורטיבות, אינסטלציה וניקוז, חשמל ולוח חשמל, אלומיניום, חלונות ודלתות, מרפסות, התאמה למפרט הטכני ולתקנים — תוך שימוש בציוד מקצועי כמו מצלמה תרמית ומד לחות.",
+              },
+            ]}
+          />
+
           {/* CTA */}
-          <div className="bg-gradient-to-l from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white">
+          <div className="mt-12 bg-gradient-to-l from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">
               מתכננים לרכוש דירה חדשה?
             </h2>

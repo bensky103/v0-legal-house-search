@@ -4,6 +4,7 @@ import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
+import { ArticleFaq } from "@/components/article-faq"
 
 import { DEFECTS_MATAI } from "@/lib/article-images"
 
@@ -369,8 +370,34 @@ export default function MataiLehazminBedekBayitPage() {
           items={DEFECTS_MATAI}
         />
 
+        {/* FAQ */}
+        <ArticleFaq
+          items={[
+            {
+              question: "מתי הכי כדאי להזמין בדק בית?",
+              answer:
+                "העיתוי המומלץ ביותר הוא במעמד מסירת הדירה מהקבלן, או סמוך לו ככל הניתן. כך כל ליקוי שמתגלה נכנס ישירות לפרוטוקול המסירה ומחייב את הקבלן לתקן, ונמנעת הטענה שהדייר עצמו גרם לליקוי. בדירה יד שנייה כדאי לבצע את הבדיקה לפני חתימה על חוזה.",
+            },
+            {
+              question: "האם אפשר להזמין בדק בית עוד לפני המסירה?",
+              answer:
+                "רוב הקבלנים אינם מאפשרים בדיקה שבועות לפני המסירה, ולכן הבדיקה מתבצעת בדרך כלל במעמד המסירה עצמו. זה גם העיתוי הנכון מבחינתכם — כל עוד הקבלן באתר עם צוותים וחומרים, התיקון מהיר וזול עבורו.",
+            },
+            {
+              question: "מה קורה אם מגלים ליקויים אחרי שכבר קיבלתי את הדירה?",
+              answer:
+                "גם לאחר המסירה עומדות לכם זכויות לפי חוק המכר (דירות), כולל תקופות בדק ואחריות. כדאי לבצע בדק בית מקצועי שיתעד את הליקויים בדוח קביל, ולהגיש את הדרישה לקבלן בכתב. אם הקבלן אינו מתקן, הדוח משמש בסיס להליך משפטי.",
+            },
+            {
+              question: "האם להכניס רהיטים או לשפץ לפני בדק הבית?",
+              answer:
+                "לא. חשוב לבצע את הבדיקה לפני הכנסת רהיטים ולפני כל שיפוץ. רהיטים מסתירים קירות, רצפות ופינות קריטיות, ושיפוץ עלול לכסות ליקויים קיימים ולהקשות על ייחוסם לקבלן.",
+            },
+          ]}
+        />
+
         {/* Final CTA */}
-        <section className="text-center py-8 border-t border-gray-200">
+        <section className="mt-12 text-center py-8 border-t border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-3">לפני שקונים - בודקים!</h3>
           <p className="text-gray-700 mb-4">
             אם אתם עומדים לפני קבלת דירה - זה הזמן להזמין בדק בית מקצועי.
@@ -388,7 +415,7 @@ export default function MataiLehazminBedekBayitPage() {
             </div>
             <div className="text-center md:text-right">
               <h3 className="text-xl font-bold text-gray-900">יגאל בנסקי</h3>
-              <p className="text-blue-600 font-medium mb-3">מומחה בדק בית מוסמך על ידי איגוד המהנדסים | רישיון משרד העבודה 1641507</p>
+              <p className="text-blue-600 font-medium mb-3">מומחה בדק בית מוסמ�� על ידי איגוד המהנדסים | רישיון משרד העבודה 1641507</p>
               <p className="text-gray-600">
                 מומחה בדק בית עם ניסיון רב בבדיקת דירות חדשות ויד שניה. מספק שירותי בדיקה הנדסית מקצועית, חוות דעת משפטית וליווי מלא מול קבלנים ומוכרים בכל הארץ.
               </p>

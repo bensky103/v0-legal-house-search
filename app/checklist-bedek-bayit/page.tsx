@@ -314,6 +314,7 @@ export default function ChecklistPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">עמודים נוספים שיעזרו לכם</h2>
             <div className="flex flex-wrap justify-center gap-3">
               {[
+                { label: "דוח בדק בית לדוגמה", href: "/doch-ledugma" },
                 { label: "בדק בית לפני מסירה", href: "/services/bedek-bayit-lifnei-mesira" },
                 { label: "פרוטוקול מסירה - מדריך", href: "/articles/protokol-mesira" },
                 { label: "כמה עולה בדק בית", href: "/mehir-bedek-bayit" },

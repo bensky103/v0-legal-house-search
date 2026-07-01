@@ -133,6 +133,7 @@ export default function MehirBedekBayitPage() {
         ctaText="צרו קשר עוד היום עם תיאור קצר של הנכס, וקבלו הצעת מחיר מותאמת ושקופה ללא התחייבות. מומחה מוסמך, שירות בכל הארץ."
         relatedLinks={[
           { label: "צ׳קליסט בדק בית להורדה", href: "/checklist-bedek-bayit" },
+          { label: "דוח בדק בית לדוגמה", href: "/doch-ledugma" },
           { label: "בדק בית לפני קנייה", href: "/services/bedek-bayit-lifnei-kniya" },
           { label: "בדק בית לפני מסירה", href: "/services/bedek-bayit-lifnei-mesira" },
           { label: "בדיקת בית פרטי", href: "/services/bdikat-bayit-prati" },

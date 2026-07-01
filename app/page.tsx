@@ -1035,6 +1035,10 @@ export default function HomePage() {
             <div className="flex items-center justify-between mb-4" dir="rtl">
               <h3 className="text-lg font-bold text-slate-900">בדיקות מתועדות מהשטח</h3>
               <div className="flex items-center gap-4">
+                <a href="/doch-ledugma" className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:text-emerald-800 transition-colors">
+                  <ClipboardCheck className="w-4 h-4" aria-hidden="true" />
+                  דוח לדוגמה
+                </a>
                 <a href="/videos" className="inline-flex items-center gap-1.5 text-sm font-semibold text-red-600 hover:text-red-700 transition-colors">
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />

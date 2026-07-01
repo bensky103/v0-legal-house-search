@@ -266,7 +266,7 @@ export default function SampleReportPage() {
               </dl>
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 no-print">
-              <PrintButton />
+              <PrintButton label="הורדת הדוח (שמירה כ-PDF)" />
               <a
                 href="https://wa.me/972506277858"
                 target="_blank"
@@ -400,6 +400,7 @@ export default function SampleReportPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">עמודים נוספים שיעזרו לכם</h2>
             <div className="flex flex-wrap justify-center gap-3">
               {[
+                { label: "דוח בדק בית מפורט לדוגמה (67 ליקויים)", href: "/doch-ledugma-mefurat" },
                 { label: "צ׳קליסט בדק בית להורדה", href: "/checklist-bedek-bayit" },
                 { label: "בדק בית לפני מסירה", href: "/services/bedek-bayit-lifnei-mesira" },
                 { label: "חוות דעת מומחה", href: "/services/chavat-daat-mumche" },

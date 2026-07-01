@@ -222,6 +222,36 @@ const PROPERTY_EXPERIENCE = [
   },
 ]
 
+// How the inspection works — a clear 5-step process, mirroring the competitor
+// "how it works" sections while staying grounded in the real workflow.
+const PROCESS_STEPS = [
+  {
+    icon: Users,
+    title: "תיאום הבדיקה",
+    desc: "יצירת קשר קצרה: אתם מתארים את הנכס (סוג, גודל ומאפיינים), ואנחנו קובעים מועד בדיקה נוח ומוסרים הצעת מחיר ברורה מראש.",
+  },
+  {
+    icon: Search,
+    title: "בדיקה הנדסית בשטח",
+    desc: "סריקה שיטתית של כל מרכיבי הנכס בעזרת ציוד מתקדם — מצלמה תרמית, מד לחות, אנדוסקופ ומפלסת לייזר — לאיתור ליקויים גלויים ונסתרים.",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "דוח מפורט ומצולם",
+    desc: "בסמוך לבדיקה מתקבל דוח מסודר, מדורג לפי חומרת הליקויים ומגובה בתמונות ובתקנים — קביל כראיה מול הקבלן ובבית משפט.",
+  },
+  {
+    icon: Gavel,
+    title: "ליווי מול הקבלן",
+    desc: "לפי הצורך — ליווי בדרישת התיקונים מהקבלן, הכנת חוות דעת נגדית והערכת עלויות תיקון, עד לפתרון.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "בדיקה חוזרת לאחר תיקונים",
+    desc: "לאחר שהקבלן מתקן, בדיקה חוזרת מוודאת שכל הליקויים טופלו כראוי — ושקיבלתם בדיוק את מה שמגיע לכם.",
+  },
+]
+
 export default function HomePage() {
   const { t, direction } = useLanguage()
   const [videoOpen, setVideoOpen] = useState(false)
@@ -384,7 +414,7 @@ export default function HomePage() {
             alt={t("hero.bgAlt")}
             fill
             sizes="100vw"
-            quality={55}
+            quality={60}
             className="object-cover object-top"
             priority
           />
@@ -857,6 +887,40 @@ export default function HomePage() {
               )
             })}
           </div>
+        </div>
+      </section>
+
+      {/* How it works — the inspection process in clear numbered steps */}
+      <section className="py-14 md:py-20 bg-white" dir="rtl">
+        <div className="container mx-auto px-4">
+          <SectionHeading
+            eyebrow="איך זה עובד"
+            title="תהליך הבדיקה — צעד אחר צעד"
+            subtitle="מהשיחה הראשונה ועד הבדיקה החוזרת לאחר התיקונים — תהליך ברור ומלווה, בלי הפתעות"
+          />
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6 max-w-6xl mx-auto">
+            {PROCESS_STEPS.map((step, i) => {
+              const Icon = step.icon
+              return (
+                <li
+                  key={step.title}
+                  className="group relative overflow-hidden rounded-xl bg-white p-6 ring-1 ring-slate-200 transition-all duration-200 hover:ring-blue-300 hover:shadow-lg hover:shadow-blue-900/5"
+                >
+                  <span className="absolute inset-x-0 top-0 h-1 origin-right scale-x-0 bg-blue-600 transition-transform duration-300 group-hover:scale-x-100" aria-hidden="true" />
+                  <div className="flex items-center justify-between">
+                    <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-colors group-hover:bg-blue-600 group-hover:ring-blue-600">
+                      <Icon className="w-6 h-6 text-blue-700 transition-colors group-hover:text-white" aria-hidden="true" />
+                    </span>
+                    <span className="font-mono text-xl font-extrabold tracking-widest text-slate-300">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 text-base md:text-lg font-bold text-slate-900">{step.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{step.desc}</p>
+                </li>
+              )
+            })}
+          </ol>
         </div>
       </section>
 

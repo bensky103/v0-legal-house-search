@@ -21,6 +21,7 @@ export function SiteIndex() {
     { label: "אודות", href: "/about" },
     { label: "שירותי בדק בית", href: "/services" },
     { label: "כמה עולה בדק בית", href: "/mehir-bedek-bayit" },
+    { label: "צ׳קליסט בדק בית להורדה", href: "/checklist-bedek-bayit" },
     { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
     { label: "בדק בית לפי קבלן", href: "/bedek-bayit/kablan" },
     { label: "ליקויי בנייה", href: "/likuyey-bniya" },

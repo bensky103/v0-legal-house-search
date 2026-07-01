@@ -124,6 +124,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://legalbedek.co.il/checklist-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://legalbedek.co.il/about",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",

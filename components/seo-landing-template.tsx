@@ -56,6 +56,14 @@ interface SeoLandingTemplateProps {
   // Optional YouTube inspection videos relevant to the page topic.
   videos?: { id: string; title: string }[]
   videosHeading?: string
+  // Optional market price-range table (typical industry ranges, NOT a fixed quote).
+  priceTable?: {
+    heading: string
+    intro?: string
+    columns: [string, string, string]
+    rows: { type: string; size: string; range: string }[]
+    disclaimer: string
+  }
 }
 
 export function SeoLandingTemplate({
@@ -78,6 +86,7 @@ export function SeoLandingTemplate({
   galleryHeading = "תמונות מבדיקות בשטח",
   videos = [],
   videosHeading = "סרטוני בדיקות בשטח",
+  priceTable,
 }: SeoLandingTemplateProps) {
   const baseUrl = "https://legalbedek.co.il"
   const crumbs: Breadcrumb[] = breadcrumbs.length > 0 ? breadcrumbs : [{ label: "דף הבית", href: "/" }]
@@ -243,6 +252,43 @@ export function SeoLandingTemplate({
           ))}
         </div>
       </section>
+
+      {/* Market price-range table — typical industry ranges (not a fixed quote) */}
+      {priceTable && priceTable.rows.length > 0 && (
+        <section className="py-10 md:py-16 bg-white" dir="rtl">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{priceTable.heading}</h2>
+            {priceTable.intro && (
+              <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-6">{priceTable.intro}</p>
+            )}
+            <div className="overflow-x-auto rounded-2xl ring-1 ring-slate-200 shadow-sm">
+              <table className="w-full text-right border-collapse">
+                <thead>
+                  <tr className="bg-slate-900 text-white">
+                    {priceTable.columns.map((col) => (
+                      <th key={col} className="px-4 py-3 text-sm md:text-base font-bold">
+                        {col}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 bg-white">
+                  {priceTable.rows.map((row) => (
+                    <tr key={row.type} className="hover:bg-slate-50">
+                      <td className="px-4 py-3 text-sm md:text-base font-semibold text-slate-900">{row.type}</td>
+                      <td className="px-4 py-3 text-sm md:text-base text-slate-600">{row.size}</td>
+                      <td className="px-4 py-3 text-sm md:text-base font-bold text-blue-700 whitespace-nowrap">
+                        {row.range}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-sm text-slate-500 leading-relaxed">{priceTable.disclaimer}</p>
+          </div>
+        </section>
+      )}
 
       {/* Named real projects (city pages) — each project name as an H3 for "<project> בדק בית" search */}
       {projectsSection && projectsSection.projects.length > 0 && (

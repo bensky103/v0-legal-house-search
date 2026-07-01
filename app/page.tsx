@@ -384,7 +384,7 @@ export default function HomePage() {
             alt={t("hero.bgAlt")}
             fill
             sizes="100vw"
-            quality={68}
+            quality={55}
             className="object-cover object-top"
             priority
           />
@@ -468,7 +468,8 @@ export default function HomePage() {
                   src="/gallery/yigal-bensky-rechev-bedek-bayit.webp"
                   alt={t("hero.imageAlt")}
                   fill
-                  sizes="(max-width: 1024px) 28rem, 32rem"
+                  sizes="(max-width: 1024px) 26rem, 30rem"
+                  quality={72}
                   className="object-cover"
                   loading="lazy"
                 />

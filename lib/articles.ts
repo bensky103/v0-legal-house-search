@@ -68,6 +68,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya"],
   },
   {
+    slug: "giliti-likui-bedira-mi-achrai",
+    title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים",
+    description:
+      "מצאתם רטיבות, סדק או ריצוף שקוע בדירה מקבלן אחרי המסירה? מדריך פעולה: מי אחראי לפי חוק המכר, לכמה זמן, ואיך מחייבים את הקבלן לתקן.",
+    datePublished: "2026-07-01",
+    relatedServices: ["itur-likuyey-bniya", "chavat-daat-beit-mishpat"],
+    relatedDefects: ["retivut", "sdakim", "itum"],
+  },
+  {
     slug: "protokol-mesira",
     title: "פרוטוקול מסירה לדירה חדשה — מה חייב להופיע ואיך לא להיתקע",
     description:

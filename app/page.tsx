@@ -1616,6 +1616,11 @@ export default function HomePage() {
                     מאמר: פרוטוקול מסירה - מדריך
                   </a>
                 </li>
+                <li>
+                  <a href="/articles/giliti-likui-bedira-mi-achrai" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    מאמר: גיליתי ליקוי בדירה - מי אחראי?
+                  </a>
+                </li>
                 <li className="pt-2">
                   <a href="/blog" className="text-blue-400 hover:text-blue-300 hover:underline">
                     בלוג בדק בית

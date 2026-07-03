@@ -3,6 +3,7 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleJsonLd } from "@/components/article-jsonld"
+import { ConsultationBox } from "@/components/consultation-box"
 
 /**
  * Shared chrome for long-form article pages (server component, SEO-friendly).
@@ -79,6 +80,9 @@ export function ArticleLayout({
               <span>רישיון משרד העבודה: 1641507</span>
             </div>
           </div>
+
+          {/* Free-consultation prompt near the top, for readers arriving mid-decision */}
+          <ConsultationBox />
 
           {/* Body */}
           <div className="space-y-6 text-gray-800 leading-relaxed text-base md:text-lg">{children}</div>

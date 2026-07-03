@@ -43,6 +43,7 @@ export function SiteIndex() {
     { label: "תקני אינסטלציה (ת״י 1205)", href: "/articles/tikaney-instalatzia-bedek-bayit" },
     { label: "ת״י 789 - סטיות מותרות", href: "/articles/taken-789-stiyot-mutarot" },
     { label: "פרוטוקול מסירה - מדריך", href: "/articles/protokol-mesira" },
+    { label: "גיליתי ליקוי בדירה - מי אחראי?", href: "/articles/giliti-likui-bedira-mi-achrai" },
   ]
 
   return (

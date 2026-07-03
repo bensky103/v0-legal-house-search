@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "בדק בית לפי עיר | מומחה בדק בית בכל הארץ - Legal",
   description:
     "שירותי בדק בית הנדסי בכל הערים בישראל. איתור ליקויי בנייה, בדיקת דירה חדשה ויד שניה. בחרו את העיר שלכם וקבלו שירות מקצועי ממומחה מוסמך.",
-  alternates: { canonical: "https://legalbedek.co.il/bedek-bayit" },
+  alternates: { canonical: "https://www.legalbedek.co.il/bedek-bayit" },
   robots: "index, follow",
 }
 

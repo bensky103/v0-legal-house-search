@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "בלוג בדק בית של Legal - מאמרים, טיפים ומדריכים בנושא איתור ליקויי בנייה, בדיקת דירה חדשה מקבלן, בדק בית לפני מסירה וחוות דעת הנדסית.",
   alternates: {
-    canonical: "https://legalbedek.co.il/blog",
+    canonical: "https://www.legalbedek.co.il/blog",
   },
 }
 

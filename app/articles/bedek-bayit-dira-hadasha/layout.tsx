@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     description: "מדריך מקיף על בדק בית בדירה חדשה - למה חשוב לא לקנות חתול בשק ואיך זה עוזר במשא ומתן על המחיר",
     type: "article",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
+    url: "https://www.legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
     siteName: "בדק בית Legal",
   },
   alternates: {
-    canonical: "https://legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
+    canonical: "https://www.legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
   },
   robots: "index, follow",
 }

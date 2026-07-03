@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "ליקויי בנייה נפוצים בדירות - מדריך מקצועי | בדק בית Legal",
   description:
     "מדריך מקצועי לליקויי הבנייה הנפוצים בדירות בישראל - רטיבות, סדקים, איטום, חשמל, ריצוף, אינסטלציה ועוד. למדו לזהות ליקויים ומתי לבצע בדק בית.",
-  alternates: { canonical: "https://legalbedek.co.il/likuyey-bniya" },
+  alternates: { canonical: "https://www.legalbedek.co.il/likuyey-bniya" },
   robots: "index, follow",
 }
 

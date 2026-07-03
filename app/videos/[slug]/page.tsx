@@ -9,7 +9,7 @@ import { cities } from "@/lib/seo-locations"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { SiteIndex } from "@/components/site-index"
 
-const BASE = "https://legalbedek.co.il"
+const BASE = "https://www.legalbedek.co.il"
 
 export function generateStaticParams() {
   return allVideoSlugs().map((slug) => ({ slug }))

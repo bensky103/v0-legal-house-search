@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "חוות דעת הנדסית ליקויי בנייה",
   ],
   authors: [{ name: "יגאל בנסקי" }],
-  alternates: { canonical: "https://legalbedek.co.il/articles/giliti-likui-bedira-mi-achrai" },
+  alternates: { canonical: "https://www.legalbedek.co.il/articles/giliti-likui-bedira-mi-achrai" },
   openGraph: {
     title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים",
     description:
       "מדריך פעולה מעשי למי שגילה ליקוי בדירה מקבלן: מי אחראי לפי חוק המכר, לכמה זמן, ואיך מחייבים את הקבלן לתקן.",
     type: "article",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/articles/giliti-likui-bedira-mi-achrai",
+    url: "https://www.legalbedek.co.il/articles/giliti-likui-bedira-mi-achrai",
     siteName: "בדק בית Legal",
   },
   robots: "index, follow",

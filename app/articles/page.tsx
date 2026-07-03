@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   title: "מאמרים ומדריכי בדק בית | בדק בית Legal",
   description:
     "מאמרים ומדריכים מקצועיים בנושא בדק בית: בדיקת דירה חדשה ויד שנייה, עיתוי הבדיקה, חוק המכר (דירות), תקני בנייה ת״י 789 ות״י 1205 ועוד.",
-  alternates: { canonical: "https://legalbedek.co.il/articles" },
+  alternates: { canonical: "https://www.legalbedek.co.il/articles" },
   robots: "index, follow",
 }
 
 export default function ArticlesIndexPage() {
-  const baseUrl = "https://legalbedek.co.il"
+  const baseUrl = "https://www.legalbedek.co.il"
 
   const itemListSchema = {
     "@context": "https://schema.org",

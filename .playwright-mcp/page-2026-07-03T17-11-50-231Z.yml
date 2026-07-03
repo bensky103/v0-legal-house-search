@@ -1,0 +1,49 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: טוען
+        - progressbar [ref=e8]
+      - main [ref=e15]:
+        - generic [ref=e16]:
+          - img [ref=e19]
+          - generic [ref=e24]:
+            - heading "כניסה" [level=1] [ref=e25]
+            - generic [ref=e26]: באמצעות חשבון Google שלך כדי להמשיך אל Google Search Console. החשבון הזה יהיה זמין גם באפליקציות אחרות של Google בדפדפן.
+        - generic [ref=e29]:
+          - generic [ref=e34]:
+            - generic [ref=e39]:
+              - textbox "כתובת אימייל או מספר טלפון" [active] [ref=e40]
+              - generic: כתובת אימייל או מספר טלפון
+            - button "שכחת את כתובת האימייל?" [ref=e44] [cursor=pointer]
+          - generic [ref=e47]:
+            - text: זה לא המחשב שלך? מומלץ להשתמש במצב אורח כדי להיכנס לחשבון בפרטיות.
+            - link "מידע נוסף על השימוש במצב אורח (קישור חיצוני, ייפתח בחלון חדש)" [ref=e48] [cursor=pointer]:
+              - /url: https://support.google.com/chrome/answer/6130773?hl=iw
+              - text: מידע נוסף על השימוש במצב אורח
+        - generic [ref=e50]:
+          - button "הבא" [ref=e54]:
+            - generic [ref=e57]: הבא
+          - button "יצירת חשבון חדש" [ref=e63]:
+            - generic [ref=e66]: יצירת חשבון חדש
+    - contentinfo [ref=e70]:
+      - combobox "שינוי שפה עברית" [ref=e74] [cursor=pointer]:
+        - generic:
+          - generic: עברית
+        - generic:
+          - img
+      - list [ref=e76]:
+        - listitem [ref=e77]:
+          - link "פתיחת מרכז העזרה של חשבון Google (קישור חיצוני, ייפתח בחלון חדש)" [ref=e78] [cursor=pointer]:
+            - /url: https://support.google.com/accounts?hl=iw&p=account_iph
+            - text: עזרה
+        - listitem [ref=e79]:
+          - link "מדיניות הפרטיות (קישור חיצוני, ייפתח בחלון חדש)" [ref=e80] [cursor=pointer]:
+            - /url: https://accounts.google.com/TOS?loc=IL&hl=iw&privacy=true
+            - text: פרטיות
+        - listitem [ref=e81]:
+          - link "התנאים וההגבלות של Google (קישור חיצוני, נפתח בחלון חדש)" [ref=e82] [cursor=pointer]:
+            - /url: https://accounts.google.com/TOS?loc=IL&hl=iw
+            - text: תנאים
+  - iframe [ref=e83]:
+    

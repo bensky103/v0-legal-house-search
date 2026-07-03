@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     "ליקויי בנייה",
   ],
   authors: [{ name: "יגאל בנסקי" }],
-  alternates: { canonical: "https://legalbedek.co.il/articles/protokol-mesira" },
+  alternates: { canonical: "https://www.legalbedek.co.il/articles/protokol-mesira" },
   openGraph: {
     title: "פרוטוקול מסירה לדירה חדשה: מה חייב להופיע ואיך לא להיתקע",
     description:
       "מה זה פרוטוקול מסירה, מה חייב להופיע בו, מתי לבצע בדק בית ואילו טעויות בחתימה עלולות לעלות ביוקר.",
     type: "article",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/articles/protokol-mesira",
+    url: "https://www.legalbedek.co.il/articles/protokol-mesira",
     siteName: "בדק בית Legal",
   },
   robots: "index, follow",

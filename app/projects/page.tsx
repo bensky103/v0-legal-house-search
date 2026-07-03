@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "בדק בית בפרויקטים חדשים | בדיקת דירה מקבלן לפי עיר",
   description:
     "בדק בית לדירות חדשות בפרויקטים בכל הארץ. בדיקה הנדסית לפני מסירת דירה מקבלן, איתור ליקויי בנייה ופרוטוקול מסירה מקצועי לפי עיר.",
-  alternates: { canonical: "https://legalbedek.co.il/projects" },
+  alternates: { canonical: "https://www.legalbedek.co.il/projects" },
 }
 
 // תאריך עדכון לתצוגה ידידותית (חודש בעברית) מתוך featuredProjectsUpdated.

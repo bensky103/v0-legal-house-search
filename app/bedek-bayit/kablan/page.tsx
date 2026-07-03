@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "בדק בית לפי קבלן | בדיקת דירה בפרויקטים של קבלני הבנייה המובילים",
   description:
     "שירותי בדק בית הנדסי לדירות בפרויקטים של קבלני הבנייה המובילים בישראל. איתור ליקויי בנייה לפני מסירה, בהתבסס על מחקר הטכניון. בחרו את הקבלן שלכם וקבלו שירות מקצועי.",
-  alternates: { canonical: "https://legalbedek.co.il/bedek-bayit/kablan" },
+  alternates: { canonical: "https://www.legalbedek.co.il/bedek-bayit/kablan" },
   robots: "index, follow",
 }
 

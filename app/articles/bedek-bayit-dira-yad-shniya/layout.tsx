@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     description: "מדריך מקיף על בדק בית לדירה יד שניה - איך לחסוך הוצאות עתידיות ולהוריד את מחיר הדירה במשא ומתן",
     type: "article",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/articles/bedek-bayit-dira-yad-shniya",
+    url: "https://www.legalbedek.co.il/articles/bedek-bayit-dira-yad-shniya",
     siteName: "בדק בית Legal",
   },
   alternates: {
-    canonical: "https://legalbedek.co.il/articles/bedek-bayit-dira-yad-shniya",
+    canonical: "https://www.legalbedek.co.il/articles/bedek-bayit-dira-yad-shniya",
   },
   robots: "index, follow",
 }

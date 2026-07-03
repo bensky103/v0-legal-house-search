@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
-const URL = "https://legalbedek.co.il/mehir-bedek-bayit"
+const URL = "https://www.legalbedek.co.il/mehir-bedek-bayit"
 
 export const metadata: Metadata = {
   title: "כמה עולה בדק בית? מחיר בדק בית והגורמים שקובעים אותו | בדק בית Legal",
@@ -39,9 +39,9 @@ export default function MehirBedekBayitPage() {
     areaServed: { "@type": "Country", name: "ישראל" },
     provider: {
       "@type": "ProfessionalService",
-      "@id": "https://legalbedek.co.il/#organization",
+      "@id": "https://www.legalbedek.co.il/#organization",
       name: "בדק בית Legal - יגאל בנסקי",
-      url: "https://legalbedek.co.il",
+      url: "https://www.legalbedek.co.il",
       telephone: "+972-50-627-7858",
     },
   }

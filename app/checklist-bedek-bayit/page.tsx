@@ -4,7 +4,7 @@ import Link from "next/link"
 import { PrintButton } from "@/components/print-button"
 import { SiteIndex } from "@/components/site-index"
 
-const URL = "https://legalbedek.co.il/checklist-bedek-bayit"
+const URL = "https://www.legalbedek.co.il/checklist-bedek-bayit"
 
 export const metadata: Metadata = {
   title: "צ׳קליסט בדק בית להורדה - רשימת בדיקה עצמית לפני מסירה | בדק בית Legal",
@@ -140,7 +140,7 @@ export default function ChecklistPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://legalbedek.co.il" },
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://www.legalbedek.co.il" },
       { "@type": "ListItem", position: 2, name: "צ׳קליסט בדק בית", item: URL },
     ],
   }

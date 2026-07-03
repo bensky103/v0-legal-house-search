@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     description: "מתי הזמן הנכון להזמין בדק בית? מדריך מקצועי לעיתוי הנכון של בדיקה הנדסית שיחסוך לכם כסף רב",
     type: "article",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/articles/matai-lehazmin-bedek-bayit",
+    url: "https://www.legalbedek.co.il/articles/matai-lehazmin-bedek-bayit",
     siteName: "בדק בית Legal",
   },
   alternates: {
-    canonical: "https://legalbedek.co.il/articles/matai-lehazmin-bedek-bayit",
+    canonical: "https://www.legalbedek.co.il/articles/matai-lehazmin-bedek-bayit",
   },
   robots: "index, follow",
 }

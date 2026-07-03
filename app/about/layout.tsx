@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     description: "מומחים מוסמכים לאיתור ליקויי בנייה וחוות דעת נגדית - הסמכת איגוד המהנדסים ורישיון משרד העבודה",
     type: "website",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/about",
+    url: "https://www.legalbedek.co.il/about",
     siteName: "בדק בית Legal",
   },
   alternates: {
-    canonical: "https://legalbedek.co.il/about",
+    canonical: "https://www.legalbedek.co.il/about",
   },
 }
 

@@ -1,0 +1,176 @@
+- generic [ref=f10e2]:
+  - banner [ref=f10e4]:
+    - generic [ref=f10e5]:
+      - button "התפריט הראשי" [ref=f10e7] [cursor=pointer]:
+        - img [ref=f10e8]
+      - generic [ref=f10e10]:
+        - search [ref=f10e12]:
+          - generic [ref=f10e18]:
+            - textbox [disabled] [ref=f10e19]: ניתן לבדוק כל כתובת אתר ב-"https://www.legalbedek.co.il/"
+            - combobox "ניתן לבדוק כל כתובת URL באתר https://www.legalbedek.co.il/" [ref=f10e20]
+          - button "חיפוש" [ref=f10e21] [cursor=pointer]:
+            - img [ref=f10e22]
+        - generic [ref=f10e25]:
+          - generic [ref=f10e27]:
+            - button "עזרה" [ref=f10e29] [cursor=pointer]:
+              - generic [ref=f10e32]: 
+            - button "הגדרות משתמש" [ref=f10e34] [cursor=pointer]:
+              - img [ref=f10e37]
+          - 'button "הודעות שלא נקראו: 3" [ref=f10e41] [cursor=pointer]':
+            - generic [ref=f10e43]:
+              - generic [ref=f10e44]: 
+              - generic [ref=f10e46]: "3"
+      - generic [ref=f10e48]:
+        - button "אפליקציות Google" [ref=f10e52] [cursor=pointer]:
+          - img [ref=f10e53]
+        - 'button "חשבון Google: ‪Yigal Bensky‬‏ (yigalbensky@gmail.com)" [ref=f10e58] [cursor=pointer]':
+          - img [ref=f10e60]
+  - generic [ref=f10e64]:
+    - generic [ref=f10e67]:
+      - navigation "נתיבי ניווט" [ref=f10e69]:
+        - generic "דפים שנוספו לאינדקס" [ref=f10e71] [cursor=pointer]:
+          - link "דפים שנוספו לאינדקס" [ref=f10e72]:
+            - /url: ./search-console/index?resource_id=https%3A%2F%2Fwww.legalbedek.co.il%2F&pages=ALL_URLS
+            - generic [ref=f10e75]: arrow_forward
+        - heading "עותק משוכפל בלי שנבחר דף קנוני על ידי המשתמש" [level=1] [ref=f10e78]
+      - button "ייצוא" [ref=f10e81] [cursor=pointer]:
+        - generic [ref=f10e84]:
+          - generic [ref=f10e85]: 
+          - generic [ref=f10e86]: ייצוא
+      - button "קבלת קישור שניתן לשיתוף." [ref=f10e90] [cursor=pointer]:
+        - generic [ref=f10e93]: 
+    - generic [ref=f10e99]:
+      - generic [ref=f10e101]:
+        - listbox [disabled] [ref=f10e104]:
+          - option "כל הדפים הידועים" [disabled] [selected] [ref=f10e105]
+        - generic [ref=f10e108]: "העדכון האחרון: 30.6.2026"
+      - main [ref=f10e110]:
+        - generic [ref=f10e111]:
+          - generic [ref=f10e113]:
+            - generic [ref=f10e114]:
+              - generic [ref=f10e115]: info
+              - generic [ref=f10e116]:
+                - generic [ref=f10e117]: עותק משוכפל בלי שנבחר דף קנוני על ידי המשתמש
+                - generic [ref=f10e118]: הדפים האלה לא נוספים לאינדקס או מוצגים ב-Google
+                - link "קישור לתיעוד נרחב יותר" [ref=f10e120] [cursor=pointer]:
+                  - /url: https://support.google.com/webmasters/answer/7440203#duplicate_page_without_canonical_tag
+                  - generic [ref=f10e123]: למידע נוסף
+            - generic [ref=f10e125]:
+              - generic [ref=f10e126]: "זוהה לראשונה: 1.7.2026"
+              - generic [ref=f10e127]: סיימת לתקן?
+              - button "אימות התיקון" [ref=f10e128] [cursor=pointer]:
+                - generic [ref=f10e131]: אימות התיקון
+          - generic [ref=f10e134]:
+            - generic [ref=f10e137]:
+              - generic "דפים שהושפעו" [ref=f10e138]
+              - generic "31" [ref=f10e139]
+            - img [ref=f10e143]:
+              - generic [ref=f10e144]:
+                - generic [ref=f10e145]:
+                  - generic [ref=f10e147]: 4.4.2026
+                  - generic [ref=f10e149]: 16.4.2026
+                  - generic [ref=f10e151]: 28.4.2026
+                  - generic [ref=f10e153]: 10.5.2026
+                  - generic [ref=f10e155]: 22.5.2026
+                  - generic [ref=f10e157]: 3.6.2026
+                  - generic [ref=f10e159]: 15.6.2026
+                  - generic [ref=f10e161]: 27.6.2026
+                - generic [ref=f10e162]:
+                  - generic [ref=f10e164]: "45"
+                  - generic [ref=f10e166]: "30"
+                  - generic [ref=f10e168]: "15"
+                  - generic [ref=f10e170]: "0"
+          - generic [ref=f10e179]:
+            - generic [ref=f10e181]:
+              - generic [ref=f10e182]:
+                - generic [ref=f10e183]: דוגמאות
+                - button "null" [ref=f10e187] [cursor=pointer]:
+                  - generic [ref=f10e188]: 
+              - button "סינון שורות בטבלה" [ref=f10e193] [cursor=pointer]:
+                - generic [ref=f10e196]: 
+            - table [ref=f10e199]:
+              - rowgroup [ref=f10e200]:
+                - row "כתובת אתר נסרק לאחרונה" [ref=f10e201]:
+                  - columnheader "כתובת אתר" [ref=f10e202]:
+                    - generic [ref=f10e204]: כתובת אתר
+                    - img [ref=f10e206] [cursor=pointer]
+                  - columnheader "נסרק לאחרונה" [ref=f10e208]:
+                    - generic [ref=f10e210]: נסרק לאחרונה
+                    - img [ref=f10e212] [cursor=pointer]
+              - rowgroup [ref=f10e214]:
+                - row "https://www.legalbedek.co.il/bedek-bayit/kablan/minrav 30 ביוני 2026" [ref=f10e215]:
+                  - cell "https://www.legalbedek.co.il/bedek-bayit/kablan/minrav" [ref=f10e216]:
+                    - generic "https://www.legalbedek.co.il/bedek-bayit/kablan/minrav" [ref=f10e218]:
+                      - generic [ref=f10e219]: https://www.legalbedek.co.il/bedek-bayit/kablan/minrav
+                  - cell "30 ביוני 2026" [ref=f10e220]:
+                    - generic [ref=f10e222]: 30 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/rechush-meshutaf-gag-itum 29 ביוני 2026" [ref=f10e223]:
+                  - cell "https://www.legalbedek.co.il/videos/rechush-meshutaf-gag-itum" [ref=f10e224]:
+                    - generic "https://www.legalbedek.co.il/videos/rechush-meshutaf-gag-itum" [ref=f10e226]:
+                      - generic [ref=f10e227]: https://www.legalbedek.co.il/videos/rechush-meshutaf-gag-itum
+                  - cell "29 ביוני 2026" [ref=f10e228]:
+                    - generic [ref=f10e230]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/instalatzia-mechalek-mayim 29 ביוני 2026" [ref=f10e231]:
+                  - cell "https://www.legalbedek.co.il/videos/instalatzia-mechalek-mayim" [ref=f10e232]:
+                    - generic "https://www.legalbedek.co.il/videos/instalatzia-mechalek-mayim" [ref=f10e234]:
+                      - generic [ref=f10e235]: https://www.legalbedek.co.il/videos/instalatzia-mechalek-mayim
+                  - cell "29 ביוני 2026" [ref=f10e236]:
+                    - generic [ref=f10e238]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/likui-rochav-dlatot-pnim 29 ביוני 2026" [ref=f10e239]:
+                  - cell "https://www.legalbedek.co.il/videos/likui-rochav-dlatot-pnim" [ref=f10e240]:
+                    - generic "https://www.legalbedek.co.il/videos/likui-rochav-dlatot-pnim" [ref=f10e242]:
+                      - generic [ref=f10e243]: https://www.legalbedek.co.il/videos/likui-rochav-dlatot-pnim
+                  - cell "29 ביוני 2026" [ref=f10e244]:
+                    - generic [ref=f10e246]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/anchiyut-mishoriyut-tiyach 29 ביוני 2026" [ref=f10e247]:
+                  - cell "https://www.legalbedek.co.il/videos/anchiyut-mishoriyut-tiyach" [ref=f10e248]:
+                    - generic "https://www.legalbedek.co.il/videos/anchiyut-mishoriyut-tiyach" [ref=f10e250]:
+                      - generic [ref=f10e251]: https://www.legalbedek.co.il/videos/anchiyut-mishoriyut-tiyach
+                  - cell "29 ביוני 2026" [ref=f10e252]:
+                    - generic [ref=f10e254]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/sdakim-betiyach 29 ביוני 2026" [ref=f10e255]:
+                  - cell "https://www.legalbedek.co.il/videos/sdakim-betiyach" [ref=f10e256]:
+                    - generic "https://www.legalbedek.co.il/videos/sdakim-betiyach" [ref=f10e258]:
+                      - generic [ref=f10e259]: https://www.legalbedek.co.il/videos/sdakim-betiyach
+                  - cell "29 ביוני 2026" [ref=f10e260]:
+                    - generic [ref=f10e262]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/maake-mesukan-lo-takni 29 ביוני 2026" [ref=f10e263]:
+                  - cell "https://www.legalbedek.co.il/videos/maake-mesukan-lo-takni" [ref=f10e264]:
+                    - generic "https://www.legalbedek.co.il/videos/maake-mesukan-lo-takni" [ref=f10e266]:
+                      - generic [ref=f10e267]: https://www.legalbedek.co.il/videos/maake-mesukan-lo-takni
+                  - cell "29 ביוני 2026" [ref=f10e268]:
+                    - generic [ref=f10e270]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/likui-itum-mirpeset 29 ביוני 2026" [ref=f10e271]:
+                  - cell "https://www.legalbedek.co.il/videos/likui-itum-mirpeset" [ref=f10e272]:
+                    - generic "https://www.legalbedek.co.il/videos/likui-itum-mirpeset" [ref=f10e274]:
+                      - generic [ref=f10e275]: https://www.legalbedek.co.il/videos/likui-itum-mirpeset
+                  - cell "29 ביוני 2026" [ref=f10e276]:
+                    - generic [ref=f10e278]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/tzanrat-biyuv-endoskop 29 ביוני 2026" [ref=f10e279]:
+                  - cell "https://www.legalbedek.co.il/videos/tzanrat-biyuv-endoskop" [ref=f10e280]:
+                    - generic "https://www.legalbedek.co.il/videos/tzanrat-biyuv-endoskop" [ref=f10e282]:
+                      - generic [ref=f10e283]: https://www.legalbedek.co.il/videos/tzanrat-biyuv-endoskop
+                  - cell "29 ביוני 2026" [ref=f10e284]:
+                    - generic [ref=f10e286]: 29 ביוני 2026
+                - row "https://www.legalbedek.co.il/videos/coping-chipuy-chitzoni-pnimi 29 ביוני 2026" [ref=f10e287]:
+                  - cell "https://www.legalbedek.co.il/videos/coping-chipuy-chitzoni-pnimi" [ref=f10e288]:
+                    - generic "https://www.legalbedek.co.il/videos/coping-chipuy-chitzoni-pnimi" [ref=f10e290]:
+                      - generic [ref=f10e291]: https://www.legalbedek.co.il/videos/coping-chipuy-chitzoni-pnimi
+                  - cell "29 ביוני 2026" [ref=f10e292]:
+                    - generic [ref=f10e294]: 29 ביוני 2026
+            - generic [ref=f10e297]:
+              - generic [ref=f10e299]:
+                - generic [ref=f10e300]: "שורות בכל דף:"
+                - listbox "מספר השורות בכל דף" [ref=f10e301] [cursor=pointer]:
+                  - option "5"
+                  - option "10" [selected] [ref=f10e302]
+                  - option "25"
+                  - option "50"
+                  - option "100"
+                  - option "250"
+                  - option "500"
+              - generic [ref=f10e303]:
+                - generic [ref=f10e304]: 1–10 מתוך 31
+                - generic [ref=f10e305]:
+                  - generic [ref=f10e307]: 
+                  - generic [ref=f10e309] [cursor=pointer]: 

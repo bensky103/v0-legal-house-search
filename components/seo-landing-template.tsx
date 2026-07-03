@@ -88,7 +88,7 @@ export function SeoLandingTemplate({
   videosHeading = "סרטוני בדיקות בשטח",
   priceTable,
 }: SeoLandingTemplateProps) {
-  const baseUrl = "https://legalbedek.co.il"
+  const baseUrl = "https://www.legalbedek.co.il"
   const crumbs: Breadcrumb[] = breadcrumbs.length > 0 ? breadcrumbs : [{ label: "דף הבית", href: "/" }]
 
   const faqSchema =

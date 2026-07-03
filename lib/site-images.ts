@@ -6,7 +6,7 @@
 import { galleryImages } from "@/lib/gallery-images"
 
 /** Canonical production origin, used to build absolute image URLs for SEO. */
-export const SITE_URL = "https://legalbedek.co.il"
+export const SITE_URL = "https://www.legalbedek.co.il"
 
 /** Absolute URL helper for an asset path. */
 export const absoluteUrl = (path: string): string =>

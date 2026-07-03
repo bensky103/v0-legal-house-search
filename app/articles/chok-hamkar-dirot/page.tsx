@@ -23,14 +23,14 @@ export const metadata: Metadata = {
     "ליקויי בנייה",
   ],
   authors: [{ name: "יגאל בנסקי" }],
-  alternates: { canonical: "https://legalbedek.co.il/articles/chok-hamkar-dirot" },
+  alternates: { canonical: "https://www.legalbedek.co.il/articles/chok-hamkar-dirot" },
   openGraph: {
     title: "חוק המכר (דירות): תקופות בדק ואחריות לליקויי בנייה",
     description:
       "תקופות הבדק והאחריות לכל סוג ליקוי לפי חוק המכר (דירות) — ריצוף, רטיבות, איטום, צנרת, סדקים וחיפוי חוץ.",
     type: "article",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/articles/chok-hamkar-dirot",
+    url: "https://www.legalbedek.co.il/articles/chok-hamkar-dirot",
     siteName: "בדק בית Legal",
   },
   robots: "index, follow",

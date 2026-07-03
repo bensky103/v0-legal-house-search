@@ -37,11 +37,11 @@ export function generateMetadata({ params }: { params: { contractor: string } })
       description,
       type: "website",
       locale: "he_IL",
-      url: `https://legalbedek.co.il/bedek-bayit/kablan/${contractor.slug}`,
+      url: `https://www.legalbedek.co.il/bedek-bayit/kablan/${contractor.slug}`,
       siteName: "בדק בית Legal",
     },
     alternates: {
-      canonical: `https://legalbedek.co.il/bedek-bayit/kablan/${contractor.slug}`,
+      canonical: `https://www.legalbedek.co.il/bedek-bayit/kablan/${contractor.slug}`,
     },
     robots: "index, follow",
   }

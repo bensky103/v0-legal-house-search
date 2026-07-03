@@ -4,7 +4,7 @@ import Link from "next/link"
 import { PrintButton } from "@/components/print-button"
 import { SiteIndex } from "@/components/site-index"
 
-const URL = "https://legalbedek.co.il/doch-ledugma"
+const URL = "https://www.legalbedek.co.il/doch-ledugma"
 
 export const metadata: Metadata = {
   title: "דוח בדק בית לדוגמה - חוות דעת מומחה אמיתית | בדק בית Legal",
@@ -147,7 +147,7 @@ export default function SampleReportPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://legalbedek.co.il" },
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://www.legalbedek.co.il" },
       { "@type": "ListItem", position: 2, name: "דוח בדק בית לדוגמה", item: URL },
     ],
   }
@@ -161,8 +161,8 @@ export default function SampleReportPage() {
     inLanguage: "he",
     datePublished: "2026-07-01",
     dateModified: "2026-07-01",
-    author: { "@type": "Person", name: "יגאל בנסקי", "@id": "https://legalbedek.co.il/#yigal-bensky" },
-    publisher: { "@id": "https://legalbedek.co.il/#organization" },
+    author: { "@type": "Person", name: "יגאל בנסקי", "@id": "https://www.legalbedek.co.il/#yigal-bensky" },
+    publisher: { "@id": "https://www.legalbedek.co.il/#organization" },
     mainEntityOfPage: URL,
   }
 

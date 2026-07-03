@@ -25,10 +25,10 @@ export function generateMetadata({ params }: { params: { type: string } }): Meta
         description: service.metaDescription,
         type: "website",
         locale: "he_IL",
-        url: `https://legalbedek.co.il/services/${service.slug}`,
+        url: `https://www.legalbedek.co.il/services/${service.slug}`,
         siteName: "בדק בית Legal",
       },
-      alternates: { canonical: `https://legalbedek.co.il/services/${service.slug}` },
+      alternates: { canonical: `https://www.legalbedek.co.il/services/${service.slug}` },
       robots: "index, follow",
     }
   }
@@ -46,11 +46,11 @@ export function generateMetadata({ params }: { params: { type: string } }): Meta
       description: project.description,
       type: "website",
       locale: "he_IL",
-      url: `https://legalbedek.co.il/services/${project.slug}`,
+      url: `https://www.legalbedek.co.il/services/${project.slug}`,
       siteName: "בדק בית Legal",
     },
     alternates: {
-      canonical: `https://legalbedek.co.il/services/${project.slug}`,
+      canonical: `https://www.legalbedek.co.il/services/${project.slug}`,
     },
     robots: "index, follow",
   }
@@ -144,7 +144,7 @@ export default function ServicePage({ params }: { params: { type: string } }) {
 // Rich, dedicated service page (P8) — full content from lib/services.ts plus Service schema.
 function DedicatedService({ slug }: { slug: string }) {
   const service = getServiceBySlug(slug)!
-  const baseUrl = "https://legalbedek.co.il"
+  const baseUrl = "https://www.legalbedek.co.il"
 
   // Contextual internal links (P2): other services + related construction defects.
   const relatedServiceLinks = (service.relatedServices ?? [])

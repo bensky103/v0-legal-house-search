@@ -29,14 +29,14 @@ export const metadata: Metadata = {
       "תיעוד אמיתי של בדיקות בדק בית ואיתור ליקויי בנייה בדירות חדשות, יד שניה ובתים פרטיים ברחבי הארץ.",
     type: "website",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/gallery",
+    url: "https://www.legalbedek.co.il/gallery",
     siteName: "בדק בית Legal",
     images: galleryImages
       .slice(0, 4)
       .map((img) => ({ url: absoluteUrl(img.src), width: img.width, height: img.height, alt: img.alt })),
   },
   alternates: {
-    canonical: "https://legalbedek.co.il/gallery",
+    canonical: "https://www.legalbedek.co.il/gallery",
   },
   robots: "index, follow",
 }
@@ -48,7 +48,7 @@ export default function GalleryLayout({ children }: { children: React.ReactNode 
     name: "גלריית בדק בית - Legal",
     description:
       "גלריית תמונות של בדיקות בדק בית ואיתור ליקויי בנייה בכל הארץ מאת יגאל בנסקי, מומחה בדק בית מוסמך.",
-    url: "https://legalbedek.co.il/gallery",
+    url: "https://www.legalbedek.co.il/gallery",
     image: galleryImages.map((img) => ({
       "@type": "ImageObject",
       contentUrl: absoluteUrl(img.src),

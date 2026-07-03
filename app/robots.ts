@@ -17,10 +17,10 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: [
-      "https://legalbedek.co.il/sitemap.xml",
-      "https://legalbedek.co.il/image-sitemap.xml",
-      "https://legalbedek.co.il/video-sitemap.xml",
+      "https://www.legalbedek.co.il/sitemap.xml",
+      "https://www.legalbedek.co.il/image-sitemap.xml",
+      "https://www.legalbedek.co.il/video-sitemap.xml",
     ],
-    host: "https://legalbedek.co.il",
+    host: "https://www.legalbedek.co.il",
   }
 }

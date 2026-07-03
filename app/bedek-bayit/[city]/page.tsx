@@ -45,11 +45,11 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
       description,
       type: "website",
       locale: "he_IL",
-      url: `https://legalbedek.co.il/bedek-bayit/${city.slug}`,
+      url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
       siteName: "בדק בית Legal",
     },
     alternates: {
-      canonical: `https://legalbedek.co.il/bedek-bayit/${city.slug}`,
+      canonical: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
     },
     robots: "index, follow",
   }
@@ -193,13 +193,13 @@ export default function CityPage({ params }: { params: { city: string } }) {
     name: `בדק בית ב${city.name}`,
     serviceType: "בדק בית ואיתור ליקויי בנייה",
     description: `בדק בית הנדסי מקצועי ב${city.name} — בדיקת דירות חדשות ויד שנייה, איתור ליקויי בנייה וחוות דעת קבילה.`,
-    url: `https://legalbedek.co.il/bedek-bayit/${city.slug}`,
+    url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
     areaServed: { "@type": "City", name: city.nameSimple },
     provider: {
       "@type": "ProfessionalService",
-      "@id": "https://legalbedek.co.il/#organization",
+      "@id": "https://www.legalbedek.co.il/#organization",
       name: "בדק בית Legal - יגאל בנסקי",
-      url: "https://legalbedek.co.il",
+      url: "https://www.legalbedek.co.il",
       telephone: "+972-50-627-7858",
     },
   }

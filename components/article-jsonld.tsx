@@ -11,7 +11,7 @@ interface ArticleJsonLdProps {
   image?: string
 }
 
-const BASE_URL = "https://legalbedek.co.il"
+const BASE_URL = "https://www.legalbedek.co.il"
 
 // Server-rendered JSON-LD (Article + Author + BreadcrumbList) for article pages.
 // Strengthens E-E-A-T: the author is linked to the site-wide Person entity, the

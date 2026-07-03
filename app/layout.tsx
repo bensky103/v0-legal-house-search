@@ -19,7 +19,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://legalbedek.co.il"),
+  metadataBase: new URL("https://www.legalbedek.co.il"),
   title: "בדק בית - איתור ליקויי בנייה וחוות דעת נגדית | מומחה מוסמך",
   description:
     "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום. שירות מקצועי ומהיר בכל הארץ.",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "he_IL",
-    url: "https://legalbedek.co.il",
+    url: "https://www.legalbedek.co.il",
     siteName: "בדק בית Legal - איתור ליקויי בנייה",
     title: "בדק בית - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום.",
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     images: ["/images/binyanim-moderniim-israel-bedek-bayit.webp"],
   },
   alternates: {
-    canonical: "https://legalbedek.co.il",
+    canonical: "https://www.legalbedek.co.il",
     languages: {
-      "he-IL": "https://legalbedek.co.il",
+      "he-IL": "https://www.legalbedek.co.il",
     },
   },
   verification: {
@@ -106,14 +106,14 @@ gtag('config', 'AW-17703305821');`}
           {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "@id": "https://legalbedek.co.il/#organization",
+              "@id": "https://www.legalbedek.co.il/#organization",
               name: "בדק בית Legal - יגאל בנסקי",
               description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוו״ד נגדית",
-              url: "https://legalbedek.co.il",
+              url: "https://www.legalbedek.co.il",
               logo: {
                 "@type": "ImageObject",
-                url: "https://legalbedek.co.il/logo.webp",
-                contentUrl: "https://legalbedek.co.il/logo.webp",
+                url: "https://www.legalbedek.co.il/logo.webp",
+                contentUrl: "https://www.legalbedek.co.il/logo.webp",
                 caption: "בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
                 width: 1124,
                 height: 901,
@@ -122,8 +122,8 @@ gtag('config', 'AW-17703305821');`}
               image: [
                 {
                   "@type": "ImageObject",
-                  url: "https://legalbedek.co.il/images/binyanim-moderniim-israel-bedek-bayit.webp",
-                  contentUrl: "https://legalbedek.co.il/images/binyanim-moderniim-israel-bedek-bayit.webp",
+                  url: "https://www.legalbedek.co.il/images/binyanim-moderniim-israel-bedek-bayit.webp",
+                  contentUrl: "https://www.legalbedek.co.il/images/binyanim-moderniim-israel-bedek-bayit.webp",
                   caption:
                     "בדק בית ובדיקת איכות בנייה של דירות חדשות ומבנים בישראל לפני מסירה מהקבלן",
                   width: 1229,
@@ -133,8 +133,8 @@ gtag('config', 'AW-17703305821');`}
                 },
                 {
                   "@type": "ImageObject",
-                  url: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
-                  contentUrl: "https://legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                  url: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+                  contentUrl: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
                   caption: "יגאל בנסקי - מומחה בדק בית מוסמך עם קסדת מגן וציוד בדיקה הנדסי",
                   width: 1086,
                   height: 1448,
@@ -255,7 +255,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "WebPage",
                   name: "בדק בית מקצועי",
-                  url: "https://legalbedek.co.il/#services",
+                  url: "https://www.legalbedek.co.il/#services",
                   description: "בדיקת בנייה מלאה עם דוח מפורט ממומחה מוסמך",
                   inLanguage: "he",
                   alternateName: "שירותי בדיקה מקצועיים",
@@ -263,7 +263,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "WebPage",
                   name: "איתור ליקויי בנייה",
-                  url: "https://legalbedek.co.il/#inspection",
+                  url: "https://www.legalbedek.co.il/#inspection",
                   description: "זיהוי מומחה של כל סוגי ליקויי הבנייה והקונסטרוקציה בנכס",
                   inLanguage: "he",
                   alternateName: "בדיקת איתור ליקויים",
@@ -271,7 +271,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "WebPage",
                   name: "חוות דעת נגדית",
-                  url: "https://legalbedek.co.il/#counter-opinion",
+                  url: "https://www.legalbedek.co.il/#counter-opinion",
                   description: "דעה מקצועית בלתי תלויה על הנכס לצורך משפטי וביטוחי",
                   inLanguage: "he",
                   alternateName: "חוו״ד נגדית מוסמכת",
@@ -279,7 +279,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "WebPage",
                   name: "בדיקת נכס לאחר רכישה",
-                  url: "https://legalbedek.co.il/#post-purchase",
+                  url: "https://www.legalbedek.co.il/#post-purchase",
                   description: "וודא את איכות הנכס שקנית בדיקה מקיפה תוך 7 ימים מהקנייה",
                   inLanguage: "he",
                   alternateName: "בדיקה לרוכשי דירות ובתים",
@@ -287,7 +287,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "WebPage",
                   name: "בדיקה עבור ועד הבית",
-                  url: "https://legalbedek.co.il/#building-committee",
+                  url: "https://www.legalbedek.co.il/#building-committee",
                   description: "בדיקת המבנה המשותף לטובת תוכניות שיפוצים וביטחון התושבים",
                   inLanguage: "he",
                   alternateName: "בדיקה שוטפת עבור ועדות",
@@ -295,7 +295,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "WebPage",
                   name: "צור קשר עכשיו",
-                  url: "https://legalbedek.co.il/#contact",
+                  url: "https://www.legalbedek.co.il/#contact",
                   description: "קבל הצעת מחיר בחינם וקבע פגישה עם מומחה בתוך שעה",
                   inLanguage: "he",
                   alternateName: "יצירת קשר עם המומחה",
@@ -303,7 +303,7 @@ gtag('config', 'AW-17703305821');`}
                 {
                   "@type": "Article",
                   name: "בדק בית בדירה חדשה - מדריך מקיף",
-                  url: "https://legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
+                  url: "https://www.legalbedek.co.il/articles/bedek-bayit-dira-hadasha",
                   description: "מדריך מקיף לבדק בית בדירה חדשה - איך לא לקנות חתול בשק ולנהל משא ומתן חכם",
                   inLanguage: "he",
                 },

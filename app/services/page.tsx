@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     "איתור ליקויי בנייה",
     "הערכת עלויות תיקון",
   ],
-  alternates: { canonical: "https://legalbedek.co.il/services" },
+  alternates: { canonical: "https://www.legalbedek.co.il/services" },
   robots: "index, follow",
 }
 
 export default function ServicesHubPage() {
-  const baseUrl = "https://legalbedek.co.il"
+  const baseUrl = "https://www.legalbedek.co.il"
 
   const itemListSchema = {
     "@context": "https://schema.org",

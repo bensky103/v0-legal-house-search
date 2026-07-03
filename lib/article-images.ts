@@ -187,7 +187,7 @@ export const DEFECTS_MATAI: ArticleImage[] = [
   },
 ]
 
-const SITE_URL = "https://legalbedek.co.il"
+const SITE_URL = "https://www.legalbedek.co.il"
 
 /** Map every article gallery image to the article URL it appears on (for the image sitemap). */
 export const articleSitemapImages = [

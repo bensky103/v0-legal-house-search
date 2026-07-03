@@ -21,8 +21,8 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   return {
     title,
     description,
-    alternates: { canonical: `https://legalbedek.co.il/projects/${city.slug}` },
-    openGraph: { title, description, url: `https://legalbedek.co.il/projects/${city.slug}`, type: "website" },
+    alternates: { canonical: `https://www.legalbedek.co.il/projects/${city.slug}` },
+    openGraph: { title, description, url: `https://www.legalbedek.co.il/projects/${city.slug}`, type: "website" },
   }
 }
 

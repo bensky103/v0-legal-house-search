@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "אזורי שירות - בדק בית בכל הארץ | Legal בדק בית",
   description:
     "בדק בית הנדסי, איתור ליקויי בנייה וחוות דעת נגדית בכל הערים בישראל - מגוש דן ועד הצפון והדרום. בדקו אם אנחנו נותנים שירות בעיר שלכם.",
-  alternates: { canonical: "https://legalbedek.co.il/ezorei-sherut" },
+  alternates: { canonical: "https://www.legalbedek.co.il/ezorei-sherut" },
   robots: "index, follow",
 }
 

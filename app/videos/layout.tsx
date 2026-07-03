@@ -26,11 +26,11 @@ export const metadata: Metadata = {
       "סרטוני וידאו אמיתיים של בדיקות בדק בית ואיתור ליקויי בנייה בדירות חדשות, יד שניה ובתים פרטיים.",
     type: "website",
     locale: "he_IL",
-    url: "https://legalbedek.co.il/videos",
+    url: "https://www.legalbedek.co.il/videos",
     siteName: "בדק בית Legal",
   },
   alternates: {
-    canonical: "https://legalbedek.co.il/videos",
+    canonical: "https://www.legalbedek.co.il/videos",
   },
   robots: "index, follow",
 }

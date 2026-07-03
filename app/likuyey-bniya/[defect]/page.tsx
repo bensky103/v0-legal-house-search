@@ -34,11 +34,11 @@ export function generateMetadata({ params }: { params: { defect: string } }): Me
       description: defect.metaDescription,
       type: "article",
       locale: "he_IL",
-      url: `https://legalbedek.co.il/likuyey-bniya/${defect.slug}`,
+      url: `https://www.legalbedek.co.il/likuyey-bniya/${defect.slug}`,
       siteName: "בדק בית Legal",
     },
     alternates: {
-      canonical: `https://legalbedek.co.il/likuyey-bniya/${defect.slug}`,
+      canonical: `https://www.legalbedek.co.il/likuyey-bniya/${defect.slug}`,
     },
     robots: "index, follow",
   }
@@ -97,13 +97,13 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
     name: `איתור וטיפול בליקויי ${defect.name}`,
     serviceType: `בדק בית - ליקויי ${defect.name}`,
     description: defect.metaDescription,
-    url: `https://legalbedek.co.il/likuyey-bniya/${defect.slug}`,
+    url: `https://www.legalbedek.co.il/likuyey-bniya/${defect.slug}`,
     areaServed: { "@type": "Country", name: "ישראל" },
     provider: {
       "@type": "ProfessionalService",
-      "@id": "https://legalbedek.co.il/#organization",
+      "@id": "https://www.legalbedek.co.il/#organization",
       name: "בדק בית Legal - יגאל בנסקי",
-      url: "https://legalbedek.co.il",
+      url: "https://www.legalbedek.co.il",
       telephone: "+972-50-627-7858",
     },
   }

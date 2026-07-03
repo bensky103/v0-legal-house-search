@@ -7,7 +7,7 @@ import { videoSlug } from "@/lib/video-pages"
 
 export const dynamic = "force-static"
 
-const SITE = "https://legalbedek.co.il"
+const SITE = "https://www.legalbedek.co.il"
 
 // Each video has its own dedicated landing page.
 function pageUrl(v: (typeof videos)[number]): string {

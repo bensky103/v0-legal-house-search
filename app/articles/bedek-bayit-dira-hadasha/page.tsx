@@ -8,6 +8,7 @@ import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ArticleFaq } from "@/components/article-faq"
+import { ConsultationBox } from "@/components/consultation-box"
 
 import { DEFECTS_DIRA_HADASHA } from "@/lib/article-images"
 
@@ -73,6 +74,8 @@ export default function ArticleBedekBayitDiraHadasha() {
               רכישת דירה חדשה היא אחת ההחלטות הכלכליות המשמעותיות ביותר בחיינו. רבים מאיתנו משקיעים את כל חסכונותיהם ולוקחים משכנתא לשנים רבות כדי לממן את הדירה. אך האם אתם באמת יודעים מה אתם קונים? <strong>בדק בית מקצועי</strong> הוא הכלי שיעזור לכם לדעת בדיוק מה מצב הנכס - ולא לקנות חתול בשק.
             </p>
           </div>
+
+          <ConsultationBox />
 
           {/* Section 1 */}
           <Card className="mb-8 border-r-4 border-r-blue-500">

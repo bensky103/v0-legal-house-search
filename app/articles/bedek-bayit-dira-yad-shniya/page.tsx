@@ -5,6 +5,7 @@ import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ArticleFaq } from "@/components/article-faq"
+import { ConsultationBox } from "@/components/consultation-box"
 
 import { DEFECTS_YAD_SHNIYA } from "@/lib/article-images"
 
@@ -62,6 +63,8 @@ export default function BedekBayitDiraYadShniyaArticle() {
               </p>
             </div>
           </section>
+
+          <ConsultationBox />
 
           {/* Hidden Defects Section */}
           <section className="mb-12">

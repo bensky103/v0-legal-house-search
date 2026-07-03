@@ -5,6 +5,7 @@ import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ArticleFaq } from "@/components/article-faq"
+import { ConsultationBox } from "@/components/consultation-box"
 
 import { DEFECTS_MATAI } from "@/lib/article-images"
 
@@ -53,6 +54,8 @@ export default function MataiLehazminBedekBayitPage() {
             במאמר זה נסביר בדיוק מתי להזמין בדק בית, למה העיתוי קריטי, ואיך פעולה נכונה יכולה <strong>לחסוך לכם עשרות אלפי שקלים</strong> ולמנוע מחלוקות עם הקבלן.
           </p>
         </section>
+
+        <ConsultationBox />
 
         {/* Why is it important */}
         <section className="mb-10">

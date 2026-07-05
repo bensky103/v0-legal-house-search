@@ -322,6 +322,32 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "מגדלי לייף", area: "מגורים ומסחר, מתחם BBC" },
     { name: "פרדס דכה", area: "שכונת מגורים חדשה בצפון העיר" },
   ],
+  "kiryat-gat": [
+    { name: "אדם בכרמי גת צפון", area: "כרמי גת צפון, יזם אדם" },
+    { name: "רייסדור כרמי גת צפון", area: "כרמי גת צפון, יזם רייסדור" },
+    { name: "פרשקובסקי שער העיר", area: "שער העיר, יזם פרשקובסקי" },
+    { name: "כרמי גת הירוקה", area: "שכונת כרמי גת" },
+    { name: "דונה בכרמי גת", area: "כרמי גת, יזם דונה" },
+  ],
+  lod: [
+    { name: "צמרות הרובע", area: "הרובע הבינלאומי" },
+    { name: "אהבתיה", area: "הרובע הבינלאומי" },
+    { name: "אייל פרץ ברובע הבינלאומי", area: "הרובע הבינלאומי, יזם אייל פרץ" },
+    { name: "חלומות בן שמן", area: "נופי בן שמן" },
+    { name: "PATIO בן שמן", area: "נופי בן שמן" },
+    { name: "אפי נופי בן שמן", area: "נופי בן שמן, יזם אפי" },
+  ],
+  "beer-yaakov": [
+    { name: "FIORI", area: "מרכז העיר" },
+    { name: "נופי תהילה", area: "מרכז העיר" },
+    { name: "iFamily", area: "מרכז העיר" },
+  ],
+  gedera: [{ name: "ארבע אמהות", area: "שכונת גולדה" }],
+  "bet-shemesh": [{ name: "NEO הבית בקאנטרי", area: "מרכז העיר" }],
+  "kiryat-malachi": [{ name: "כרמי הנדיב", area: "שכונת כרמי הנדיב" }],
+  ramla: [{ name: "Teo שער העיר", area: "רובע שער העיר" }],
+  "or-akiva": [{ name: "אלמוגים אור ים", area: "שכונת אור ים, יזם אלמוגים" }],
+  "ganei-tikva": [{ name: "דרך המשי 15-17", area: "גני תקווה מערב" }],
 }
 
 export function getCityProjects(slug: string): CityProject[] {

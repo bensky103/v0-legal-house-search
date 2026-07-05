@@ -8,6 +8,54 @@ import { defects } from "@/lib/defects"
 import { services } from "@/lib/services"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
+// Real defect photos from actual inspections, shown on every city page so the
+// landing page carries genuine visual evidence (and keyword-rich image alt text
+// for Google Images), not just text.
+const CITY_GALLERY = [
+  {
+    src: "/articles/likuyim/likui-itum-chalon-aluminium-dira-hadasha.webp",
+    width: 1200,
+    height: 900,
+    alt: "ליקוי איטום בחלון אלומיניום בדירה חדשה - איתור ליקויי בנייה בבדק בית לפני מסירה מקבלן",
+    caption: "איטום לקוי בשפת חלון אלומיניום — ליקוי נפוץ בדירות חדשות שעלול לגרום לרטיבות.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-mishoriyut-ritzpa-peles-aroch-yad-shniya.webp",
+    width: 1200,
+    height: 900,
+    alt: "בדיקת מישוריות ריצוף בעזרת פלס ארוך לאיתור שקיעות והפרשי גובה בדירה - בדק בית",
+    caption: "בדיקת מישוריות הריצוף בפלס ארוך — איתור שקיעות והפרשי מפלס בין אריחים.",
+  },
+  {
+    src: "/articles/likuyim/likui-sedek-luach-even-yad-shniya.webp",
+    width: 1200,
+    height: 900,
+    alt: "סדק עובר בלוח אבן ובקיר בדירה - איתור וסיווג סדקים בבדק בית",
+    caption: "סדק עובר בקיר — סיווג נכון של הסדק מול התקן הוא הבסיס לדרישת תיקון מהקבלן.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-mad-koach-chalon-dira-hadasha.webp",
+    width: 1200,
+    height: 900,
+    alt: "מדידת כוח הפעלת חלון בעזרת מד כוח דיגיטלי בבדק בית לדירה חדשה - בדיקת תקינות חלונות לפי תקן",
+    caption: "מדידת כוח הפעלת החלון במד כוח — כוח חריג מעיד על ליקוי התקנה ואי-עמידה בתקן.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-bdikat-delet-knisa-plada-matai.webp",
+    width: 1200,
+    height: 900,
+    alt: "מומחה בדק בית בודק דלת כניסה פלדלת, מנעול ומשקוף בדירה - איתור ליקויי התקנה ובטיחות",
+    caption: "בדיקת דלת הכניסה (פלדלת): מנעול, צירים, איטום ומשקוף — ליקויי התקנה ובטיחות.",
+  },
+  {
+    src: "/articles/likuyim/bedek-bayit-tiud-likuyim-doch-matai.webp",
+    width: 1200,
+    height: 900,
+    alt: "תיעוד ליקויי בנייה והכנת דוח בדק בית עם ציוד בדיקה מקצועי - דירה חדשה ויד שנייה",
+    caption: "תיעוד הממצאים בדוח בדק בית מסודר — הבסיס לדרישת תיקונים מהקבלן.",
+  },
+]
+
 export function generateStaticParams() {
   return cities.map((city) => ({ city: city.slug }))
 }
@@ -215,6 +263,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
       features={profile ? profile.features : genericFeatures}
       contentSections={[...(profile ? profile.sections : genericSections), timingSection]}
       projectsSection={projectsSection}
+      gallery={CITY_GALLERY}
+      galleryHeading={`תיעוד ליקויים מבדיקות בדק בית ב${city.name}`}
       faq={profile ? profile.faq : genericFaq}
       ctaTitle={`צריכים בדק בית ב${city.name}?`}
       ctaText={`צרו קשר עוד היום לתיאום בדיקה הנדסית מקצועית של הנכס שלכם ב${city.name}. מומחה מוסמך, שירות מהיר וחוות דעת מקצועית.`}

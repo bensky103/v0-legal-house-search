@@ -7,17 +7,23 @@ import { videoThumb, videoEmbedUrl } from "@/lib/videos"
  * Lightweight YouTube facade: renders only the thumbnail + a play button until
  * the user clicks, then swaps in the real iframe. Keeps pages fast (no heavy
  * YouTube JS on load) while still embedding the video for SEO and UX.
+ *
+ * `eager`: render the real player iframe immediately (server-rendered), without
+ * autoplay. Used on a video's canonical page (/videos/[slug]) so Google's video
+ * crawler finds an actual player in the HTML — a facade alone (thumbnail only)
+ * leaves no player in the DOM and the video is not added to the video index.
  */
-export function LiteYouTube({ id, title }: { id: string; title: string }) {
+export function LiteYouTube({ id, title, eager = false }: { id: string; title: string; eager?: boolean }) {
   const [active, setActive] = useState(false)
+  const showIframe = eager || active
 
   return (
     <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 ring-1 ring-slate-200">
-      {active ? (
+      {showIframe ? (
         <iframe
-          src={`${videoEmbedUrl(id)}?autoplay=1&rel=0`}
+          src={`${videoEmbedUrl(id)}?rel=0${active ? "&autoplay=1" : ""}`}
           title={title}
-          loading="lazy"
+          loading={eager ? undefined : "lazy"}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
           className="absolute inset-0 h-full w-full"

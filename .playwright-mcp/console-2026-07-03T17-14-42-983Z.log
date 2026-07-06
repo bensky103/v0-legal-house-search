@@ -6,3 +6,4 @@ Do not enter or paste code that you do not understand. @ /_/scs/mss-static/_/js/
 [131780914ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://accounts.google.com/RotateCookies:0
 [133567222ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://search.google.com/_/SearchConsoleAggReportUi/gen204/?tmambps=0.0008427507312264537&rtembps=-1&rttms=8.939999999999998&ct=undefined:0
 [159361207ms] [ERROR] Failed to load resource: net::ERR_INTERNET_DISCONNECTED @ https://accounts.google.com/RotateCookies:0
+[260148858ms] [ERROR] Failed to load resource: net::ERR_NAME_NOT_RESOLVED @ https://accounts.google.com/RotateCookies:0

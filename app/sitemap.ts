@@ -8,7 +8,9 @@ import { videoSlug } from "@/lib/video-pages"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Fixed content-update date — avoids signalling "everything changed" to Google on every deploy.
-  const LAST_UPDATED = new Date("2026-06-28")
+  // Bumped 2026-07-06 after the www-canonical migration + new city/project content, to prompt
+  // Google to re-crawl and re-evaluate pages stuck in "crawled - currently not indexed".
+  const LAST_UPDATED = new Date("2026-07-06")
 
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,

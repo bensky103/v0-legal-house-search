@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { videos, videoSchema } from "@/lib/videos"
 
 export const metadata: Metadata = {
   title: "סרטוני בדק בית - תיעוד בדיקות ואיתור ליקויי בנייה | Legal בדק בית",
@@ -36,16 +35,10 @@ export const metadata: Metadata = {
 }
 
 export default function VideosLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      {videos.map((v) => (
-        <script
-          key={v.id}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(v)) }}
-        />
-      ))}
-      {children}
-    </>
-  )
+  // Per-video VideoObject schema is rendered by each page itself: the grid page
+  // (/videos) lists all videos, and each /videos/[slug] page declares only its
+  // own video. Injecting all videos here (a shared layout) made every single
+  // video page claim 29 videos while showing one player — a mismatch that kept
+  // the videos out of Google's video index.
+  return <>{children}</>
 }

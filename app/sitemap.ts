@@ -215,5 +215,59 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://www.legalbedek.co.il/articles/itum-gagot-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/aluminium-zigug-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/likuyey-ritzuf-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/bdikat-mamad-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/likuyey-tiyach-tzeva-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/likuyey-chashmal-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/likuyey-mitbach-negarut-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/bdikat-mizug-avir-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/bdikat-dud-shemesh-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ]
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
+import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { DEFECTS_INSTALATZIA_FIELD } from "@/lib/article-images"
 
 export const metadata: Metadata = {
   title: "תקני אינסטלציה בבדק בית: מים, ביוב וניקוז (ת\"י 1205) | בדק בית Legal",
@@ -151,6 +153,13 @@ export default function TikaneyInstalatziaArticle() {
         <li><strong>מד לחות (פרוטימטר) ומצלמה תרמית</strong> לאיתור נזילות ורטיבות נסתרת בקירות וברצפה.</li>
         <li><strong>בדיקת שיפועים</strong> ברצפות אזורים רטובים ובמרפסות, לוודא התנקזות תקינה.</li>
       </ul>
+
+      <ArticleDefectGallery
+        heading="בדיקת אינסטלציה בשטח — תיעוד מבדק בית"
+        intro="דוגמאות אמיתיות לבדיקת צנרת, חיבורים ואיתור נזילות בבדק בית, כולל מצלמה תרמית. תיעוד מדויק של כל ממצא הוא הבסיס לדרישת תיקון מהקבלן."
+        items={DEFECTS_INSTALATZIA_FIELD}
+      />
+
       <p>
         רוצים להעמיק? עברו למדריך על <Link href="/likuyey-bniya/instalatzia" className="text-blue-700 hover:underline font-medium">ליקויי אינסטלציה</Link>,
         על <Link href="/likuyey-bniya/retivut" className="text-blue-700 hover:underline font-medium">ליקויי רטיבות</Link>,

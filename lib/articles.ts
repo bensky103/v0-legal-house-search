@@ -85,6 +85,87 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira"],
     relatedDefects: ["i-hatama-lemifrat"],
   },
+  {
+    slug: "itum-gagot-bedek-bayit",
+    title: "איטום גגות ומרפסות בבדק בית — איך מאתרים נזילות וכשלי איטום",
+    description:
+      "כשל איטום בגג, במרפסת ובחיבורי החיפוי הוא מהליקויים היקרים ביותר. כך מאתרים חדירת מים, סדקים ורטיבות סמויה בבדק בית — כולל מצלמה תרמית.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["itum", "gagot", "retivut"],
+  },
+  {
+    slug: "aluminium-zigug-bedek-bayit",
+    title: "ליקויי אלומיניום, חלונות ותריסים בבדק בית (ת״י 1068)",
+    description:
+      "חלונות, דלתות הזזה ותריסים מאלומיניום הם מקור נפוץ לליקויי אטימה, ניקוז ותפעול. כך בודקים אותם בבדק בית לפי ת״י 1068 לפני מסירה מקבלן.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["aluminium", "chalonot", "trisim"],
+  },
+  {
+    slug: "likuyey-ritzuf-bedek-bayit",
+    title: "ליקויי ריצוף בבדק בית — מישוריות, שיפוע ופוגות (ת״י 1555)",
+    description:
+      "שקיעות, 'שן' בין אריחים, שיפוע לקוי וסדקים בריצוף נבדקים לפי ת״י 1555. כך מאתרים ומתעדים ליקויי ריצוף בבדק בית לפני מסירה מהקבלן.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["ritzuf"],
+  },
+  {
+    slug: "bdikat-mamad-bedek-bayit",
+    title: "בדיקת ממ״ד בבדק בית — דלת וחלון הדף, איטום ואוורור",
+    description:
+      "הממ״ד הוא רכיב מגן קריטי. כך בודקים בבדק בית את דלת ההדף, חלון ההדף, האיטום ומערכת האוויר לפי הנחיות פיקוד העורף בדירה חדשה מקבלן.",
+    datePublished: "2026-07-12",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["mamad"],
+  },
+  {
+    slug: "likuyey-tiyach-tzeva-bedek-bayit",
+    title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789)",
+    description:
+      "קירות עקומים, סדקים, גלים בטיח ופגמי צבע נבדקים מול הסטיות המותרות בת״י 789. כך מאתרים ומתעדים ליקויי טיח וצבע בבדק בית לדירה חדשה.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["tiyach", "tzeva"],
+  },
+  {
+    slug: "likuyey-chashmal-bedek-bayit",
+    title: "ליקויי חשמל ותקשורת בבדק בית — לוח, נקודות ובדיקה תרמית",
+    description:
+      "לוח חשמל, נקודות, שקעים ותשתית תקשורת נבדקים בבדק בית — כולל מצלמה תרמית לאיתור התחממות יתר וחיבורים רופפים המהווים סכנת בטיחות.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["chashmal"],
+  },
+  {
+    slug: "likuyey-mitbach-negarut-bedek-bayit",
+    title: "ליקויי מטבח ונגרות בבדק בית — ארונות, משטח ואיטום",
+    description:
+      "פילוס ארונות, מישוריות משטח, איטום כיור ואיכות נגרות במטבח ובחדרי הרחצה — כך בודקים ליקויי מטבח ונגרות בבדק בית לפני מסירה מקבלן.",
+    datePublished: "2026-07-12",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["mitbach", "negarut"],
+  },
+  {
+    slug: "bdikat-mizug-avir-bedek-bayit",
+    title: "בדיקת מיזוג אוויר בבדק בית — בדיקה תרמית של המערכת",
+    description:
+      "מערכת המיזוג נבדקת בבדק בית באמצעות מצלמה תרמית לאיתור פיזור אוויר לקוי, דליפות ובידוד תעלות. כך מזהים ליקויי מיזוג אוויר בדירה חדשה.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["mizug-avir"],
+  },
+  {
+    slug: "bdikat-dud-shemesh-bedek-bayit",
+    title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת״י 579)",
+    description:
+      "דוד השמש והמערכת הסולארית נבדקים בבדק בית לפי ת״י 579 — תקינות הדוד, הקולטים, הבידוד והחיבורים, כולל בדיקה תרמית לאיתור ליקויים.",
+    datePublished: "2026-07-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["dud-shemesh"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

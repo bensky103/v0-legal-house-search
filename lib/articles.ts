@@ -175,6 +175,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat"],
     relatedDefects: ["tiyach", "tzeva", "i-hatama-lemifrat"],
   },
+  {
+    slug: "hanmakhat-tikra-godel-cheder",
+    title: "גובה תקרה וגודל חדר מינימלי — מתי הנמכת תקרה הופכת חדר לחדרון",
+    description:
+      "גובה תקרה מינימלי 2.5 מ׳ ושטח חדר מגורים מינימלי 8 מ״ר. הנמכת תקרה שנוגסת בשטח המינימלי הופכת חדר לחדרון, מורידה את מספר החדרים בדירה ופוגעת בערכה — בניגוד לתקנות התכנון והבנייה.",
+    datePublished: "2026-07-13",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat"],
+    relatedDefects: ["i-hatama-lemifrat"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

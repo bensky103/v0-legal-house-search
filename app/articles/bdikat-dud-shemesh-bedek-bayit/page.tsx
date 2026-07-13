@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_DUD_SHEMESH } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -67,6 +68,13 @@ export default function BdikatDudShemeshArticle() {
         heading="בדיקת דוד שמש בשטח — תיעוד מבדק בית"
         intro="דוגמה אמיתית לבדיקת דוד שמש ומערכת חימום מים בעזרת מצלמה תרמית, לאיתור בידוד וחיבורים לקויים."
         items={DEFECTS_DUD_SHEMESH}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "טיפול בחוטי חשמל חשופים בדוד", price: "כ־300 ₪" },
+          { item: "השלמת מיכל התפשטות תקני", price: "כ־860 ₪" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

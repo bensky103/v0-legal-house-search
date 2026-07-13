@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_ITUM_GAGOT } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -71,6 +72,14 @@ export default function ItumGagotArticle() {
         heading="ליקויי איטום שאותרו בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת איטום ואיתור רטיבות בגגות ובמרפסות. תיעוד מדויק של כל ממצא הוא הבסיס לדרישת תיקון מהקבלן."
         items={DEFECTS_ITUM_GAGOT}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "אף מים בהגבהות גג / קופינג", price: "כ־740 ₪ למ״ר" },
+          { item: "ביצוע מישק הפרדה סביב מערכת האיטום", price: "כ־63 ₪ למ״ר" },
+          { item: "טיפול נקודתי ברטיבות ואיטום חוזר", price: "מאות שקלים לנקודה" },
+        ]}
       />
 
       <ArticleH2>אחריות הקבלן לכשלי איטום</ArticleH2>

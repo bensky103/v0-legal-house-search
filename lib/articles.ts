@@ -166,6 +166,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["dud-shemesh"],
   },
+  {
+    slug: "alut-tikun-likuyey-bniya",
+    title: "כמה עולה תיקון ליקויי בנייה? עלויות אמיתיות וכלי למשא ומתן",
+    description:
+      "איך מחושבת עלות תיקון ליקויי בנייה לפי מחירונים מקובלים, דוגמה אמיתית מדוח בדק בית, ולמה עלות הבדיקה זניחה מול הליקויים ומול ההנחה במשא ומתן.",
+    datePublished: "2026-07-13",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat"],
+    relatedDefects: ["tiyach", "tzeva", "i-hatama-lemifrat"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

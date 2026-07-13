@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_INSTALATZIA_FIELD } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -158,6 +159,15 @@ export default function TikaneyInstalatziaArticle() {
         heading="בדיקת אינסטלציה בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת צנרת, חיבורים ואיתור נזילות בבדק בית, כולל מצלמה תרמית. תיעוד מדויק של כל ממצא הוא הבסיס לדרישת תיקון מהקבלן."
         items={DEFECTS_INSTALATZIA_FIELD}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "סימון צנרת מים חמים וקרים", price: "כ־300 ₪" },
+          { item: "החלפת ברז ניל חלוד", price: "כ־300 ₪" },
+          { item: "החלפת צינור ניקוז לא תקני", price: "כ־224 ₪" },
+          { item: "הידוק או החלפת ברז רופף", price: "כ־172 ₪" },
+        ]}
       />
 
       <p>

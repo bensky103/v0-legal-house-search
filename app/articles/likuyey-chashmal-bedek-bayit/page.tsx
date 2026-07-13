@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_CHASHMAL } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -69,6 +70,17 @@ export default function LikuyeyChashmalArticle() {
         heading="בדיקת חשמל ותקשורת בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת לוח חשמל, נקודות ותשתית תקשורת, כולל איתור התחממות יתר במצלמה תרמית."
         items={DEFECTS_CHASHMAL}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "סימון מפסקים והוספת מקרא בלוח", price: "כ־156 ₪" },
+          { item: "החלפת שקע רופף או לא תקין", price: "כ־295 ₪" },
+          { item: "החלפת שקע לשקע מוגן מים (חדר רטוב)", price: "כ־308 ₪" },
+          { item: "טיפול בחוטי חשמל חשופים", price: "כ־295 ₪" },
+          { item: "איתור ותיקון שקע ללא פאזה", price: "כ־590 ₪" },
+          { item: "הוספת שקעים בארון תקשורת", price: "כ־308 ₪" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_TIYACH_TZEVA } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -70,6 +71,16 @@ export default function LikuyeyTiyachTzevaArticle() {
         heading="ליקויי טיח וצבע שאותרו בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת מישוריות, אנכיות וגמר טיח וצבע. תיעוד וכימות מדויק של כל סטייה הם הבסיס לדרישת תיקון מהקבלן."
         items={DEFECTS_TIYACH_TZEVA}
+      />
+
+      <ArticlePriceSection
+        intro="טיח וצבע הוא לרוב הנושא היקר ביותר בדוח — לעיתים יותר משליש מכלל עלות התיקונים, בשל השטחים הגדולים. אלה אומדנים מייצגים, מבוססים על מחירונים מקובלים במחיר עלות לקבלן; המחירים משתנים מעת לעת ולפי הקבלן ורמת הגימור, ובשוק הפרטי גבוהים יותר."
+        items={[
+          { item: "תיקון וצביעת קיר או תקרה", price: "כ־63–86 ₪ למ״ר" },
+          { item: "סתימת חורי קידוח וסדקים בטיח", price: "כ־225 ₪ למ״ר" },
+          { item: "איתור וטיפול בנקודת רטיבות", price: "כ־680 ₪ לנקודה" },
+          { item: "תיקון סדק ברוחב מעל 0.3 מ״מ", price: "כ־225 ₪ למ״ר" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

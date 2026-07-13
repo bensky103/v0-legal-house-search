@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MIZUG } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -68,6 +69,13 @@ export default function BdikatMizugAvirArticle() {
         heading="בדיקת מיזוג אוויר בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת מערכת המיזוג בעזרת מצלמה תרמית. הבדיקה חושפת ליקויי פיזור אוויר, דליפות ובידוד."
         items={DEFECTS_MIZUG}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "תיקון רטיבות או ניקוז בצנרת המזגן", price: "כ־800 ₪" },
+          { item: "מערכת מיזוג מיני־מרכזית לא תקינה", price: "כ־11,860 ₪ ליחידה" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

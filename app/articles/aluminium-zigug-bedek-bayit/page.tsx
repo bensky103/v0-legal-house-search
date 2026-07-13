@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_ALUMINIUM } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -70,6 +71,17 @@ export default function AluminiumZigugArticle() {
         heading="ליקויי אלומיניום שאותרו בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת חלונות, תריסים ודלתות הזזה מאלומיניום. תיעוד מדויק של כל ליקוי מאפשר לדרוש תיקון מהקבלן."
         items={DEFECTS_ALUMINIUM}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "כיוונון חלון או ויטרינת הזזה (כוח הפעלה)", price: "כ־690 ₪ ליחידה" },
+          { item: "החלפת ברגים לפלב״מ עמידי קורוזיה", price: "כ־470 ₪" },
+          { item: "השלמת אטמים ומברשות איטום בכנף", price: "כ־470 ₪" },
+          { item: "החלפת חלון או ויטרינה פגומים", price: "כ־1,630 ₪ למ״ר" },
+          { item: "אישור או החלפת זכוכית בטיחות במעקה", price: "כ־300 ₪" },
+          { item: "ניקוי שאריות צבע וטיח מפרופילים", price: "כ־16 ₪ למ״ר" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

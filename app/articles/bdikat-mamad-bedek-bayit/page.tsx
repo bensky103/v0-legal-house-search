@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MAMAD } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -70,6 +71,15 @@ export default function BdikatMamadArticle() {
         heading="בדיקת ממ&quot;ד בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת דלת וחלון ההדף, האיטום ומערכת האוויר בממ״ד. תיעוד מדויק של כל ממצא מאפשר לדרוש תיקון מהקבלן."
         items={DEFECTS_MAMAD}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "תיקון וצביעת משקוף דלת הממ״ד", price: "כ־404 ₪" },
+          { item: "החלפת אטם היקפי (גומייה) בדלת/חלון", price: "כ־920 ₪" },
+          { item: "כיוונון דלת שאינה נסגרת בכוח תקני", price: "כ־510 ₪" },
+          { item: "תיקון פגמי צבע במכלול הדלת", price: "כ־590 ₪" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

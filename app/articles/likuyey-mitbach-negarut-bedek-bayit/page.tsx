@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MITBACH_NEGARUT } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -70,6 +71,15 @@ export default function LikuyeyMitbachNegarutArticle() {
         heading="ליקויי מטבח ונגרות שאותרו בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת ארונות, משטח ונגרות במטבח ובחדרי הרחצה. תיעוד מדויק של כל ממצא מאפשר לדרוש תיקון מהקבלן."
         items={DEFECTS_MITBACH_NEGARUT}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "החלפת ציר עם חלודה (מטבח או רחצה)", price: "כ־99 ₪ ליחידה" },
+          { item: "תיקון שריטות ופגיעות בחזיתות", price: "כ־450 ₪ למ״ר" },
+          { item: "כיוונון ופילוס דלתות ומגירות", price: "כ־1,200 ₪ (חצי יום עבודה)" },
+          { item: "ביצוע אף מים במשטח שיש", price: "כ־300 ₪" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

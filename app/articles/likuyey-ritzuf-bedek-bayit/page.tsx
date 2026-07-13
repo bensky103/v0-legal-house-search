@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_RITZUF } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -71,6 +72,16 @@ export default function LikuyeyRitzufArticle() {
         heading="ליקויי ריצוף שאותרו בשטח — תיעוד מבדק בית"
         intro="דוגמאות אמיתיות לבדיקת מישוריות, פילוס ושיפוע ריצוף בשטח. תיעוד מדויק של כל ממצא הוא הבסיס לדרישת תיקון מהקבלן."
         items={DEFECTS_RITZUF}
+      />
+
+      <ArticlePriceSection
+        items={[
+          { item: "מילוי מישק הפרדה גמיש (שיפולים)", price: "כ־36 ₪ למ״ר" },
+          { item: "תיקון שיפוע רצפה במרפסת", price: "כ־326 ₪ למ״ר" },
+          { item: "הדבקה מחדש של אריח חלול", price: "כ־416 ₪" },
+          { item: "החלפת אריח שבור", price: "כ־416 ₪ למ״ר" },
+          { item: "ריצוף פרקט או למינציה", price: "כ־308 ₪ למ״ר" },
+        ]}
       />
 
       <ArticleH2>להרחבה</ArticleH2>

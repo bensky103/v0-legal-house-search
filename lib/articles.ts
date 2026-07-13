@@ -184,6 +184,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat"],
     relatedDefects: ["i-hatama-lemifrat"],
   },
+  {
+    slug: "bdikat-maake-dira-hadasha",
+    title: "בדיקת מעקה זכוכית ומעקה בכלל בדירה חדשה — מה בודקים ביום המסירה",
+    description:
+      "מעקה הוא רכיב בטיחות מציל חיים. כך בודקים מעקה זכוכית ומעקה בכלל בדירה חדשה מקבלן ביום המסירה — גובה, מרווחים, חוזק עיגון, זכוכית בטיחות ורפידות גומי לפי ת״י 1142 ות״י 1099.",
+    datePublished: "2026-07-13",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["maakot", "mirpasot"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

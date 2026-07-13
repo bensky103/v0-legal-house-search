@@ -217,6 +217,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-06-30",
     topic: "aluminium",
   },
+  {
+    id: "IX84kY-Oz4k",
+    title: "בדק בית - בדיקת מעקה זכוכית בדירה חדשה ביום המסירה",
+    description:
+      "בדיקת מעקה זכוכית במרפסת דירה חדשה ביום המסירה - גובה, חוזק עיגון ורפידות גומי בין הזכוכית למסגרת, לפי ת״י 1142 ות״י 1099.",
+    uploadDate: "2026-07-13",
+    topic: "maakot",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

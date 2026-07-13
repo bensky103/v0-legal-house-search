@@ -225,6 +225,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-13",
     topic: "maakot",
   },
+  {
+    id: "7npg8xugJOU",
+    title: "בדיקת מרפסת בדירה חדשה מקבלן - איטום, ריצוף, שיפועים וניקוז",
+    description:
+      "בדק בית - בדיקת מרפסת בדירה חדשה מקבלן ביום המסירה: איטום רצפת המרפסת, שיפועים לכיוון הניקוז, איכות הריצוף ותפקוד נקודת הניקוז.",
+    uploadDate: "2026-07-13",
+    topic: "itum",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

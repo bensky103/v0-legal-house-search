@@ -193,6 +193,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["maakot", "mirpasot"],
   },
+  {
+    slug: "bdikat-mirpeset-dira-hadasha",
+    title: "בדיקת מרפסת בדירה חדשה — איטום, שיפועים, ריצוף וניקוז ביום המסירה",
+    description:
+      "המרפסת חשופה לגשם ולשמש והיא מהאזורים הרגישים ביותר לחדירת מים. כך בודקים מרפסת בדירה חדשה מקבלן ביום המסירה — איטום הרצפה, שיפועים לניקוז, איכות הריצוף ותפקוד נקודת הניקוז.",
+    datePublished: "2026-07-13",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["mirpasot", "itum", "ritzuf"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

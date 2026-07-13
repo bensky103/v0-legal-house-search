@@ -293,5 +293,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://www.legalbedek.co.il/articles/bdikat-chipuyey-chutz-dira-hadasha",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ]
 }

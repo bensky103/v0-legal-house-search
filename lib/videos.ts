@@ -233,6 +233,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-13",
     topic: "itum",
   },
+  {
+    id: "MbybnZzRLhE",
+    title: "בדק בית - בדיקת חיפויי חוץ בדירה חדשה ביום המסירה",
+    description:
+      "בדיקת חיפויי חוץ בדירה חדשה מקבלן ביום המסירה - איתור אריחים מתנתקים, נקישה חלולה, פוגות פתוחות, סדקים והיעדר עיגון בחיפוי אבן בחזית, לפי ת״י 2378 ות״י 1555.",
+    uploadDate: "2026-07-13",
+    topic: "chipuyim",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

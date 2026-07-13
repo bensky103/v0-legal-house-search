@@ -202,6 +202,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["mirpasot", "itum", "ritzuf"],
   },
+  {
+    slug: "bdikat-chipuyey-chutz-dira-hadasha",
+    title: "בדיקת חיפויי חוץ בדירה חדשה — מה בודקים ביום המסירה",
+    description:
+      "חיפוי חוץ שמתנתק או נופל הוא סכנת בטיחות, לא רק ליקוי אסתטי. כך בודקים חיפויי חוץ בדירה חדשה מקבלן ביום המסירה — נקישה חלולה, פוגות, סדקים, עיגון אבן ורטיבות, לפי ת״י 2378 ות״י 1555.",
+    datePublished: "2026-07-13",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["chipuyim"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

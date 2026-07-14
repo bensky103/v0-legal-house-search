@@ -290,6 +290,25 @@ export const DEFECTS_RITZUF: ArticleImage[] = [
   },
 ]
 
+export const DEFECTS_RITZUF_MISHAKIM: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-likui-ritzuf-36.webp",
+    standard: "ת״י 1555 – ריצוף קרמי",
+    title: "התרוממות אריח עקב מישקים צפופים",
+    alt: "אריח ריצוף שהתרומם והתנתק מהרצפה עקב מישקים צפופים מדי ללא מרווח להתפשטות - ליקוי ריצוף שאותר בבדק בית",
+    caption:
+      "אריח שהתרומם והתנתק מהמצע. כאשר המישקים בין המרצפות צפופים מדי וללא מרווח להתפשטות, לחצי ההתפשטות מצטברים עם השנים והריצוף מתרומם — נזק שמחייב פירוק וריצוף מחדש.",
+  },
+  {
+    src: "/gallery/bedek-bayit-likui-ritzuf-37.webp",
+    standard: "ת״י 1555 – ריצוף קרמי",
+    title: "ריצוף ללא מישקי הפרדה",
+    alt: "רצפת אריחים בהדבקה צפופה ללא מישקי הפרדה ומרווחים תקינים בין המרצפות - ליקוי המוביל להתרוממות ריצוף, שאותר בבדק בית",
+    caption:
+      "רצפה בהדבקה צפופה ללא מישקי הפרדה ומרווחים תקינים בין המרצפות. היעדר מישקים מונע מהריצוף מרחב להתפשט ומוביל עם הזמן להתרוממות ולהתנתקות מהמצע.",
+  },
+]
+
 export const DEFECTS_MAMAD: ArticleImage[] = [
   {
     src: "/gallery/bedek-bayit-likui-mamad-05.webp",
@@ -485,6 +504,7 @@ export const articleSitemapImages = [
   ...DEFECTS_ITUM_GAGOT.map((img) => ({ ...img, articleSlug: "itum-gagot-bedek-bayit" })),
   ...DEFECTS_ALUMINIUM.map((img) => ({ ...img, articleSlug: "aluminium-zigug-bedek-bayit" })),
   ...DEFECTS_RITZUF.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-bedek-bayit" })),
+  ...DEFECTS_RITZUF_MISHAKIM.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-mishakim" })),
   ...DEFECTS_MAMAD.map((img) => ({ ...img, articleSlug: "bdikat-mamad-bedek-bayit" })),
   ...DEFECTS_TIYACH_TZEVA.map((img) => ({ ...img, articleSlug: "likuyey-tiyach-tzeva-bedek-bayit" })),
   ...DEFECTS_CHASHMAL.map((img) => ({ ...img, articleSlug: "likuyey-chashmal-bedek-bayit" })),

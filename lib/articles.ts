@@ -229,6 +229,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["chashmal"],
   },
+  {
+    slug: "likuyey-ritzuf-mishakim",
+    title: "מישקים ורווחים בריצוף — למה הם מונעים התרוממות והתנתקות אריחים",
+    description:
+      "מישקים ומרווחים תקינים בין המרצפות מונעים לחצי התפשטות שגורמים עם השנים להתרוממות ולהתנתקות הריצוף מהרצפה. כך נבדקים המישקים בבדק בית לפי ת״י 1555.",
+    datePublished: "2026-07-14",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["ritzuf"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

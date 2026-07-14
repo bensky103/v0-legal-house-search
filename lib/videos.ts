@@ -257,6 +257,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-14",
     topic: "dlatot",
   },
+  {
+    id: "D95GOtlLq4w",
+    title: "בדיקת נגרות מטבח בדירה חדשה - ארונות, צירים, מגירות ומשטח",
+    description:
+      "בדק בית - בדיקת נגרות המטבח בדירה: פילוס ותלייה של הארונות, כיוונון צירים ומגירות, מישוריות משטח העבודה, איטום הכיור וגמר הנגרות.",
+    uploadDate: "2026-07-14",
+    topic: "mitbach",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

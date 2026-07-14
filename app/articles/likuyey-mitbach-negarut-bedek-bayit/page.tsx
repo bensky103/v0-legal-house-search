@@ -3,7 +3,10 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { LiteYouTube } from "@/components/lite-youtube"
 import { DEFECTS_MITBACH_NEGARUT } from "@/lib/article-images"
+import { videos, videoSchema } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 
 export const metadata: Metadata = {
   title: "ליקויי מטבח ונגרות בבדק בית — ארונות, משטח ואיטום | בדק בית Legal",
@@ -33,6 +36,8 @@ export const metadata: Metadata = {
   robots: "index, follow",
 }
 
+const MITBACH_VIDEO = videos.find((v) => v.id === "D95GOtlLq4w")
+
 export default function LikuyeyMitbachNegarutArticle() {
   return (
     <ArticleLayout
@@ -49,6 +54,28 @@ export default function LikuyeyMitbachNegarutArticle() {
         המטבח וארונות הנגרות משלבים כמה תחומים — נגרות, אינסטלציה ואיטום — ולכן הם מוקד לליקויים. פילוס ארונות
         לקוי, משטח לא ישר, איטום כיור כושל וגמר נגרות ירוד הם ממצאים נפוצים שנבדקים בבדק בית לפני קבלת הדירה.
       </ArticleLead>
+
+      {MITBACH_VIDEO && (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(MITBACH_VIDEO)) }}
+          />
+          <figure className="my-6">
+            <LiteYouTube id={MITBACH_VIDEO.id} title={MITBACH_VIDEO.title} />
+            <figcaption className="mt-2 text-sm text-gray-500">
+              בדיקת נגרות מטבח בדירה חדשה מקבלן — ארונות, צירים, מגירות ומשטח עבודה. לצפייה בעמוד המלא:{" "}
+              <Link
+                href={`/videos/${videoSlug(MITBACH_VIDEO)}`}
+                className="text-blue-700 hover:underline font-medium"
+              >
+                עמוד הסרטון
+              </Link>
+              .
+            </figcaption>
+          </figure>
+        </>
+      )}
 
       <ArticleH2>ליקויי המטבח והנגרות הנפוצים</ArticleH2>
       <ul className="list-disc pr-6 space-y-2">

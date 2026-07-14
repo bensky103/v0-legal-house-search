@@ -249,6 +249,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-14",
     topic: "aluminium",
   },
+  {
+    id: "-cLW0Eo8-Ag",
+    title: "בדיקת דלת כניסה בדירה חדשה - נעילה, משקוף, פרזול ואטימות",
+    description:
+      "בדק בית - בדיקת דלת הכניסה בדירה: ישרות המשקוף, פעולת המנעולים והצילינדר, הפרזול, אטימות ההיקף והסף וליקויי התקנה נפוצים.",
+    uploadDate: "2026-07-14",
+    topic: "dlatot",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

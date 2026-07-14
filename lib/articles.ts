@@ -211,6 +211,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["chipuyim"],
   },
+  {
+    slug: "bdikat-delet-knisa-dira",
+    title: "בדיקת דלת כניסה בדירה — משקוף, נעילה, פרזול ואטימות",
+    description:
+      "דלת הכניסה היא קו ההגנה הראשון של הדירה. כך בודקים אותה בבדק בית — ישרות המשקוף, פעולת המנעולים והפרזול, אטימות ההיקף והסף וליקויי התקנה, בדירה חדשה מקבלן וביד שנייה.",
+    datePublished: "2026-07-14",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["delet-knisa", "dlatot"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

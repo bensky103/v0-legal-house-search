@@ -220,6 +220,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["delet-knisa", "dlatot"],
   },
+  {
+    slug: "bdikat-chashmal-tikshoret-dira",
+    title: "בדיקות חשמל ותקשורת בדירה — מה בודקים ומי מטפל בליקויים",
+    description:
+      "בדיקת חשמל ותקשורת בדירה חדשה וביד שנייה — לוח, נקודות, שקע כפול בארון התקשורת ותשתית להעברת כבלי אינטרנט. בבדק בית הבדיקה חזותית, וטיפול בליקויי חשמל בידי חשמלאי מוסמך בלבד.",
+    datePublished: "2026-07-14",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedDefects: ["chashmal"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

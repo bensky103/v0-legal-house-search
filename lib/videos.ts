@@ -265,6 +265,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-14",
     topic: "mitbach",
   },
+  {
+    id: "dxLyMkXDwi8",
+    title: "בדיקת חשמל ותקשורת בדירה - בדיקה חזותית וטיפול בידי חשמלאי מוסמך",
+    description:
+      "בדק בית - בדיקת חשמל ותקשורת בדירה: בדיקה חזותית של לוח החשמל, הנקודות וארון התקשורת, שקע כפול בארון התקשורת ותשתית להעברת כבלי אינטרנט. טיפול בליקויי חשמל בידי חשמלאי מוסמך בלבד.",
+    uploadDate: "2026-07-14",
+    topic: "chashmal",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

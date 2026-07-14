@@ -241,6 +241,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-13",
     topic: "chipuyim",
   },
+  {
+    id: "rS7Qr33r6jg",
+    title: "בדיקת עבודות אלומיניום בדירה חדשה - חלונות, תריסים ואטימות",
+    description:
+      "בדק בית - בדיקת עבודות האלומיניום בדירה: חלונות, תריסים, אטימות למים ולאוויר, ניקוז המים במלבן וליקויי התקנה נפוצים, לפי ת״י 1068.",
+    uploadDate: "2026-07-14",
+    topic: "aluminium",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

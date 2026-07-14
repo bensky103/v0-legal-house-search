@@ -3,7 +3,10 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { LiteYouTube } from "@/components/lite-youtube"
 import { DEFECTS_ALUMINIUM } from "@/lib/article-images"
+import { videos, videoSchema } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 
 export const metadata: Metadata = {
   title: "ליקויי אלומיניום, חלונות ותריסים בבדק בית (ת\"י 1068) | בדק בית Legal",
@@ -33,6 +36,8 @@ export const metadata: Metadata = {
   robots: "index, follow",
 }
 
+const ALUMINIUM_VIDEO = videos.find((v) => v.id === "rS7Qr33r6jg")
+
 export default function AluminiumZigugArticle() {
   return (
     <ArticleLayout
@@ -50,6 +55,28 @@ export default function AluminiumZigugArticle() {
         הנוחות היומיומית בדירה. ליקויי התקנה, אטימה וניקוז בהן נפוצים מאוד בדירות חדשות, ונבדקים בבדק בית לפי{" "}
         <strong>ת"י 1068</strong>.
       </ArticleLead>
+
+      {ALUMINIUM_VIDEO && (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(ALUMINIUM_VIDEO)) }}
+          />
+          <figure className="my-6">
+            <LiteYouTube id={ALUMINIUM_VIDEO.id} title={ALUMINIUM_VIDEO.title} />
+            <figcaption className="mt-2 text-sm text-gray-500">
+              בדיקת עבודות אלומיניום בדירה חדשה מקבלן — חלונות, תריסים ואטימות. לצפייה בעמוד המלא:{" "}
+              <Link
+                href={`/videos/${videoSlug(ALUMINIUM_VIDEO)}`}
+                className="text-blue-700 hover:underline font-medium"
+              >
+                עמוד הסרטון
+              </Link>
+              .
+            </figcaption>
+          </figure>
+        </>
+      )}
 
       <ArticleH2>הליקויים הנפוצים באלומיניום ובזיגוג</ArticleH2>
       <ul className="list-disc pr-6 space-y-2">

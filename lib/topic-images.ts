@@ -63,6 +63,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-itum-07.jpg"),
   ],
   ritzuf: [
+    GF("bedek-bayit-likui-ritzuf-38.webp"),
     GF("bedek-bayit-likui-ritzuf-36.webp"),
     GF("bedek-bayit-likui-ritzuf-37.webp"),
     GF("bedek-bayit-likui-ritzuf-28.webp"),

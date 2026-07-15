@@ -238,6 +238,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["ritzuf"],
   },
+  {
+    slug: "gibenet-ritzuf-hadbakat-ariachim",
+    title: "תופעת הגיבנת בריצוף — כללי ההנחה וההדבקה הנכונה של אריחים",
+    description:
+      "גיבנת בריצוף נובעת מכשל בהדבקת האריחים לתשתית בשילוב מישקים חסרים. כך נבדקת תקינות ההדבקה — כיסוי דבק 85%, כיסוי מלא בפינות ובמישקים, מריחה כפולה — לפי ת״י 1551 חלק 1.",
+    datePublished: "2026-07-15",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["ritzuf"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

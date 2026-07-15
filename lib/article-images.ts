@@ -309,6 +309,17 @@ export const DEFECTS_RITZUF_MISHAKIM: ArticleImage[] = [
   },
 ]
 
+export const DEFECTS_GIBENET: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-likui-ritzuf-38.webp",
+    standard: "ת״י 1551 חלק 1 – הדבקה",
+    title: "גיבנת בריצוף — התרוממות וסדיקת אריחים",
+    alt: "תופעת גיבנת בריצוף - אריחים שהתרוממו, נסדקו והתפוצצו בקו לאורך הרצפה עקב כשל בהדבקה ובמישקים - ליקוי חמור שאותר בבדק בית",
+    caption:
+      "תופעת ה“גיבנת”: אריחים שהתרוממו, נסדקו והתפוצצו בקו לאורך הרצפה. זהו כשל משולב — הדבקה לקויה לתשתית יחד עם מישקים חסרים — שמחייב פירוק וריצוף מחדש של האזור.",
+  },
+]
+
 export const DEFECTS_MAMAD: ArticleImage[] = [
   {
     src: "/gallery/bedek-bayit-likui-mamad-05.webp",
@@ -505,6 +516,7 @@ export const articleSitemapImages = [
   ...DEFECTS_ALUMINIUM.map((img) => ({ ...img, articleSlug: "aluminium-zigug-bedek-bayit" })),
   ...DEFECTS_RITZUF.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-bedek-bayit" })),
   ...DEFECTS_RITZUF_MISHAKIM.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-mishakim" })),
+  ...DEFECTS_GIBENET.map((img) => ({ ...img, articleSlug: "gibenet-ritzuf-hadbakat-ariachim" })),
   ...DEFECTS_MAMAD.map((img) => ({ ...img, articleSlug: "bdikat-mamad-bedek-bayit" })),
   ...DEFECTS_TIYACH_TZEVA.map((img) => ({ ...img, articleSlug: "likuyey-tiyach-tzeva-bedek-bayit" })),
   ...DEFECTS_CHASHMAL.map((img) => ({ ...img, articleSlug: "likuyey-chashmal-bedek-bayit" })),

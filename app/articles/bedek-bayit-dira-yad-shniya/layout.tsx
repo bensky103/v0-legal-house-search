@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import { ArticleJsonLd } from "@/components/article-jsonld"
 
 export const metadata: Metadata = {
   title: "בדק בית לדירה יד שניה: חיסכון עשרות אלפי שקלים | Legal בדק בית",
@@ -38,17 +37,7 @@ export default function ArticleLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      <ArticleJsonLd
-        headline="בדק בית לדירה יד שניה: חיסכון עשרות אלפי שקלים"
-        description="מדריך מקיף על בדק בית לדירה יד שניה - איך לחסוך הוצאות עתידיות על ליקויים סמויים, לדעת מה בדיוק קונים ולהוריד את מחיר הדירה במשא ומתן."
-        slug="bedek-bayit-dira-yad-shniya"
-        breadcrumbLabel="בדק בית לדירה יד שניה"
-        datePublished="2026-06-28"
-        dateModified="2026-06-28"
-      />
-      {children}
-    </>
-  )
+  // Article + BreadcrumbList JSON-LD is emitted by the page component (page.tsx),
+  // so it is intentionally NOT rendered here — avoids duplicate structured data.
+  return <>{children}</>
 }

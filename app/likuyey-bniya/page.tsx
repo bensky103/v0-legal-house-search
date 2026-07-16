@@ -9,12 +9,47 @@ export const metadata: Metadata = {
   description:
     "מדריך מקצועי לליקויי הבנייה הנפוצים בדירות בישראל - רטיבות, סדקים, איטום, חשמל, ריצוף, אינסטלציה ועוד. למדו לזהות ליקויים ומתי לבצע בדק בית.",
   alternates: { canonical: "https://www.legalbedek.co.il/likuyey-bniya" },
+  openGraph: {
+    title: "ליקויי בנייה נפוצים בדירות - מדריך מקצועי",
+    description:
+      "מדריך מקצועי לליקויי הבנייה הנפוצים בדירות בישראל - רטיבות, סדקים, איטום, חשמל, ריצוף ואינסטלציה.",
+    type: "website",
+    locale: "he_IL",
+    url: "https://www.legalbedek.co.il/likuyey-bniya",
+    siteName: "בדק בית Legal",
+  },
   robots: "index, follow",
 }
 
 export default function DefectsIndexPage() {
+  // נתונים מובנים: פירורי לחם + רשימת סוגי ליקויי הבנייה המכוסים באתר.
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://www.legalbedek.co.il" },
+      { "@type": "ListItem", position: 2, name: "ליקויי בנייה", item: "https://www.legalbedek.co.il/likuyey-bniya" },
+    ],
+  }
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "ליקויי בנייה נפוצים בדירות בישראל",
+    description: "רשימת סוגי ליקויי הבנייה הנפוצים בדירות בישראל שמומחה בדק בית מאתר בבדיקה הנדסית.",
+    numberOfItems: defects.length,
+    itemListElement: defects.map((defect, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: `ליקויי ${defect.name}`,
+      url: `https://www.legalbedek.co.il/likuyey-bniya/${defect.slug}`,
+    })),
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">

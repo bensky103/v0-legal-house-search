@@ -9,14 +9,49 @@ export const metadata: Metadata = {
   description:
     "שירותי בדק בית הנדסי בכל הערים בישראל. איתור ליקויי בנייה, בדיקת דירה חדשה ויד שניה. בחרו את העיר שלכם וקבלו שירות מקצועי ממומחה מוסמך.",
   alternates: { canonical: "https://www.legalbedek.co.il/bedek-bayit" },
+  openGraph: {
+    title: "בדק בית לפי עיר | מומחה בדק בית בכל הארץ",
+    description:
+      "שירותי בדק בית הנדסי בכל הערים בישראל. בחרו את העיר שלכם וקבלו שירות מקצועי ממומחה מוסמך.",
+    type: "website",
+    locale: "he_IL",
+    url: "https://www.legalbedek.co.il/bedek-bayit",
+    siteName: "בדק בית Legal",
+  },
   robots: "index, follow",
 }
 
 export default function CitiesIndexPage() {
   const regions = Array.from(new Set(cities.map((c) => c.region)))
 
+  // נתונים מובנים: פירורי לחם + רשימת הערים שבהן ניתן להזמין בדק בית.
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://www.legalbedek.co.il" },
+      { "@type": "ListItem", position: 2, name: "בדק בית לפי עיר", item: "https://www.legalbedek.co.il/bedek-bayit" },
+    ],
+  }
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "בדק בית לפי עיר בישראל",
+    description: "רשימת הערים בישראל שבהן ניתן להזמין שירותי בדק בית הנדסי מקצועי ואיתור ליקויי בנייה.",
+    numberOfItems: cities.length,
+    itemListElement: cities.map((city, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: `בדק בית ב${city.name}`,
+      url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
+    })),
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">

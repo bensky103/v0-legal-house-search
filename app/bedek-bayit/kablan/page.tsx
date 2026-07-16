@@ -9,12 +9,48 @@ export const metadata: Metadata = {
   description:
     "שירותי בדק בית הנדסי לדירות בפרויקטים של קבלני הבנייה המובילים בישראל. איתור ליקויי בנייה לפני מסירה, בהתבסס על מחקר הטכניון. בחרו את הקבלן שלכם וקבלו שירות מקצועי.",
   alternates: { canonical: "https://www.legalbedek.co.il/bedek-bayit/kablan" },
+  openGraph: {
+    title: "בדק בית לפי קבלן | בדיקת דירה בפרויקטים של קבלני הבנייה המובילים",
+    description:
+      "שירותי בדק בית הנדסי לדירות בפרויקטים של קבלני הבנייה המובילים בישראל. איתור ליקויי בנייה לפני מסירה.",
+    type: "website",
+    locale: "he_IL",
+    url: "https://www.legalbedek.co.il/bedek-bayit/kablan",
+    siteName: "בדק בית Legal",
+  },
   robots: "index, follow",
 }
 
 export default function ContractorsIndexPage() {
+  // נתונים מובנים: פירורי לחם + רשימת הקבלנים שעבורם קיים עמוד בדק בית ייעודי.
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://www.legalbedek.co.il" },
+      { "@type": "ListItem", position: 2, name: "בדק בית לפי עיר", item: "https://www.legalbedek.co.il/bedek-bayit" },
+      { "@type": "ListItem", position: 3, name: "בדק בית לפי קבלן", item: "https://www.legalbedek.co.il/bedek-bayit/kablan" },
+    ],
+  }
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "בדק בית לפי קבלן בנייה בישראל",
+    description: "רשימת קבלני הבנייה המובילים בישראל שעבורם ניתן להזמין בדק בית הנדסי לדירה חדשה לפני מסירה.",
+    numberOfItems: contractors.length,
+    itemListElement: contractors.map((contractor, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: `בדק בית - ${contractor.name}`,
+      url: `https://www.legalbedek.co.il/bedek-bayit/kablan/${contractor.slug}`,
+    })),
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">

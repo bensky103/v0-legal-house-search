@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { DEFECTS_MITBACH_NEGARUT } from "@/lib/article-images"
 import { videos, videoSchema } from "@/lib/videos"
@@ -115,6 +116,26 @@ export default function LikuyeyMitbachNegarutArticle() {
         ו<Link href="/likuyey-bniya/negarut" className="text-blue-700 hover:underline font-medium">נגרות</Link>, או
         חזרו ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מהם ליקויי המטבח והנגרות הנפוצים ביותר?",
+            answer:
+              "הליקויים הנפוצים הם פילוס ותלייה לקויים של ארונות עליונים ותחתונים, מישוריות משטח לקויה, איטום כושל סביב הכיור והברז שגורם לחדירת מים לארון, וגמר נגרות ירוד כמו מגירות וצירים לא מכווננים. אותם עקרונות חלים גם על ארונות אמבטיה ונגרות חדרי הרחצה.",
+          },
+          {
+            question: "איך בודקים מטבח ונגרות בבדק בית?",
+            answer:
+              "בודקים באמצעות פלס את פילוס הארונות ומישוריות המשטח, בוחנים את תפקוד המגירות, הצירים ומנגנוני הפתיחה והסגירה, בודקים את האיטום סביב הכיור, הברז וחיבורי המים מתחת לארון, ומאתרים פגמים בגמר הנגרות ואי-התאמות למפרט.",
+          },
+          {
+            question: "למה איטום כיור לקוי מסוכן לארון המטבח?",
+            answer:
+              "אטימה כושלת סביב הכיור והברז מאפשרת חדירת מים לארון שמתחת. מים אלה גורמים עם הזמן לנפיחות, לעובש ולנזק בלתי הפיך לנגרות. בדק בית מקצועי מאתר ומתעד את כשל האיטום עוד לפני המסירה, כדי לאפשר דרישת תיקון מהקבלן.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

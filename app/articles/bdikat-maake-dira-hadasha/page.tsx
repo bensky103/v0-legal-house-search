@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
+import { ArticleFaq } from "@/components/article-faq"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { videos, videoSchema } from "@/lib/videos"
@@ -127,6 +128,31 @@ export default function BdikatMaakeDiraHadashaArticle() {
         וקראו על <Link href="/articles/protokol-mesira" className="text-blue-700 hover:underline font-medium">פרוטוקול מסירה לדירה חדשה</Link>{" "}
         ועל <Link href="/articles/alut-tikun-likuyey-bniya" className="text-blue-700 hover:underline font-medium">עלות תיקון ליקויי בנייה</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מה בודקים במעקה בדירה חדשה ביום המסירה?",
+            answer:
+              "בכל מעקה נבדקים גובה, מרווחים בין המוטות, חוזק ועיגון, מבנה שאינו מזמין טיפוס וסימני חלודה בברגים ובמסגרת, לפי ת״י 1142. במעקה זכוכית מתווספות דרישות לזכוכית עצמה ולאופן התקנתה לפי ת״י 1099 — זכוכית בטיחות, רפידות גומי ואופן העיגון. בדק בית מקצועי מודד ומתעד כל חריגה ביום המסירה.",
+          },
+          {
+            question: "לפי איזה תקן נבדק מעקה?",
+            answer:
+              "מעקה נבדק לפי ת״י 1142 (מעקים ומסעדים), שמציב דרישות של גובה, מרווחים וחוזק. במעקה זכוכית מתווסף ת״י 1099 (זכוכית במעקות), שמחייב זכוכית בטיחות ורפידות גומי בין הזכוכית למסגרת.",
+          },
+          {
+            question: "מה תפקיד רפידות הגומי במעקה זכוכית?",
+            answer:
+              "בין הזכוכית למסגרת חייבות להיות רפידות גומי. מגע ישיר בין הזכוכית לרכיב קשיח מעביר עומסים אל הזכוכית וגורם לסדקים ולשבר מוקדם. היעדר רפידות הוא ליקוי נפוץ שמאותר בבדק בית.",
+          },
+          {
+            question: "למה חשוב לבדוק מעקה דווקא ביום המסירה?",
+            answer:
+              "ביום המסירה הדירה עדיין באחריות מלאה של הקבלן, וכל ליקוי שמתועד בפרוטוקול המסירה הופך לדרישת תיקון מחייבת. מעקה מסוכן שלא אותר במועד עלול להתגלות מאוחר, לעיתים אחרי אירוע, ולכן תיעוד מדויק של גובה, מרווחים, חוזק ורפידות הוא הבסיס לדרישת תיקון או החלפה.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

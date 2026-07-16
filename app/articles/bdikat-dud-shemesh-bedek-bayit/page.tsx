@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticleFaq } from "@/components/article-faq"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_DUD_SHEMESH } from "@/lib/article-images"
 
@@ -83,6 +84,31 @@ export default function BdikatDudShemeshArticle() {
         ו<Link href="/articles/tikaney-instalatzia-bedek-bayit" className="text-blue-700 hover:underline font-medium">תקני האינסטלציה (ת״י 1205)</Link>,
         או קראו על <Link href="/articles/bdikat-mizug-avir-bedek-bayit" className="text-blue-700 hover:underline font-medium">בדיקת מיזוג אוויר</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "לפי איזה תקן נבדק דוד שמש בבדק בית?",
+            answer:
+              "דוד השמש והמערכת הסולארית נבדקים בבדק בית לפי ת״י 579 — התקן לבדיקת מערכות סולאריות לחימום מים. הבדיקה מוודאת שהדוד, הקולטים, הבידוד והחיבורים מותקנים כראוי ותואמים את דרישות התקן.",
+          },
+          {
+            question: "מה נבדק בדוד שמש בבדק בית?",
+            answer:
+              "נבדקים תקינות התקנת הדוד ומיקומו, התקנת הקולטים הסולאריים על הגג, בידוד הצנרת והדוד, תקינות החיבורים לאיתור נזילות, וכן החיבור התקין למערכת המים החמים של הדירה.",
+          },
+          {
+            question: "למה משתמשים במצלמה תרמית לבדיקת דוד שמש?",
+            answer:
+              "מצלמה תרמית מאפשרת לבחון את התפלגות החום בדוד ובצנרת, ולסייע באיתור בידוד לקוי או חיבורים בעייתיים. בשילוב עם בדיקה חזותית של הדוד, הקולטים והחיבורים, מתקבלת תמונה מלאה של תקינות המערכת הסולארית.",
+          },
+          {
+            question: "מה גורם בידוד לקוי בדוד שמש?",
+            answer:
+              "בידוד לקוי, חיבורים בעייתיים או התקנה שגויה פוגעים ביעילות המערכת הסולארית, גורמים לאובדן חום ועלולים להוביל לנזילות. בדק בית מקצועי מאתר את הליקויים האלה בעזרת בדיקה חזותית ובדיקה תרמית.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
+import { ArticleFaq } from "@/components/article-faq"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { videos, videoSchema } from "@/lib/videos"
@@ -124,6 +125,31 @@ export default function BdikatChipuyeyChutzArticle() {
         וקראו על <Link href="/articles/itum-gagot-bedek-bayit" className="text-blue-700 hover:underline font-medium">איטום גגות ומרפסות</Link>{" "}
         ועל <Link href="/articles/protokol-mesira" className="text-blue-700 hover:underline font-medium">פרוטוקול מסירה לדירה חדשה</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "למה בדיקת חיפוי חוץ היא בדיקת בטיחות ולא רק אסתטיקה?",
+            answer:
+              "בעוד שחיפוי פנים מתנתק הוא בעיקר ליקוי אסתטי, חיפוי חוץ — ובמיוחד חיפוי אבן כבד בחזית גבוהה — שמתנתק או נופל מגובה הוא סכנת חיים לעוברי אורח. לכן חיפוי כזה מחייב לעיתים חיזוק מכני (עיגון) ולא רק הדבקה, והיעדרו הוא ליקוי בטיחות.",
+          },
+          {
+            question: "מה זה נקישה חלולה בבדיקת חיפוי?",
+            answer:
+              "בדיקת נקישה היא הקשה קלה על האריחים. צליל של נקישה חלולה מעיד על חלל מאחורי האריח ועל הדבקה לקויה, שעלולה להוביל להתנתקות האריח. זהו אחד הסימנים המרכזיים שבדק בית מאתר ומתעד בחיפויי חוץ.",
+          },
+          {
+            question: "לפי איזה תקן נבדק חיפוי אבן בחזית?",
+            answer:
+              "את דרישות חיפוי האבן קובע ת״י 2378, ואת חיפוי הקרמיקה בחוץ קובע ת״י 1555. בבדק בית בודקים בין היתר אם קיים חיזוק מכני (עיגון) לחיפוי האבן בחזית, מצב הפוגות והאריחים, וכן רטיבות סמויה מאחורי החיפוי בעזרת מצלמה תרמית ומד לחות.",
+          },
+          {
+            question: "למה כדאי לבדוק חיפוי חוץ ביום המסירה?",
+            answer:
+              "ליקוי בחיפוי חוץ שמתגלה אחרי האכלוס הוא תיקון יקר ומורכב — פירוק וחידוש חיפוי בחזית דורשים פיגומים ועיגון מחדש. כשהליקוי מתועד בפרוטוקול המסירה בעוד האחריות על הקבלן, ניתן לדרוש את התיקון על חשבונו. תיעוד מסודר של נקישה חלולה, סדקים ופוגות פתוחות הוא הבסיס לדרישה.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

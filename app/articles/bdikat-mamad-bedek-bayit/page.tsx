@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
+import { ArticleFaq } from "@/components/article-faq"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MAMAD } from "@/lib/article-images"
@@ -88,6 +89,31 @@ export default function BdikatMamadArticle() {
         או חזרו ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
         לבדיקה לפני קבלת הדירה ראו <Link href="/services/bedek-bayit-lifnei-mesira" className="text-blue-700 hover:underline font-medium">בדק בית לפני מסירה</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מה בודקים בממ״ד בבדק בית?",
+            answer:
+              "בבדק בית נבדקים דלת ההדף (התקנה, צירים, מנגנון סגירה ואיטום היקפי), חלון ההדף, איטום הפתחים ומעברי הצנרת והחשמל, מערכת האוויר והסינון והגימור הפנימי — הכול לפי הנחיות פיקוד העורף. תיעוד מדויק של כל ממצא מאפשר לדרוש תיקון מהקבלן.",
+          },
+          {
+            question: "לפי מה נבדק הממ״ד?",
+            answer:
+              "רכיבי הממ״ד נבדקים לפי הנחיות פיקוד העורף. הממ״ד (חדר מוגן דירתי) נועד להגן על הדיירים בשעת חירום, ולכן חובה שכל רכיביו — דלת וחלון ההדף, האיטום והאוורור — יבוצעו ויותקנו כראוי.",
+          },
+          {
+            question: "למה חשוב לבדוק את דלת וחלון ההדף?",
+            answer:
+              "דלת וחלון ההדף הם פריטים כבדים ומורכבים, והתקנה לא מדויקת שלהם פוגעת באטימות ובתפקוד ההגנתי של החדר. ליקוי שמתגלה בבדק בית לפני המסירה מתועד בדוח ומאפשר לדרוש מהקבלן תיקון על חשבונו במסגרת אחריותו לפי חוק המכר (דירות).",
+          },
+          {
+            question: "מי אחראי לתקן ליקוי בממ״ד בדירה חדשה?",
+            answer:
+              "האחריות היא על הקבלן במסגרת חוק המכר (דירות). ליקוי בדלת, בחלון או באיטום הממ״ד שמתועד בבדק בית לפני המסירה מאפשר לדרוש מהקבלן תיקון על חשבונו.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

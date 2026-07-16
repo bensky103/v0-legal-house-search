@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_ITUM_GAGOT } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -91,6 +92,31 @@ export default function ItumGagotArticle() {
         <Link href="/likuyey-bniya/retivut" className="text-blue-700 hover:underline font-medium">רטיבות</Link>{" "}
         ו<Link href="/likuyey-bniya/gagot" className="text-blue-700 hover:underline font-medium">גגות ומרפסות</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "איך מאתרים רטיבות סמויה שאינה נראית לעין?",
+            answer:
+              "בבדק בית משתמשים במצלמה תרמית לאיתור הפרשי טמפרטורה בקירות ובתקרה, שחושפים רטיבות ונזילות סמויות, וכן במד לחות (פרוטימטר) למדידת אחוז הרטיבות בחומרי הבנייה. הבדיקה משלבת ציוד ייעודי עם בדיקה חזותית של שכבות האיטום והתפרים.",
+          },
+          {
+            question: "היכן כשלי האיטום נפוצים ביותר?",
+            answer:
+              "המוקדים הנפוצים הם גגות ורום גג (תפרים חשופים ושכבת איטום פגומה), מרפסות (שיפוע לקוי ואיטום כושל סביב הניקוז), חיבורי חלונות ודלתות, וקירות חוץ וחיפוי שבהם סדקים מובילים לרטיבות בקירות הפנים.",
+          },
+          {
+            question: "למה כדאי לבדוק איטום מוקדם ולא לחכות?",
+            answer:
+              "מים שחודרים דרך גג, מרפסת או חיבור חיפוי פוגעים בקירות, בתקרה ובריצוף, ולרוב מתגלים רק כשהנזק כבר נרחב ויקר לתיקון. בדק בית במועד מאתר את כשל האיטום לפני שהוא הופך לנזק רטיבות משמעותי.",
+          },
+          {
+            question: "האם הקבלן אחראי לתקן כשל איטום?",
+            answer:
+              "כן. כשל איטום ורטיבות נכללים בתקופות הבדק והאחריות של חוק המכר (דירות). תיעוד הליקוי בדוח בדק בית בתוך התקופה הוא המפתח לחייב את הקבלן לתקן על חשבונו.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_TIYACH_TZEVA } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -90,6 +91,31 @@ export default function LikuyeyTiyachTzevaArticle() {
         ו<Link href="/likuyey-bniya/sdakim" className="text-blue-700 hover:underline font-medium">סדקים</Link>, או
         קראו על <Link href="/articles/taken-789-stiyot-mutarot" className="text-blue-700 hover:underline font-medium">הסטיות המותרות בת״י 789</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מהם ליקויי הטיח והצבע הנפוצים?",
+            answer:
+              "הליקויים הנפוצים הם סטיית מישוריות ואנכיות של קיר גלי או נטוי, סדקי גמר וסדקים מבניים בטיח, גלים ובליטות שנראים באור צדי, ופגמי צבע כמו כיסוי לא אחיד, גוונים שונים ונזילות צבע. אלה שכבות הגמר הנראות ביותר בדירה, ולכן ליקויים בהן בולטים מיד.",
+          },
+          {
+            question: "איך בודקים מישוריות ואנכיות של קיר בבדק בית?",
+            answer:
+              "בבדק בית משתמשים בפלס ובסרגל לבדיקת מישוריות ואנכיות הקירות ולמדידת גודל הסטייה, ובבדיקה באור צדי לחשיפת גלים, בליטות ואי-אחידות בגמר. כל סטייה מכומתת ומושווית לסטיות המותרות בתקן, כדי לקבוע מה מהווה ליקוי.",
+          },
+          {
+            question: "לפי איזה תקן נמדדות סטיות הטיח והצבע?",
+            answer:
+              "סטיות הטיח והגמר נמדדות ומושוות לסטיות המותרות בת״י 789, התקן הקובע את רמת הדיוק הנדרשת בעבודות הגמר. תיעוד וכימות מדויק של כל סטייה מול התקן הם הבסיס לדרישת תיקון מהקבלן.",
+          },
+          {
+            question: "מה ההבדל בין סדק גמר לסדק מבני?",
+            answer:
+              "לא כל סדק זהה: יש להבחין בין סדקי גמר שטחיים לבין סדקים מבניים בטיח, ולתעד את רוחבם. בבדק בית מאתרים את הסדקים, מודדים את רוחבם ומבחינים ביניהם, מפני שסדק מבני מצביע על בעיה חמורה יותר מסדק גמר.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

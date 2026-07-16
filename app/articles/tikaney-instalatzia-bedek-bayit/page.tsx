@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_INSTALATZIA_FIELD } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -175,6 +176,31 @@ export default function TikaneyInstalatziaArticle() {
         על <Link href="/likuyey-bniya/retivut" className="text-blue-700 hover:underline font-medium">ליקויי רטיבות</Link>,
         או ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מה כולל תקן האינסטלציה ת״י 1205?",
+            answer:
+              "ת״י 1205 מגדיר את הדרישות למערכות האינסטלציה בדירה ומחולק לחלקים ייעודיים: הספקת מים חמים וקרים, מערכות נקזים, כלים סניטריים, ומערכות הביוב והתיעול. לכל תת-מערכת יש תקן ייעודי המגדיר את הליקויים האופייניים לה.",
+          },
+          {
+            question: "כמה שנים אחראי הקבלן לליקויי צנרת?",
+            answer:
+              "לפי התוספת לחוק המכר (דירות), כשל במערכות הצנרת של מים, הסקה, מרזבים, דלוחין וביוב, לרבות נזילות, נמצא באחריות הקבלן למשך 4 שנים ממועד מסירת הדירה. תיעוד הליקוי בדוח בדק בית בתוך התקופה הזו הוא המפתח לחייב את הקבלן בתיקון על חשבונו.",
+          },
+          {
+            question: "מה גורם לריח ביוב חוזר בדירה?",
+            answer:
+              "ריח ביוב חוזר או סתימות מעידים על שיפוע צנרת לקוי, חיבור פגום או היעדר אוורור למערכת, והם ליקוי במערכת הביוב לפי ת״י 1205.4. בבדק בית נעזרים במצלמת אנדוסקופ לבדיקת צנרת הביוב הנסתרת ולאיתור מקור הבעיה.",
+          },
+          {
+            question: "איך מאתרים נזילה נסתרת בבדק בית?",
+            answer:
+              "נזילה בצנרת מתגלה לרוב רק כשהרטיבות כבר חדרה לקירות ולריצוף, ולכן היא מהליקויים היקרים ביותר. בבדק בית מאתרים נזילות ורטיבות נסתרת בעזרת מד לחות (פרוטימטר) ומצלמה תרמית, לצד בדיקת לחץ וספיקה ובדיקת שיפועי ניקוז באזורים הרטובים.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 
 export const metadata: Metadata = {
   title: "גובה תקרה וגודל חדר מינימלי — מתי הנמכת תקרה הופכת חדר לחדרון | בדק בית Legal",
@@ -158,6 +159,31 @@ export default function HanmakhatTikraGodelChederArticle() {
         ועל <Link href="/articles/bdikat-mizug-avir-bedek-bayit" className="text-blue-700 hover:underline font-medium">בדיקת מיזוג אוויר בבדק בית</Link>{" "}
         (שבשבילו נעשית לרוב ההנמכה). לסיכום, עברו ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מה גובה התקרה המינימלי בחדר מגורים?",
+            answer:
+              "תקנות התכנון והבנייה קובעות גובה מינימלי של 2.50 מטרים לחדר מגורים, הנמדד נטו בין פני הריצוף לתחתית התקרה. במקביל נדרש שטח מינימלי של 8 מ״ר ורוחב מינימלי של 2.60 מטרים. שלוש הדרישות הן חובה ואין לגביהן סטייה מותרת.",
+          },
+          {
+            question: "מתי הנמכת תקרה הופכת חדר לחדרון?",
+            answer:
+              "הנמכת תקרה מותרת רק בשטח העודף על 8 מ״ר. כשההנמכה נוגסת פנימה לתוך ה־8 מ״ר ומשאירה שטח קטן מכך בגובה תקני של 2.50 מ׳, החדר מפסיק לענות על הגדרת חדר מגורים והופך לחדרון. כך למשל חדר של 9.24 מ״ר עם הנמכה גדולה מדי נותר עם כ־7.26 מ״ר בלבד בגובה תקני.",
+          },
+          {
+            question: "האם הנמכת תקרה לא תקנית פוגעת בערך הדירה?",
+            answer:
+              "כן. חדר שהשטח שלו בגובה תקני קטן מ־8 מ״ר אינו נספר כחדר מגורים מלא, כך שדירת 4 חדרים עלולה להיחשב בפועל לדירת 3.5 חדרים — ירידת ערך משמעותית שנפסקה פעמים רבות בבתי המשפט. כשלא ניתן להחזיר לחדר את גובהו התקני, הסעד הוא פיצוי בגין ירידת ערך שנקבע בידי שמאי מקרקעין.",
+          },
+          {
+            question: "איך בדק בית מגלה הנמכת תקרה לא תקנית?",
+            answer:
+              "בדק בית מקצועי מודד את שטח החדר ואת הגובה בכל אזור, בודק אם ההנמכה מסומנת בתוכניות המכר, ומתעד את אי-ההתאמה לתקנות ולמפרט. תיעוד זה הוא הבסיס לדרישת תיקון מהקבלן או לפנייה לשמאי לקביעת ירידת הערך.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

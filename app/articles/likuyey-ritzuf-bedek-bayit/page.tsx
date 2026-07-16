@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_RITZUF } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -90,6 +91,31 @@ export default function LikuyeyRitzufArticle() {
         קראו על <Link href="/articles/taken-789-stiyot-mutarot" className="text-blue-700 hover:underline font-medium">הסטיות המותרות בת״י 789</Link>,
         או חזרו ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מהו התקן הישראלי לביצוע ריצוף?",
+            answer:
+              "תקן ת״י 1555 מגדיר את הדרישות לביצוע ריצוף וחיפוי קרמי — מישוריות, פילוס, שיפוע ורוחב פוגות. סטייה מהתקן היא ליקוי שנבדק ומתועד בבדק בית.",
+          },
+          {
+            question: "מהם ליקויי הריצוף הנפוצים ביותר?",
+            answer:
+              "הליקויים הנפוצים הם 'שן' והפרשי מפלס בין אריחים סמוכים שמורגשים בהליכה, שקיעות ובליטות מקומיות, שיפוע לקוי באזורים רטובים ובמרפסות שגורם למים עומדים, סדקים ושברים באריחים או במישקים, ופוגות לא אחידות הפוגעות במראה ובאיטום.",
+          },
+          {
+            question: "איך בודקים ריצוף בבדק בית?",
+            answer:
+              "משתמשים בפלס ארוך ובפלס דיגיטלי לבדיקת מישוריות, פילוס ושיפוע, בסרגל למדידת הפרשי מפלס בין אריחים סמוכים לאיתור 'שן', בבדיקת ריקות (חלל) מתחת לאריחים המעידה על הדבקה לקויה, ובבדיקת ניקוז ושיפוע באזורים רטובים לכיוון נקודת הניקוז.",
+          },
+          {
+            question: "למה חלל מתחת לאריח מסוכן?",
+            answer:
+              "ריקות או חלל מתחת לאריח מעידים על הדבקה לקויה של תשתית הריצוף. אריח כזה חשוף לסכנת שבירה בעת דריכה או הנחת משקל, ולכן הוא נבדק ומתועד בבדק בית כליקוי הדורש הדבקה מחדש.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
+import { ArticleFaq } from "@/components/article-faq"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MIZUG } from "@/lib/article-images"
@@ -84,6 +85,26 @@ export default function BdikatMizugAvirArticle() {
         או קראו על <Link href="/articles/bdikat-dud-shemesh-bedek-bayit" className="text-blue-700 hover:underline font-medium">בדיקת דוד שמש</Link> —
         מערכת נוספת שנבדקת בבדק בית בעזרת מצלמה תרמית.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "איך בודקים מערכת מיזוג אוויר בבדק בית?",
+            answer:
+              "מערכת המיזוג, ובמיוחד מערכות מיני-מרכזיות, מוסתרת ברובה בתקרות ובתעלות, ולכן בבדק בית נעזרים במצלמה תרמית. המצלמה מציגה את פערי הטמפרטורה על פני התקרה והקירות ומאפשרת לבחון את פיזור האוויר הקר, לאתר דליפות ולבדוק את בידוד התעלות.",
+          },
+          {
+            question: "מה בודקים במערכת המיזוג?",
+            answer:
+              "בודקים את פיזור האוויר (פיזור אחיד מהמפזרים ללא אזורים מתים), דליפות אוויר מהתעלות או מחיבורים לא אטומים, בידוד התעלות, ומיקום והתקנה של המזגן והמפזרים. בידוד לקוי עלול לגרום לעיבוי, לאובדן קור ולעיתים לרטיבות בתקרה.",
+          },
+          {
+            question: "למה מצלמה תרמית מתאימה לבדיקת מיזוג?",
+            answer:
+              "מצלמה תרמית מציגה את פערי הטמפרטורה על פני התקרה והקירות, ולכן היא כלי יעיל לבדיקת מערכת מיזוג — היא מראה את פיזור האוויר הקר בפועל, חושפת דליפות ומצביעה על בידוד לקוי, גם כשהמערכת עצמה מוסתרת מהעין.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

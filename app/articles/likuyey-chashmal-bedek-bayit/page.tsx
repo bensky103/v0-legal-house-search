@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
+import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_CHASHMAL } from "@/lib/article-images"
 
 export const metadata: Metadata = {
@@ -88,6 +89,26 @@ export default function LikuyeyChashmalArticle() {
         עברו למדריך על <Link href="/likuyey-bniya/chashmal" className="text-blue-700 hover:underline font-medium">ליקויי חשמל</Link>,
         או חזרו ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "מה נבדק במערכת החשמל בבדק בית?",
+            answer:
+              "נבדקים לוח החשמל (סימון, סידור ותקינות מפסקים), הנקודות, השקעים והמפסקים מול המפרט הטכני, הגנות הבטיחות כנדרש בחוק החשמל, וכן תשתית התקשורת הכוללת את ארון התקשורת ונקודות הרשת. הבדיקה כוללת גם מצלמה תרמית לאיתור התחממות יתר.",
+          },
+          {
+            question: "למה בדיקה תרמית חשובה בבדיקת חשמל?",
+            answer:
+              "חיבור חשמלי רופף או עמוס מתחמם עוד לפני שהוא גורם לתקלה גלויה. מצלמה תרמית חושפת נקודות חמות חריגות בלוח החשמל ובחיבורים, ומאפשרת לטפל בליקוי לפני שהוא הופך לתקלה או לסכנת בטיחות. הבדיקה משלימה את הבדיקה החזותית ואת בדיקת החשמלאי המוסמך.",
+          },
+          {
+            question: "האם ליקוי חשמל מהווה סכנת בטיחות?",
+            answer:
+              "כן. חיבור רופף, עומס יתר או התקנה לקויה עלולים לגרום להתחממות, לתקלות ואף לסכנת בטיחות. מדובר במערכת שבטיחותה קריטית, ולכן חשוב לאתר ולתעד ליקויים אלה בבדק בית מקצועי.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

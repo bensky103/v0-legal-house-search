@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
+import { ArticleFaq } from "@/components/article-faq"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { DEFECTS_ALUMINIUM } from "@/lib/article-images"
@@ -119,6 +120,31 @@ export default function AluminiumZigugArticle() {
         ו<Link href="/likuyey-bniya/trisim" className="text-blue-700 hover:underline font-medium">תריסים</Link>, או
         חזרו ל<Link href="/likuyey-bniya" className="text-blue-700 hover:underline font-medium">מדריך ליקויי הבנייה המלא</Link>.
       </p>
+
+      <ArticleFaq
+        items={[
+          {
+            question: "לפי איזה תקן נבדקים חלונות ותריסים מאלומיניום?",
+            answer:
+              "חלונות, דלתות הזזה ותריסים מאלומיניום נבדקים בבדק בית לפי ת״י 1068. בדיקה זו מקיפה את האטימה למים ולאוויר, את הניקוז ואת תפעול הכנפיים, כדי לוודא שהמערכת עומדת בדרישות התקן לפני מסירת הדירה מקבלן.",
+          },
+          {
+            question: "מה נבדק במערכות אלומיניום בבדק בית?",
+            answer:
+              "נבדקת האטימה למים ולאוויר בהיקף הפתח, פתחי הניקוז במלבן, כוח ההפעלה של חלונות ותריסים, וכן הזיגוג, הפרופילים וחיבורי הפינה. לשם כך נעשה שימוש בכלים כמו מד ספיקת אוויר ומד כוח (דינמומטר) לאיתור סטיות התקנה.",
+          },
+          {
+            question: "למה חשוב שפתחי הניקוז בחלון יהיו פתוחים?",
+            answer:
+              "פתחי הניקוז במלבן החלון מנקזים החוצה מים שחודרים אל הפתח. כשהם חסומים או פגומים, מים מצטברים במלבן וחודרים פנימה כרטיבות. בבדק בית בודקים את תקינות פתחי הניקוז כדי למנוע הצטברות מים וחדירת לחות.",
+          },
+          {
+            question: "האם חלון או תריס שכבד לתפעול נחשב ליקוי?",
+            answer:
+              "כן. חלון או דלת הזזה שכבדים לתפעול, כוח הפעלה חריג או תריס שנתקע הם ליקויי תפעול. בבדק בית מודדים את כוח ההפעלה בעזרת מד כוח, ותיעוד מדויק של הליקוי מאפשר לדרוש כיוונון או תיקון מהקבלן.",
+          },
+        ]}
+      />
     </ArticleLayout>
   )
 }

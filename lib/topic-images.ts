@@ -17,6 +17,8 @@ const GF = (file: string) => `/gallery/${file}`
 // Curated, topic-relevant photo sets (by defect slug from lib/defects.ts).
 const DEFECT_IMAGES: Record<string, string[]> = {
   retivut: [
+    GF("bedek-bayit-likui-retivut-14.webp"),
+    GF("bedek-bayit-likui-retivut-15.webp"),
     GF("bedek-bayit-likui-retivut-01.jpg"),
     GF("bedek-bayit-likui-retivut-02.jpg"),
     GF("bedek-bayit-likui-retivut-03.jpg"),

@@ -247,6 +247,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["ritzuf"],
   },
+  {
+    slug: "retivut-eliya-kapilarit",
+    title: "רטיבות מעלייה קפילרית — מלחים והתקלפות טיח בהיקף הבית",
+    description:
+      "רטיבות מעלייה קפילרית: לחות שמצטברת במצע הרצפה ועולה מעל האחוזים המותרים (6% בחול, 3% בסומסום) מתבטאת בהתקלפות טיח, התנפחות ומלחים בהיקף הבית. כך מאתרים את המקור בבדק בית — מצלמה תרמית, מד לחות ומצלמה אנדוסקופית.",
+    datePublished: "2026-07-16",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "bdikat-dira-yad-shniya"],
+    relatedDefects: ["retivut", "itum"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

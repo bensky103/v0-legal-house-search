@@ -309,6 +309,50 @@ export const DEFECTS_RITZUF_MISHAKIM: ArticleImage[] = [
   },
 ]
 
+export const DEFECTS_RETIVUT_KAPILARIT: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-likui-retivut-14.webp",
+    standard: "עלייה קפילרית",
+    title: "התקלפות טיח ומלחים בהיקף הבית",
+    alt: "רטיבות מעלייה קפילרית - התקלפות והתנפחות טיח ומלחים לבנים בבסיס הקיר ובפנל בהיקף הבית, ליקוי שאותר בבדק בית",
+    caption:
+      "התקלפות והתנפחות טיח עם מלחים לבנים בבסיס הקיר, בגובה הפנל. זהו סימן אופייני לרטיבות קפילרית — לחות שעולה מהמצע דרך נקבוביות הקיר בהיקף הבית.",
+  },
+  {
+    src: "/gallery/bedek-bayit-likui-retivut-15.webp",
+    standard: "עלייה קפילרית",
+    title: "נידוף מלחים והתנפחות טיח",
+    alt: "התנפחות והתקלפות טיח עם נידוף מלחים לבנים בבסיס הקיר עקב עלייה קפילרית של לחות מהמצע - תיעוד מבדק בית",
+    caption:
+      "התנפחות הטיח ונידוף מלחים לבנים בבסיס הקיר. הלחות העולה מהמצע סוחפת עמה מלחים מומסים, שמתגבשים על פני הקיר בזמן ההתאדות.",
+  },
+]
+
+// Detection devices — reused from the equipment gallery to give the article authority.
+export const DEVICES_RETIVUT: ArticleImage[] = [
+  {
+    src: "/gallery/matzlema-termit-itur-retivut.webp",
+    title: "מצלמה תרמית",
+    alt: "מצלמה תרמית לאיתור רטיבות נסתרת, גשרי קור וכשלי בידוד בקירות ובתקרות - ציוד בדק בית מתקדם",
+    caption:
+      "מצלמה תרמית: מזהה הפרשי טמפרטורה על פני הקיר ומסייעת לאתר אזורי רטיבות נסתרת ואת כיוון התפשטותה, גם כשהמקור רחוק מהסימן הגלוי.",
+  },
+  {
+    src: "/gallery/mad-lachut-protimeter-bedek-bayit.webp",
+    title: "מד לחות (פרוטימטר)",
+    alt: "מד לחות Protimeter לא פולשני לאיתור רטיבות נסתרת בקירות, רצפות ותקרות בבדק בית",
+    caption:
+      "מד לחות (פרוטימטר): מכשיר לא פולשני המודד את רמת הלחות בקיר וברצפה בנקודות שונות, ומאפשר להשוות ולעקוב אחרי מסלול עליית הרטיבות.",
+  },
+  {
+    src: "/gallery/matzlemat-tzanrat-endoskop-bedek-bayit.webp",
+    title: "מצלמה אנדוסקופית",
+    alt: "מצלמת צנרת אנדוסקופית על כבל ארוך לבדיקת צנרת נסתרת וחללים לאיתור מקור נזילה בבדק בית",
+    caption:
+      "מצלמה אנדוסקופית: מוחדרת לצנרת ולחללים נסתרים ומאפשרת לאתר את מקור הנזילה בפועל — לעיתים במרחק רב מהסימן הנראה על הקיר.",
+  },
+]
+
 export const DEFECTS_GIBENET: ArticleImage[] = [
   {
     src: "/gallery/bedek-bayit-likui-ritzuf-38.webp",
@@ -517,6 +561,7 @@ export const articleSitemapImages = [
   ...DEFECTS_RITZUF.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-bedek-bayit" })),
   ...DEFECTS_RITZUF_MISHAKIM.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-mishakim" })),
   ...DEFECTS_GIBENET.map((img) => ({ ...img, articleSlug: "gibenet-ritzuf-hadbakat-ariachim" })),
+  ...DEFECTS_RETIVUT_KAPILARIT.map((img) => ({ ...img, articleSlug: "retivut-eliya-kapilarit" })),
   ...DEFECTS_MAMAD.map((img) => ({ ...img, articleSlug: "bdikat-mamad-bedek-bayit" })),
   ...DEFECTS_TIYACH_TZEVA.map((img) => ({ ...img, articleSlug: "likuyey-tiyach-tzeva-bedek-bayit" })),
   ...DEFECTS_CHASHMAL.map((img) => ({ ...img, articleSlug: "likuyey-chashmal-bedek-bayit" })),

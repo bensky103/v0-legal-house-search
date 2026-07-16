@@ -175,8 +175,15 @@ const HOMEPAGE_FAQ = [
   },
 ]
 
+// Total ratings on the Google Business Profile (verified 5.0★ across 42 reviews).
+// Update these two values whenever the Google profile changes — they drive the
+// AggregateRating count so the schema reflects the real Google asset, not just the
+// sample testimonials shown on the page.
+const GOOGLE_RATING_VALUE = "5.0"
+const GOOGLE_RATING_COUNT = 42
+
 // Real on-page testimonials, emitted as Review + AggregateRating schema (all 5★).
-// These are the same reviews displayed in the testimonials section below.
+// These are a sample of the reviews displayed in the testimonials section below.
 const HOMEPAGE_REVIEWS = [
   { author: "בינימין", body: "קיבלתי חוות דעת עם ליקויים רבים, להפתעתי חברת אלקטרה תיקנו את הכל ללא כל ויכוח בהתאם לדוח." },
   { author: "יוסף אבוטבול", body: "הזמנו בדק בית לבניין מטעם ועד הבית. מרוצים מאוד מהתוצאה, התגלו ליקויים שאם לא היינו מטפלים בהם היה נגרם נזק עצום בעתיד." },
@@ -322,9 +329,9 @@ export default function HomePage() {
                 areaServed: { "@type": "Country", name: "ישראל" },
                 aggregateRating: {
                   "@type": "AggregateRating",
-                  ratingValue: "5.0",
+                  ratingValue: GOOGLE_RATING_VALUE,
                   bestRating: "5",
-                  reviewCount: String(HOMEPAGE_REVIEWS.length),
+                  ratingCount: String(GOOGLE_RATING_COUNT),
                 },
                 review: HOMEPAGE_REVIEWS.map((r) => ({
                   "@type": "Review",
@@ -1090,10 +1097,10 @@ export default function HomePage() {
           />
 
           {/* Google Reviews Badge */}
-          <div className="flex justify-center mb-8 md:mb-12">
-            <a 
-              href="https://share.google/UEfYIc6AgM0BAcvgS" 
-              target="_blank" 
+          <div className="flex flex-col items-center gap-3 mb-8 md:mb-12">
+            <a
+              href="https://share.google/UEfYIc6AgM0BAcvgS"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-6 py-4 shadow-md hover:shadow-lg transition-shadow"
               aria-label="צפה בביקורות שלנו בגוגל מפס"
@@ -1116,10 +1123,21 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">{t("testimonials.googleBadge")}</p>
+                  <p className="text-sm text-gray-600">{GOOGLE_RATING_COUNT} {t("testimonials.googleBadge")}</p>
                 </div>
               </div>
               <span className="text-blue-600 font-medium text-sm hover:underline">{t("testimonials.viewAll")}</span>
+            </a>
+            <a
+              href="https://g.page/r/CemODJrGUt89EBE/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-blue-700 transition-colors"
+            >
+              <svg className="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              {t("testimonials.leaveReview")}
             </a>
           </div>
           

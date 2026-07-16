@@ -82,6 +82,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "testimonials.subtitle": "ביקורות אמיתיות מלקוחות מרוצים",
     "testimonials.googleBadge": "ביקורות Google",
     "testimonials.viewAll": "צפה בכל הביקורות",
+    "testimonials.leaveReview": "השאירו ביקורת בגוגל",
     "testimonials.whatsappTitle": "המלצות מאומתות מוואטסאפ",
     
     // Footer
@@ -167,6 +168,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "testimonials.subtitle": "Real reviews from satisfied clients",
     "testimonials.googleBadge": "Google Reviews",
     "testimonials.viewAll": "View all reviews",
+    "testimonials.leaveReview": "Leave a Google review",
     "testimonials.whatsappTitle": "Verified WhatsApp Recommendations",
     
     // Footer
@@ -252,6 +254,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "testimonials.subtitle": "Реальные отзывы довольных клиентов",
     "testimonials.googleBadge": "Отзывы Google",
     "testimonials.viewAll": "Смотреть все отзыв��",
+    "testimonials.leaveReview": "Оставить отзыв в Google",
     "testimonials.whatsappTitle": "Проверенные рекомендации WhatsApp",
     
     // Footer
@@ -337,6 +340,7 @@ export const translations: Record<Language, Record<string, string>> = {
     "testimonials.subtitle": "Avis réels de clients satisfaits",
     "testimonials.googleBadge": "Avis Google",
     "testimonials.viewAll": "Voir tous les avis",
+    "testimonials.leaveReview": "Laisser un avis Google",
     "testimonials.whatsappTitle": "Recommandations WhatsApp vérifiées",
     
     // Footer

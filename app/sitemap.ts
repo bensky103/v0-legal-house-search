@@ -150,6 +150,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: "https://www.legalbedek.co.il/mediniyut-pratiyut",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
       url: "https://www.legalbedek.co.il/gallery",
       lastModified: LAST_UPDATED,
       changeFrequency: "weekly",

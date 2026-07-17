@@ -1688,6 +1688,11 @@ export default function HomePage() {
 
           <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-300">
             <p className="text-sm text-gray-200">© 2020 בדק בית Legal - {t("footer.rights")}.</p>
+            <p className="mt-2 text-xs text-gray-400">
+              <a href="/mediniyut-pratiyut" className="hover:text-gray-200 hover:underline">
+                מדיניות פרטיות
+              </a>
+            </p>
           </div>
         </div>
       </footer>

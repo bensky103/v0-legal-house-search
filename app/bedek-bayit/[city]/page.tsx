@@ -124,15 +124,28 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
   // Contextual internal links (P2): the city's real new-construction projects, related
   // construction defects, core services and nearby cities — 10+ links per page.
-  const nearbyCityLinks = cities
-    .filter((c) => c.slug !== city.slug && c.region === city.region)
-    .slice(0, 5)
-    .map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
+  //
+  // Distribute the sibling-city links evenly instead of always taking slice(0, n): a fixed
+  // slice always linked the first cities in the data array and orphaned the ones at the end
+  // (e.g. רמלה, the last of אזור המרכז), which received internal links only from the hub page.
+  // Weak internal linking is a common cause of "discovered/crawled - currently not indexed".
+  // Rotating the selection window by the city's index spreads inbound links across every city
+  // deterministically (required for SSG), so tail cities are linked from several sibling pages.
+  const cityIndex = cities.findIndex((c) => c.slug === city.slug)
+  const rotate = <T,>(pool: T[], count: number): T[] =>
+    pool.length <= count
+      ? pool
+      : Array.from({ length: count }, (_, i) => pool[(cityIndex + i) % pool.length])
 
-  const otherCityLinks = cities
-    .filter((c) => c.slug !== city.slug && c.region !== city.region)
-    .slice(0, 3)
-    .map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
+  const nearbyCityLinks = rotate(
+    cities.filter((c) => c.slug !== city.slug && c.region === city.region),
+    5,
+  ).map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
+
+  const otherCityLinks = rotate(
+    cities.filter((c) => c.slug !== city.slug && c.region !== city.region),
+    3,
+  ).map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
 
   const defectLinks = defects
     .slice(0, 4)

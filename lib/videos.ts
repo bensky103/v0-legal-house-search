@@ -281,6 +281,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-19",
     topic: "klim-sanitariim",
   },
+  {
+    id: "AEh0CCdkHWc",
+    title: "בדק בית - בדיקת מסגרות ממ״ד: דלת, חלון הדף, מיזוג אוויר ובטיחות",
+    description:
+      "בדק בית - בדיקת ממ״ד ומסגרות הממ״ד: דלת ההדף וחלון ההדף, פתחי האוורור ומיזוג האוויר, אטימות האטמים וליקויי בטיחות לפי דרישות פיקוד העורף.",
+    uploadDate: "2026-07-19",
+    topic: "mamad",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

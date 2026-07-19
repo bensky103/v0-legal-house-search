@@ -289,6 +289,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-19",
     topic: "mamad",
   },
+  {
+    id: "Xqnrgm-qXS8",
+    title: "בדק בית - בדיקת שיפועי ריצוף במרפסת שמש ומניעת מים עומדים",
+    description:
+      "בדק בית - בדיקת ריצוף מרפסת השמש: מדידת שיפועי הריצוף לכיוון הניקוז, איתור מים עומדים וליקויי ניקוז, ובדיקת אחוז השיפוע הנדרש לפי התקן.",
+    uploadDate: "2026-07-19",
+    topic: "mirpasot",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

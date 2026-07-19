@@ -273,6 +273,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-14",
     topic: "chashmal",
   },
+  {
+    id: "7PBgkeG0ML0",
+    title: "בדק בית - בדיקת כלים סניטריים וחדרי רחצה (חדרים רטובים)",
+    description:
+      "בדק בית - בדיקת כלים סניטריים בחדרי הרחצה והחדרים הרטובים: התקנת אסלות, כיורים וברזים, איטום ומרווחי שימוש, ניקוז ושיפועים ובטיחות חשמל מוגן מים.",
+    uploadDate: "2026-07-19",
+    topic: "klim-sanitariim",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

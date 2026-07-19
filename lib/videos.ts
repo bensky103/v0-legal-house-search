@@ -297,6 +297,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-19",
     topic: "mirpasot",
   },
+  {
+    id: "zitCbwPXHxQ",
+    title: "בדק בית - בדיקת עבודות טיח: הידבקות, התקלפות ונפיחות",
+    description:
+      "בדק בית - בדיקת עבודות הטיח בקירות הדירה: בדיקת הידבקות הטיח בהקשה, איתור התקלפות, נפיחות ('בועות') וטיח מתפורר, והבחנה בין ליקוי גמר לבעיית רטיבות.",
+    uploadDate: "2026-07-19",
+    topic: "tiyach",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

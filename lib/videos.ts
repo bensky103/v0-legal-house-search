@@ -305,6 +305,14 @@ export const videos: SiteVideo[] = [
     uploadDate: "2026-07-19",
     topic: "tiyach",
   },
+  {
+    id: "EcSoHibvvAY",
+    title: "בדק בית - בדיקת מסתור כביסה ומרפסת שירות: בטיחות, ניקוז וצנרת",
+    description:
+      "בדק בית - בדיקת מסתור הכביסה ומרפסת השירות הצמודה: בדיקות בטיחות, דוד המים, מיזוג האוויר, הניקוזים, הברזים וצנרת מכונת הכביסה, אוורור ובטיחות חשמל בסביבה לחה.",
+    uploadDate: "2026-07-19",
+    topic: "mistor-kvisa",
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

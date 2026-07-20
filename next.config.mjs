@@ -16,11 +16,20 @@ const nextConfig = {
   async redirects() {
     // Project-type pages moved from /projects/[type] to /services/[type].
     const projectTypeSlugs = ["shechunot-hadashot", "mehir-lamishtaken", "pinui-binui", "tama-38"]
-    return projectTypeSlugs.map((slug) => ({
-      source: `/projects/${slug}`,
-      destination: `/services/${slug}`,
-      permanent: true,
-    }))
+    return [
+      ...projectTypeSlugs.map((slug) => ({
+        source: `/projects/${slug}`,
+        destination: `/services/${slug}`,
+        permanent: true,
+      })),
+      // Video that previously fell back to an auto-generated ugly slug (topic-id),
+      // now has a dedicated SEO slug + intro. Redirect the old URL so no 404 lingers.
+      {
+        source: "/videos/aluminium-ND1KckpOO7g",
+        destination: "/videos/ma-livdok-aluminium-chalonot-dira-hadasha",
+        permanent: true,
+      },
+    ]
   },
   async headers() {
     // Security headers (PageSpeed "Best Practices" / Trust & Safety): HSTS, anti-clickjacking,

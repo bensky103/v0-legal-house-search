@@ -339,6 +339,7 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "חלומות בן שמן", area: "נופי בן שמן" },
     { name: "PATIO בן שמן", area: "נופי בן שמן" },
     { name: "אפי נופי בן שמן", area: "נופי בן שמן, יזם אפי" },
+    { name: "נופי בן שמן", area: "נופי בן שמן, יזם שיכון ובינוי" },
   ],
   "beer-yaakov": [
     { name: "FIORI", area: "מרכז העיר" },

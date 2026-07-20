@@ -256,6 +256,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "bdikat-dira-yad-shniya"],
     relatedDefects: ["retivut", "itum"],
   },
+  {
+    slug: "bedek-bayit-nofei-ben-shemen",
+    title: "בדק בית בפרויקט נופי בן שמן בלוד (שיכון ובינוי) — מדריך לרוכשים",
+    description:
+      "רכשתם דירה בפרויקט נופי בן שמן בלוד של שיכון ובינוי? מדריך לבדק בית ובדיקת מסירה בפרויקט — מה בודקים, מתי, ואיך מחייבים את הקבלן לתקן ליקויים לפי חוק המכר.",
+    datePublished: "2026-07-20",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "bedek-bayit-lifnei-kniya", "itur-likuyey-bniya"],
+    relatedDefects: ["itum", "ritzuf", "i-hatama-lemifrat"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

@@ -181,6 +181,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://www.legalbedek.co.il/articles/bedek-bayit-nofei-ben-shemen",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://www.legalbedek.co.il/articles/bedek-bayit-dira-yad-shniya",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",

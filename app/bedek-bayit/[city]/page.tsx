@@ -155,8 +155,17 @@ export default function CityPage({ params }: { params: { city: string } }) {
     .slice(0, 3)
     .map((s) => ({ label: s.name, href: `/services/${s.slug}` }))
 
+  // Project-specific article referrals: internal links from the city page to a
+  // dedicated project guide, so the article gains inbound equity for long-tail
+  // "<project> בדק בית" searches.
+  const cityArticleLinks: { label: string; href: string }[] =
+    city.slug === "lod"
+      ? [{ label: "בדק בית בפרויקט נופי בן שמן (שיכון ובינוי)", href: "/articles/bedek-bayit-nofei-ben-shemen" }]
+      : []
+
   const relatedLinks = [
     ...(projectIndex ? [{ label: `פרויקטים חדשים ב${city.nameSimple}`, href: `/projects/${city.slug}` }] : []),
+    ...cityArticleLinks,
     ...serviceLinks,
     ...defectLinks,
     ...nearbyCityLinks,

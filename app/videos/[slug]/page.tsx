@@ -4,7 +4,6 @@ import { notFound } from "next/navigation"
 import { videos, videoThumb, videoSchema } from "@/lib/videos"
 import { videoArticles, getVideoBySlug, allVideoSlugs, videoSlug } from "@/lib/video-pages"
 import { getDefect } from "@/lib/defects"
-import { defectStandards } from "@/lib/defect-standards"
 import { cities } from "@/lib/seo-locations"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { SiteIndex } from "@/components/site-index"
@@ -52,7 +51,6 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
 
   const article = videoArticles[video.id]
   const defect = video.topic !== "general" ? getDefect(video.topic) : undefined
-  const standards = defect ? defectStandards[defect.slug] ?? [] : []
 
   // Deterministic internal city links (spread videos across cities).
   const idx = videos.findIndex((v) => v.id === video.id)
@@ -112,42 +110,24 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
         <LiteYouTube id={video.id} title={video.title} eager />
 
         {defect && (
-          <section className="mt-10">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-              מה בודקים בבדיקת {defect.name}?
+          // The full defect breakdown (symptoms, causes, Israeli standards) lives on the
+          // dedicated /likuyey-bniya/[defect] guide. The video page links to it instead of
+          // reproducing it, so the two — and same-topic video pages — are not near-duplicates
+          // (the cause of "duplicate without user-selected canonical" in Search Console).
+          <section className="mt-10 rounded-xl bg-blue-50 ring-1 ring-blue-100 p-5 md:p-6">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+              להעמקה בליקויי {defect.name}
             </h2>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">{defect.summary}</p>
-
-            {defect.symptoms?.length > 0 && (
-              <div className="mb-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">סימנים שמעידים על הליקוי</h3>
-                <ul className="list-disc pr-5 space-y-1 text-gray-700">
-                  {defect.symptoms.map((s, i) => <li key={i}>{s}</li>)}
-                </ul>
-              </div>
-            )}
-
-            {defect.causes?.length > 0 && (
-              <div className="mb-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">הגורמים הנפוצים</h3>
-                <ul className="list-disc pr-5 space-y-1 text-gray-700">
-                  {defect.causes.map((c, i) => <li key={i}>{c}</li>)}
-                </ul>
-              </div>
-            )}
-
-            {standards.length > 0 && (
-              <div className="mb-2">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  תקנים ישראליים רלוונטיים
-                </h3>
-                <ul className="list-disc pr-5 space-y-1 text-gray-700">
-                  {standards.map((st, i) => (
-                    <li key={i}>{st.code} – {st.subject}: {st.note}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
+            <p className="text-base text-gray-700 leading-relaxed mb-4">
+              בסרטון מוצג חלק מהבדיקה בשטח. את הפירוט המלא — הסימנים המעידים על הליקוי, הגורמים הנפוצים והתקנים הישראליים הרלוונטיים — ריכזנו במדריך הייעודי.
+            </p>
+            <Link
+              href={`/likuyey-bniya/${defect.slug}`}
+              className="inline-flex items-center gap-1 font-semibold text-blue-700 hover:underline"
+            >
+              למדריך המלא: איתור וטיפול בליקויי {defect.name}
+              <span aria-hidden="true">←</span>
+            </Link>
           </section>
         )}
 

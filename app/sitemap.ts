@@ -13,6 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // "discovered/crawled - currently not indexed".
   const LAST_UPDATED = new Date("2026-07-18")
 
+  // Video pages carry their own, later date: they were last crawled 2026-06-29 —
+  // before the de-duplication fix (2026-07-21) and before the depth content in
+  // lib/video-content.ts (2026-08-11). With the shared LAST_UPDATED they were
+  // still advertised as unchanged since 2026-07-18, so nothing prompted Google to
+  // re-crawl and re-evaluate them.
+  const VIDEOS_UPDATED = new Date("2026-08-11")
+
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
     lastModified: LAST_UPDATED,
@@ -59,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const videoPages: MetadataRoute.Sitemap = videos.map((v) => ({
     url: `https://www.legalbedek.co.il/videos/${videoSlug(v)}`,
-    lastModified: LAST_UPDATED,
+    lastModified: VIDEOS_UPDATED,
     changeFrequency: "monthly",
     priority: 0.7,
   }))

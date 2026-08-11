@@ -3,6 +3,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { videos, videoThumb, videoSchema } from "@/lib/videos"
 import { videoArticles, getVideoBySlug, allVideoSlugs, videoSlug } from "@/lib/video-pages"
+import { getVideoExtra } from "@/lib/video-content"
 import { getDefect } from "@/lib/defects"
 import { cities } from "@/lib/seo-locations"
 import { LiteYouTube } from "@/components/lite-youtube"
@@ -50,6 +51,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
   if (!video) notFound()
 
   const article = videoArticles[video.id]
+  const extra = getVideoExtra(video.id)
   const defect = video.topic !== "general" ? getDefect(video.topic) : undefined
 
   // Deterministic internal city links (spread videos across cities).
@@ -75,6 +77,21 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
     ],
   }
 
+  // FAQ schema only when this video has its own authored Q&A — the questions are
+  // video-specific and do not repeat the defect guide's FAQ.
+  const faqSchema =
+    extra && extra.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: extra.faq.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        }
+      : null
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
       <script
@@ -85,6 +102,12 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* Breadcrumb */}
       <nav aria-label="ניווט" className="container mx-auto px-4 pt-6 text-sm text-gray-600">
@@ -108,6 +131,36 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
         )}
 
         <LiteYouTube id={video.id} title={video.title} eager />
+
+        {extra && extra.checks.length > 0 && (
+          <section className="mt-10">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              מה נבדק בבדיקה שבסרטון
+            </h2>
+            <ul className="space-y-3">
+              {extra.checks.map((check) => (
+                <li key={check} className="flex gap-3 text-base text-gray-700 leading-relaxed">
+                  <span aria-hidden="true" className="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600" />
+                  <span>{check}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        {extra && extra.faq.length > 0 && (
+          <section className="mt-10">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">שאלות נפוצות</h2>
+            <div className="space-y-5">
+              {extra.faq.map((item) => (
+                <div key={item.question} className="rounded-xl bg-white ring-1 ring-slate-200 p-5">
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">{item.question}</h3>
+                  <p className="text-base text-gray-700 leading-relaxed">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {defect && (
           // The full defect breakdown (symptoms, causes, Israeli standards) lives on the

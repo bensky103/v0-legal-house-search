@@ -2895,6 +2895,16 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "ליקויי אלומיניום", "זיגוג", "חלונות", "תריסים"],
   },
   {
+    src: "/gallery/bedek-bayit-likui-aluminium-22.webp",
+    width: 1600,
+    height: 1600,
+    category: "field",
+    title: "בדיקת חלון אלומיניום במטבח - בדק בית",
+    alt: "מהנדס בדק בית בודק מלבן חלון אלומיניום ואיטום היקפי מעל שיש המטבח בדירה חדשה מקבלן",
+    caption: "בדיקת מלבן חלון האלומיניום והאיטום ההיקפי במטבח",
+    keywords: ["בדק בית", "ליקויי אלומיניום", "חלון מטבח", "איטום היקפי", "מלבן אלומיניום"],
+  },
+  {
     src: "/gallery/bedek-bayit-dud-shemesh-01.webp",
     width: 640,
     height: 480,

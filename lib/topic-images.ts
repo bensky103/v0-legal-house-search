@@ -172,6 +172,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-aluminium-19.webp"),
     GF("bedek-bayit-likui-aluminium-20.webp"),
     GF("bedek-bayit-likui-aluminium-21.webp"),
+    GF("bedek-bayit-likui-aluminium-22.webp"),
     GF("bedek-bayit-likui-aluminium-17.jpg"),
     GF("bedek-bayit-likui-aluminium-13.jpg"),
     GF("bedek-bayit-likui-aluminium-14.jpg"),

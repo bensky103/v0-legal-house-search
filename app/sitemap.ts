@@ -218,6 +218,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://www.legalbedek.co.il/articles/tzilum-kavim-bdikat-tzanrat",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://www.legalbedek.co.il/articles/taken-789-stiyot-mutarot",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
@@ -243,6 +249,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://www.legalbedek.co.il/articles/aluminium-zigug-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/bdikat-zchuchit-zigug-bedek-bayit",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.8,

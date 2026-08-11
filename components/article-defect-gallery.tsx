@@ -26,11 +26,14 @@ export type DefectItem = {
  */
 export function ArticleDefectGallery({
   eyebrow = "תיעוד מהשטח",
+  badge = "ליקוי",
   heading,
   intro,
   items,
 }: {
   eyebrow?: string
+  /** Corner label on each photo. Use "בדיקה" for galleries that show the inspection itself. */
+  badge?: string
   heading: string
   intro?: string
   items: DefectItem[]
@@ -70,7 +73,7 @@ export function ArticleDefectGallery({
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute top-2 end-2 rounded-full bg-blue-600 px-2.5 py-1 text-xs font-bold text-white shadow">
-                  ליקוי
+                  {badge}
                 </span>
               </div>
               <figcaption className="p-4">

@@ -557,6 +557,64 @@ export const DEFECTS_INSTALATZIA_FIELD: ArticleImage[] = [
   },
 ]
 
+// Glass & glazing inspection — the measuring stage rather than the defect itself,
+// so the article renders it with an "תיעוד מהשטח" eyebrow.
+export const BDIKAT_ZCHUCHIT: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-bdikat-zchuchit-01.webp",
+    standard: "ת״י 1099 – זיגוג מבנים",
+    title: "מדידת עובי הזגוגית ומרווח האוויר",
+    alt: "מומחה בדק בית מצמיד מד עובי זכוכית ומרווח אוויר לחלון זכוכית כפולה בדירה - מדידת הזגוגית ללא פירוק החלון",
+    caption:
+      "המד מוצמד לזגוגית מבחוץ ומודד את עובי הזכוכית ואת מרווח האוויר בין הלוחות — בלי לפרק את החלון ובלי לפגוע בו.",
+  },
+  {
+    src: "/gallery/bedek-bayit-bdikat-zchuchit-02.webp",
+    standard: "ת״י 1099 – זיגוג מבנים",
+    title: "קריאת העובי והמרווח מהסרגל",
+    alt: "סרגל מד עובי זכוכית ומרווח אוויר צמוד לזגוגית עם השתקפויות הלייזר - קריאת עובי הזכוכית ומרווח האוויר במילימטרים",
+    caption:
+      "המרחק בין השתקפויות הלייזר על הסרגל מתורגם לעובי הזכוכית ולמרווח האוויר במילימטרים. כך משווים את מה שהותקן בפועל אל מול מפרט המכר.",
+  },
+  {
+    src: "/gallery/bedek-bayit-bdikat-zchuchit-03.webp",
+    standard: "ת״י 1099 – זיגוג מבנים",
+    title: "בדיקת זכוכית בטיחות בגלאי",
+    alt: "גלאי זכוכית מחוסמת ורבודה צמוד לזגוגית בדירה כשנורות החיווי דולקות - בדיקה האם הותקנה זכוכית בטיחות תקנית",
+    caption:
+      "הגלאי מזהה אם הזגוגית מחוסמת, רבודה (למינציה) או זכוכית רגילה. במקומות שבהם התקן מחייב זכוכית בטיחות, זכוכית רגילה היא ליקוי בטיחות.",
+  },
+  {
+    src: "/gallery/bedek-bayit-bdikat-zchuchit-04.webp",
+    standard: "ת״י 1068 – חלונות",
+    title: "בדיקת הזיגוג ומעטפת הזכוכית",
+    alt: "מומחה בדק בית בודק מעטפת זכוכית וחלונות במרפסת מקורה - בחינת הזיגוג, ההתקנה והאטימה בהיקף הפתח",
+    caption:
+      "בדיקת מעטפת הזכוכית במרפסת: אופן ההתקנה, האטימה בהיקף הפתח ופגמים בזגוגית עצמה — שריטות, שברים או אדים בין הלוחות.",
+  },
+]
+
+// Pipe-camera (צילום קווים) survey — the inspection method itself, documented in
+// the field, so the article renders it as "תיעוד מהשטח" rather than as a defect.
+export const BDIKAT_TZILUM_KAVIM: ArticleImage[] = [
+  {
+    src: "/gallery/bedikat-tzilum-kavim-tzanrat-01.webp",
+    standard: "ת״י 1205.2 – מערכות נקזים",
+    title: "החדרת מצלמת הצנרת דרך מחסום הרצפה",
+    alt: "מומחה בדק בית מחדיר סליל מצלמת צנרת דרך מחסום רצפה במרפסת דירה חדשה - צילום קווים לבדיקת ניקוז וסתימות",
+    caption:
+      "סליל המצלמה מוחדר לקו הניקוז דרך מחסום הרצפה במרפסת. הבדיקה נעשית בלי פירוק ובלי שבירת ריצוף — הצנרת נבחנת כפי שהיא הותקנה בפועל.",
+  },
+  {
+    src: "/gallery/bedikat-tzilum-kavim-tzanrat-02.webp",
+    standard: "ת״י 1205.4 – ביוב ותיעול",
+    title: "צילום קו דלוחין בחדר רחצה",
+    alt: "מומחה בדק בית מבצע צילום קווים בצנרת דלוחין בחדר רחצה בעזרת מצלמת אנדוסקופ עם צג - בדיקת סתימות וחיבורים פגומים",
+    caption:
+      "צילום קו הדלוחין בחדר הרחצה. הצג מציג את פנים הצינור בזמן אמת ומאפשר לזהות שאריות בנייה, חיבור פגום או שיפוע לקוי לפני שהם הופכים לסתימה.",
+  },
+]
+
 const SITE_URL = "https://www.legalbedek.co.il"
 
 /** Map every article gallery image to the article URL it appears on (for the image sitemap). */
@@ -577,6 +635,8 @@ export const articleSitemapImages = [
   ...DEFECTS_MIZUG.map((img) => ({ ...img, articleSlug: "bdikat-mizug-avir-bedek-bayit" })),
   ...DEFECTS_DUD_SHEMESH.map((img) => ({ ...img, articleSlug: "bdikat-dud-shemesh-bedek-bayit" })),
   ...DEFECTS_INSTALATZIA_FIELD.map((img) => ({ ...img, articleSlug: "tikaney-instalatzia-bedek-bayit" })),
+  ...BDIKAT_ZCHUCHIT.map((img) => ({ ...img, articleSlug: "bdikat-zchuchit-zigug-bedek-bayit" })),
+  ...BDIKAT_TZILUM_KAVIM.map((img) => ({ ...img, articleSlug: "tzilum-kavim-bdikat-tzanrat" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

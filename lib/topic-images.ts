@@ -96,6 +96,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-ritzuf-09.jpg"),
   ],
   instalatzia: [
+    G("bedikat-tzilum-kavim-tzanrat-01"),
+    G("bedikat-tzilum-kavim-tzanrat-02"),
     GF("bedek-bayit-likui-instalatzia-22.webp"),
     GF("bedek-bayit-likui-instalatzia-23.webp"),
     GF("bedek-bayit-likui-instalatzia-24.webp"),
@@ -168,6 +170,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedikat-tikrat-mirpeset-mad-temperatura"),
   ],
   aluminium: [
+    GF("bedek-bayit-bdikat-zchuchit-01.webp"),
+    GF("bedek-bayit-bdikat-zchuchit-04.webp"),
     GF("bedek-bayit-likui-aluminium-18.webp"),
     GF("bedek-bayit-likui-aluminium-19.webp"),
     GF("bedek-bayit-likui-aluminium-20.webp"),
@@ -190,6 +194,10 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-aluminium-09.jpg"),
   ],
   chalonot: [
+    GF("bedek-bayit-bdikat-zchuchit-01.webp"),
+    GF("bedek-bayit-bdikat-zchuchit-02.webp"),
+    GF("bedek-bayit-bdikat-zchuchit-03.webp"),
+    GF("bedek-bayit-bdikat-zchuchit-04.webp"),
     G("mad-oviy-zchuchit-merlin-bedek-bayit"),
     G("glai-zchuchit-mechusemet-merlin-bedek-bayit"),
     G("mad-koach-digitali-bedikat-chozek"),
@@ -235,6 +243,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-maakot-betichut-04.jpg"),
     GF("bedek-bayit-maakot-betichut-05.jpg"),
     GF("bedek-bayit-maakot-betichut-06.jpg"),
+    GF("bedek-bayit-bdikat-zchuchit-03.webp"),
   ],
   chipuyim: [
     GF("bedek-bayit-likui-chipuyim-19.jpg"),
@@ -286,6 +295,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
   ],
   nikuz: [
+    G("bedikat-tzilum-kavim-tzanrat-01"),
+    G("bedikat-tzilum-kavim-tzanrat-02"),
     GF("bedek-bayit-likui-nikuz-01.jpg"),
     GF("bedek-bayit-likui-nikuz-02.jpg"),
     G("bedikat-nikuz-matzlemat-endoskop"),
@@ -467,6 +478,7 @@ const SERVICE_IMAGES: Record<string, string[]> = {
     G("bedikat-mishoriyut-ritzuf-peles-aroch"),
     G("matzlema-termit-itur-retivut"),
     G("bedikat-tzanrat-instalatzia"),
+    G("bedikat-tzilum-kavim-tzanrat-01"),
     G("bedikat-chozek-maake-mirpeset"),
   ],
   "bdikat-dira-yad-shniya": [
@@ -496,6 +508,7 @@ const SERVICE_IMAGES: Record<string, string[]> = {
     G("matzlema-termit-itur-retivut"),
     G("mad-lachut-protimeter-bedek-bayit"),
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
+    G("bedikat-tzilum-kavim-tzanrat-01"),
     G("maflest-laser-anchiyut-bedek-bayit"),
   ],
   "haarachat-aluyot-tikun": [

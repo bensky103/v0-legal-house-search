@@ -68,6 +68,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya"],
   },
   {
+    slug: "tzilum-kavim-bdikat-tzanrat",
+    title: "צילום קווים בבדק בית: בדיקת צנרת נסתרת במצלמה",
+    description:
+      "מה מגלה צילום קווים בצנרת הניקוז והדלוחין, מתי כדאי לבצע אותו, ואיך הממצא המצולם הופך לדרישת תיקון מהקבלן.",
+    datePublished: "2026-08-11",
+    relatedDefects: ["instalatzia", "nikuz"],
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+  },
+  {
     slug: "giliti-likui-bedira-mi-achrai",
     title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים",
     description:
@@ -264,6 +273,15 @@ export const articles: ArticleMeta[] = [
     datePublished: "2026-07-20",
     relatedServices: ["bedek-bayit-lifnei-mesira", "bedek-bayit-lifnei-kniya", "itur-likuyey-bniya"],
     relatedDefects: ["itum", "ritzuf", "i-hatama-lemifrat"],
+  },
+  {
+    slug: "bdikat-zchuchit-zigug-bedek-bayit",
+    title: "בדיקת זכוכית וזיגוג בבדק בית — עובי, מרווח אוויר וזכוכית בטיחות",
+    description:
+      "מה שהותקן בפועל לא תמיד תואם למפרט המכר. כך בודקים בבדק בית את עובי הזגוגית, את מרווח האוויר ואת סוג זכוכית הבטיחות — במדידה בשטח, בלי לפרק את החלון.",
+    datePublished: "2026-08-11",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["chalonot", "aluminium", "maakot"],
   },
 ]
 

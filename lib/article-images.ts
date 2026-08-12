@@ -615,6 +615,19 @@ export const BDIKAT_TZILUM_KAVIM: ArticleImage[] = [
   },
 ]
 
+// Height difference ("שן") between adjacent floor tiles — the measurement itself,
+// documented in the field.
+export const DEFECTS_HEFRESHEY_GOVAH: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-likui-ritzuf-39.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף קרמי",
+    title: "מדידת הפרש הגובה בין אריחים סמוכים",
+    alt: "פלס מונח על המישק בין שני אריחי ריצוף וסרגל מדידה מוחדר אל המרווח שנוצר מתחתיו - מדידת הפרש גובה (שן) בין אריחים סמוכים בבדק בית",
+    caption:
+      "הפלס מונח על המישק בין שני אריחים סמוכים, והסרגל מוחדר אל הרווח שנפער תחתיו. כך נמדד הפרש הגובה במילימטרים ומושווה לסטייה המותרת — ולא נשאר בגדר תחושה בכף הרגל.",
+  },
+]
+
 const SITE_URL = "https://www.legalbedek.co.il"
 
 /** Map every article gallery image to the article URL it appears on (for the image sitemap). */
@@ -627,6 +640,7 @@ export const articleSitemapImages = [
   ...DEFECTS_RITZUF.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-bedek-bayit" })),
   ...DEFECTS_RITZUF_MISHAKIM.map((img) => ({ ...img, articleSlug: "likuyey-ritzuf-mishakim" })),
   ...DEFECTS_GIBENET.map((img) => ({ ...img, articleSlug: "gibenet-ritzuf-hadbakat-ariachim" })),
+  ...DEFECTS_HEFRESHEY_GOVAH.map((img) => ({ ...img, articleSlug: "hefreshey-govah-bein-ariachim" })),
   ...DEFECTS_RETIVUT_KAPILARIT.map((img) => ({ ...img, articleSlug: "retivut-eliya-kapilarit" })),
   ...DEFECTS_MAMAD.map((img) => ({ ...img, articleSlug: "bdikat-mamad-bedek-bayit" })),
   ...DEFECTS_TIYACH_TZEVA.map((img) => ({ ...img, articleSlug: "likuyey-tiyach-tzeva-bedek-bayit" })),

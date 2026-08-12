@@ -283,6 +283,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["chalonot", "aluminium", "maakot"],
   },
+  {
+    slug: "hefreshey-govah-bein-ariachim",
+    title: "הפרשי גובה בין אריחי ריצוף — כמה מותר, ולמה אי אפשר לשטוף את הרצפה",
+    description:
+      "הפרש גובה בין אריחים סמוכים (״שן״) מותר עד 1 מ״מ בדירה חדשה ועד 1.5 מ״מ בדירה ישנה. מעבר לכך המגב נתקע, הלכלוך נאגר בקו המישק והמראה אינו אחיד. כך מודדים את הליקוי בבדק בית.",
+    datePublished: "2026-08-12",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["ritzuf"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

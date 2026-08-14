@@ -292,6 +292,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["ritzuf"],
   },
+  {
+    slug: "mah-kolel-doch-bedek-bayit",
+    title: "איך נראה דוח בדק בית ומה כלול בו — מקרה בוחן של 60 ממצאים",
+    description:
+      "מבנה הממצא בדוח בדק בית — מיקום ותיאור, סימוכין לתקן, המלצה לתיקון ואומדן עלות — לצד הציוד שמאחורי הממצאים ופילוח עלויות מלא, לפי דוח אמיתי בן 195 עמודים.",
+    datePublished: "2026-08-14",
+    relatedServices: ["chavat-daat-beit-mishpat", "itur-likuyey-bniya", "bdikat-dira-yad-shniya"],
+    relatedDefects: ["itum", "maakot", "ritzuf"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

@@ -628,6 +628,144 @@ export const DEFECTS_HEFRESHEY_GOVAH: ArticleImage[] = [
   },
 ]
 
+// ---- Case study: what a bedek-bayit report contains (second-hand penthouse, Eilat).
+// Three sets: the non-destructive toolkit, then the findings themselves, grouped the
+// way the report groups them.
+export const DOCH_TZIYUD_AL_HERES: ArticleImage[] = [
+  {
+    src: "/gallery/bedikat-tzilum-kavim-tzanrat-01.webp",
+    standard: "ת״י 1205 – מערכות נקזים",
+    title: "מצלמת צנרת - צילום קווי ביוב וניקוז",
+    alt: "מומחה בדק בית מחדיר סליל מצלמת צנרת דרך מחסום רצפה במרפסת - צילום קווי ביוב וניקוז לאיתור סתימות ושאריות בנייה",
+    caption:
+      "סליל המצלמה מוחדר לקו הניקוז דרך מחסום הרצפה. פנים הצינור נראה בזמן אמת, בלי פירוק ובלי שבירת ריצוף.",
+  },
+  {
+    src: "/gallery/bedek-bayit-endoskop-magof-nikuz.webp",
+    standard: "ת״י 1205 – מערכות נקזים",
+    title: "אנדוסקופ - בדיקת מגוף ניקוז מתחת לריצוף",
+    alt: "מומחה בדק בית מחדיר מצלמת אנדוסקופ אל מגוף ניקוז שמתחת לריצוף בחדר רחצה - בדיקת תקינות הניקוז בלי פירוק אריחים",
+    caption:
+      "האנדוסקופ מגיע אל מגוף הניקוז שמתחת לריצוף. רכיב שאי אפשר לראות בעין נבדק בלי לפרק אריח אחד.",
+  },
+  {
+    src: "/gallery/bedek-bayit-mad-lachut-mipuy-retivut.webp",
+    title: "מד לחות - מיפוי רטיבות בקירות ובתקרות",
+    alt: "מד לחות דיגיטלי צמוד לקיר ליד מלבן דלת ומציג קריאה חריגה - מיפוי רטיבות בקירות ובתקרות בבדק בית",
+    caption:
+      "מד הלחות מוצמד לקיר ומודד את אחוזי הלחות. כתם מפוקפק הופך לקריאה מספרית שאפשר להשוות בין נקודות.",
+  },
+  {
+    src: "/gallery/bedek-bayit-matzlema-termit-luach-chashmal.webp",
+    standard: "ת״י 1525 חלק 2 – לוחות חשמל",
+    title: "מצלמה תרמית - חימום יתר בלוח החשמל",
+    alt: "תמונה ממצלמה תרמית של לוח חשמל בדירה המראה מהדקים בטמפרטורה של 38.8 מעלות - חשד לחיבורים לא מהודקים",
+    caption:
+      "מהדקי הלוח נמדדו ב-38.8 מעלות. חימום יתר מעיד על חיבור לא מהודק — ליקוי בטיחות שאינו נראה לעין.",
+  },
+  {
+    src: "/gallery/bedek-bayit-peles-laser-anachiyut-kir.webp",
+    standard: "ת״י 789 – סטיות מותרות",
+    title: "פלס לייזר וזווית - אנכיות ומישוריות",
+    alt: "מומחה בדק בית בודק אנכיות ומישוריות של קיר בעזרת פלס לייזר וזווית - מדידת סטיות בנייה מול הסטייה המותרת בתקן",
+    caption:
+      "קו הלייזר מסמן את המישור האנכי והזווית נבחנת מולו. הסטייה נמדדת במילימטרים ומושווית לסטייה המותרת.",
+  },
+  {
+    src: "/gallery/bedek-bayit-mad-oviy-zchuchit-chalon.webp",
+    standard: "ת״י 1099 – זיגוג מבנים",
+    title: "מד עובי זכוכית - התאמת הבידוד למפרט",
+    alt: "מד עובי זכוכית מרלין צמוד לזגוגית חלון ומציג את עובי הזכוכית ואת מרווח האוויר - בדיקת התאמת הזיגוג למפרט המכר",
+    caption:
+      "המכשיר מודד עובי זגוגית ומרווח אוויר בלי לפרק את החלון. כך נבדק אם מה שהותקן תואם למה שהובטח במפרט.",
+  },
+]
+
+export const DOCH_MIMTZAIM_ITUM_MAAKIM: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-likui-itum-briha-sdika.webp",
+    standard: "ת״י 1536 – חומרי איטום",
+    title: "סדיקה והתנתקות של שכבת האיטום",
+    alt: "שכבת איטום סדוקה ומנותקת מהתשתית מתחת לבריכת שחייה על הגג, עם סדקים מבניים בבטון שמתחתיה - כשל איטום שאותר בבדק בית",
+    caption:
+      "האיטום מתחת לבריכת הגג נסדק והתנתק מהתשתית, ומתחתיו נחשפו סדקים מבניים. החומר שהותקן מדורג ״לא מומלץ להשמה״ בתנאי שרייה במים.",
+  },
+  {
+    src: "/gallery/bedek-bayit-nezila-chadar-sherut-briha.webp",
+    standard: "ת״י 1752 – איטום גגות",
+    title: "נזילה פעילה בחדר השירות מתחת לבריכה",
+    alt: "נזילה פעילה וכתמי רטיבות לאורך צנרת בחדר שירות שמתחת לבריכת הגג - חדירת מים אל שלד הבניין שתועדה בבדק בית",
+    caption:
+      "נזילה פעילה בחדר השירות שמתחת לבריכה. זו אינה בעיה אסתטית — אלה מים שנכנסים לשלד הבניין.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-maake-zchuchit-madregot.webp",
+    standard: "ת״י 1142 – מעקים ומסעדים",
+    title: "מדידת מעקה הזכוכית בגרם המדרגות",
+    alt: "סרט מדידה מוצמד למעקה זכוכית בגרם מדרגות בדירה - מדידת גובה המעקה מנקודת הדריכה העליונה מול דרישות ת״י 1142",
+    caption:
+      "גובה המעקה נמדד מנקודת הדריכה העליונה. זו נקודת הייחוס שהתקן קובע, ולא הרצפה שמתחת לגרם.",
+  },
+  {
+    src: "/gallery/bedek-bayit-maake-mirpeset-briha-govah.webp",
+    standard: "ת״י 1142 – מעקים ומסעדים",
+    title: "מעקה מרפסת הבריכה - גובה נמוך מהתקן",
+    alt: "מדידת גובה מעקה זכוכית במרפסת בריכה על הגג - מעקה שנמצא נמוך מדרישות התקן, ליקוי בטיחות עם סיכון נפילה מגובה",
+    caption:
+      "המעקה נמצא נמוך מדרישות התקן — ליקוי בטיחות עם סיכון נפילה מגובה. התיקון יקר משום שהוא מחייב החלפת זכוכית ועיגון מחדש.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-shipua-mirpeset-peles.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף",
+    title: "פלס דיגיטלי - שיפוע נמוך מ-1% לכיוון הנקז",
+    alt: "פלס דיגיטלי מונח על ריצוף מרפסת ומציג שיפוע של 0.79 אחוז לכיוון הנקז - שיפוע נמוך מהנדרש שגורם למים לעמוד במקום להתנקז",
+    caption:
+      "הפלס מציג שיפוע נמוך מ-1% לכיוון הנקז. מים בעת שטיפה או גשם עומדים במקום להתנקז.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-shipua-mirpeset-shemesh.webp",
+    standard: "ת״י 1555 חלק 3 – ריצוף",
+    title: "מדידה לאורך מרפסת השמש הגדולה",
+    alt: "מומחית בדק בית מודדת שיפועי ניקוז בעזרת פלס ארוך לאורך מרפסת שמש גדולה בדירה - בדיקת ניקוז ממשטח מרוצף החשוף לגשם",
+    caption:
+      "המדידה נעשית בכמה מקטעים לאורך המרפסת ולא בנקודה אחת. בשלוש מרפסות נמדד שיפוע קטן מהנדרש.",
+  },
+]
+
+export const DOCH_MIMTZAIM_MAARACHOT: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-tzinor-shirshuri-nikuz-kiyor.webp",
+    standard: "ת״י 1205 – דלוחין ושופכין",
+    title: "צינור שרשורי גמיש בניקוז כיור",
+    alt: "צינור שרשורי גמיש מסוג ג׳קוזי המשמש לניקוז כיור בתוך ארון מטבח - צינור שאינו ברשימת הצינורות המותרים לדלוחין",
+    caption:
+      "ניקוז כיור שבוצע בצינור שרשורי גמיש, שאינו ברשימת הצינורות המותרים. שישה מוקדים כאלה נמצאו בדירה — כולם מוסתרים מאחורי ארון או שיש.",
+  },
+  {
+    src: "/gallery/bedek-bayit-hitnafchut-tiyach-retivut-misdaron.webp",
+    title: "התנפחות והתקלפות בקיר עקב רטיבות",
+    alt: "טיח מתנפח ומתקלף בתחתית קיר במסדרון דירה עקב רטיבות שמקורה בניקוז מזגן - ליקוי רטיבות שאותר ותועד בבדק בית",
+    caption:
+      "כתמי רטיבות ועובש במסדרון שמקורם בניקוז המזגן. רטיבות היא הליקוי היחיד שמחמיר מעצמו בין מועד הבדיקה למועד התיקון.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-omek-shelach-madrega.webp",
+    standard: "תקנות התכנון והבנייה",
+    title: "עומק שלח נמדד קטן מהנדרש",
+    alt: "סרגל זווית מונח על מדרגה בדירה ומודד את עומק השלח שנמצא קטן מ-26 סנטימטר - סטייה מיחס רום שלח התקני",
+    caption:
+      "עומק שלח המדרגה נמדד קטן מ-26 ס״מ, בסטייה מיחס רום-שלח התקני. תיקון כזה מחייב עבודת הריסה ובנייה.",
+  },
+  {
+    src: "/gallery/bedek-bayit-petach-or-delet-knisa.webp",
+    standard: "תקנות התכנון והבנייה",
+    title: "פתח האור בדלת הכניסה קטן מהנדרש",
+    alt: "דלת כניסה פתוחה בדירה שבה נמדד פתח אור קטן מהמידה התקנית של 80 סנטימטר רוחב ו-198 סנטימטר גובה - ליקוי מילוט",
+    caption:
+      "פתח האור בדלת הכניסה קטן מהמידה התקנית של 80 ס״מ רוחב ו-198 ס״מ גובה — ליקוי שמשפיע על מילוט מהדירה בעת סכנה.",
+  },
+]
+
 const SITE_URL = "https://www.legalbedek.co.il"
 
 /** Map every article gallery image to the article URL it appears on (for the image sitemap). */
@@ -651,6 +789,9 @@ export const articleSitemapImages = [
   ...DEFECTS_INSTALATZIA_FIELD.map((img) => ({ ...img, articleSlug: "tikaney-instalatzia-bedek-bayit" })),
   ...BDIKAT_ZCHUCHIT.map((img) => ({ ...img, articleSlug: "bdikat-zchuchit-zigug-bedek-bayit" })),
   ...BDIKAT_TZILUM_KAVIM.map((img) => ({ ...img, articleSlug: "tzilum-kavim-bdikat-tzanrat" })),
+  ...DOCH_TZIYUD_AL_HERES.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
+  ...DOCH_MIMTZAIM_ITUM_MAAKIM.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
+  ...DOCH_MIMTZAIM_MAARACHOT.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

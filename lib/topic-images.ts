@@ -17,6 +17,8 @@ const GF = (file: string) => `/gallery/${file}`
 // Curated, topic-relevant photo sets (by defect slug from lib/defects.ts).
 const DEFECT_IMAGES: Record<string, string[]> = {
   retivut: [
+    G("bedek-bayit-tzinor-gag-lelo-mikel-saba"),
+    G("bedek-bayit-tzinor-gag-lelo-sharvul-itum"),
     G("bedek-bayit-hitnafchut-tiyach-retivut-misdaron"),
     G("bedek-bayit-mad-lachut-mipuy-retivut"),
     G("bedek-bayit-nezila-chadar-sherut-briha"),
@@ -46,6 +48,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("likui-retivut-hitporerut-tiyach"),
   ],
   itum: [
+    G("bedek-bayit-tzinor-gag-lelo-sharvul-itum"),
+    G("bedek-bayit-chadirat-tzanrat-kir-lelo-sharvul"),
     G("bedek-bayit-likui-itum-briha-sdika"),
     G("bedek-bayit-nezila-chadar-sherut-briha"),
     GF("bedek-bayit-likui-itum-17.webp"),
@@ -241,6 +245,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("mad-zavit-digitali-bedek-bayit"),
   ],
   gagot: [
+    G("bedek-bayit-tzinor-gag-lelo-mikel-saba"),
+    G("bedek-bayit-tzinor-gag-lelo-sharvul-itum"),
     G("bedek-bayit-likui-itum-briha-sdika"),
     G("bedek-bayit-nezila-chadar-sherut-briha"),
     GF("bedek-bayit-likui-itum-17.webp"),
@@ -359,6 +365,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-klim-sanitariim-06.jpg"),
   ],
   "mizug-avir": [
+    G("bedek-bayit-chadirat-tzanrat-kir-lelo-sharvul"),
     GF("bedek-bayit-mizug-avir-01.webp"),
     GF("bedek-bayit-mizug-avir-02.webp"),
     GF("bedek-bayit-mizug-avir-03.webp"),

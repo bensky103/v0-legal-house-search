@@ -769,6 +769,33 @@ export const DOCH_MIMTZAIM_MAARACHOT: ArticleImage[] = [
 const SITE_URL = "https://www.legalbedek.co.il"
 
 /** Map every article gallery image to the article URL it appears on (for the image sitemap). */
+export const CHADIRAT_TZANRAT_GAG: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-tzinor-gag-lelo-sharvul-itum.webp",
+    standard: "ת״י 1752 – איטום גגות",
+    title: "צנרת מזגן חודרת את הגג ללא שרוול מעבר",
+    alt: "צינור מזגן מבודד החודר את שכבת האיטום בגג ללא שרוול מעבר וללא רולקת איטום, כשהבידוד סדוק ומתפורר והמעבר צמוד לקולטן הניקוז - ליקוי איטום שאותר בבדק בית",
+    caption:
+      "הצינור נכנס לגג ישירות דרך שכבת האיטום — בלי שרוול מעבר, בלי אוגן ובלי רולקה. הבידוד סביבו נסדק והתפורר, והמעבר ממוקם צמוד לקולטן הניקוז, כלומר בדיוק בנקודה שאליה זורמים כל מי הגשם של הגג.",
+  },
+  {
+    src: "/gallery/bedek-bayit-chadirat-tzanrat-kir-lelo-sharvul.webp",
+    standard: "ת״י 1752 – איטום גגות",
+    title: "מעבר צנרת בקיר שנסתם במריחת טיט",
+    alt: "צרור צנרת גז מזגן, צינור ניקוז וכבל חשמל החודרים קיר בגג דרך פתח שנסתם במריחת טיט ידנית, ללא שרוול מעבר וללא איטום גמיש - ליקוי איטום שתועד בבדק בית",
+    caption:
+      "צרור של צנרת גז, ניקוז וכבל חשמל נדחס לתוך פתח שנחצב בקיר, והפתח נסתם במריחת טיט. טיט אינו חומר איטום: הוא נסדק בהפרשי הטמפרטורה של הגג ומאבד את ההיצמדות לצינור, והפתח הופך לנתיב חדירת רטיבות אל תוך הקיר.",
+  },
+  {
+    src: "/gallery/bedek-bayit-tzinor-gag-lelo-mikel-saba.webp",
+    standard: "ת״י 1752 – איטום גגות",
+    title: "צינור פתוח בגג ללא מקל סבא וללא מכסה גשם",
+    alt: "צינור אנכי פתוח בראש קיר מעקה בגג, ללא כיפוף מקל סבא וללא מכסה מגן מפני גשם, לצד סדק פתוח בקיר המעקה - ליקוי שמכניס מי גשם ישירות לצנרת ולמבנה",
+    caption:
+      "הצינור נגמר בפתח אנכי חשוף — בלי כיפוף מקל סבא ובלי מכסה גשם. כל טיפה שנוחתת עליו נכנסת פנימה בכוח הכובד. בתמונה נראה גם סדק פתוח בראש קיר המעקה, נתיב חדירה נוסף שמתגלה באותה בדיקה.",
+  },
+]
+
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -792,6 +819,7 @@ export const articleSitemapImages = [
   ...DOCH_TZIYUD_AL_HERES.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
   ...DOCH_MIMTZAIM_ITUM_MAAKIM.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
   ...DOCH_MIMTZAIM_MAARACHOT.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
+  ...CHADIRAT_TZANRAT_GAG.map((img) => ({ ...img, articleSlug: "chadirat-tzanrat-gag-lelo-sharvul" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

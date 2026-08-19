@@ -301,6 +301,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["chavat-daat-beit-mishpat", "itur-likuyey-bniya", "bdikat-dira-yad-shniya"],
     relatedDefects: ["itum", "maakot", "ritzuf"],
   },
+  {
+    slug: "chadirat-tzanrat-gag-lelo-sharvul",
+    title: "חדירת צנרת בגג ללא שרוול — הליקוי הקטן שמכניס רטיבות לכל הדירה",
+    description:
+      "צנרת שחודרת גג או קיר ללא שרוול מעבר, צינור שנגמר בלי מקל סבא ומעבר מזגן בלי מכסה נגד גשם. איך מאתרים את נקודת חדירת הרטיבות, מה דורש ת״י 1752, ואיך מונעים רטיבות בבתים ובדירות.",
+    datePublished: "2026-08-19",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "bdikat-bayit-prati"],
+    relatedDefects: ["itum", "retivut", "gagot", "mizug-avir"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

@@ -8,8 +8,12 @@ const nextConfig = {
     // so mobile devices no longer download desktop-size images (improves LCP / Core Web Vitals).
     formats: ["image/avif", "image/webp"],
     deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920],
+    // Optimized variants are expensive to generate (AVIF especially). The default
+    // TTL is 60s, which makes the CDN re-encode constantly; photos here are added
+    // under new filenames rather than replaced, so a 30-day TTL is safe.
+    minimumCacheTTL: 2592000,
   },
- 
+
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -45,6 +49,21 @@ const nextConfig = {
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
         ],
+      },
+      {
+        // Photos served straight from /public (og:image, direct links, anything not
+        // routed through the image optimizer). ":path+" requires at least one extra
+        // segment, so the /gallery HTML page itself is not caught by this rule.
+        source: "/gallery/:path+",
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
+      },
+      {
+        source: "/images/:path+",
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
+      },
+      {
+        source: "/logo.webp",
+        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
       },
     ]
   },

@@ -1,6 +1,9 @@
-"use client"
+// Server component. The page is almost entirely static Hebrew markup, so it is
+// rendered on the server; only the pieces that genuinely need the browser
+// (language-aware strings, the language switcher, the intro-video modal) are
+// client islands. This keeps SiteIndex and its data tables off the wire.
 
-import { useState } from "react"
+import type React from "react"
 import Image from "next/image"
 import {
   Eye,
@@ -22,11 +25,21 @@ import {
   Camera,
 } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { WhatsAppButton } from "@/components/whatsapp-button"
 import { LanguageSwitcher } from "@/components/language-switcher"
 import { SiteIndex } from "@/components/site-index"
-import { useLanguage } from "@/contexts/language-context"
+import { T } from "@/components/t"
+import { LanguageDir } from "@/components/language-dir"
+import { HomeVideoButton } from "@/components/home-video-button"
+import { translations } from "@/lib/translations"
+
+/**
+ * Hebrew text for a translation key, resolved on the server.
+ *
+ * Used for attribute values (alt, aria-label) that cannot hold a JSX island.
+ * Visible copy uses <T k="..." /> instead and stays language-aware.
+ */
+const he = (key: string) => translations.he[key] ?? key
 
 // Engineering "spec-sheet" section heading: mono index + tick + eyebrow over the title.
 function SectionHeading({
@@ -34,9 +47,9 @@ function SectionHeading({
   title,
   subtitle,
 }: {
-  eyebrow: string
-  title: string
-  subtitle?: string
+  eyebrow: React.ReactNode
+  title: React.ReactNode
+  subtitle?: React.ReactNode
 }) {
   return (
     <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
@@ -260,11 +273,8 @@ const PROCESS_STEPS = [
 ]
 
 export default function HomePage() {
-  const { t, direction } = useLanguage()
-  const [videoOpen, setVideoOpen] = useState(false)
-  
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir={direction}>
+    <LanguageDir className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       {/* EEAT structured data — Person (the expert) + ProfessionalService */}
       <script
         type="application/ld+json"
@@ -399,10 +409,10 @@ export default function HomePage() {
               />
               <div>
                 <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
-                  {t("site.title")}
+                  <T k="site.title" />
                 </h1>
                 <p className="text-sm md:text-base lg:text-lg text-slate-900 font-bold mt-1">
-                  {t("site.subtitle")}
+                  <T k="site.subtitle" />
                 </p>
               </div>
             </div>
@@ -418,7 +428,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <Image
             src="/images/binyanim-moderniim-israel-bedek-bayit.webp"
-            alt={t("hero.bgAlt")}
+            alt={he("hero.bgAlt")}
             fill
             sizes="100vw"
             quality={60}
@@ -437,14 +447,14 @@ export default function HomePage() {
                 <svg className="w-4 h-4 fill-blue-600" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1.2 14.5L7 11.7l1.4-1.4 2.4 2.4 5-5L17.2 9l-6.4 6.5z" />
                 </svg>
-                {t("hero.badge")}
+                <T k="hero.badge" />
               </span>
 
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-balance text-slate-900">
-                {t("hero.title")}
+                <T k="hero.title" />
               </h2>
               <p className="mt-4 text-lg md:text-xl text-slate-700 font-medium leading-relaxed text-pretty">
-                {t("hero.subtitle1")}
+                <T k="hero.subtitle1" />
               </p>
 
               {/* Trust elements */}
@@ -456,7 +466,9 @@ export default function HomePage() {
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
                     </span>
-                    <span className="text-base md:text-lg font-semibold text-slate-800">{t(key)}</span>
+                    <span className="text-base md:text-lg font-semibold text-slate-800">
+                      <T k={key} />
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -471,7 +483,7 @@ export default function HomePage() {
                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                     <path d="M14 2v6h6M9 13h6M9 17h6" />
                   </svg>
-                  {t("hero.ctaPrimary")}
+                  <T k="hero.ctaPrimary" />
                 </a>
                 <a
                   href="tel:+972506277858"
@@ -480,22 +492,11 @@ export default function HomePage() {
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
-                  {t("hero.ctaSecondary")}
+                  <T k="hero.ctaSecondary" />
                 </a>
               </div>
 
-              <button
-                onClick={() => setVideoOpen(true)}
-                className="mt-5 inline-flex items-center gap-2 text-blue-700 hover:text-blue-900 text-sm font-semibold transition-colors mx-auto lg:mx-0"
-                aria-label={t("hero.moreInfo")}
-              >
-                <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-100 hover:bg-blue-200 transition-colors shrink-0">
-                  <svg className="w-3.5 h-3.5 fill-blue-700" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-                {t("hero.moreInfo")}
-              </button>
+              <HomeVideoButton />
             </div>
 
             {/* Image column - the inspector next to the service vehicle */}
@@ -503,7 +504,7 @@ export default function HomePage() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-white/70 shadow-2xl">
                 <Image
                   src="/gallery/yigal-bensky-rechev-bedek-bayit.webp"
-                  alt={t("hero.imageAlt")}
+                  alt={he("hero.imageAlt")}
                   fill
                   sizes="(max-width: 1024px) 26rem, 30rem"
                   quality={72}
@@ -513,7 +514,7 @@ export default function HomePage() {
                 <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white text-start">
                   <p className="text-xl font-bold drop-shadow">יגאל בנסקי</p>
-                  <p className="text-sm text-blue-50 font-medium drop-shadow">{t("hero.badge")}</p>
+                  <p className="text-sm text-blue-50 font-medium drop-shadow"><T k="hero.badge" /></p>
                 </div>
               </div>
               {/* Floating credential chip */}
@@ -524,7 +525,7 @@ export default function HomePage() {
                     <path d="M14 2v6h6M9 13h6M9 17h6" />
                   </svg>
                 </span>
-                <span className="text-sm font-bold leading-tight">{t("hero.trust2")}</span>
+                <span className="text-sm font-bold leading-tight"><T k="hero.trust2" /></span>
               </div>
             </div>
           </div>
@@ -700,11 +701,11 @@ export default function HomePage() {
       <section className="bg-white py-10 md:py-14 border-b border-slate-100">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-balance">{t("strip.title")}</h2>
-            <p className="mt-2 text-slate-600 text-pretty">{t("strip.subtitle")}</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 text-balance"><T k="strip.title" /></h2>
+            <p className="mt-2 text-slate-600 text-pretty"><T k="strip.subtitle" /></p>
             <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-blue-600">
               <Eye className="w-4 h-4" aria-hidden="true" />
-              {t("strip.clickHint")}
+              <T k="strip.clickHint" />
             </p>
           </div>
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -718,13 +719,13 @@ export default function HomePage() {
               <li key={item.src}>
                 <a
                   href="/gallery"
-                  aria-label={`${t(item.label)} – ${t("strip.viewGallery")}`}
+                  aria-label={`${he(item.label)} – ${he("strip.viewGallery")}`}
                   className="group relative block rounded-xl overflow-hidden ring-1 ring-slate-200 hover:ring-blue-400 hover:shadow-lg transition-all duration-200"
                 >
                   <div className="relative aspect-square overflow-hidden bg-slate-100">
                     <Image
                       src={item.src || "/placeholder.svg"}
-                      alt={t(item.label)}
+                      alt={he(item.label)}
                       fill
                       sizes="(max-width: 768px) 50vw, 20vw"
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -739,12 +740,12 @@ export default function HomePage() {
                     <span className="absolute inset-0 flex items-center justify-center bg-slate-900/45 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
                       <span className="flex translate-y-1 items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-sm font-semibold text-slate-900 shadow-md transition-transform duration-200 group-hover:translate-y-0">
                         <Eye className="h-4 w-4" aria-hidden="true" />
-                        {t("strip.viewGallery")}
+                        <T k="strip.viewGallery" />
                       </span>
                     </span>
                   </div>
                   <span className="block text-center text-sm font-semibold text-slate-700 px-2 py-2.5 transition-colors group-hover:text-blue-600">
-                    {t(item.label)}
+                    <T k={item.label} />
                   </span>
                 </a>
               </li>
@@ -753,40 +754,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Business ID Card Video Dialog */}
-      <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="max-w-3xl p-0 overflow-hidden bg-black border-0" dir={direction}>
-          <DialogHeader className="px-4 pt-4 pb-2 bg-black">
-            <DialogTitle className="text-white text-center text-lg md:text-xl">
-              {t("hero.moreInfo")}
-            </DialogTitle>
-          </DialogHeader>
-          <div className="w-full">
-            {videoOpen && (
-              <video
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%AA%D7%A8-W1e4mWhh4SZfg8W0g0azc15TRMW1fZ.mp4"
-                controls
-                autoPlay
-                playsInline
-                preload="auto"
-                className="w-full h-auto max-h-[75vh] bg-black"
-              >
-                {"הדפדפן שלך אינו תומך בהפעלת וידאו."}
-              </video>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
-
       {/* Hero Section */}
       <section className="py-12 md:py-16 bg-gradient-to-l from-blue-100 to-gray-50">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">
-              {t("peace.title")}
+              <T k="peace.title" />
             </h2>
             <p className="text-base md:text-lg text-gray-800 leading-relaxed">
-              {t("peace.description")}
+              <T k="peace.description" />
             </p>
           </div>
         </div>
@@ -806,14 +782,14 @@ export default function HomePage() {
               <div>
                 <span className="font-mono text-xs font-bold tracking-[0.2em] text-blue-600">חלון זמן קריטי</span>
                 <h3 className="mt-1.5 text-xl md:text-2xl font-bold text-slate-900">
-                  {t("shortNotice.title")}
+                  <T k="shortNotice.title" />
                 </h3>
                 <div className="mt-3 space-y-3">
                   <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900">{t("shortNotice.new")}</strong> {t("shortNotice.newDesc")}
+                    <strong className="text-slate-900"><T k="shortNotice.new" /></strong> <T k="shortNotice.newDesc" />
                   </p>
                   <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-                    <strong className="text-slate-900">{t("shortNotice.used")}</strong> {t("shortNotice.usedDesc")}
+                    <strong className="text-slate-900"><T k="shortNotice.used" /></strong> <T k="shortNotice.usedDesc" />
                   </p>
                 </div>
               </div>
@@ -825,7 +801,7 @@ export default function HomePage() {
       {/* Target Audience Section */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeading eyebrow="למי זה מיועד" title={t("audience.title")} />
+          <SectionHeading eyebrow="למי זה מיועד" title={<T k="audience.title" />} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {AUDIENCE_ITEMS.map((item, i) => {
               const Icon = item.icon
@@ -859,7 +835,7 @@ export default function HomePage() {
         <div className="relative container mx-auto px-4">
           <SectionHeading
             eyebrow="תחומי השירות"
-            title={t("services.title")}
+            title={<T k="services.title" />}
             subtitle="כל בדיקה מבוצעת בכלים הנדסיים מקצועיים ומתועדת בדוח מסודר"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7 max-w-5xl mx-auto">
@@ -1092,8 +1068,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <SectionHeading
             eyebrow="לקוחות ממליצים"
-            title={t("testimonials.title")}
-            subtitle={t("testimonials.subtitle")}
+            title={<T k="testimonials.title" />}
+            subtitle={<T k="testimonials.subtitle" />}
           />
 
           {/* Google Reviews Badge */}
@@ -1123,10 +1099,10 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">{GOOGLE_RATING_COUNT} {t("testimonials.googleBadge")}</p>
+                  <p className="text-sm text-gray-600">{GOOGLE_RATING_COUNT} <T k="testimonials.googleBadge" /></p>
                 </div>
               </div>
-              <span className="text-blue-600 font-medium text-sm hover:underline">{t("testimonials.viewAll")}</span>
+              <span className="text-blue-600 font-medium text-sm hover:underline"><T k="testimonials.viewAll" /></span>
             </a>
             <a
               href="https://g.page/r/CemODJrGUt89EBE/review"
@@ -1137,7 +1113,7 @@ export default function HomePage() {
               <svg className="w-4 h-4 fill-yellow-400" viewBox="0 0 20 20" aria-hidden="true">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
               </svg>
-              {t("testimonials.leaveReview")}
+              <T k="testimonials.leaveReview" />
             </a>
           </div>
           
@@ -1199,7 +1175,7 @@ export default function HomePage() {
           </div>
 
           {/* WhatsApp Screenshot Reviews */}
-          <h3 className="text-xl font-semibold text-center text-gray-800 mb-6 mt-4">{t("testimonials.whatsappTitle")}</h3>
+          <h3 className="text-xl font-semibold text-center text-gray-800 mb-6 mt-4"><T k="testimonials.whatsappTitle" /></h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             <Card className="hover:shadow-lg transition-shadow overflow-hidden border-r-4 border-r-green-500">
               <CardContent className="p-6">
@@ -1567,11 +1543,11 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">{t("footer.contact")}</h3>
+              <h3 className="text-xl font-bold mb-4"><T k="footer.contact" /></h3>
               <div className="space-y-2 text-gray-200">
-                <p>📞 073-3745044 - {t("footer.office")}</p>
-                <p>📞 050-6277858 - {t("footer.expert")}</p>
-                <p>📍 {t("footer.nationwide")}</p>
+                <p>📞 073-3745044 - <T k="footer.office" /></p>
+                <p>📞 050-6277858 - <T k="footer.expert" /></p>
+                <p>📍 <T k="footer.nationwide" /></p>
               </div>
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 <a 
@@ -1614,7 +1590,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold mb-4">{t("footer.services")}</h3>
+              <h3 className="text-xl font-bold mb-4"><T k="footer.services" /></h3>
               <ul className="space-y-2 text-gray-200">
                 <li>
                   <a href="/services" className="text-blue-400 hover:text-blue-300 hover:underline font-semibold">
@@ -1725,7 +1701,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-700 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-300">
-            <p className="text-sm text-gray-200">© 2020 בדק בית Legal - {t("footer.rights")}.</p>
+            <p className="text-sm text-gray-200">© 2020 בדק בית Legal - <T k="footer.rights" />.</p>
             <p className="mt-2 text-xs text-gray-400">
               <a href="/mediniyut-pratiyut" className="hover:text-gray-200 hover:underline">
                 מדיניות פרטיות
@@ -1734,6 +1710,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-    </div>
+    </LanguageDir>
   )
 }

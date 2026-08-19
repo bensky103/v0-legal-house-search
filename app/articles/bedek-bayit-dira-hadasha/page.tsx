@@ -1,4 +1,5 @@
-"use client"
+// Server component: the CTA buttons are real <a> links now, so nothing on this
+// page needs hooks. Keeps SiteIndex's data tables out of the client bundle.
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -41,11 +42,8 @@ export default function ArticleBedekBayitDiraHadasha() {
                 </span>
               </div>
             </Link>
-            <Button
-              className="bg-green-700 hover:bg-green-800 text-white"
-              onClick={() => window.open("tel:+972506277858", "_self")}
-            >
-              התקשר עכשיו
+            <Button asChild className="bg-green-700 hover:bg-green-800 text-white">
+              <a href="tel:+972506277858">התקשר עכשיו</a>
             </Button>
           </div>
         </div>
@@ -262,17 +260,13 @@ export default function ArticleBedekBayitDiraHadasha() {
               אל תסתכנו - הזמינו בדק בית מקצועי עוד היום
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg"
-                onClick={() => window.open("tel:+972506277858", "_self")}
-              >
-                התקשרו עכשיו: 050-627-7858
+              <Button asChild className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 text-lg">
+                <a href="tel:+972506277858">התקשרו עכשיו: 050-627-7858</a>
               </Button>
-              <Button
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg"
-                onClick={() => window.open("https://wa.me/972506277858", "_blank")}
-              >
-                שלחו הודעה בוואטסאפ
+              <Button asChild className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 text-lg">
+                <a href="https://wa.me/972506277858" target="_blank" rel="noopener noreferrer">
+                  שלחו הודעה בוואטסאפ
+                </a>
               </Button>
             </div>
           </div>

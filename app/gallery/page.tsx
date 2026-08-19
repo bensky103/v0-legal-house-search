@@ -1,4 +1,5 @@
-"use client"
+// Server component (no hooks / no event handlers here): the gallery is static
+// markup, so the image catalog and SiteIndex data stay on the server.
 
 import Image from "next/image"
 import Link from "next/link"

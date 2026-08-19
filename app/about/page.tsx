@@ -1,4 +1,5 @@
-"use client"
+// Server component (no hooks / no event handlers here): keeps SiteIndex and its
+// large data files (cities, defects, services) out of the client bundle.
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"

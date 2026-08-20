@@ -36,7 +36,11 @@ function getCityProjectContent(citySlug: string): {
   return {
     projects: idx?.projects ?? named.map((p) => p.name),
     buildingAreas: idx?.buildingAreas ?? derivedAreas,
-    namedProjects: idx ? [] : named,
+    // The per-project H3 block is driven by lib/city-projects.ts, the only source
+    // that carries an area/street per project. Suppress it only when the index
+    // overrides the name list, since the two lists can diverge and rendering both
+    // would put two different project lists on the same page.
+    namedProjects: idx?.projects ? [] : named,
   }
 }
 
@@ -115,8 +119,9 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
       ]
     : []
 
-  // Each named project as its own H3, with the neighbourhood it sits in. Only the
-  // fallback cities reach this — the curated index stores names without an area.
+  // Each named project as its own H3, with the neighbourhood or street it sits in.
+  // The area is the one detail the prose list, the bullet list and the FAQ all lack,
+  // so this block is what makes an address like "שלמה דרור 1" indexable.
   const namedProjectsBlock = namedProjects.length
     ? {
         heading: `הפרויקטים החדשים ב${city.name} לפי שכונה`,

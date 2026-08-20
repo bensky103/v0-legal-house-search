@@ -124,6 +124,7 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "N סוקולוב", area: "מרכז העיר צפון" },
     { name: "EAST חופים", area: "פארק הים" },
     { name: "Story גלי ים", area: "שכונת גלי הים" },
+    { name: "BRIGA", area: "רחוב שלמה דרור 1" },
   ],
   "kfar-saba": [
     { name: "אוסטשינסקי 5", area: "בנייה חדשה" },
@@ -319,6 +320,8 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "אפיקי נחל", area: "רובע מגורים חדש" },
     { name: "רובע הפארק", area: "מתחמי מגורים חדשים, פארק העיר" },
     { name: "מישור הגפן", area: "שכונת מגורים חדשה" },
+    { name: "שכונת השקד", area: "שכונת מגורים חדשה" },
+    { name: "אפי קפיטל בינוי בע״מ", area: "רחוב נחל אמציהו 30 ונחל זיתן 49" },
   ],
   "bnei-brak": [
     { name: "BBC Living", area: "מגורים ליד מתחם העסקים BBC" },

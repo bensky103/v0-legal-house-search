@@ -164,7 +164,12 @@ export default function CityPage({ params }: { params: { city: string } }) {
       : []
 
   const relatedLinks = [
-    ...(projectIndex ? [{ label: `פרויקטים חדשים ב${city.nameSimple}`, href: `/projects/${city.slug}` }] : []),
+    // The /projects page exists for every city. Gating this link on projectIndex
+    // alone left the cities that only have owner-supplied project data with no
+    // inbound link at all — orphaned pages Google is unlikely to keep indexed.
+    ...(projectIndex || cityProjectList.length
+      ? [{ label: `פרויקטים חדשים ב${city.nameSimple}`, href: `/projects/${city.slug}` }]
+      : []),
     ...cityArticleLinks,
     ...serviceLinks,
     ...defectLinks,

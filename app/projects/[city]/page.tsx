@@ -2,7 +2,43 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { cities, getContractorsForCity } from "@/lib/seo-locations"
 import { getCityProjectIndex } from "@/lib/projects"
+import { getCityProjects, type CityProject } from "@/lib/city-projects"
+import { getCityProfile } from "@/lib/city-profiles"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+
+/**
+ * Project names and building areas for a city.
+ *
+ * `cityProjectIndexes` (lib/projects.ts) covers 33 cities. The remaining ones
+ * used to fall through to the bare template — same words, only the city name
+ * swapped — which Google classified as duplicate content and dropped from the
+ * index. Their real projects were already on file in lib/city-projects.ts and
+ * simply were not being read here, so that data is the fallback.
+ */
+function getCityProjectContent(citySlug: string): {
+  projects: string[]
+  buildingAreas: string[]
+  namedProjects: CityProject[]
+} {
+  const idx = getCityProjectIndex(citySlug)
+  const named = getCityProjects(citySlug)
+
+  // The `area` field may carry a developer suffix ("נופי בן שמן, יזם שיכון ובינוי");
+  // the neighbourhood is the part before the separator.
+  const derivedAreas = [
+    ...new Set(
+      named
+        .map((p) => p.area.split(/[,;]/)[0].trim())
+        .filter((a) => a.length > 0 && !a.startsWith("יזם")),
+    ),
+  ]
+
+  return {
+    projects: idx?.projects ?? named.map((p) => p.name),
+    buildingAreas: idx?.buildingAreas ?? derivedAreas,
+    namedProjects: idx ? [] : named,
+  }
+}
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }))
@@ -12,7 +48,7 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   const city = cities.find((c) => c.slug === params.city)
   if (!city) return {}
 
-  const projects = getCityProjectIndex(city.slug)?.projects ?? []
+  const { projects } = getCityProjectContent(city.slug)
   const projectsHint = projects.length ? ` ביניהם ${projects.slice(0, 3).join(", ")}.` : ""
 
   const title = `בדק בית בפרויקטים חדשים ב${city.name} | בדיקת דירה מקבלן`
@@ -31,24 +67,42 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
   if (!city) notFound()
 
   const idx = getCityProjectIndex(city.slug)
+  const { projects, buildingAreas, namedProjects } = getCityProjectContent(city.slug)
+
+  // city.description is a bespoke per-city paragraph that the /bedek-bayit page
+  // renders only for cities that have no profile. Every city reaching this
+  // fallback does have a profile, so the text is unused elsewhere and lifting it
+  // here adds real city-specific copy rather than repeating another page.
+  const cityDescription = getCityProfile(city.slug) ? `${city.description} ` : ""
 
   const intro =
     idx?.intro ??
-    `${city.name} ממשיכה להתפתח עם פרויקטים חדשים של דירות מקבלן. רוכשי דירות חדשות ב${city.name} זקוקים לבדק בית מקצועי במועד מסירת הדירה, כדי לאתר ליקויי בנייה ולוודא שהדירה תואמת את המפרט והתקנים במעמד המסירה.`
+    `${cityDescription}${city.name} ממשיכה להתפתח עם פרויקטים חדשים של דירות מקבלן. רוכשי דירות חדשות ב${city.name} זקוקים לבדק בית מקצועי במועד מסירת הדירה, כדי לאתר ליקויי בנייה ולוודא שהדירה תואמת את המפרט והתקנים במעמד המסירה.`
 
-  const areasSection = idx?.buildingAreas?.length
+  // Real neighbourhoods from the city profile. This is the one profile field the
+  // /bedek-bayit city page does not render, so using it here adds genuinely
+  // city-specific copy without repeating that page.
+  const otherNeighborhoods = (getCityProfile(city.slug)?.neighborhoods ?? []).filter(
+    (n) => !buildingAreas.some((a) => a.includes(n) || n.includes(a)),
+  )
+
+  const areasSection = buildingAreas.length
     ? [
         {
           heading: `אזורי בנייה חדשה ב${city.name}`,
           paragraphs: [
-            `הבנייה החדשה ב${city.name} מתרכזת באזורים ובשכונות הבאים: ${idx.buildingAreas.join(", ")}. בכל אחד מאזורים אלו אנו מבצעים בדק בית מקצועי לדירות חדשות מקבלן לפני מסירה.`,
+            `הבנייה החדשה ב${city.name} מתרכזת באזורים ובשכונות הבאים: ${buildingAreas.join(", ")}. בכל אחד מאזורים אלו אנו מבצעים בדק בית מקצועי לדירות חדשות מקבלן לפני מסירה.`,
+            ...(otherNeighborhoods.length
+              ? [
+                  `מעבר לאזורי הבנייה החדשה, אנו מבצעים בדק בית ובדיקת דירה גם בשאר שכונות ${city.name}: ${otherNeighborhoods.join(", ")} — הן בדירות חדשות מקבלן, הן בדירות יד שנייה והן בפרויקטים של התחדשות עירונית.`,
+                ]
+              : []),
             `מומחה בדק בית מכיר את שיטות הבנייה הנפוצות בפרויקטים חדשים ויודע לאתר את הליקויים האופייניים לדירות חדשות - מאיטום לקוי ועד סטיות במידות ובמפלסים.`,
           ],
         },
       ]
     : []
 
-  const projects = idx?.projects ?? []
   const projectsSection = projects.length
     ? [
         {
@@ -60,6 +114,16 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
         },
       ]
     : []
+
+  // Each named project as its own H3, with the neighbourhood it sits in. Only the
+  // fallback cities reach this — the curated index stores names without an area.
+  const namedProjectsBlock = namedProjects.length
+    ? {
+        heading: `הפרויקטים החדשים ב${city.name} לפי שכונה`,
+        intro: `אלה פרויקטי המגורים החדשים ב${city.name} שבהם אנו מבצעים בדק בית ובדיקת מסירה, לפי האזור שבו הם נבנים:`,
+        projects: namedProjects,
+      }
+    : undefined
 
   return (
     <SeoLandingTemplate
@@ -113,6 +177,7 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
         ...areasSection,
         ...(idx?.extraSections ?? []),
       ]}
+      projectsSection={namedProjectsBlock}
       bulletSections={
         projects.length
           ? [
@@ -124,6 +189,16 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
           : undefined
       }
       faq={[
+        // City-specific answer built from the real project list, so the FAQ block
+        // is not identical text on all 46 city pages.
+        ...(projects.length
+          ? [
+              {
+                question: `באילו פרויקטים חדשים ב${city.name} אתם מבצעים בדק בית?`,
+                answer: `אנו מבצעים בדק בית ובדיקת מסירה בפרויקטים החדשים ב${city.name}, ובהם ${projects.join(", ")}. הבדיקה מתבצעת במעמד מסירת הדירה מהקבלן וכוללת בדיקת התאמה למפרט, איתור ליקויי בנייה והכנת פרוטוקול מסירה. הרשימה אינה סגורה — אנו בודקים דירות בכל פרויקט חדש בעיר.`,
+              },
+            ]
+          : []),
         {
           question: `מתי כדאי לבצע בדק בית לדירה חדשה ב${city.name}?`,
           answer:

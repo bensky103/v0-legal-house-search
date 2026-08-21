@@ -12,13 +12,31 @@ import { videoThumb, videoEmbedUrl } from "@/lib/videos"
  * autoplay. Used on a video's canonical page (/videos/[slug]) so Google's video
  * crawler finds an actual player in the HTML — a facade alone (thumbnail only)
  * leaves no player in the DOM and the video is not added to the video index.
+ *
+ * `vertical`: the source is a YouTube Short (9:16). Rendering it in the default
+ * 16:9 frame would leave the footage as a narrow strip between black bars, so
+ * the frame flips to portrait and is capped in width to stay usable on desktop.
  */
-export function LiteYouTube({ id, title, eager = false }: { id: string; title: string; eager?: boolean }) {
+export function LiteYouTube({
+  id,
+  title,
+  eager = false,
+  vertical = false,
+}: {
+  id: string
+  title: string
+  eager?: boolean
+  vertical?: boolean
+}) {
   const [active, setActive] = useState(false)
   const showIframe = eager || active
 
   return (
-    <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-900 ring-1 ring-slate-200">
+    <div
+      className={`relative w-full overflow-hidden rounded-xl bg-slate-900 ring-1 ring-slate-200 ${
+        vertical ? "aspect-[9/16] mx-auto max-w-xs" : "aspect-video"
+      }`}
+    >
       {showIframe ? (
         <iframe
           src={`${videoEmbedUrl(id)}?rel=0${active ? "&autoplay=1" : ""}`}
@@ -40,7 +58,11 @@ export function LiteYouTube({ id, title, eager = false }: { id: string; title: s
             src={videoThumb(id)}
             alt={title}
             loading="lazy"
-            className="h-full w-full object-cover transition group-hover:scale-105"
+            className={`h-full w-full transition group-hover:scale-105 ${
+              // A Short's thumbnail is delivered pillarboxed inside a 16:9 image, so
+              // cropping it to fill a portrait frame would cut the footage in half.
+              vertical ? "object-contain" : "object-cover"
+            }`}
           />
           <span className="absolute inset-0 bg-black/20 transition group-hover:bg-black/30" />
           <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-red-600 shadow-lg transition group-hover:bg-red-700">

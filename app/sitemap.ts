@@ -65,12 +65,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  const videoPages: MetadataRoute.Sitemap = videos.map((v) => ({
-    url: `https://www.legalbedek.co.il/videos/${videoSlug(v)}`,
-    lastModified: VIDEOS_UPDATED,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
+  // A video published after that sweep is newer than it, so it keeps its own date
+  // rather than being advertised as older than it actually is.
+  const videoPages: MetadataRoute.Sitemap = videos.map((v) => {
+    const uploaded = new Date(v.uploadDate)
+    return {
+      url: `https://www.legalbedek.co.il/videos/${videoSlug(v)}`,
+      lastModified: uploaded > VIDEOS_UPDATED ? uploaded : VIDEOS_UPDATED,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }
+  })
 
   return [
     {

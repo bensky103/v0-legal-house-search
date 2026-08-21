@@ -130,7 +130,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
           <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">{article.intro}</p>
         )}
 
-        <LiteYouTube id={video.id} title={video.title} eager />
+        <LiteYouTube id={video.id} title={video.title} vertical={video.vertical} eager />
 
         {extra && extra.checks.length > 0 && (
           <section className="mt-10">

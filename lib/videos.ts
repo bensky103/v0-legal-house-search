@@ -18,6 +18,8 @@ export interface SiteVideo {
   uploadDate: string
   /** Defect/service slug this video maps onto, or "general". */
   topic: string
+  /** True for a YouTube Short (9:16). The player frame flips to portrait. */
+  vertical?: boolean
 }
 
 export const videos: SiteVideo[] = [
@@ -312,6 +314,15 @@ export const videos: SiteVideo[] = [
       "בדק בית - בדיקת מסתור הכביסה ומרפסת השירות הצמודה: בדיקות בטיחות, דוד המים, מיזוג האוויר, הניקוזים, הברזים וצנרת מכונת הכביסה, אוורור ובטיחות חשמל בסביבה לחה.",
     uploadDate: "2026-07-19",
     topic: "mistor-kvisa",
+  },
+  {
+    id: "8freZT7q5Qc",
+    title: "צילום צנרת בבדק בית - מה מסתתר מתחת לנקז במרפסת",
+    description:
+      "בדק בית - צילום צנרת הניקוז של המרפסת במצלמה, לאיתור שיירי חומרי בנייה בתוך הקו, מים עומדים המעידים על שיפוע לקוי וחיבורים לא תקניים.",
+    uploadDate: "2026-08-21",
+    topic: "nikuz",
+    vertical: true,
   },
 ]
 

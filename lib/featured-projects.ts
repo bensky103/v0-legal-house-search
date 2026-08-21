@@ -31,7 +31,7 @@ export const featuredProjects: FeaturedProject[] = [
   { id: 4, name: "מתחם האלף", city: "ראשון לציון", status: "בנייה מתקדמת", citySlug: "rishon-lezion" },
   { id: 5, name: "שכונת מורשת", city: "מודיעין", status: "שלבי אכלוס", citySlug: "modiin" },
   { id: 6, name: "שכונת נווה דורון החדשה", city: "רמלה", status: "לקראת מסירה" },
-  { id: 7, name: "נאות פרס (שלב ב')", city: "חיפה", status: "בנייה מתקדמת / מסירה", citySlug: "haifa" },
+  { id: 7, name: "נאות פרס (שלב ב׳)", city: "חיפה", status: "בנייה מתקדמת / מסירה", citySlug: "haifa" },
   { id: 8, name: "שכונת בצוותא", city: "חריש", status: "שלבי אכלוס אחרונים" },
   { id: 9, name: "פארק איילון", city: "אור יהודה", status: "לקראת מסירה", citySlug: "or-yehuda" },
   { id: 10, name: "אגמים מזרח", city: "נתניה", status: "בנייה מתקדמת", citySlug: "netanya" },

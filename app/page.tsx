@@ -1131,7 +1131,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  {"\"קיבלתי חוו\"ד עם ליקויים רבים, להפתעתי חברת אלקטרה תיקנו את הכל ללא כל ויכוח בהתאם לדוח.\""}
+                  {"\"קיבלתי חוו״ד עם ליקויים רבים, להפתעתי חברת אלקטרה תיקנו את הכל ללא כל ויכוח בהתאם לדוח.\""}
                 </p>
                 <p className="font-semibold text-gray-900">בינימין</p>
               </CardContent>
@@ -1167,7 +1167,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-gray-700 mb-4">
-                  {"\"אני קבלן ביצוע, הצלחתי בזכות חוו\"ד נגדית לצמצם את עלויות התיקונים בעשרות אלפי שקלים.\""}
+                  {"\"אני קבלן ביצוע, הצלחתי בזכות חוו״ד נגדית לצמצם את עלויות התיקונים בעשרות אלפי שקלים.\""}
                 </p>
                 <p className="font-semibold text-gray-900">מנחם</p>
               </CardContent>
@@ -1514,7 +1514,7 @@ export default function HomePage() {
             </h2>
             <p className="text-lg md:text-xl mb-6 md:mb-8 text-white">
               {
-                'בדק בית עכשיו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו"ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
+                'בדק בית עכשיו = שקט נפשי אחר כך. \n     תקופת האחריות מתחילה להסתיים כבר מיום מסירת הדירה.\n חוו״ד מומחה לבדק בית, תסייע לקבל את מה שמגיע לכם, תחסוך כסף  ודאגות בעתיד. '
               }
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
@@ -1635,12 +1635,12 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a href="/articles/tikaney-instalatzia-bedek-bayit" className="text-blue-400 hover:text-blue-300 hover:underline">
-                    מאמר: תקני אינסטלציה (ת&quot;י 1205)
+                    מאמר: תקני אינסטלציה (ת״י 1205)
                   </a>
                 </li>
                 <li>
                   <a href="/articles/taken-789-stiyot-mutarot" className="text-blue-400 hover:text-blue-300 hover:underline">
-                    מאמר: ת&quot;י 789 - סטיות מותרות
+                    מאמר: ת״י 789 - סטיות מותרות
                   </a>
                 </li>
                 <li>
@@ -1685,7 +1685,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a href="/services/tama-38" className="text-blue-400 hover:text-blue-300 hover:underline">
-                    בדק בית תמ&quot;א 38
+                    בדק בית תמ״א 38
                   </a>
                 </li>
               </ul>

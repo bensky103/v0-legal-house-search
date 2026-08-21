@@ -7,16 +7,16 @@ import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_TIYACH_TZEVA } from "@/lib/article-images"
 
 export const metadata: Metadata = {
-  title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת\"י 789) | בדק בית Legal",
+  title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789) | בדק בית Legal",
   description:
-    "קירות עקומים, סדקים, גלים בטיח ופגמי צבע נבדקים מול הסטיות המותרות בת\"י 789. כך מאתרים ומתעדים ליקויי טיח וצבע בבדק בית לדירה חדשה.",
+    "קירות עקומים, סדקים, גלים בטיח ופגמי צבע נבדקים מול הסטיות המותרות בת״י 789. כך מאתרים ומתעדים ליקויי טיח וצבע בבדק בית לדירה חדשה.",
   keywords: [
     "ליקויי טיח",
     "ליקויי צבע",
     "מישוריות קיר",
     "אנכיות קיר",
     "סדקים בטיח",
-    "ת\"י 789",
+    "ת״י 789",
     "גמר קיר",
     "בדק בית טיח",
     "ליקויי בנייה",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/likuyey-tiyach-tzeva-bedek-bayit" },
   openGraph: {
-    title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת\"י 789)",
-    description: "כך מאתרים ומתעדים קירות עקומים, סדקים, גלים בטיח ופגמי צבע בבדק בית מול הסטיות המותרות בת\"י 789.",
+    title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789)",
+    description: "כך מאתרים ומתעדים קירות עקומים, סדקים, גלים בטיח ופגמי צבע בבדק בית מול הסטיות המותרות בת״י 789.",
     type: "article",
     locale: "he_IL",
     url: "https://www.legalbedek.co.il/articles/likuyey-tiyach-tzeva-bedek-bayit",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
 export default function LikuyeyTiyachTzevaArticle() {
   return (
     <ArticleLayout
-      title="ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת&quot;י 789)"
-      subtitle="קיר עקום, סדק או גל בטיח בולטים לעין ומקשים על גמר הדירה. כך נבדקים מישוריות, אנכיות וגמר מול הסטיות המותרות בת&quot;י 789."
+      title="ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789)"
+      subtitle="קיר עקום, סדק או גל בטיח בולטים לעין ומקשים על גמר הדירה. כך נבדקים מישוריות, אנכיות וגמר מול הסטיות המותרות בת״י 789."
       slug="likuyey-tiyach-tzeva-bedek-bayit"
       description="כך נבדקים בבדק בית מישוריות, אנכיות, סדקים וגמר טיח וצבע מול הסטיות המותרות בת״י 789."
       datePublished="2026-07-12"
@@ -48,7 +48,7 @@ export default function LikuyeyTiyachTzevaArticle() {
     >
       <ArticleLead>
         טיח וצבע הם שכבות הגמר הנראות ביותר בדירה, וליקויים בהם בולטים מיד. קיר שאינו ישר או אנכי, סדקים, גלים
-        ופגמי צבע נבדקים בבדק בית ונמדדים מול <strong>הסטיות המותרות בת"י 789</strong> — התקן הקובע את רמת הדיוק
+        ופגמי צבע נבדקים בבדק בית ונמדדים מול <strong>הסטיות המותרות בת״י 789</strong> — התקן הקובע את רמת הדיוק
         הנדרשת בעבודות הגמר.
       </ArticleLead>
 
@@ -65,7 +65,7 @@ export default function LikuyeyTiyachTzevaArticle() {
         <li><strong>פלס וסרגל</strong> לבדיקת מישוריות ואנכיות הקירות ולמדידת גודל הסטייה.</li>
         <li><strong>בדיקה באור צדי</strong> לחשיפת גלים, בליטות ואי-אחידות בגמר.</li>
         <li><strong>איתור סדקים ומדידת רוחבם</strong> להבחנה בין סדק גמר לסדק מבני.</li>
-        <li><strong>השוואה לסטיות המותרות</strong> בת"י 789, לקביעה מה מהווה ליקוי.</li>
+        <li><strong>השוואה לסטיות המותרות</strong> בת״י 789, לקביעה מה מהווה ליקוי.</li>
       </ul>
 
       <ArticleDefectGallery

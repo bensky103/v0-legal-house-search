@@ -109,7 +109,7 @@ export const cityProjects: Record<string, CityProject[]> = {
   raanana: [
     { name: "Kedar Vision", area: "רחוב גאולה 7, 9, 11" },
     { name: "עלי מוהר 10", area: "שכונת נווה זמר" },
-    { name: "מכבי 30", area: "תמ\"א 38 הריסה ובנייה, מרכז העיר" },
+    { name: "מכבי 30", area: "תמ״א 38 הריסה ובנייה, מרכז העיר" },
     { name: "סביוני רעננה", area: "צפון / מערב העיר" },
     { name: "המעלות 7", area: "מרכז דרום" },
     { name: "הר סיני 8", area: "קריית ויצמן" },
@@ -131,7 +131,7 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "שכונת הזמר העברי (הירוקה)", area: "בנייה רוויה" },
   ],
   herzliya: [
-    { name: "הירדן 8", area: "תמ\"א 38 הריסה ובנייה מחדש" },
+    { name: "הירדן 8", area: "תמ״א 38 הריסה ובנייה מחדש" },
     { name: "מתחם אולפני הרצליה", area: "מגורי יוקרה בלב העיר" },
     { name: "HERZLIYA VILLE", area: "מרכז העיר, רחוב ויליאם הכלר" },
   ],
@@ -164,7 +164,7 @@ export const cityProjects: Record<string, CityProject[]> = {
   ],
   haifa: [
     { name: "רוטשילד פארק", area: "אזור מתחדש" },
-    { name: "נאות פרס (שלב ב')", area: "מבואות דרומיים" },
+    { name: "נאות פרס (שלב ב׳)", area: "מבואות דרומיים" },
     { name: "אזורים עיר הים", area: "נווה דוד, יזם אזורים" },
   ],
   kiryot: [
@@ -176,7 +176,7 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "אגמי בראשית", area: "מגורים מול נוף פתוח" },
   ],
   "nof-hagalil": [
-    { name: "TOP גליל", area: "שכונת הר יונה ב', בנייה רוויה" },
+    { name: "TOP גליל", area: "שכונת הר יונה ב׳, בנייה רוויה" },
   ],
   "rishon-lezion": [
     { name: "נחלת יהודה החדשה", area: "שכונת מגורים חדשה עם בניינים רבי-קומות, נחלת יהודה" },

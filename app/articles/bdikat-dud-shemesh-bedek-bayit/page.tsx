@@ -7,13 +7,13 @@ import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_DUD_SHEMESH } from "@/lib/article-images"
 
 export const metadata: Metadata = {
-  title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת\"י 579) | בדק בית Legal",
+  title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת״י 579) | בדק בית Legal",
   description:
-    "דוד השמש והמערכת הסולארית נבדקים בבדק בית לפי ת\"י 579 — תקינות הדוד, הקולטים, הבידוד והחיבורים, כולל בדיקה תרמית לאיתור ליקויים.",
+    "דוד השמש והמערכת הסולארית נבדקים בבדק בית לפי ת״י 579 — תקינות הדוד, הקולטים, הבידוד והחיבורים, כולל בדיקה תרמית לאיתור ליקויים.",
   keywords: [
     "בדיקת דוד שמש",
     "מערכת סולארית",
-    "ת\"י 579",
+    "ת״י 579",
     "קולטים",
     "חימום מים",
     "מצלמה תרמית",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-dud-shemesh-bedek-bayit" },
   openGraph: {
-    title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת\"י 579)",
-    description: "כך נבדקים דוד השמש והמערכת הסולארית בבדק בית לפי ת\"י 579 — דוד, קולטים, בידוד וחיבורים.",
+    title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת״י 579)",
+    description: "כך נבדקים דוד השמש והמערכת הסולארית בבדק בית לפי ת״י 579 — דוד, קולטים, בידוד וחיבורים.",
     type: "article",
     locale: "he_IL",
     url: "https://www.legalbedek.co.il/articles/bdikat-dud-shemesh-bedek-bayit",
@@ -36,8 +36,8 @@ export const metadata: Metadata = {
 export default function BdikatDudShemeshArticle() {
   return (
     <ArticleLayout
-      title="בדיקת דוד שמש בבדק בית — מערכת סולארית (ת&quot;י 579)"
-      subtitle="דוד השמש והמערכת הסולארית הם חלק ממערכות הדירה שנבדקות בבדק בית. כך נבדקים הדוד, הקולטים, הבידוד והחיבורים לפי ת&quot;י 579."
+      title="בדיקת דוד שמש בבדק בית — מערכת סולארית (ת״י 579)"
+      subtitle="דוד השמש והמערכת הסולארית הם חלק ממערכות הדירה שנבדקות בבדק בית. כך נבדקים הדוד, הקולטים, הבידוד והחיבורים לפי ת״י 579."
       slug="bdikat-dud-shemesh-bedek-bayit"
       description="כך נבדקים בבדק בית דוד השמש והמערכת הסולארית לפי ת״י 579 — דוד, קולטים, בידוד וחיבורים."
       datePublished="2026-07-12"
@@ -46,7 +46,7 @@ export default function BdikatDudShemeshArticle() {
       ctaText="בידוד או חיבור לקוי בדוד השמש פוגעים ביעילות ועלולים לגרום לנזילה. בדק בית מקצועי בודק את המערכת הסולארית."
     >
       <ArticleLead>
-        דוד השמש והמערכת הסולארית נבדקים בבדק בית לפי <strong>ת"י 579</strong> — התקן לבדיקת מערכות סולאריות
+        דוד השמש והמערכת הסולארית נבדקים בבדק בית לפי <strong>ת״י 579</strong> — התקן לבדיקת מערכות סולאריות
         לחימום מים. בידוד לקוי, חיבורים בעייתיים או התקנה שגויה פוגעים ביעילות המערכת ועלולים לגרום לנזילות
         ולאובדן חום.
       </ArticleLead>

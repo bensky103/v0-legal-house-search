@@ -24,12 +24,14 @@ function getCityProjectContent(citySlug: string): {
   const named = getCityProjects(citySlug)
 
   // The `area` field may carry a developer suffix ("נופי בן שמן, יזם שיכון ובינוי");
-  // the neighbourhood is the part before the separator.
+  // the neighbourhood is the part before the separator. Entries that describe the
+  // project rather than locate it ("פרויקט מגורים חדש") are dropped — this sentence
+  // lists areas and neighbourhoods, and a project descriptor reads wrong inside it.
   const derivedAreas = [
     ...new Set(
       named
         .map((p) => p.area.split(/[,;]/)[0].trim())
-        .filter((a) => a.length > 0 && !a.startsWith("יזם")),
+        .filter((a) => a.length > 0 && !a.startsWith("יזם") && !a.startsWith("פרויקט")),
     ),
   ]
 

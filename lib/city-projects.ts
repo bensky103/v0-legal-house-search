@@ -355,7 +355,10 @@ export const cityProjects: Record<string, CityProject[]> = {
   ramla: [{ name: "Teo שער העיר", area: "רובע שער העיר" }],
   "or-akiva": [{ name: "אלמוגים אור ים", area: "שכונת אור ים, יזם אלמוגים" }],
   "ganei-tikva": [{ name: "דרך המשי 15-17", area: "גני תקווה מערב" }],
-  tzfat: [{ name: "לב השמורה", area: "שכונת איביקור, מול יער בירייה; יזם: קבוצת משה חדיף" }],
+  tzfat: [
+    { name: "לב השמורה", area: "שכונת איביקור, מול יער בירייה; יזם: קבוצת משה חדיף" },
+    { name: "מצפה האגם", area: "פרויקט מגורים חדש בצפת" },
+  ],
 }
 
 export function getCityProjects(slug: string): CityProject[] {

@@ -17,6 +17,8 @@ const GF = (file: string) => `/gallery/${file}`
 // Curated, topic-relevant photo sets (by defect slug from lib/defects.ts).
 const DEFECT_IMAGES: Record<string, string[]> = {
   retivut: [
+    G("bedek-bayit-petach-tzinor-bekir-lelo-itum-gova-karka"),
+    G("bedek-bayit-deshe-tzamud-lekir-lelo-shipua-karka"),
     G("bedek-bayit-tzinor-gag-lelo-mikel-saba"),
     G("bedek-bayit-tzinor-gag-lelo-sharvul-itum"),
     G("bedek-bayit-hitnafchut-tiyach-retivut-misdaron"),
@@ -43,11 +45,13 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedikat-nichuchiyut-kir-peles"),
   ],
   ovesh: [
+    G("bedek-bayit-petach-tzinor-bekir-lelo-itum-gova-karka"),
     G("matzlema-termit-itur-retivut"),
     G("mad-lachut-protimeter-bedek-bayit"),
     G("likui-retivut-hitporerut-tiyach"),
   ],
   itum: [
+    G("bedek-bayit-petach-tzinor-bekir-lelo-itum-gova-karka"),
     G("bedek-bayit-tzinor-gag-lelo-sharvul-itum"),
     G("bedek-bayit-chadirat-tzanrat-kir-lelo-sharvul"),
     G("bedek-bayit-likui-itum-briha-sdika"),
@@ -237,6 +241,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-mamad-02.jpg"),
   ],
   mirpasot: [
+    G("bedek-bayit-medidat-shipua-mirpeset-lekivun-nakez"),
     G("bedek-bayit-medidat-shipua-mirpeset-shemesh"),
     G("bedek-bayit-medidat-shipua-mirpeset-peles"),
     G("bedek-bayit-maake-mirpeset-briha-govah"),
@@ -319,11 +324,19 @@ const DEFECT_IMAGES: Record<string, string[]> = {
   ],
   pergolot: [G("mad-koach-digitali-bedikat-chozek"), G("bedikat-chozek-maake-mirpeset")],
   chatzerot: [
+    G("bedek-bayit-deshe-tzamud-lekir-lelo-shipua-karka"),
+    G("bedek-bayit-nikuz-mei-geshem-lereglei-kir-bayit-prati"),
+    G("bedek-bayit-medidat-shipua-chatzer-peles-digitali"),
+    G("bedek-bayit-tetzuga-shipua-lakui-0-26-achuz"),
+    G("bedek-bayit-medidat-shipua-mishtach-mrutzaf-chutz"),
     G("bedikat-nikuz-matzlemat-endoskop"),
     G("mad-zavit-digitali-bedek-bayit"),
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
   ],
   nikuz: [
+    G("bedek-bayit-nikuz-mei-geshem-lereglei-kir-bayit-prati"),
+    G("bedek-bayit-medidat-shipua-mirpeset-lekivun-nakez"),
+    G("bedek-bayit-tetzuga-shipua-efes-mishtach-shatuach"),
     G("bedek-bayit-endoskop-magof-nikuz"),
     G("bedek-bayit-medidat-shipua-mirpeset-peles"),
     G("bedikat-tzilum-kavim-tzanrat-01"),
@@ -452,6 +465,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("mad-oviy-zchuchit-merlin-bedek-bayit"),
   ],
   "ritzuf-chutz": [
+    G("bedek-bayit-peles-digitali-al-ritzuf-even-chatzer"),
+    G("bedek-bayit-tetzuga-shipua-efes-mishtach-shatuach"),
     GF("bedek-bayit-ritzuf-chutz-01.jpg"),
     GF("bedek-bayit-ritzuf-chutz-02.jpg"),
     GF("bedek-bayit-ritzuf-chutz-03.jpg"),

@@ -796,6 +796,84 @@ export const CHADIRAT_TZANRAT_GAG: ArticleImage[] = [
   },
 ]
 
+export const ITUM_KARKA_SVIV_BAYIT: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-petach-tzinor-bekir-lelo-itum-gova-karka.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "מעבר צנרת בקיר בגובה הקרקע ללא איטום",
+    alt: "צינור החודר קיר חיצוני של בית פרטי בגובה הדשא, כשהפתח סביבו נותר פתוח וללא איטום והדשא הסינתטי צמוד לקיר ללא שיפוע - ליקוי איטום שאותר בבדק בית",
+    caption:
+      "הצינור נדחף דרך חור שנקדח בקיר, והפער סביבו נשאר פתוח. הפתח נמצא בגובה פני הדשא — כלומר בדיוק בגובה שבו נאספים מי השטיפה ומי הגשם. זהו נתיב חדירה ישיר אל תוך הקיר, מתחת לגובה הריצוף הפנימי.",
+  },
+  {
+    src: "/gallery/bedek-bayit-deshe-tzamud-lekir-lelo-shipua-karka.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "דשא צמוד לקיר ללא שיפוע מהמבנה",
+    alt: "דשא סינתטי המונח עד לקו הקיר החיצוני בחצר בית פרטי, ללא שיפוע קרקע מהמבנה וללא רצועת ניקוז, כשמעבר צנרת פתוח בתחתית הקיר - ליקוי שנבדק בבדק בית",
+    caption:
+      "המשטח כולו שטוח והדשא מגיע עד לקו הקיר. אין שיפוע שמרחיק את המים מהמבנה ואין רצועת ניקוז בין הדשא לקיר, כך שכל מים שמגיעים לפינה הזאת נשארים בה ונספגים בתחתית הקיר.",
+  },
+  {
+    src: "/gallery/bedek-bayit-nikuz-mei-geshem-lereglei-kir-bayit-prati.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "מרזבים המנקזים מי גג לרגלי הקיר",
+    alt: "שני מרזבי ניקוז מי גשם המסתיימים על הריצוף ממש לרגלי קיר חיצוני של בית פרטי, ללא הרחקת מים וללא שיפוע ניקוז מהמבנה - ליקוי ניקוז שתועד בבדק בית",
+    caption:
+      "שני מרזבים שמרכזים את כל מי הגג ומשחררים אותם על הריצוף שלרגלי הקיר. במקום שהמים יורחקו אל נקז, הם נשפכים בנקודה אחת ומרטיבים את תחתית הקיר בכל אירוע גשם.",
+  },
+]
+
+export const MEDIDAT_SHIPUA_SVIV_BAYIT: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-medidat-shipua-chatzer-peles-digitali.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "מדידת שיפוע בחצר בניצב לקיר",
+    alt: "מהנדס בדק בית מודד את שיפוע הריצוף בחצר בית פרטי בעזרת פלס דיגיטלי ארוך המונח בניצב לקיר האבן - בדיקת ניקוז והרחקת מים מהמבנה",
+    caption:
+      "הפלס מונח בניצב לקיר, בכיוון שבו המים אמורים לזרום. זו הדרך היחידה לדעת אם המשטח מרחיק מים או אוסף אותם — המדידה חוזרת בכל צלע של הבית, מפני שהשיפוע משתנה מצד לצד.",
+  },
+  {
+    src: "/gallery/bedek-bayit-peles-digitali-al-ritzuf-even-chatzer.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "פלס באורך שני מטרים על ריצוף האבן",
+    alt: "פלס דיגיטלי באורך שני מטרים מונח על ריצוף אבן בחצר בית פרטי לאורך קיר חיצוני - מדידת שיפוע וניקוז בבדיקה הנדסית",
+    caption:
+      "אורך הפלס אינו פרט טכני שולי. פלס קצר מודד את סטיית האריח הבודד שמתחתיו, ואילו פלס באורך שני מטרים מודד את השיפוע האמיתי של המשטח — וזה מה שקובע לאן המים ילכו.",
+  },
+  {
+    src: "/gallery/bedek-bayit-tetzuga-shipua-lakui-0-26-achuz.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "תצוגה: שיפוע של 0.26 אחוז בלבד",
+    alt: "תצוגת פלס דיגיטלי המראה שיפוע של 0.26 אחוז במשטח חצר - שיפוע נמוך בהרבה מהנדרש להרחקת מים מהמבנה, ממצא בבדק בית",
+    caption:
+      "0.26 אחוז — כשישית מהשיפוע הנדרש, שהוא כ־1.75 אחוז למעלה אחת. לעין המשטח נראה תקין לחלוטין, ובפועל המים כמעט אינם זזים ממנו. זו בדיוק הסיבה שהליקוי הזה מתגלה רק במדידה.",
+  },
+  {
+    src: "/gallery/bedek-bayit-tetzuga-shipua-efes-mishtach-shatuach.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "תצוגה: שיפוע אפס",
+    alt: "תצוגת פלס דיגיטלי המראה שיפוע אפס אחוז על ריצוף חוץ - משטח שטוח לחלוטין ללא ניקוז, ליקוי שתועד בבדק בית",
+    caption:
+      "אפס אחוז: המשטח שטוח לגמרי. אין כיוון זרימה, ולכן כל מים שמגיעים אליו נשארים עליו — עד שהם מתאדים או נספגים בריצוף ובתחתית הקיר הסמוך.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-shipua-mishtach-mrutzaf-chutz.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "משטח בטון שמנקז לכיוון הקיר",
+    alt: "פלס דיגיטלי ארוך מונח על משטח בטון בחצר בית פרטי לרגלי קיר חיצוני, ליד ברז גינה וצינור השקיה - בדיקת שיפוע וניקוז בבדק בית",
+    caption:
+      "משטח הבטון בחצר נמדד בקטע שצמוד לקיר. סימני הרטיבות על המשטח מראים היכן המים נעצרים בפועל, והמדידה מאשרת את מה שהכתמים כבר מספרים.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-shipua-mirpeset-lekivun-nakez.webp",
+    standard: "ת״י 1555 חלק 3 – שיפועים וניקוז",
+    title: "מדידת שיפוע מרפסת לכיוון הנקז",
+    alt: "פלס דיגיטלי ארוך מונח באלכסון על ריצוף מרפסת חיצונית לכיוון נקז רצפה, ליד סף דלת הכניסה לדירה - בדיקת שיפוע וניקוז בבדק בית",
+    caption:
+      "במרפסת ובחצר מרוצפת עם נקז, השיפוע חייב להוליך אל הנקז ולא אל סף הדלת. מדידה באלכסון מאמתת שהמים אכן מגיעים לנקודת הניקוז ולא נעצרים לפני הכניסה לבית.",
+  },
+]
+
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -820,6 +898,8 @@ export const articleSitemapImages = [
   ...DOCH_MIMTZAIM_ITUM_MAAKIM.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
   ...DOCH_MIMTZAIM_MAARACHOT.map((img) => ({ ...img, articleSlug: "mah-kolel-doch-bedek-bayit" })),
   ...CHADIRAT_TZANRAT_GAG.map((img) => ({ ...img, articleSlug: "chadirat-tzanrat-gag-lelo-sharvul" })),
+  ...ITUM_KARKA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
+  ...MEDIDAT_SHIPUA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

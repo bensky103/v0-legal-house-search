@@ -310,6 +310,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "bdikat-bayit-prati"],
     relatedDefects: ["itum", "retivut", "gagot", "mizug-avir"],
   },
+  {
+    slug: "itum-karka-shipua-sviv-bayit-prati",
+    title: "איטום הקרקע סביב הבית — שיפוע, מעברי צנרת ורטיבות בתחתית הקירות",
+    description:
+      "קרקע שטוחה או משופעת אל המבנה ומעברי צנרת שלא נאטמו הם הגורם השכיח לנפיחויות, עובש וטחב בחצי המטר התחתון של הקירות. מה דורש ת״י 1555 חלק 3, איך בודקים ומה מתקנים.",
+    datePublished: "2026-08-21",
+    relatedServices: ["bdikat-bayit-prati", "itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["itum", "retivut", "ovesh", "nikuz"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

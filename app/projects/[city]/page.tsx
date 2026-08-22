@@ -123,7 +123,7 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
 
   // Each named project as its own H3, with the neighbourhood or street it sits in.
   // The area is the one detail the prose list, the bullet list and the FAQ all lack,
-  // so this block is what makes an address like "שלמה דרור 1" indexable.
+  // so this block is what makes an address like "רחוב שלמה דרור" indexable.
   const namedProjectsBlock = namedProjects.length
     ? {
         heading: `הפרויקטים החדשים ב${city.name} לפי שכונה`,

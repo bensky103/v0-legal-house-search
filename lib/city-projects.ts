@@ -124,7 +124,7 @@ export const cityProjects: Record<string, CityProject[]> = {
     { name: "N סוקולוב", area: "מרכז העיר צפון" },
     { name: "EAST חופים", area: "פארק הים" },
     { name: "Story גלי ים", area: "שכונת גלי הים" },
-    { name: "BRIGA", area: "רחוב שלמה דרור 1" },
+    { name: "בריגה איינשטיין", area: "רחוב שלמה דרור, שכונת כוכב הצפון" },
   ],
   "kfar-saba": [
     { name: "אוסטשינסקי 5", area: "בנייה חדשה" },

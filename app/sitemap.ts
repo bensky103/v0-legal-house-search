@@ -11,8 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Bumped 2026-07-18 after rebalancing internal links between city pages (tail cities like רמלה
   // were near-orphaned), to prompt Google to re-crawl and re-evaluate pages stuck in
   // "discovered/crawled - currently not indexed". Bumped again 2026-08-14 with the
-  // report-anatomy article and its field photos.
-  const LAST_UPDATED = new Date("2026-08-21")
+  // report-anatomy article and its field photos, and 2026-08-27 with the hidden-mold
+  // detection article and its field photos.
+  const LAST_UPDATED = new Date("2026-08-27")
 
   // Video pages carry their own, later date: they were last crawled 2026-06-29 —
   // before the de-duplication fix (2026-07-21) and before the depth content in
@@ -387,6 +388,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://www.legalbedek.co.il/articles/itum-karka-shipua-sviv-bayit-prati",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/itur-ovesh-samuy-bedek-bayit",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.8,

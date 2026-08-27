@@ -874,6 +874,30 @@ export const MEDIDAT_SHIPUA_SVIV_BAYIT: ArticleImage[] = [
   },
 ]
 
+export const ITUR_OVESH_SAMUY: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-mad-lachut-tikra-hitkalfut-tiyach-chashad-ovesh.webp",
+    title: "מדידת לחות בתקרה מעל תקרת גבס",
+    alt: "מומחה בדק בית מצמיד מד לחות לתקרת בטון מתקלפת מעל תקרת גבס מונמכת עם גוף תאורה שקוע - איתור רטיבות נסתרת וחשד לעובש",
+    caption:
+      "הטיח בתקרה מתקלף, ומד הלחות מכמת את מה שהעין רק מנחשת. הקריאה קובעת אם מדובר ברטיבות פעילה או בנזק ישן שהתייבש — הבחנה שמשנה לגמרי את התיקון הנדרש. המכשיר מודד לחות, לא עובש.",
+  },
+  {
+    src: "/gallery/bedek-bayit-hitnafchut-tiyach-tikra-meal-tikrat-gevs.webp",
+    title: "התנפחות טיח והכהיה בחלל שמעל תקרת הגבס",
+    alt: "התנפחות והתנתקות טיח בתקרת בטון בפינת חדר מעל תקרת גבס מונמכת, עם הכהיה לאורך קו החיבור - ממצא רטיבות נסתרת בבדק בית",
+    caption:
+      "החלל שבין תקרת הבטון לתקרת הגבס אינו מאוורר ואיש אינו מסתכל בו. הטיח שהתנפח וההכהיה לאורך קו החיבור מסמנים לחות ממושכת — בדיוק התנאי שבו מתפתח עובש סמוי.",
+  },
+  {
+    src: "/gallery/bedek-bayit-ktamim-kehim-al-tiyach-hitkalfut-tzeva-chashad-ovesh.webp",
+    title: "כתמים כהים בשולי התקלפות הצבע",
+    alt: "תקריב של שכבת צבע מתקלפת על טיח עם שני כתמים חומים כהים בסמוך לקו ההתקלפות - סימן לרטיבות ולחשד להתפתחות עובש בבדק בית",
+    caption:
+      "שכבת הצבע התנתקה מהטיח, ובסמוך לקו ההתקלפות מופיעים כתמים כהים ומוגדרים. זהו סימן מובהק שמחייב מדידה ובירור מקור הלחות — ומה שנראה בפני השטח קטן כמעט תמיד מהשטח שנפגע מאחוריו.",
+  },
+]
+
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -900,6 +924,7 @@ export const articleSitemapImages = [
   ...CHADIRAT_TZANRAT_GAG.map((img) => ({ ...img, articleSlug: "chadirat-tzanrat-gag-lelo-sharvul" })),
   ...ITUM_KARKA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
   ...MEDIDAT_SHIPUA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
+  ...ITUR_OVESH_SAMUY.map((img) => ({ ...img, articleSlug: "itur-ovesh-samuy-bedek-bayit" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

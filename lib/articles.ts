@@ -319,6 +319,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bdikat-bayit-prati", "itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["itum", "retivut", "ovesh", "nikuz"],
   },
+  {
+    slug: "itur-ovesh-samuy-bedek-bayit",
+    title: "עובש סמוי — איך מאתרים אותו בבדק בית ומה רק מעבדה יכולה לקבוע",
+    description:
+      "אין מכשיר שמזהה עובש בתוך קיר. בבדק בית מאתרים את התנאים שמייצרים עובש — לחות, עיבוי ואוורור לקוי — בבדיקה ויזואלית, מד לחות ומצלמה תרמית. קביעה ודאית מחייבת דגימה ובדיקת מעבדה.",
+    datePublished: "2026-08-27",
+    relatedServices: ["itur-likuyey-bniya", "bdikat-dira-yad-shniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["ovesh", "retivut", "bidud-termi", "tikrot-gevs"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

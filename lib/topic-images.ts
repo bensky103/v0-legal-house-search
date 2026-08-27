@@ -23,6 +23,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedek-bayit-tzinor-gag-lelo-sharvul-itum"),
     G("bedek-bayit-hitnafchut-tiyach-retivut-misdaron"),
     G("bedek-bayit-mad-lachut-mipuy-retivut"),
+    G("bedek-bayit-mad-lachut-tikra-hitkalfut-tiyach-chashad-ovesh"),
+    G("bedek-bayit-hitnafchut-tiyach-tikra-meal-tikrat-gevs"),
     G("bedek-bayit-nezila-chadar-sherut-briha"),
     GF("bedek-bayit-likui-retivut-14.webp"),
     GF("bedek-bayit-likui-retivut-15.webp"),
@@ -45,6 +47,9 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedikat-nichuchiyut-kir-peles"),
   ],
   ovesh: [
+    G("bedek-bayit-mad-lachut-tikra-hitkalfut-tiyach-chashad-ovesh"),
+    G("bedek-bayit-ktamim-kehim-al-tiyach-hitkalfut-tzeva-chashad-ovesh"),
+    G("bedek-bayit-hitnafchut-tiyach-tikra-meal-tikrat-gevs"),
     G("bedek-bayit-petach-tzinor-bekir-lelo-itum-gova-karka"),
     G("matzlema-termit-itur-retivut"),
     G("mad-lachut-protimeter-bedek-bayit"),

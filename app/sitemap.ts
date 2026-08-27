@@ -398,5 +398,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://www.legalbedek.co.il/articles/stimot-biyuv-pesolet-bniya-bedek-bayit",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ]
 }

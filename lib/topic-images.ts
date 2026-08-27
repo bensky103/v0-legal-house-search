@@ -117,6 +117,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-ritzuf-09.jpg"),
   ],
   instalatzia: [
+    G("bedek-bayit-machsom-ritzpa-satum-pesolet-bniya"),
+    G("bedek-bayit-tzilum-stima-machsom-ritzpa-matzlemat-tzanrat"),
     G("bedek-bayit-tzinor-shirshuri-nikuz-kiyor"),
     G("bedek-bayit-endoskop-magof-nikuz"),
     G("bedikat-tzilum-kavim-tzanrat-01"),
@@ -339,6 +341,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
   ],
   nikuz: [
+    G("bedek-bayit-machsom-ritzpa-satum-pesolet-bniya"),
+    G("bedek-bayit-tzilum-kavim-chadar-rachatza-dira-hadasha"),
     G("bedek-bayit-nikuz-mei-geshem-lereglei-kir-bayit-prati"),
     G("bedek-bayit-medidat-shipua-mirpeset-lekivun-nakez"),
     G("bedek-bayit-tetzuga-shipua-efes-mishtach-shatuach"),
@@ -448,6 +452,9 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("sargel-pelada-meduyak-bedek-bayit"),
   ],
   biyuv: [
+    G("bedek-bayit-machsom-ritzpa-satum-pesolet-bniya"),
+    G("bedek-bayit-tzilum-stima-machsom-ritzpa-matzlemat-tzanrat"),
+    G("bedek-bayit-tzilum-kavim-chadar-rachatza-dira-hadasha"),
     G("matzlemat-tzanrat-endoskop-bedek-bayit"),
     G("bedikat-nikuz-matzlemat-endoskop"),
     G("likui-nikuz-stima-tzanrat"),

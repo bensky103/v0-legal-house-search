@@ -328,6 +328,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bdikat-dira-yad-shniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["ovesh", "retivut", "bidud-termi", "tikrot-gevs"],
   },
+  {
+    slug: "stimot-biyuv-pesolet-bniya-bedek-bayit",
+    title: "סתימות ביוב משאריות בנייה — הליקוי הנפוץ בבדיקת דירה אחרי בנייה",
+    description:
+      "בזמן הבנייה ובניקיון שלפני המסירה נשטפות שאריות מלט, רובה ופסולת אל קווי הניקוז. החומר מתקשה בצינור ויוצר סתימה חלקית שאינה מתגלה בבדיקת מים קצרה — כך מאתרים אותה לפני החתימה.",
+    datePublished: "2026-08-27",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "bedek-bayit-lifnei-kniya"],
+    relatedDefects: ["biyuv", "instalatzia", "nikuz", "klim-sanitariim"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

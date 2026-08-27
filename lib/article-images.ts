@@ -898,6 +898,35 @@ export const ITUR_OVESH_SAMUY: ArticleImage[] = [
   },
 ]
 
+// Construction debris washed into the apartment drain lines — found with the
+// pipe camera during a pre-delivery inspection.
+export const STIMOT_PESOLET_BNIYA: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-machsom-ritzpa-satum-pesolet-bniya.webp",
+    standard: "ת״י 1205.2 – מערכות נקזים",
+    title: "מחסום רצפה סתום בשאריות בנייה",
+    alt: "פתח מחסום רצפה שנחשף ברצפת דירה, ובתוכו חומר בנייה שהתקשה ושאריות ניילון החוסמים את הניקוז - ממצא בבדק בית לדירה חדשה",
+    caption:
+      "גוף מחסום הרצפה מלא בחומר שהתקשה ובשאריות ניילון. זהו הנתיב שדרכו אמורים לרדת כל מי המקלחת, ובפועל נותר בו חלק קטן משטח החתך המקורי.",
+  },
+  {
+    src: "/gallery/bedek-bayit-tzilum-stima-machsom-ritzpa-matzlemat-tzanrat.webp",
+    standard: "ת״י 1205.4 – ביוב ותיעול",
+    title: "צילום הסתימה במצלמת צנרת",
+    alt: "מומחה בדק בית מחדיר מצלמת צנרת אל מחסום רצפה סתום, והצג מציג את שאריות הבנייה שבתוך הקו - צילום קווים בבדיקת דירה אחרי בנייה",
+    caption:
+      "המצלמה מוחדרת אל הקו והצג מציג את פנים הצינור בזמן אמת. כך הופך החשד לממצא מתועד — עם מיקום ומרחק — עוד לפני שנגעו בסתימה.",
+  },
+  {
+    src: "/gallery/bedek-bayit-tzilum-kavim-chadar-rachatza-dira-hadasha.webp",
+    standard: "ת״י 1205 – מערכות אינסטלציה",
+    title: "בדיקת קווי הניקוז בחדר רחצה גמור",
+    alt: "ערכת צילום קווים מונחת על רצפת חדר רחצה גמור בדירה חדשה עם ארון כיור ואמבטיה - בדיקת צנרת ניקוז לפני מסירה מקבלן",
+    caption:
+      "הבדיקה מתבצעת בדירה גמורה, בלי שבירת ריצוף ובלי פירוק כלים סניטריים. הצנרת נבחנת בדיוק כפי שהיא נמסרת לרוכש.",
+  },
+]
+
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -925,6 +954,7 @@ export const articleSitemapImages = [
   ...ITUM_KARKA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
   ...MEDIDAT_SHIPUA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
   ...ITUR_OVESH_SAMUY.map((img) => ({ ...img, articleSlug: "itur-ovesh-samuy-bedek-bayit" })),
+  ...STIMOT_PESOLET_BNIYA.map((img) => ({ ...img, articleSlug: "stimot-biyuv-pesolet-bniya-bedek-bayit" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

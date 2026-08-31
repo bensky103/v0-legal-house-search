@@ -324,6 +324,15 @@ export const videos: SiteVideo[] = [
     topic: "nikuz",
     vertical: true,
   },
+  {
+    id: "JrwYTCF0aG0",
+    title: "בדק בית - בדיקת אינסטלציה במצלמת אנדוסקופ לפני קבלת מפתח",
+    description:
+      "בדק בית לדירה חדשה - בדיקת מערכת האינסטלציה בעזרת מצלמת אנדוסקופ לאיתור חיבורים לקויים, שאריות בנייה וליקויים בצנרת לפני קבלת המפתח. רלוונטי גם לדירת יד שנייה.",
+    uploadDate: "2026-07-21",
+    topic: "instalatzia",
+    vertical: true,
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

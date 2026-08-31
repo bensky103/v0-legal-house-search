@@ -927,6 +927,16 @@ export const STIMOT_PESOLET_BNIYA: ArticleImage[] = [
   },
 ]
 
+export const MEDIDAT_TIYACH_1920: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-medidat-tiyach-lazer-anachiyut-mishoriyut.webp",
+    standard: "ת״י 1920 – טיח",
+    title: "מדידת אנכיות ומישוריות טיח בפלס לייזר",
+    alt: "מומחה בדק בית מציב פלס לייזר צולב למדידת אנכיות, מישוריות וגליות הטיח בקירות דירה חדשה מקבלן",
+    caption:
+      "הצבת פלס לייזר צולב בדירה חדשה מקבלן. קו הלייזר מייצר מישור אנכי ואופקי ייחוס, והמרחק בינו לבין פני הטיח נמדד לאורך הקיר — כך מכמתים סטיית אנכיות, מישוריות וגליות במילימטרים במקום להסתמך על התרשמות מהעין.",
+  },
+]
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -955,6 +965,7 @@ export const articleSitemapImages = [
   ...MEDIDAT_SHIPUA_SVIV_BAYIT.map((img) => ({ ...img, articleSlug: "itum-karka-shipua-sviv-bayit-prati" })),
   ...ITUR_OVESH_SAMUY.map((img) => ({ ...img, articleSlug: "itur-ovesh-samuy-bedek-bayit" })),
   ...STIMOT_PESOLET_BNIYA.map((img) => ({ ...img, articleSlug: "stimot-biyuv-pesolet-bniya-bedek-bayit" })),
+  ...MEDIDAT_TIYACH_1920.map((img) => ({ ...img, articleSlug: "taken-1920-tiyach-stiyot-mutarot" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

@@ -89,7 +89,8 @@ export default function LikuyeyTiyachTzevaArticle() {
         עברו למדריכים על <Link href="/likuyey-bniya/tiyach" className="text-blue-700 hover:underline font-medium">ליקויי טיח</Link>,{" "}
         <Link href="/likuyey-bniya/tzeva" className="text-blue-700 hover:underline font-medium">צבע</Link>{" "}
         ו<Link href="/likuyey-bniya/sdakim" className="text-blue-700 hover:underline font-medium">סדקים</Link>, או
-        קראו על <Link href="/articles/taken-789-stiyot-mutarot" className="text-blue-700 hover:underline font-medium">הסטיות המותרות בת״י 789</Link>.
+        קראו על <Link href="/articles/taken-789-stiyot-mutarot" className="text-blue-700 hover:underline font-medium">הסטיות המותרות בת״י 789</Link>{" "}
+        ועל <Link href="/articles/taken-1920-tiyach-stiyot-mutarot" className="text-blue-700 hover:underline font-medium">הסטיות המותרות בטיח לפי ת״י 1920</Link>.
       </p>
 
       <ArticleFaq

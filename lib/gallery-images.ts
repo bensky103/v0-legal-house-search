@@ -3092,6 +3092,16 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "ליקויי טיח", "מישוריות", "גימור צבע", "אנכיות"],
   },
   {
+    src: "/gallery/bedek-bayit-medidat-tiyach-lazer-anachiyut-mishoriyut.webp",
+    width: 1200,
+    height: 1600,
+    category: "field",
+    title: "מדידת אנכיות ומישוריות טיח בפלס לייזר - בדק בית",
+    alt: "מומחה בדק בית מציב פלס לייזר צולב למדידת אנכיות, מישוריות וגליות הטיח בקירות דירה חדשה מקבלן - בדיקת סטיות מותרות בטיח",
+    caption: "מדידת אנכיות ומישוריות הטיח בפלס לייזר צולב בדירה חדשה מקבלן",
+    keywords: ["בדק בית", "מדידת טיח", "פלס לייזר", "אנכיות קיר", "מישוריות", "ת״י 1920"],
+  },
+  {
     src: "/gallery/bedek-bayit-mizug-avir-01.webp",
     width: 640,
     height: 480,

@@ -307,6 +307,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
   tiyach: [
     G("bedek-bayit-hitnafchut-tiyach-retivut-misdaron"),
     G("bedek-bayit-peles-laser-anachiyut-kir"),
+    GF("bedek-bayit-medidat-tiyach-lazer-anachiyut-mishoriyut.webp"),
     GF("bedek-bayit-likui-tiyach-12.webp"),
     GF("bedek-bayit-likui-tiyach-13.webp"),
     GF("bedek-bayit-likui-tiyach-14.webp"),

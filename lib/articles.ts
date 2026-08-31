@@ -337,6 +337,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "bedek-bayit-lifnei-kniya"],
     relatedDefects: ["biyuv", "instalatzia", "nikuz", "klim-sanitariim"],
   },
+  {
+    slug: "taken-1920-tiyach-stiyot-mutarot",
+    title: "ת״י 1920 — סטיות מותרות בטיח: אנכיות, מישוריות וגליות",
+    description:
+      "התקן קובע לטיח דרישות מדידות: אנכיות הקיר, מישוריות פני הטיח, גליות ועובי השכבות. קיר עקום אינו רק בעיה אסתטית, וטיח שהונח בעובי חורג סודק, מתפורר ופוגע באטימות הקיר.",
+    datePublished: "2026-08-31",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["tiyach", "sdakim", "tzeva"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

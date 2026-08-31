@@ -53,8 +53,10 @@ interface SeoLandingTemplateProps {
   // Optional real inspection photos relevant to the page topic.
   gallery?: GalleryImg[]
   galleryHeading?: string
-  // Optional YouTube inspection videos relevant to the page topic.
-  videos?: { id: string; title: string }[]
+  // Optional YouTube inspection videos relevant to the page topic. `slug` is the
+  // video's own /videos/[slug] page - the one page that carries its VideoObject
+  // markup and a server-rendered player, so the caption links there.
+  videos?: { id: string; title: string; slug: string }[]
   videosHeading?: string
   // Optional market price-range table (typical industry ranges, NOT a fixed quote).
   priceTable?: {
@@ -369,7 +371,10 @@ export function SeoLandingTemplate({
         </section>
       )}
 
-      {/* Topic-relevant inspection videos (YouTube, lazy facade) */}
+      {/* Topic-relevant inspection videos (YouTube, lazy facade).
+          No VideoObject markup here on purpose: the facade renders no player
+          until the visitor clicks, and a video is indexed under a single URL -
+          its own /videos/[slug] page, which carries both. */}
       {videos.length > 0 && (
         <section className="py-10 md:py-16 bg-slate-50">
           <div className="container mx-auto px-4 max-w-5xl">
@@ -381,7 +386,9 @@ export function SeoLandingTemplate({
                 <figure key={v.id}>
                   <LiteYouTube id={v.id} title={v.title} />
                   <figcaption className="mt-3 text-sm text-gray-700 leading-relaxed font-medium">
-                    {v.title}
+                    <Link href={`/videos/${v.slug}`} className="hover:text-blue-700 hover:underline">
+                      {v.title}
+                    </Link>
                   </figcaption>
                 </figure>
               ))}

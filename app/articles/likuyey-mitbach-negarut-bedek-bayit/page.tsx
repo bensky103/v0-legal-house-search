@@ -6,7 +6,7 @@ import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { DEFECTS_MITBACH_NEGARUT } from "@/lib/article-images"
-import { videos, videoSchema } from "@/lib/videos"
+import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
 
 export const metadata: Metadata = {
@@ -58,10 +58,6 @@ export default function LikuyeyMitbachNegarutArticle() {
 
       {MITBACH_VIDEO && (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(MITBACH_VIDEO)) }}
-          />
           <figure className="my-6">
             <LiteYouTube id={MITBACH_VIDEO.id} title={MITBACH_VIDEO.title} />
             <figcaption className="mt-2 text-sm text-gray-500">

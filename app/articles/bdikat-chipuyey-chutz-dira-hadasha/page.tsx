@@ -4,7 +4,7 @@ import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layo
 import { ArticleFaq } from "@/components/article-faq"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
-import { videos, videoSchema } from "@/lib/videos"
+import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
 
 export const metadata: Metadata = {
@@ -59,10 +59,6 @@ export default function BdikatChipuyeyChutzArticle() {
 
       {CHIPUY_VIDEO && (
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(CHIPUY_VIDEO)) }}
-          />
           <figure className="my-6">
             <LiteYouTube id={CHIPUY_VIDEO.id} title={CHIPUY_VIDEO.title} />
             <figcaption className="mt-2 text-sm text-gray-500">

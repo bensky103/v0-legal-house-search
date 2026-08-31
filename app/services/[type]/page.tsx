@@ -4,7 +4,8 @@ import { projectTypes } from "@/lib/seo-locations"
 import { services, getServiceBySlug } from "@/lib/services"
 import { getArticlesForService } from "@/lib/articles"
 import { getServiceImages } from "@/lib/topic-images"
-import { getVideosForTopic, videoSchema } from "@/lib/videos"
+import { getVideosForTopic } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 import { defects } from "@/lib/defects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
@@ -192,13 +193,6 @@ function DedicatedService({ slug }: { slug: string }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      {topicVideos.map((v) => (
-        <script
-          key={v.id}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(v)) }}
-        />
-      ))}
       <SeoLandingTemplate
         badge={service.badge}
         title={service.title}
@@ -208,7 +202,7 @@ function DedicatedService({ slug }: { slug: string }) {
         features={service.features}
         gallery={getServiceImages(service.slug)}
         galleryHeading={`תמונות מבדיקות בשטח - ${service.name}`}
-        videos={topicVideos.map((v) => ({ id: v.id, title: v.title }))}
+        videos={topicVideos.map((v) => ({ id: v.id, title: v.title, slug: videoSlug(v) }))}
         videosHeading={`סרטוני בדיקות בשטח - ${service.name}`}
         contentSections={service.contentSections}
         bulletSections={service.bulletSections}

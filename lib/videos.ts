@@ -385,16 +385,33 @@ export function getVideosForTopic(slug: string): SiteVideo[] {
   return videos.filter((v) => related.includes(v.topic))
 }
 
-/** VideoObject JSON-LD for a single video. */
-export function videoSchema(v: SiteVideo) {
+/**
+ * VideoObject JSON-LD for a single video.
+ *
+ * Emit this ONLY on the page that renders a real player for the video - its
+ * dedicated /videos/[slug] page, where the iframe is server-rendered (`eager`).
+ * Google adds a video to the video index only when it finds an actual player on
+ * the page that carries the markup, and it indexes each video under one URL.
+ * Declaring the same VideoObject on defect, service and article pages - where
+ * the player is a click-to-load facade and no iframe exists until the visitor
+ * clicks - produced only "video not indexed" rows in Search Console.
+ *
+ * `pageUrl` anchors the entity to the video's canonical page, so the same clip
+ * embedded elsewhere is not read as a separate video.
+ *
+ * No `contentUrl`: for a YouTube-hosted video the only address we have is the
+ * watch page, while Google expects contentUrl to be the media file itself.
+ * `embedUrl` alone is the correct player reference.
+ */
+export function videoSchema(v: SiteVideo, pageUrl?: string) {
   return {
     "@context": "https://schema.org",
     "@type": "VideoObject",
+    ...(pageUrl ? { "@id": `${pageUrl}#video`, url: pageUrl, mainEntityOfPage: pageUrl } : {}),
     name: v.title,
     description: v.description,
     thumbnailUrl: [videoThumb(v.id)],
     uploadDate: v.uploadDate,
-    contentUrl: videoWatchUrl(v.id),
     embedUrl: videoEmbedUrl(v.id),
   }
 }

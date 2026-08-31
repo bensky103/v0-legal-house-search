@@ -379,17 +379,11 @@ export default function HomePage() {
                 inLanguage: "he",
                 publisher: { "@id": "https://www.legalbedek.co.il/#organization" },
               },
-              {
-                "@type": "VideoObject",
-                name: "בדק בית Legal - יגאל בנסקי, מומחה לאיתור ליקויי בנייה",
-                description:
-                  "סרטון היכרות עם שירותי בדק בית של יגאל בנסקי: איתור ליקויי בנייה, בדיקת דירה לפני מסירה וחוות דעת הנדסית קבילה.",
-                thumbnailUrl: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
-                uploadDate: "2026-06-16",
-                contentUrl:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%D7%9C%D7%A2%D7%9C%D7%95%D7%AA%20%D7%9C%D7%90%D7%AA%D7%A8-W1e4mWhh4SZfg8W0g0azc15TRMW1fZ.mp4",
-                publisher: { "@id": "https://www.legalbedek.co.il/#organization" },
-              },
+              // No VideoObject for the hero intro clip: it plays inside a modal
+              // that is loaded on demand, so no <video> element ever exists in
+              // the crawled page and Google cannot add it to the video index.
+              // To have that clip indexed it needs a visible player on a page of
+              // its own, the way the YouTube clips work under /videos/[slug].
             ],
           }),
         }}

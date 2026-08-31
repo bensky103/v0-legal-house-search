@@ -6,7 +6,8 @@ import { services } from "@/lib/services"
 import { cities } from "@/lib/seo-locations"
 import { getArticlesForDefect } from "@/lib/articles"
 import { getDefectImages } from "@/lib/topic-images"
-import { getVideosForTopic, videoSchema } from "@/lib/videos"
+import { getVideosForTopic } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 
 export function generateStaticParams() {
@@ -113,13 +114,6 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
   return (
     <>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-    {topicVideos.map((v) => (
-      <script
-        key={v.id}
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(v)) }}
-      />
-    ))}
     <SeoLandingTemplate
       badge="מדריך ליקויי בנייה"
       title={`ליקויי ${defect.name} בדירה - מדריך מקצועי`}
@@ -150,7 +144,7 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
       ]}
       gallery={getDefectImages(defect.slug)}
       galleryHeading={`תמונות מבדיקות בשטח - איתור ליקויי ${defect.name}`}
-      videos={topicVideos.map((v) => ({ id: v.id, title: v.title }))}
+      videos={topicVideos.map((v) => ({ id: v.id, title: v.title, slug: videoSlug(v) }))}
       videosHeading={`סרטוני בדיקות בשטח - ליקויי ${defect.name}`}
       contentSections={contentSections}
       faq={defect.faq}

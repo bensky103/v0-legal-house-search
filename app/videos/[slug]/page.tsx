@@ -96,7 +96,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(video)) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(video, url)) }}
       />
       <script
         type="application/ld+json"

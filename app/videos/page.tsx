@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { videos, videoSchema } from "@/lib/videos"
+import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { SiteIndex } from "@/components/site-index"
@@ -8,14 +8,26 @@ import { SiteIndex } from "@/components/site-index"
 export default function VideosPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
-      {/* This gallery page lists every video, so it carries a VideoObject for each. */}
-      {videos.map((v) => (
-        <script
-          key={v.id}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema(v)) }}
-        />
-      ))}
+      {/* An ItemList of the video pages, not a VideoObject per clip: this hub
+          shows every video as a click-to-load facade, so no player exists in the
+          DOM here, and a page holding dozens of videos gives Google no prominent
+          one to index. Each video's VideoObject lives on its own page. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "סרטוני בדק בית ואיתור ליקויי בנייה",
+            itemListElement: videos.map((v, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              url: `https://www.legalbedek.co.il/videos/${videoSlug(v)}`,
+              name: v.title,
+            })),
+          }),
+        }}
+      />
       {/* Header */}
       <header className="bg-white shadow-sm border-b relative z-10">
         <div className="container mx-auto px-4 py-4">

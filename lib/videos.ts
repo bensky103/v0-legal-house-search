@@ -333,6 +333,15 @@ export const videos: SiteVideo[] = [
     topic: "instalatzia",
     vertical: true,
   },
+  {
+    id: "P2Q83xnXdwU",
+    title: "בדק בית - בדיקת ישרות וגליות טיח בעזרת פלס לייזר",
+    description:
+      "בדק בית לדירה חדשה - בדיקת ישרות וגליות של הטיח והקירות בעזרת פלס לייזר, לאיתור סטיות ממישור שישפיעו על הריצוף, הארונות וההתקנות. רלוונטי גם לדירת יד שנייה.",
+    uploadDate: "2026-07-21",
+    topic: "tiyach",
+    vertical: true,
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

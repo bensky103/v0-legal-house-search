@@ -1490,8 +1490,8 @@ export default function HomePage() {
                 <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
                   <Image
                     src="/images/bikoret-bedek-bayit-tzfat-dira-chadasha.webp"
-                    alt="ביקורת בדק בית בוואטסאפ מלקוח מרוצה לאחר בדק בית לדירה חדשה בצפת - דוח מקצועי עם תמחור ליקויים לפי מחירון דקל"
-                    title="ביקורת לקוח מצפת על בדק בית לדירה חדשה"
+                    alt="ביקורת בדק בית בוואטסאפ משלמה לאחר בדק בית לדירה חדשה בצפת - דוח מקצועי עם תמחור ליקויים לפי מחירון דקל"
+                    title="ביקורת לקוח משלמה מצפת על בדק בית לדירה חדשה"
                     width={1020}
                     height={902}
                     loading="lazy"
@@ -1499,7 +1499,7 @@ export default function HomePage() {
                   />
                   <figcaption className="sr-only">ביקורת לקוח בוואטסאפ - בדק בית לדירה חדשה בצפת, דוח מקצועי עם תמחור ליקויים לפי מחירון דקל</figcaption>
                 </figure>
-                <p className="font-semibold text-gray-900 mt-3">לקוח מרוצה, צפת</p>
+                <p className="font-semibold text-gray-900 mt-3">שלמה, צפת</p>
               </CardContent>
             </Card>
           </div>

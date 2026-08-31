@@ -85,6 +85,22 @@ export const siteImages = {
     caption: "ביקורת לקוח - תודה רבה, מעריך את ההשקעה בבדק הבית",
     page: "/",
   },
+  reviewEilat: {
+    src: "/images/bikoret-bedek-bayit-eilat-yad-shniya.webp",
+    width: 1220,
+    height: 410,
+    alt: "ביקורת בדק בית בוואטסאפ מדוד לאחר בדק בית לדירה יד שנייה באילת - הדוח איתר ליקויים שהרוכש לא הבחין בהם בעצמו",
+    caption: "ביקורת לקוח בוואטסאפ - בדק בית לדירה יד שנייה באילת, הדוח איתר ליקויים שלא נראו לעין הרוכש",
+    page: "/",
+  },
+  reviewTzfat: {
+    src: "/images/bikoret-bedek-bayit-tzfat-dira-chadasha.webp",
+    width: 1020,
+    height: 902,
+    alt: "ביקורת בדק בית בוואטסאפ מלקוח מרוצה לאחר בדק בית לדירה חדשה בצפת - דוח מקצועי עם תמחור ליקויים לפי מחירון דקל",
+    caption: "ביקורת לקוח בוואטסאפ - בדק בית לדירה חדשה בצפת, דוח מקצועי עם תמחור ליקויים לפי מחירון דקל",
+    page: "/",
+  },
 } as const satisfies Record<string, SiteImage>
 
 export const allSiteImages: SiteImage[] = Object.values(siteImages)

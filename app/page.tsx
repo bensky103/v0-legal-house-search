@@ -32,6 +32,7 @@ import { T } from "@/components/t"
 import { LanguageDir } from "@/components/language-dir"
 import { HomeVideoButton } from "@/components/home-video-button"
 import { translations } from "@/lib/translations"
+import { GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT } from "@/lib/google-reviews"
 
 /**
  * Hebrew text for a translation key, resolved on the server.
@@ -138,7 +139,7 @@ const EXPERTISE_TAGS = [
 
 // EEAT — verifiable trust signals (no fabricated counts) shown beneath the intro.
 const EEAT_STATS = [
-  { icon: Star, value: "5.0", label: "דירוג Google" },
+  { icon: Star, value: GOOGLE_RATING_VALUE, label: "דירוג Google" },
   { icon: Award, value: "איגוד המהנדסים", label: "מומחה מוסמך" },
   { icon: BadgeCheck, value: "רישיון משרד העבודה", label: "בודק מורשה" },
   { icon: MapPin, value: "בכל הארץ", label: "צפון · מרכז · דרום" },
@@ -187,13 +188,6 @@ const HOMEPAGE_FAQ = [
       "מקבלים דוח מפורט המתעד כל ליקוי, ועל בסיסו ניתן לדרוש מהקבלן לתקן, לנהל משא ומתן על מחיר הנכס, או להכין חוות דעת והערכת עלויות תיקון. אנו מלווים את הלקוח בתהליך מול הקבלן עד לתיקון.",
   },
 ]
-
-// Total ratings on the Google Business Profile (verified 5.0★ across 42 reviews).
-// Update these two values whenever the Google profile changes — they drive the
-// AggregateRating count so the schema reflects the real Google asset, not just the
-// sample testimonials shown on the page.
-const GOOGLE_RATING_VALUE = "5.0"
-const GOOGLE_RATING_COUNT = 42
 
 // Real on-page testimonials, emitted as Review + AggregateRating schema (all 5★).
 // These are a sample of the reviews displayed in the testimonials section below.
@@ -341,7 +335,7 @@ export default function HomePage() {
                   "@type": "AggregateRating",
                   ratingValue: GOOGLE_RATING_VALUE,
                   bestRating: "5",
-                  ratingCount: String(GOOGLE_RATING_COUNT),
+                  ratingCount: String(GOOGLE_REVIEW_COUNT),
                 },
                 review: HOMEPAGE_REVIEWS.map((r) => ({
                   "@type": "Review",
@@ -1084,7 +1078,7 @@ export default function HomePage() {
                 </svg>
                 <div className="text-right">
                   <div className="flex items-center gap-1">
-                    <span className="font-bold text-gray-900 text-lg">5.0</span>
+                    <span className="font-bold text-gray-900 text-lg">{GOOGLE_RATING_VALUE}</span>
                     <div className="flex text-yellow-400">
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
@@ -1093,7 +1087,7 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-600">{GOOGLE_RATING_COUNT} <T k="testimonials.googleBadge" /></p>
+                  <p className="text-sm text-gray-600">{GOOGLE_REVIEW_COUNT} <T k="testimonials.googleBadge" /></p>
                 </div>
               </div>
               <span className="text-blue-600 font-medium text-sm hover:underline"><T k="testimonials.viewAll" /></span>

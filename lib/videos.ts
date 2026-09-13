@@ -16,6 +16,12 @@ export interface SiteVideo {
   description: string
   /** ISO upload date (YYYY-MM-DD), required by VideoObject schema. */
   uploadDate: string
+  /**
+   * Runtime in seconds, read off the video on YouTube (never estimated).
+   * Google treats duration as a recommended VideoObject property and uses it
+   * for the length badge on a video result, so every entry carries it.
+   */
+  durationSeconds: number
   /** Defect/service slug this video maps onto, or "general". */
   topic: string
   /** True for a YouTube Short (9:16). The player frame flips to portrait. */
@@ -28,6 +34,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - מעקה מסוכן שאינו עומד בתקן",
     description: "בדיקת מעקה במרפסת במסגרת בדק בית - איתור מעקה מסוכן שאינו עומד בדרישות החוזק והגובה לפי התקן הישראלי.",
     uploadDate: "2026-04-19",
+    durationSeconds: 31,
     topic: "maakot",
   },
   {
@@ -35,6 +42,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - למה חשוב שהקבלן יבצע אף מים",
     description: "הסבר על חשיבות אף המים (תלם ניתוק) למניעת חדירת רטיבות, ובדיקת ביצועו התקין במסגרת בדק בית.",
     uploadDate: "2026-04-19",
+    durationSeconds: 40,
     topic: "itum",
   },
   {
@@ -42,6 +50,7 @@ export const videos: SiteVideo[] = [
     title: "בדיקת ריצוף בדירה - מישוריות, אנכיות ואיתור ליקויי בנייה",
     description: "בדיקת ריצוף בדק בית - מדידת מישוריות ואנכיות, איתור הפרשי מפלס וליקויי ריצוף בעזרת פלס ולייזר.",
     uploadDate: "2026-03-08",
+    durationSeconds: 29,
     topic: "ritzuf",
   },
   {
@@ -49,6 +58,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - מדידת רוחב דלתות לפי תקנות התכנון והבנייה",
     description: "בדק בית - בדיקת רוחב הדלתות בדירה והאם הן עומדות בדרישות תקנות התכנון והבנייה ובמפרט הטכני.",
     uploadDate: "2026-03-08",
+    durationSeconds: 28,
     topic: "dlatot",
   },
   {
@@ -56,6 +66,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת ויטרינת אלומיניום וקלות תזוזת הכנפיים",
     description: "בדיקת עבודות אלומיניום בבדק בית - בדיקת ויטרינה, קלות תזוזת הכנפיים, מסילות ואיטום פתחי האלומיניום.",
     uploadDate: "2026-03-08",
+    durationSeconds: 20,
     topic: "aluminium",
   },
   {
@@ -63,6 +74,7 @@ export const videos: SiteVideo[] = [
     title: "בדיקת מיזוג אוויר מרכזי עם מצלמה תרמית",
     description: "בדק בית - בדיקת מערכת מיזוג אוויר מרכזי בעזרת מצלמה תרמית, לאיתור ליקויי פיזור אוויר ובידוד.",
     uploadDate: "2026-03-08",
+    durationSeconds: 27,
     topic: "bidud-termi",
   },
   {
@@ -70,6 +82,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - איתור חסימות בצנרת ביוב בעזרת מצלמה",
     description: "בדק בית - בדיקת צנרת ביוב וניקוז בעזרת מצלמת אנדוסקופ, לאיתור חסימות, שיפועים לקויים וליקויי ניקוז.",
     uploadDate: "2026-03-08",
+    durationSeconds: 19,
     topic: "nikuz",
   },
   {
@@ -77,6 +90,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת צנרת אינסטלציה ואיתור נזילות",
     description: "בדיקת צנרת האינסטלציה בדירה במסגרת בדק בית - בדיקת מים, חיבורים ואיתור נזילות וליקויי אינסטלציה.",
     uploadDate: "2026-03-08",
+    durationSeconds: 25,
     topic: "instalatzia",
   },
   {
@@ -84,6 +98,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת סדקים בקירות: גמר או מבני?",
     description: "בדק בית - בדיקת סדקים בקירות, אבחון סוג הסדק והאם מדובר בליקוי מבני או בליקוי גמר.",
     uploadDate: "2026-03-08",
+    durationSeconds: 23,
     topic: "sdakim",
   },
   {
@@ -91,6 +106,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת נזילות ואיטום בפרויקט תמ״א 38",
     description: "בדק בית - בדיקת נזילות וליקויי איטום בדירה בפרויקט תמ״א 38, בעזרת מצלמה תרמית ומדידות לחות.",
     uploadDate: "2026-03-08",
+    durationSeconds: 45,
     topic: "itum",
   },
   {
@@ -98,6 +114,7 @@ export const videos: SiteVideo[] = [
     title: "בדיקת מרחב שימוש בחדרי אמבטיה ושירותים",
     description: "בדק בית - בדיקת מרחבי השימוש בחדרי האמבטיה והשירותים והתאמתם לתקן ולמפרט הטכני.",
     uploadDate: "2025-11-30",
+    durationSeconds: 45,
     topic: "instalatzia",
   },
   {
@@ -105,6 +122,7 @@ export const videos: SiteVideo[] = [
     title: "מה זה בדק בית ולמה חשוב לבצע אותו לפני קניית דירה",
     description: "הסבר מקיף - מה זה בדק בית, מה בודקים, ולמה חשוב לבצע בדק בית הנדסי לפני קניית דירה או נכס.",
     uploadDate: "2026-03-08",
+    durationSeconds: 76,
     topic: "general",
   },
   {
@@ -112,6 +130,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת אוורור בדירה",
     description: "בדק בית - בדיקת מערכות האוורור בדירה, כולל אוורור חדרי רחצה ושירותים, והתאמתם לדרישות.",
     uploadDate: "2026-03-08",
+    durationSeconds: 31,
     topic: "general",
   },
   {
@@ -119,6 +138,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת אינסטלציה ומחלק מים",
     description: "בדק בית - בדיקת מערכת האינסטלציה ומחלק המים בדירה, חיבורים ואיתור נזילות וליקויי אינסטלציה.",
     uploadDate: "2026-06-29",
+    durationSeconds: 33,
     topic: "instalatzia",
   },
   {
@@ -126,6 +146,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת רכוש משותף וגג: איטום, דוד שמש ואינסטלציה",
     description: "בדק בית - בדיקת רכוש משותף וגג הבניין: איטום, דודי שמש וצנרת אינסטלציה, לאיתור ליקויים משותפים.",
     uploadDate: "2026-06-29",
+    durationSeconds: 43,
     topic: "itum",
   },
   {
@@ -133,6 +154,7 @@ export const videos: SiteVideo[] = [
     title: "בדיקת פתחי אור ואוורור באמבטיה",
     description: "בדק בית - בדיקת פתחי אור ואוורור בחדר האמבטיה והתאמתם לדרישות התקנות.",
     uploadDate: "2026-06-29",
+    durationSeconds: 31,
     topic: "general",
   },
   {
@@ -140,6 +162,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - הכירו את השירות",
     description: "סרטון היכרות עם שירות בדק בית Legal - בדיקה הנדסית מקצועית ואיתור ליקויי בנייה בכל הארץ.",
     uploadDate: "2026-06-29",
+    durationSeconds: 50,
     topic: "general",
   },
   {
@@ -147,6 +170,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - ליקויים בקופינג ובחיפוי חיצוני ופנימי",
     description: "בדק בית - בדיקת קופינג (גמר עליון של קירות וגדרות) וחיפויים חיצוניים ופנימיים, ואיתור ליקויי חיפוי ואיטום.",
     uploadDate: "2026-06-29",
+    durationSeconds: 40,
     topic: "chipuyim",
   },
   {
@@ -154,6 +178,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת אנכיות ומישוריות של טיח וקירות",
     description: "בדק בית - בדיקת אנכיות, גליות ומישוריות של עבודות הטיח והקירות, לאיתור חריגות וליקויי גמר.",
     uploadDate: "2026-06-29",
+    durationSeconds: 32,
     topic: "tiyach",
   },
   {
@@ -161,6 +186,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - איכות עבודות טיח: גליות, סדיקה ואזורים חלולים",
     description: "בדק בית - בדיקת איכות עבודות הטיח בקירות הפנים של הדירה, לאיתור גליות, סדיקה וליקויי יישום.",
     uploadDate: "2026-06-29",
+    durationSeconds: 34,
     topic: "tiyach",
   },
   {
@@ -168,6 +194,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת ריצוף, הפרשי גבהים בין מרצפות ורובה",
     description: "בדק בית - בדיקת איכות עבודת הריצוף: הפרשי גבהים בין מרצפות, מילוי ורוחב הרובה ומישוריות הריצוף.",
     uploadDate: "2026-06-29",
+    durationSeconds: 37,
     topic: "ritzuf",
   },
   {
@@ -175,6 +202,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת איכות התקנת מיזוג אוויר ופיזור אוויר",
     description: "בדק בית - בדיקת איכות התקנת מערכת מיזוג האוויר בדירה ואיתור ליקויי התקנה ופיזור אוויר.",
     uploadDate: "2026-06-29",
+    durationSeconds: 27,
     topic: "bidud-termi",
   },
   {
@@ -182,6 +210,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - בדיקת שיפועים וחיבורים בצנרת ביוב באנדוסקופ",
     description: "בדק בית - בדיקת צנרת הביוב בעזרת מצלמה אנדוסקופית, לאיתור חסימות, שיפועים לקויים וליקויי ניקוז.",
     uploadDate: "2026-06-29",
+    durationSeconds: 28,
     topic: "nikuz",
   },
   {
@@ -189,6 +218,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - סדקי טיח: סדיקת התכווצות מול ליקוי יישום",
     description: "בדק בית - בדיקת סדקים בטיח הקירות, אבחון סוג הסדק והבחנה בין ליקוי גמר לליקוי מבני.",
     uploadDate: "2026-06-29",
+    durationSeconds: 23,
     topic: "sdakim",
   },
   {
@@ -196,6 +226,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - ליקויי אלומיניום נפוצים: איטום, מסילות וזיגוג",
     description: "בדק בית - בדיקת עבודות האלומיניום בדירה, כולל ויטרינה, קלות תזוזה ואיטום, ואיתור ליקויי התקנה.",
     uploadDate: "2026-06-29",
+    durationSeconds: 20,
     topic: "aluminium",
   },
   {
@@ -203,6 +234,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - דלת פנים צרה מהנדרש: ליקוי ברוחב המעבר",
     description: "בדק בית - בדיקת רוחב דלתות הפנים והתאמתן לדרישות תקנות התכנון והבנייה ולמפרט הטכני.",
     uploadDate: "2026-06-29",
+    durationSeconds: 28,
     topic: "dlatot",
   },
   {
@@ -210,6 +242,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - ליקוי באיטום מרפסת וחדירת רטיבות",
     description: "בדק בית - איתור ליקוי באיטום רצפת המרפסת, שעלול לגרום לחדירת מים ורטיבות, בעזרת בדיקה הנדסית.",
     uploadDate: "2026-06-29",
+    durationSeconds: 45,
     topic: "itum",
   },
   {
@@ -217,6 +250,7 @@ export const videos: SiteVideo[] = [
     title: "בדק בית - מה חשוב לבדוק בחלונות אלומיניום בדירה חדשה",
     description: "בדק בית בדירה חדשה - מה חשוב לבדוק בעבודות האלומיניום והחלונות לפני מסירת הדירה, ואיתור ליקויי אלומיניום נפוצים.",
     uploadDate: "2026-06-30",
+    durationSeconds: 50,
     topic: "aluminium",
   },
   {
@@ -225,6 +259,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדיקת מעקה זכוכית במרפסת דירה חדשה ביום המסירה - גובה, חוזק עיגון ורפידות גומי בין הזכוכית למסגרת, לפי ת״י 1142 ות״י 1099.",
     uploadDate: "2026-07-13",
+    durationSeconds: 29,
     topic: "maakot",
   },
   {
@@ -233,6 +268,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת מרפסת בדירה חדשה מקבלן ביום המסירה: איטום רצפת המרפסת, שיפועים לכיוון הניקוז, איכות הריצוף ותפקוד נקודת הניקוז.",
     uploadDate: "2026-07-13",
+    durationSeconds: 29,
     topic: "itum",
   },
   {
@@ -241,6 +277,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדיקת חיפויי חוץ בדירה חדשה מקבלן ביום המסירה - איתור אריחים מתנתקים, נקישה חלולה, פוגות פתוחות, סדקים והיעדר עיגון בחיפוי אבן בחזית, לפי ת״י 2378 ות״י 1555.",
     uploadDate: "2026-07-13",
+    durationSeconds: 38,
     topic: "chipuyim",
   },
   {
@@ -249,6 +286,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת עבודות האלומיניום בדירה: חלונות, תריסים, אטימות למים ולאוויר, ניקוז המים במלבן וליקויי התקנה נפוצים, לפי ת״י 1068.",
     uploadDate: "2026-07-14",
+    durationSeconds: 31,
     topic: "aluminium",
   },
   {
@@ -257,6 +295,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת דלת הכניסה בדירה: ישרות המשקוף, פעולת המנעולים והצילינדר, הפרזול, אטימות ההיקף והסף וליקויי התקנה נפוצים.",
     uploadDate: "2026-07-14",
+    durationSeconds: 31,
     topic: "dlatot",
   },
   {
@@ -265,6 +304,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת נגרות המטבח בדירה: פילוס ותלייה של הארונות, כיוונון צירים ומגירות, מישוריות משטח העבודה, איטום הכיור וגמר הנגרות.",
     uploadDate: "2026-07-14",
+    durationSeconds: 63,
     topic: "mitbach",
   },
   {
@@ -273,6 +313,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת חשמל ותקשורת בדירה: בדיקה חזותית של לוח החשמל, הנקודות וארון התקשורת, שקע כפול בארון התקשורת ותשתית להעברת כבלי אינטרנט. טיפול בליקויי חשמל בידי חשמלאי מוסמך בלבד.",
     uploadDate: "2026-07-14",
+    durationSeconds: 35,
     topic: "chashmal",
   },
   {
@@ -281,6 +322,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת כלים סניטריים בחדרי הרחצה והחדרים הרטובים: התקנת אסלות, כיורים וברזים, איטום ומרווחי שימוש, ניקוז ושיפועים ובטיחות חשמל מוגן מים.",
     uploadDate: "2026-07-19",
+    durationSeconds: 57,
     topic: "klim-sanitariim",
   },
   {
@@ -289,6 +331,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת ממ״ד ומסגרות הממ״ד: דלת ההדף וחלון ההדף, פתחי האוורור ומיזוג האוויר, אטימות האטמים וליקויי בטיחות לפי דרישות פיקוד העורף.",
     uploadDate: "2026-07-19",
+    durationSeconds: 55,
     topic: "mamad",
   },
   {
@@ -297,6 +340,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת ריצוף מרפסת השמש: מדידת שיפועי הריצוף לכיוון הניקוז, איתור מים עומדים וליקויי ניקוז, ובדיקת השיפוע הנדרש - מעל 1% לפי ת״י 1555 חלק 3.",
     uploadDate: "2026-07-19",
+    durationSeconds: 31,
     topic: "mirpasot",
   },
   {
@@ -305,6 +349,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת עבודות הטיח בקירות הדירה: בדיקת הידבקות הטיח בהקשה, איתור התקלפות, נפיחות ('בועות') וטיח מתפורר, והבחנה בין ליקוי גמר לבעיית רטיבות.",
     uploadDate: "2026-07-19",
+    durationSeconds: 41,
     topic: "tiyach",
   },
   {
@@ -313,6 +358,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - בדיקת מסתור הכביסה ומרפסת השירות הצמודה: בדיקות בטיחות, דוד המים, מיזוג האוויר, הניקוזים, הברזים וצנרת מכונת הכביסה, אוורור ובטיחות חשמל בסביבה לחה.",
     uploadDate: "2026-07-19",
+    durationSeconds: 44,
     topic: "mistor-kvisa",
   },
   {
@@ -321,6 +367,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - צילום צנרת הניקוז של המרפסת במצלמה, לאיתור שיירי חומרי בנייה בתוך הקו, מים עומדים המעידים על שיפוע לקוי וחיבורים לא תקניים.",
     uploadDate: "2026-08-21",
+    durationSeconds: 29,
     topic: "nikuz",
     vertical: true,
   },
@@ -330,6 +377,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית לדירה חדשה - בדיקת מערכת האינסטלציה בעזרת מצלמת אנדוסקופ לאיתור חיבורים לקויים, שאריות בנייה וליקויים בצנרת לפני קבלת המפתח. רלוונטי גם לדירת יד שנייה.",
     uploadDate: "2026-07-21",
+    durationSeconds: 32,
     topic: "instalatzia",
     vertical: true,
   },
@@ -339,6 +387,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית לדירה חדשה - בדיקת ישרות וגליות של הטיח והקירות בעזרת פלס לייזר, לאיתור סטיות ממישור שישפיעו על הריצוף, הארונות וההתקנות. רלוונטי גם לדירת יד שנייה.",
     uploadDate: "2026-07-21",
+    durationSeconds: 35,
     topic: "tiyach",
     vertical: true,
   },
@@ -348,6 +397,7 @@ export const videos: SiteVideo[] = [
     description:
       "בדק בית - מדידת גובה מעקה ואיתור מעקה נמוך מהנדרש, ליקוי בטיחותי במיוחד במקומות ציבוריים שיש בהם גישה לילדים. בדיקת התאמה לדרישות הבטיחות ולא רק לאיכות הגמר.",
     uploadDate: "2026-09-13",
+    durationSeconds: 33,
     topic: "maakot",
     vertical: true,
   },
@@ -359,6 +409,12 @@ export const videoThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefaul
 export const videoWatchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`
 /** Privacy-enhanced embed URL (no cookies until play). */
 export const videoEmbedUrl = (id: string) => `https://www.youtube-nocookie.com/embed/${id}`
+/** Runtime as an ISO 8601 duration ("PT41S", "PT1M16S") for VideoObject. */
+export const videoDurationISO = (seconds: number) => {
+  const m = Math.floor(seconds / 60)
+  const s = seconds % 60
+  return `PT${m > 0 ? `${m}M` : ""}${s > 0 || m === 0 ? `${s}S` : ""}`
+}
 
 // Defects that have no footage of their own borrow videos from a closely-related
 // topic, so every relevant defect page still shows real inspection video.
@@ -421,6 +477,7 @@ export function videoSchema(v: SiteVideo, pageUrl?: string) {
     description: v.description,
     thumbnailUrl: [videoThumb(v.id)],
     uploadDate: v.uploadDate,
+    duration: videoDurationISO(v.durationSeconds),
     embedUrl: videoEmbedUrl(v.id),
   }
 }

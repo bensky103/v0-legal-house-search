@@ -9,6 +9,12 @@ export const dynamic = "force-static"
 
 const SITE = "https://www.legalbedek.co.il"
 
+// Date the video markup on these pages last changed: the VideoObject was pulled
+// back to a single page per video and gained a duration. Bump it whenever that
+// markup changes - <lastmod> is what moves a page Google already crawled back
+// up the re-crawl queue.
+const MARKUP_REVISED = "2026-09-13"
+
 // Each video has its own dedicated landing page.
 function pageUrl(v: (typeof videos)[number]): string {
   return `${SITE}/videos/${videoSlug(v)}`
@@ -43,12 +49,20 @@ export function GET() {
             `      <video:title>${escapeXml(v.title)}</video:title>\n` +
             `      <video:description>${escapeXml(v.description)}</video:description>\n` +
             `      <video:player_loc>${escapeXml(videoEmbedUrl(v.id))}</video:player_loc>\n` +
+            `      <video:duration>${v.durationSeconds}</video:duration>\n` +
             `      <video:publication_date>${v.uploadDate}T00:00:00+00:00</video:publication_date>\n` +
             `      <video:family_friendly>yes</video:family_friendly>\n` +
             `    </video:video>`,
         )
         .join("\n")
-      return `  <url>\n    <loc>${escapeXml(url)}</loc>\n${videoTags}\n  </url>`
+      const lastmod = vids.map((v) => v.uploadDate).concat(MARKUP_REVISED).sort().at(-1)
+      return (
+        `  <url>\n` +
+        `    <loc>${escapeXml(url)}</loc>\n` +
+        `    <lastmod>${lastmod}</lastmod>\n` +
+        `${videoTags}\n` +
+        `  </url>`
+      )
     })
     .join("\n")
 

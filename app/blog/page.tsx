@@ -9,8 +9,13 @@ export const metadata: Metadata = {
   title: "בלוג בדק בית | מאמרים על איתור ליקויי בנייה ובדיקת דירות - Legal בדק בית",
   description:
     "בלוג בדק בית של Legal - מאמרים, טיפים ומדריכים בנושא איתור ליקויי בנייה, בדיקת דירה חדשה מקבלן, בדק בית לפני מסירה וחוות דעת הנדסית.",
+  // /blog and /articles render the same list from lib/articles.ts and measure ~97%
+  // identical. Two self-canonical near-copies is exactly the "duplicate without a
+  // user-selected canonical" case: Google picks one and drops the other. /articles is
+  // the primary — every article URL lives under /articles/ and the internal links point
+  // there — so this page consolidates into it. The page stays reachable for old links.
   alternates: {
-    canonical: "https://www.legalbedek.co.il/blog",
+    canonical: "https://www.legalbedek.co.il/articles",
   },
 }
 

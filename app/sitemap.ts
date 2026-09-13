@@ -122,12 +122,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...defectPages,
     ...projectCityPages,
     ...videoPages,
-    {
-      url: "https://www.legalbedek.co.il/blog",
-      lastModified: LAST_UPDATED,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
+    // /blog is intentionally absent: it renders the same article list as /articles and
+    // now canonicalises into it. Advertising a canonicalised duplicate in the sitemap
+    // asks Google to crawl a URL it has been told not to index.
     {
       url: "https://www.legalbedek.co.il/articles",
       lastModified: LAST_UPDATED,

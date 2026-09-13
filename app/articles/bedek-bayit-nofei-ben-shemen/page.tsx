@@ -1,6 +1,7 @@
 // Server component: the CTA buttons are real <a> links now, so nothing on this
 // page needs hooks. Keeps SiteIndex's data tables out of the client bundle.
 
+import type { Metadata } from "next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -12,6 +13,37 @@ import { ArticleFaq } from "@/components/article-faq"
 import { ConsultationBox } from "@/components/consultation-box"
 
 import { DEFECTS_DIRA_HADASHA } from "@/lib/article-images"
+
+// Without this export the page inherited the root layout's metadata wholesale —
+// the homepage title, the homepage description AND the homepage canonical — so it
+// declared itself a copy of "/" and Google could never index it. Every other
+// article carries its own block; this one was missed.
+export const metadata: Metadata = {
+  title: "בדק בית בפרויקט נופי בן שמן בלוד (שיכון ובינוי) | בדק בית Legal",
+  description:
+    "רכשתם דירה בפרויקט נופי בן שמן בלוד של שיכון ובינוי? מדריך לבדק בית ובדיקת מסירה בפרויקט — מה בודקים, מתי, ואיך מחייבים את הקבלן לתקן ליקויים לפי חוק המכר.",
+  keywords: [
+    "בדק בית נופי בן שמן",
+    "נופי בן שמן לוד",
+    "שיכון ובינוי לוד",
+    "בדק בית לוד",
+    "בדיקת דירה מקבלן בלוד",
+    "ליקויי בנייה נופי בן שמן",
+    "פרוטוקול מסירה לוד",
+  ],
+  authors: [{ name: "יגאל בנסקי" }],
+  alternates: { canonical: "https://www.legalbedek.co.il/articles/bedek-bayit-nofei-ben-shemen" },
+  openGraph: {
+    title: "בדק בית בפרויקט נופי בן שמן בלוד (שיכון ובינוי): מדריך לרוכשי דירה",
+    description:
+      "מה בודקים בבדק בית בפרויקט נופי בן שמן בלוד, מתי לבצע את הבדיקה, ואיך מחייבים את הקבלן לתקן את הליקויים לפי חוק המכר.",
+    type: "article",
+    locale: "he_IL",
+    url: "https://www.legalbedek.co.il/articles/bedek-bayit-nofei-ben-shemen",
+    siteName: "בדק בית Legal",
+  },
+  robots: "index, follow",
+}
 
 export default function ArticleBedekBayitNofeiBenShemen() {
   return (

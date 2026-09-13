@@ -60,10 +60,28 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   const title = `בדק בית בפרויקטים חדשים ב${city.name} | בדיקת דירה מקבלן`
   const description = `בדק בית לדירות חדשות בפרויקטים ב${city.name}.${projectsHint} בדיקה הנדסית לפני מסירת דירה מקבלן, איתור ליקויי בנייה ופרוטוקול מסירה מקצועי.`
 
+  // A city with a curated index (lib/projects.ts) gets a genuinely distinct page —
+  // its own intro, its own project list — and stands on its own in the index.
+  //
+  // A city without one falls back to the shared template plus whatever little sits in
+  // lib/city-projects.ts. Measured against each other those fallback pages run ~79%
+  // verbatim identical, which is why Google filed them under "duplicate without a
+  // user-selected canonical" and indexed none of them. They also carry no sitemap entry
+  // (getProjectCities lists only the curated ones), so they were asking to be indexed
+  // on their own while nothing vouched for them.
+  //
+  // Each of those cities already has a richer /bedek-bayit/<city> page, so the thin
+  // variant consolidates into it instead of competing with it. The URL stays alive —
+  // the /bedek-bayit city pages and the contractor pages link to it.
+  const hasOwnContent = Boolean(getCityProjectIndex(city.slug))
+  const canonical = hasOwnContent
+    ? `https://www.legalbedek.co.il/projects/${city.slug}`
+    : `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`
+
   return {
     title,
     description,
-    alternates: { canonical: `https://www.legalbedek.co.il/projects/${city.slug}` },
+    alternates: { canonical },
     openGraph: { title, description, url: `https://www.legalbedek.co.il/projects/${city.slug}`, type: "website" },
   }
 }

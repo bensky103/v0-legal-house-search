@@ -60,12 +60,12 @@ export const metadata: Metadata = {
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית בכל הארץ",
     images: ["/images/binyanim-moderniim-israel-bedek-bayit.webp"],
   },
-  alternates: {
-    canonical: "https://www.legalbedek.co.il",
-    languages: {
-      "he-IL": "https://www.legalbedek.co.il",
-    },
-  },
+  // NOTE: no `alternates` here on purpose. Metadata fields defined in this layout are
+  // inherited by every page that does not define them itself, so a canonical here made
+  // any page that forgot its own canonical declare itself a copy of the homepage — and
+  // Google drops such a page from the index entirely. The homepage now carries its own
+  // canonical in app/page.tsx. A page missing one emits none, which merely lets Google
+  // choose; it no longer points at the wrong URL.
   verification: {
     google: "CMIAgCXv6V9ZyaL206bc7tU3VNWXMArFrtydXSnTMQY",
   },

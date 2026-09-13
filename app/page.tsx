@@ -31,8 +31,21 @@ import { SiteIndex } from "@/components/site-index"
 import { T } from "@/components/t"
 import { LanguageDir } from "@/components/language-dir"
 import { HomeVideoButton } from "@/components/home-video-button"
+import type { Metadata } from "next"
 import { translations } from "@/lib/translations"
 import { GOOGLE_RATING_VALUE, GOOGLE_REVIEW_COUNT } from "@/lib/google-reviews"
+
+// Title, description and the rest still come from the root layout; only the canonical
+// lives here, so that it applies to the homepage alone and is not inherited by pages
+// that omit one. See the note in app/layout.tsx.
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.legalbedek.co.il",
+    languages: {
+      "he-IL": "https://www.legalbedek.co.il",
+    },
+  },
+}
 
 /**
  * Hebrew text for a translation key, resolved on the server.

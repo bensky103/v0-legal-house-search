@@ -342,6 +342,15 @@ export const videos: SiteVideo[] = [
     topic: "tiyach",
     vertical: true,
   },
+  {
+    id: "pr6jA3X0MpQ",
+    title: "בדק בית - מעקה נמוך מהנדרש: ליקוי בטיחות בגובה המעקה",
+    description:
+      "בדק בית - מדידת גובה מעקה ואיתור מעקה נמוך מהנדרש, ליקוי בטיחותי במיוחד במקומות ציבוריים שיש בהם גישה לילדים. בדיקת התאמה לדרישות הבטיחות ולא רק לאיכות הגמר.",
+    uploadDate: "2026-09-13",
+    topic: "maakot",
+    vertical: true,
+  },
 ]
 
 /** YouTube thumbnail URL for a video id. */

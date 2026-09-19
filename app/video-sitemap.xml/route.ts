@@ -1,4 +1,4 @@
-import { videos, videoThumb, videoEmbedUrl } from "@/lib/videos"
+import { videos, videoThumbLarge, videoEmbedUrl } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
 
 // Google video sitemap. Lists every embedded YouTube video under the page it
@@ -9,11 +9,13 @@ export const dynamic = "force-static"
 
 const SITE = "https://www.legalbedek.co.il"
 
-// Date the video markup on these pages last changed: the VideoObject was pulled
-// back to a single page per video and gained a duration. Bump it whenever that
+// Date the video markup on these pages last changed. Bump it whenever that
 // markup changes - <lastmod> is what moves a page Google already crawled back
 // up the re-crawl queue.
-const MARKUP_REVISED = "2026-09-13"
+// 2026-09-13: one VideoObject per page, plus a duration.
+// 2026-09-19: the player moved off youtube-nocookie.com onto youtube.com and the
+// declared thumbnail went from 480x360 to 1280x720.
+const MARKUP_REVISED = "2026-09-19"
 
 // Each video has its own dedicated landing page.
 function pageUrl(v: (typeof videos)[number]): string {
@@ -45,7 +47,7 @@ export function GET() {
         .map(
           (v) =>
             `    <video:video>\n` +
-            `      <video:thumbnail_loc>${escapeXml(videoThumb(v.id))}</video:thumbnail_loc>\n` +
+            `      <video:thumbnail_loc>${escapeXml(videoThumbLarge(v.id))}</video:thumbnail_loc>\n` +
             `      <video:title>${escapeXml(v.title)}</video:title>\n` +
             `      <video:description>${escapeXml(v.description)}</video:description>\n` +
             `      <video:player_loc>${escapeXml(videoEmbedUrl(v.id))}</video:player_loc>\n` +

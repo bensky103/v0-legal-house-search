@@ -19,10 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // before the de-duplication fix (2026-07-21) and before the depth content in
   // lib/video-content.ts (2026-08-11). With the shared LAST_UPDATED they were
   // still advertised as unchanged since 2026-07-18, so nothing prompted Google to
-  // re-crawl and re-evaluate them. Bumped again 2026-09-13: the VideoObject on
-  // these pages was rewritten (one page per video, plus a duration), and Google
-  // re-reads markup on a page it already has only once lastmod says it moved.
-  const VIDEOS_UPDATED = new Date("2026-09-13")
+  // re-crawl and re-evaluate them. Bumped again 2026-09-13 (one VideoObject per
+  // page, plus a duration) and 2026-09-19 (player domain and thumbnail size), as
+  // Google re-reads markup on a page it already has only once lastmod says it moved.
+  const VIDEOS_UPDATED = new Date("2026-09-19")
 
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,

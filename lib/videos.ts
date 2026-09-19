@@ -403,12 +403,34 @@ export const videos: SiteVideo[] = [
   },
 ]
 
-/** YouTube thumbnail URL for a video id. */
+/**
+ * Thumbnail for the click-to-load facade. 480x360 - small on purpose, because a
+ * page such as /videos renders 44 of these and they are decoration, not the
+ * image Google indexes. The image Google indexes is videoThumbLarge.
+ */
 export const videoThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
+/**
+ * Thumbnail declared to Google (VideoObject, video sitemap, og:image): 1280x720.
+ * Google asks for the largest available thumbnail and needs one stable URL per
+ * video; maxresdefault was verified to return a real 1280x720 frame for every id
+ * in this file. The Shorts-only endpoints (oardefault, which would give a true
+ * 9:16 crop) 404 on half the Shorts, so they cannot be the stable URL.
+ */
+export const videoThumbLarge = (id: string) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
 /** Public watch URL. */
 export const videoWatchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`
-/** Privacy-enhanced embed URL (no cookies until play). */
-export const videoEmbedUrl = (id: string) => `https://www.youtube-nocookie.com/embed/${id}`
+/**
+ * Player URL, used for the on-page iframe, for VideoObject.embedUrl and for
+ * <video:player_loc> alike - the three have to name the same player.
+ *
+ * Deliberately youtube.com and not youtube-nocookie.com: Google indexes a video
+ * by matching the embedded player against its own YouTube index, and the
+ * privacy-enhanced domain is an alias that need not resolve to the same entity
+ * for it. The cookie-free domain is the better privacy default, but it was the
+ * one unverifiable link in a chain that is otherwise fully correct, so the
+ * indexable domain wins here.
+ */
+export const videoEmbedUrl = (id: string) => `https://www.youtube.com/embed/${id}`
 /** Runtime as an ISO 8601 duration ("PT41S", "PT1M16S") for VideoObject. */
 export const videoDurationISO = (seconds: number) => {
   const m = Math.floor(seconds / 60)
@@ -475,7 +497,7 @@ export function videoSchema(v: SiteVideo, pageUrl?: string) {
     ...(pageUrl ? { "@id": `${pageUrl}#video`, url: pageUrl, mainEntityOfPage: pageUrl } : {}),
     name: v.title,
     description: v.description,
-    thumbnailUrl: [videoThumb(v.id)],
+    thumbnailUrl: [videoThumbLarge(v.id)],
     uploadDate: v.uploadDate,
     duration: videoDurationISO(v.durationSeconds),
     embedUrl: videoEmbedUrl(v.id),

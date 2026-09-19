@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { videos, videoThumb, videoSchema } from "@/lib/videos"
+import { videos, videoThumbLarge, videoSchema } from "@/lib/videos"
 import { videoArticles, getVideoBySlug, allVideoSlugs, videoSlug } from "@/lib/video-pages"
 import { getVideoExtra } from "@/lib/video-content"
 import { getDefect } from "@/lib/defects"
@@ -39,7 +39,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       locale: "he_IL",
       url,
       siteName: "בדק בית Legal",
-      images: [{ url: videoThumb(video.id) }],
+      images: [{ url: videoThumbLarge(video.id) }],
     },
     alternates: { canonical: url },
     robots: "index, follow",

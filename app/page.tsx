@@ -213,6 +213,7 @@ const HOMEPAGE_REVIEWS = [
   { author: "יעקב", body: "אין לי מילים חוץ מלומר לך שאתה תותח! אני ממליץ עליך בחום." },
   { author: "איתן", body: "תודה רבה שוב, עבודה מקצועית ומדויקת." },
   { author: "מאשה", body: "טרם הסתכלתי בבדק בית אך היית אמין, סבלני ומקצועי, תודה רבה." },
+  { author: "אלנה", body: "תודה רבה על הבדיקה המהירה ועל הדוח. אחזור אליכם עם תאריכים מדויקים כדי לסיים." },
 ]
 
 // EEAT — breadth of real-world inspection experience across property types.
@@ -1468,7 +1469,7 @@ export default function HomePage() {
                 <p className="font-semibold text-gray-900 mt-3">אביגל, רעננה</p>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow overflow-hidden border-r-4 border-r-green-500 md:col-span-2 md:mx-auto md:w-[calc(50%-1rem)]">
+            <Card className="hover:shadow-lg transition-shadow overflow-hidden border-r-4 border-r-green-500">
               <CardContent className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex text-yellow-400">
@@ -1501,6 +1502,41 @@ export default function HomePage() {
                   <figcaption className="sr-only">ביקורת לקוח בוואטסאפ - בדק בית לדירה חדשה בצפת, דוח מקצועי עם תמחור ליקויים לפי מחירון דקל</figcaption>
                 </figure>
                 <p className="font-semibold text-gray-900 mt-3">שלמה, צפת</p>
+              </CardContent>
+            </Card>
+            <Card className="hover:shadow-lg transition-shadow overflow-hidden border-r-4 border-r-green-500">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <span className="text-sm text-green-700 font-medium flex items-center gap-1 bg-green-50 px-2 py-1 rounded-full">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    </svg>
+                    WhatsApp
+                  </span>
+                </div>
+                <p className="text-gray-700 mb-3 font-medium">
+                  {"\"תודה רבה על הבדיקה המהירה ועל הדוח. אחזור אליכם עם תאריכים מדויקים כדי לסיים.\" (תורגם מרוסית)"}
+                </p>
+                <figure className="rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                  <Image
+                    src="/images/bikoret-bedek-bayit-toda-bdika-mehira.webp"
+                    alt="ביקורת בדק בית בוואטסאפ מלקוחה דוברת רוסית - תודה על בדיקה מהירה ועל דוח שהתקבל במהירות"
+                    title="המלצת לקוחה על בדיקה מהירה ודוח בדק בית"
+                    width={1220}
+                    height={510}
+                    loading="lazy"
+                    className="w-full h-auto object-cover"
+                  />
+                  <figcaption className="sr-only">ביקורת לקוחה בוואטסאפ - תודה על בדיקה מהירה ועל קבלת הדוח במהירות</figcaption>
+                </figure>
+                <p className="font-semibold text-gray-900 mt-3">אלנה</p>
               </CardContent>
             </Card>
           </div>

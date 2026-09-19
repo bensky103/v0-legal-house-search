@@ -101,6 +101,14 @@ export const siteImages = {
     caption: "ביקורת לקוח בוואטסאפ - בדק בית לדירה חדשה בצפת, דוח מקצועי עם תמחור ליקויים לפי מחירון דקל",
     page: "/",
   },
+  reviewFastReport: {
+    src: "/images/bikoret-bedek-bayit-toda-bdika-mehira.webp",
+    width: 1220,
+    height: 510,
+    alt: "ביקורת בדק בית בוואטסאפ מלקוחה דוברת רוסית - תודה על בדיקה מהירה ועל דוח שהתקבל במהירות",
+    caption: "ביקורת לקוחה בוואטסאפ - תודה על בדיקה מהירה ועל קבלת הדוח במהירות",
+    page: "/",
+  },
 } as const satisfies Record<string, SiteImage>
 
 export const allSiteImages: SiteImage[] = Object.values(siteImages)

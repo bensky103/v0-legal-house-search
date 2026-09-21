@@ -26,6 +26,16 @@ export interface SiteVideo {
   topic: string
   /** True for a YouTube Short (9:16). The player frame flips to portrait. */
   vertical?: boolean
+  /**
+   * Set to true only when https://i.ytimg.com/vi/<id>/maxresdefault.jpg 404s for
+   * this video - YouTube does not generate the 1280x720 still for every upload.
+   * The thumbnail declared to Google then falls back to hqdefault, which always
+   * exists. Check it when adding a video: a declared thumbnail that 404s is
+   * enough on its own to keep the video out of the video index. A freshly
+   * uploaded video may only gain its max-res still hours later, so it is worth
+   * re-checking and clearing this flag.
+   */
+  noMaxResThumb?: boolean
 }
 
 export const videos: SiteVideo[] = [
@@ -401,6 +411,18 @@ export const videos: SiteVideo[] = [
     topic: "maakot",
     vertical: true,
   },
+  {
+    id: "cohvNuYEUms",
+    title: "בדק בית - איתור עובש ורטיבות במצלמה תרמית ובמד נקודת טל",
+    description:
+      "בדק בית - איתור המקור לעובש ולרטיבות בדירה בעזרת מצלמה תרמית ומד נקודת טל. הבדיקה מזהה גשר תרמי בקיר - הנקודה שבה בידוד לקוי מוריד את טמפרטורת פני הקיר אל מתחת לנקודת הטל וגורם לעיבוי ולעובש.",
+    uploadDate: "2026-09-21",
+    durationSeconds: 33,
+    topic: "ovesh",
+    vertical: true,
+    // Verified 2026-09-21: maxresdefault 404s for this upload, hqdefault serves.
+    noMaxResThumb: true,
+  },
 ]
 
 /**
@@ -410,13 +432,17 @@ export const videos: SiteVideo[] = [
  */
 export const videoThumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
 /**
- * Thumbnail declared to Google (VideoObject, video sitemap, og:image): 1280x720.
+ * Thumbnail declared to Google (VideoObject, video sitemap, og:image).
  * Google asks for the largest available thumbnail and needs one stable URL per
- * video; maxresdefault was verified to return a real 1280x720 frame for every id
- * in this file. The Shorts-only endpoints (oardefault, which would give a true
- * 9:16 crop) 404 on half the Shorts, so they cannot be the stable URL.
+ * video, so this is maxresdefault (1280x720) wherever YouTube has generated it -
+ * verified per id, never assumed. Where it has not, `noMaxResThumb` sends the
+ * declaration back to hqdefault (480x360), which exists for every video: a
+ * smaller thumbnail costs little, a thumbnail that 404s costs the indexing.
+ * The Shorts-only endpoint that would give a true 9:16 crop (oardefault) 404s on
+ * half the Shorts, so it cannot be the stable URL for any of them.
  */
-export const videoThumbLarge = (id: string) => `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
+export const videoThumbLarge = (v: SiteVideo) =>
+  v.noMaxResThumb ? videoThumb(v.id) : `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`
 /** Public watch URL. */
 export const videoWatchUrl = (id: string) => `https://www.youtube.com/watch?v=${id}`
 /**
@@ -497,7 +523,7 @@ export function videoSchema(v: SiteVideo, pageUrl?: string) {
     ...(pageUrl ? { "@id": `${pageUrl}#video`, url: pageUrl, mainEntityOfPage: pageUrl } : {}),
     name: v.title,
     description: v.description,
-    thumbnailUrl: [videoThumbLarge(v.id)],
+    thumbnailUrl: [videoThumbLarge(v)],
     uploadDate: v.uploadDate,
     duration: videoDurationISO(v.durationSeconds),
     embedUrl: videoEmbedUrl(v.id),

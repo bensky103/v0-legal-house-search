@@ -39,7 +39,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       locale: "he_IL",
       url,
       siteName: "בדק בית Legal",
-      images: [{ url: videoThumbLarge(video.id) }],
+      images: [{ url: videoThumbLarge(video) }],
     },
     alternates: { canonical: url },
     robots: "index, follow",

@@ -47,7 +47,7 @@ export function GET() {
         .map(
           (v) =>
             `    <video:video>\n` +
-            `      <video:thumbnail_loc>${escapeXml(videoThumbLarge(v.id))}</video:thumbnail_loc>\n` +
+            `      <video:thumbnail_loc>${escapeXml(videoThumbLarge(v))}</video:thumbnail_loc>\n` +
             `      <video:title>${escapeXml(v.title)}</video:title>\n` +
             `      <video:description>${escapeXml(v.description)}</video:description>\n` +
             `      <video:player_loc>${escapeXml(videoEmbedUrl(v.id))}</video:player_loc>\n` +

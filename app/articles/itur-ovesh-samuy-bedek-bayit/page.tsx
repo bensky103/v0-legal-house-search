@@ -3,7 +3,14 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleFaq } from "@/components/article-faq"
+import { LiteYouTube } from "@/components/lite-youtube"
 import { ITUR_OVESH_SAMUY } from "@/lib/article-images"
+import { videos } from "@/lib/videos"
+import { videoSlug } from "@/lib/video-pages"
+
+// The Short that demonstrates exactly the two measurements this article
+// describes: the thermal sweep and the surface-vs-dew-point reading.
+const OVESH_VIDEO = videos.find((v) => v.id === "cohvNuYEUms")
 
 export const metadata: Metadata = {
   title: "עובש סמוי: איך מאתרים אותו בבדק בית ומה רק מעבדה קובעת | בדק בית Legal",
@@ -223,6 +230,20 @@ export default function IturOveshSamuyArticle() {
         חשוב לדעת שהצמיחה מתחילה עוד לפני שרואים טיפות. די בכך שהלחות היחסית בסמוך לפני הקיר נשארת גבוהה לאורך
         זמן — ולכן קיר שנראה יבש לגמרי יכול להיות בתנאי צמיחה מלאים.
       </p>
+
+      {OVESH_VIDEO && (
+        <figure className="my-6">
+          <LiteYouTube id={OVESH_VIDEO.id} title={OVESH_VIDEO.title} vertical={OVESH_VIDEO.vertical} />
+          <figcaption className="mt-2 text-sm text-gray-500">
+            הדגמה בשטח: סריקה תרמית של הקיר לצד מדידת טמפרטורת המשטח מול נקודת הטל, לאיתור מקור העובש
+            והרטיבות. לצפייה בעמוד המלא:{" "}
+            <Link href={`/videos/${videoSlug(OVESH_VIDEO)}`} className="text-blue-700 hover:underline font-medium">
+              עמוד הסרטון
+            </Link>
+            .
+          </figcaption>
+        </figure>
+      )}
 
       <ArticleH2>שרשרת האיתור: מחשד לראיה</ArticleH2>
       <p>

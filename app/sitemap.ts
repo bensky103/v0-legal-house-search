@@ -11,9 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Bumped 2026-07-18 after rebalancing internal links between city pages (tail cities like רמלה
   // were near-orphaned), to prompt Google to re-crawl and re-evaluate pages stuck in
   // "discovered/crawled - currently not indexed". Bumped again 2026-08-14 with the
-  // report-anatomy article and its field photos, and 2026-08-27 with the hidden-mold
-  // detection article and its field photos.
-  const LAST_UPDATED = new Date("2026-08-27")
+  // report-anatomy article and its field photos, 2026-08-27 with the hidden-mold
+  // detection article and its field photos, and 2026-09-21 with the thermal-bridge
+  // article and its field photos.
+  const LAST_UPDATED = new Date("2026-09-21")
 
   // Video pages carry their own, later date: they were last crawled 2026-06-29 —
   // before the de-duplication fix (2026-07-21) and before the depth content in
@@ -405,6 +406,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://www.legalbedek.co.il/articles/taken-1920-tiyach-stiyot-mutarot",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.legalbedek.co.il/articles/gsharim-termiim-taken-1045-ovesh",
       lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.8,

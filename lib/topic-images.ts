@@ -191,6 +191,10 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("zavit-nagarim-bedek-bayit"),
   ],
   "bidud-termi": [
+    GF("bedek-bayit-tzilum-termi-hefresh-temperatura-kir-tikra.webp"),
+    GF("bedek-bayit-matzlema-termit-itur-gesher-termi.webp"),
+    GF("bedek-bayit-mad-nekudat-tal-gsharim-termiim.webp"),
+    GF("bedek-bayit-bdikat-gesher-termi-chibur-kir-tikra.webp"),
     G("matzlema-termit-itur-retivut"),
     G("bedika-termit-mizug-avir-dira-hadasha"),
     G("bedikat-tikrat-mirpeset-mad-temperatura"),

@@ -346,6 +346,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["tiyach", "sdakim", "tzeva"],
   },
+  {
+    slug: "gsharim-termiim-taken-1045-ovesh",
+    title: "גשרים תרמיים לפי ת״י 1045 — מהתקן ועד העובש על הקיר",
+    description:
+      "התקן מחלק את הארץ לארבעה אזורי אקלים וגוזר מהם את דרישת הבידוד. מתי אסור גשר תרמי לחלוטין, מה נדרש בממ״ד ובתקרות הביניים, ולמה גשר קור שלא טופל נגמר בעובש גלוי או סמוי.",
+    datePublished: "2026-09-21",
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedDefects: ["bidud-termi", "retivut", "ovesh"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

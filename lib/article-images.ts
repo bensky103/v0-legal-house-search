@@ -937,6 +937,40 @@ export const MEDIDAT_TIYACH_1920: ArticleImage[] = [
       "הצבת פלס לייזר צולב בדירה חדשה מקבלן. קו הלייזר מייצר מישור אנכי ואופקי ייחוס, והמרחק בינו לבין פני הטיח נמדד לאורך הקיר — כך מכמתים סטיית אנכיות, מישוריות וגליות במילימטרים במקום להסתמך על התרשמות מהעין.",
   },
 ]
+export const GSHARIM_TERMIIM_1045: ArticleImage[] = [
+  {
+    src: "/gallery/bedek-bayit-matzlema-termit-itur-gesher-termi.webp",
+    standard: "ת״י 1045 – בידוד תרמי",
+    title: "סריקת מעטפת במצלמה תרמית",
+    alt: "מומחה בדק בית סורק במצלמה תרמית את המפגש שבין הקיר לתקרה לאיתור גשר תרמי וחוסר בידוד בדירה",
+    caption:
+      "סריקה תרמית של מעטפת הדירה במפגש שבין הקיר לתקרה, ליד פתח המיזוג. המצלמה ממפה את הפרשי הטמפרטורה על פני הקיר ומראה היכן נקטעה רציפות הבידוד.",
+  },
+  {
+    src: "/gallery/bedek-bayit-tzilum-termi-hefresh-temperatura-kir-tikra.webp",
+    standard: "ת״י 1045 – בידוד תרמי",
+    title: "הפרש טמפרטורה בין הקיר לתקרה",
+    alt: "תצלום תרמי המראה הפרש טמפרטורות חד בין הקיר לתקרה כעדות לגשר תרמי ולחוסר בידוד במעטפת הבניין",
+    caption:
+      "התצלום התרמי מראה גבול חד בין שני אזורי טמפרטורה במפגש שבין הקיר לתקרה, בטווח שבין 23.1 ל-27.1 מעלות. האזור הקר הוא המשטח שיגיע ראשון לנקודת הטל ושבו מתחיל העיבוי.",
+  },
+  {
+    src: "/gallery/bedek-bayit-bdikat-gesher-termi-chibur-kir-tikra.webp",
+    standard: "ת״י 1045 – בידוד תרמי",
+    title: "בדיקת החיבור שבין הקיר לתקרה",
+    alt: "בדיקת גשר תרמי בחיבור שבין קיר החוץ לתקרה בדירה, במקום שבו נקטעת שכבת הבידוד ונוטה להופיע עובש",
+    caption:
+      "המפגש שבין קיר החוץ לתקרה הוא מוקד חוזר לגשרים תרמיים — שם עוברת חגורת הבטון וקצה תקרת הביניים, ושם מופיעה לרוב רצועת העובש הישרה.",
+  },
+  {
+    src: "/gallery/bedek-bayit-mad-nekudat-tal-gsharim-termiim.webp",
+    standard: "ת״י 1045 – בידוד תרמי",
+    title: "מדידת טמפרטורת המשטח מול נקודת הטל",
+    alt: "מכשיר לאיתור גשרים תרמיים ונקודת טל מודד את טמפרטורת פני התקרה בדירה לבדיקת סכנת עיבוי ועובש",
+    caption:
+      "מכשיר יעודי לאיתור גשרים תרמיים ונקודת טל. הוא מודד את טמפרטורת המשטח עצמו, מחשב את נקודת הטל מטמפרטורת האוויר ומהלחות היחסית, ומשווה ביניהם — משטח שנמצא בנקודת הטל או מתחתיה יתעבה.",
+  },
+]
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -966,6 +1000,7 @@ export const articleSitemapImages = [
   ...ITUR_OVESH_SAMUY.map((img) => ({ ...img, articleSlug: "itur-ovesh-samuy-bedek-bayit" })),
   ...STIMOT_PESOLET_BNIYA.map((img) => ({ ...img, articleSlug: "stimot-biyuv-pesolet-bniya-bedek-bayit" })),
   ...MEDIDAT_TIYACH_1920.map((img) => ({ ...img, articleSlug: "taken-1920-tiyach-stiyot-mutarot" })),
+  ...GSHARIM_TERMIIM_1045.map((img) => ({ ...img, articleSlug: "gsharim-termiim-taken-1045-ovesh" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

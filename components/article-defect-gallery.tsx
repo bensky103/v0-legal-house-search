@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 export type DefectItem = {
   /** Path under /public, e.g. /articles/likuyim/likui-itum-chalon.webp */
@@ -22,7 +23,8 @@ export type DefectItem = {
  * Production-safe: any image that fails to load (e.g. file not added yet)
  * is hidden on the client, while its alt text + caption still ship in the
  * server-rendered HTML for SEO. The whole section disappears only if every
- * image fails.
+ * image fails. next/image keeps that behaviour - a missing file fails the
+ * optimizer, onError fires, and the tile is dropped exactly as before.
  */
 export function ArticleDefectGallery({
   eyebrow = "תיעוד מהשטח",
@@ -60,17 +62,17 @@ export function ArticleDefectGallery({
               className="group overflow-hidden rounded-xl bg-white ring-1 ring-slate-200 transition-shadow hover:shadow-lg"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                {/* Plain img (not next/image) so a not-yet-added file degrades gracefully */}
-                <img
+                {/* Through the image optimizer: these are full-size inspection photos,
+                    up to ~670 KB each, shown in a tile a few hundred pixels wide. Served
+                    raw they were the heaviest thing on an article page by a wide margin. */}
+                <Image
                   src={it.src}
                   alt={it.alt}
                   title={it.title}
-                  width={1200}
-                  height={900}
-                  loading="lazy"
-                  decoding="async"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 430px"
                   onError={() => setBroken((b) => ({ ...b, [it.src]: true }))}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute top-2 end-2 rounded-full bg-blue-600 px-2.5 py-1 text-xs font-bold text-white shadow">
                   {badge}

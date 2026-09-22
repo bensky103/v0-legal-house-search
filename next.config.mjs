@@ -65,6 +65,22 @@ const nextConfig = {
         source: "/logo.webp",
         headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
       },
+      // Assets Google crawls because every page links to them, and then files under
+      // "crawled - currently not indexed" because there is no document to index. The
+      // header says so outright, which moves them to the deliberate-exclusion bucket
+      // instead of leaving them read as a failure. noindex on a resource does not stop
+      // Google fetching it to render the page.
+      {
+        source: "/manifest.webmanifest",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+      {
+        // Fonts only, matched by extension. A blanket rule on /_next/static/media would
+        // also cover images from a static import, and quietly drop them out of Google
+        // Images the day someone adds one.
+        source: "/_next/static/media/:file(.*\.woff2)",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
     ]
   },
 }

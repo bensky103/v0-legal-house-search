@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "he_IL",
     url: "https://www.legalbedek.co.il",
-    siteName: "בדק בית Legal - איתור ליקויי בנייה",
+    siteName: "בדק בית Legal",
     title: "בדק בית - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
     description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוות דעת נגדית. בדיקת דירה לפני קנייה, איתור רטיבות ובעיות איטום.",
     images: [
@@ -107,7 +107,7 @@ gtag('config', 'AW-17703305821');`}
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "@id": "https://www.legalbedek.co.il/#organization",
-              name: "בדק בית Legal - יגאל בנסקי",
+              name: "בדק בית Legal",
               description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוו״ד נגדית",
               url: "https://www.legalbedek.co.il",
               logo: {

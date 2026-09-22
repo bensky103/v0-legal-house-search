@@ -48,7 +48,10 @@ export function ArticleJsonLd({
       "@id": `${BASE_URL}/#yigal-bensky`,
       name: "יגאל בנסקי",
       jobTitle: "מומחה בדק בית מוסמך",
-      url: BASE_URL,
+      // The about page, not the site root - see the WebSite node on the home
+      // page: an author whose url is the root makes the site look like a
+      // personal one, and Google then prints the person as the site name.
+      url: `${BASE_URL}/about`,
     },
     publisher: {
       "@type": "Organization",

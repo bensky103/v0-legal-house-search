@@ -300,7 +300,10 @@ export default function HomePage() {
                 image: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
                 telephone: "+972-50-627-7858",
                 email: "yigalbensky@gmail.com",
-                url: "https://www.legalbedek.co.il",
+                // The about page, not the site root: the root belongs to the
+                // organisation, and a Person claiming it competes with the
+                // business for the site's identity in search.
+                url: "https://www.legalbedek.co.il/about",
                 knowsAbout: [
                   "בדק בית",
                   "איתור ליקויי בנייה",
@@ -326,7 +329,7 @@ export default function HomePage() {
               {
                 "@type": ["ProfessionalService", "LocalBusiness"],
                 "@id": "https://www.legalbedek.co.il/#organization",
-                name: "בדק בית Legal - יגאל בנסקי",
+                name: "בדק בית Legal",
                 description:
                   "שירותי בדק בית מקצועיים בכל הארץ: בדיקת דירות חדשות ויד שנייה, בתים פרטיים ורכוש משותף, איתור ליקויי בנייה וחוות דעת הנדסית קבילה בבית משפט.",
                 url: "https://www.legalbedek.co.il",
@@ -382,7 +385,11 @@ export default function HomePage() {
               {
                 "@type": "WebSite",
                 "@id": "https://www.legalbedek.co.il/#website",
-                name: "בדק בית Legal - יגאל בנסקי",
+                // The site name Google prints above a result comes from here.
+                // It is the brand on its own: a name that pairs the brand with a
+                // person lets Google print the person instead of the business.
+                name: "בדק בית Legal",
+                alternateName: ["ליגל בדק בית", "Legal בדק בית"],
                 url: "https://www.legalbedek.co.il",
                 inLanguage: "he",
                 publisher: { "@id": "https://www.legalbedek.co.il/#organization" },

@@ -182,7 +182,7 @@ function DedicatedService({ slug }: { slug: string }) {
     provider: {
       "@type": "ProfessionalService",
       "@id": `${baseUrl}/#organization`,
-      name: "בדק בית Legal - יגאל בנסקי",
+      name: "בדק בית Legal",
       url: baseUrl,
       telephone: "+972-50-627-7858",
     },

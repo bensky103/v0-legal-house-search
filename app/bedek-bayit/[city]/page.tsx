@@ -274,7 +274,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
     provider: {
       "@type": "ProfessionalService",
       "@id": "https://www.legalbedek.co.il/#organization",
-      name: "בדק בית Legal - יגאל בנסקי",
+      name: "בדק בית Legal",
       url: "https://www.legalbedek.co.il",
       telephone: "+972-50-627-7858",
     },

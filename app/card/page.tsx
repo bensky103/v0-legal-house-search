@@ -17,12 +17,13 @@ export const metadata: Metadata = {
     type: "website",
     // The page carried no image, so a share of the card link fell back to whatever
     // the root layout offers - a photo of buildings, on a personal business card.
+    // Same square card the embedded page uses, so both URLs preview identically.
     images: [
       {
-        url: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
-        width: 1086,
-        height: 1448,
-        alt: "יגאל בנסקי - מומחה בדק בית מוסמך",
+        url: "https://www.legalbedek.co.il/card-preview.jpg",
+        width: 1080,
+        height: 1080,
+        alt: "בדק בית Legal - יגאל בנסקי, מומחה בדק בית מוסמך",
       },
     ],
   },

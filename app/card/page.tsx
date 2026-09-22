@@ -15,6 +15,16 @@ export const metadata: Metadata = {
     description: "כרטיס הביקור הדיגיטלי של בדק בית Legal - מומחים לאיתור ליקויי בנייה וחוות דעת נגדית מוסמכת.",
     url: "https://www.legalbedek.co.il/card",
     type: "website",
+    // The page carried no image, so a share of the card link fell back to whatever
+    // the root layout offers - a photo of buildings, on a personal business card.
+    images: [
+      {
+        url: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
+        width: 1086,
+        height: 1448,
+        alt: "יגאל בנסקי - מומחה בדק בית מוסמך",
+      },
+    ],
   },
 }
 

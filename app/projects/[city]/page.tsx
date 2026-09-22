@@ -70,18 +70,26 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   // (getProjectCities lists only the curated ones), so they were asking to be indexed
   // on their own while nothing vouched for them.
   //
-  // Each of those cities already has a richer /bedek-bayit/<city> page, so the thin
-  // variant consolidates into it instead of competing with it. The URL stays alive —
-  // the /bedek-bayit city pages and the contractor pages link to it.
+  // Those thin pages used to point their canonical at /bedek-bayit/<city>. Measured
+  // against that target they share only 12-15% of their text, while sharing ~76% with
+  // each other — and a canonical between two pages that different is one Google throws
+  // away. Discarding it left the page with no canonical at all, which is exactly the
+  // bucket it was reported under, so the tag was feeding the problem it meant to fix.
+  //
+  // A page kept for visitors but not for the index says so with robots, which Google
+  // obeys without judging how alike the pages are. The canonical points at the page
+  // itself, as it always must alongside noindex: a canonical aimed elsewhere would
+  // hand the noindex to that other page.
+  //
+  // The URL stays alive and followable — the /bedek-bayit city pages and the
+  // contractor pages link to it.
   const hasOwnContent = Boolean(getCityProjectIndex(city.slug))
-  const canonical = hasOwnContent
-    ? `https://www.legalbedek.co.il/projects/${city.slug}`
-    : `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`
 
   return {
     title,
     description,
-    alternates: { canonical },
+    alternates: { canonical: `https://www.legalbedek.co.il/projects/${city.slug}` },
+    ...(hasOwnContent ? {} : { robots: { index: false, follow: true } }),
     openGraph: { title, description, url: `https://www.legalbedek.co.il/projects/${city.slug}`, type: "website" },
   }
 }

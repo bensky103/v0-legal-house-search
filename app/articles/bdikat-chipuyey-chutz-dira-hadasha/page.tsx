@@ -6,6 +6,7 @@ import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת חיפויי חוץ בדירה חדשה — מה בודקים ביום המסירה | בדק בית Legal",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-chipuyey-chutz-dira-hadasha" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת חיפויי חוץ בדירה חדשה — מה בודקים ביום המסירה",
     description:
       "כך בודקים חיפויי חוץ בדירה חדשה מקבלן ביום המסירה — נקישה חלולה, פוגות, סדקים, עיגון אבן בחזית ורטיבות, לפי ת״י 2378 ות״י 1555.",

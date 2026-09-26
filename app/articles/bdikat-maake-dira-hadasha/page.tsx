@@ -6,6 +6,7 @@ import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת מעקה זכוכית ומעקה בכלל בדירה חדשה — מה בודקים ביום המסירה | בדק בית Legal",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-maake-dira-hadasha" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת מעקה זכוכית ומעקה בכלל בדירה חדשה — מה בודקים ביום המסירה",
     description:
       "כך בודקים מעקה זכוכית ומעקה בכלל בדירה חדשה מקבלן ביום המסירה — גובה, מרווחים, חוזק עיגון, זכוכית בטיחות ורפידות גומי לפי ת״י 1142 ות״י 1099.",

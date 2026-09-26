@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "גובה תקרה וגודל חדר מינימלי — מתי הנמכת תקרה הופכת חדר לחדרון | בדק בית Legal",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/hanmakhat-tikra-godel-cheder" },
   openGraph: {
+    images: OG_IMAGE,
     title: "גובה תקרה וגודל חדר מינימלי — מתי הנמכת תקרה הופכת חדר לחדרון",
     description:
       "שטח חדר מגורים מינימלי 8 מ״ר וגובה תקרה מינימלי 2.5 מ׳. הנמכת תקרה שנוגסת בשטח המינימלי הופכת את החדר לחדרון, מורידה את מספר החדרים ומורידה מערך הדירה.",

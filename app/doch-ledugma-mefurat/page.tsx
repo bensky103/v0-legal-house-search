@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { PrintButton } from "@/components/print-button"
 import { SiteIndex } from "@/components/site-index"
+import { OG_IMAGE } from "@/lib/og-image"
 
 const URL = "https://www.legalbedek.co.il/doch-ledugma-mefurat"
 
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: URL },
   openGraph: {
+    images: OG_IMAGE,
     title: "דוח בדק בית מפורט לדוגמה — 67 ליקויים בדירה חדשה",
     description:
       "חוות דעת מומחה אמיתית מדירה חדשה: 67 ליקויים, תיעוד מכשירני וציטוט תקנים ישראליים. פרטים אישיים הוסתרו.",

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleFaq } from "@/components/article-faq"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "חוק המכר (דירות): תקופות בדק ואחריות לליקויי בנייה | בדק בית Legal",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/chok-hamkar-dirot" },
   openGraph: {
+    images: OG_IMAGE,
     title: "חוק המכר (דירות): תקופות בדק ואחריות לליקויי בנייה",
     description:
       "תקופות הבדק והאחריות לכל סוג ליקוי לפי חוק המכר (דירות) — ריצוף, רטיבות, איטום, צנרת, סדקים וחיפוי חוץ.",

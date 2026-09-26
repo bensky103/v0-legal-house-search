@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleFaq } from "@/components/article-faq"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "ת״י 789 – סטיות מותרות בעבודות בנייה: המצב המעודכן | בדק בית Legal",
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/taken-789-stiyot-mutarot" },
   openGraph: {
+    images: OG_IMAGE,
     title: "ת״י 789 – סטיות מותרות בעבודות בנייה: המצב המעודכן",
     description: "התקן צומצם; כיום הסטיות המותרות מופיעות בכל תקן ספציפי. מה נשאר בת״י 789 והיכן נמצאות הסטיות לכל רכיב.",
     type: "article",

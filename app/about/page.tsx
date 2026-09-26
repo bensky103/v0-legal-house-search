@@ -6,9 +6,45 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
 
+const BASE = "https://www.legalbedek.co.il"
+
+// The about page is where the person behind the reports is established, and it
+// was the one section of the site carrying no structured data at all. AboutPage
+// names the organisation as its subject and points at the Person and
+// Organization nodes declared on the home page, so the credentials already
+// described there attach to this page rather than being restated.
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${BASE}/about#webpage`,
+      url: `${BASE}/about`,
+      name: "אודות ליגל בדק בית",
+      description:
+        "מומחים מוסמכים לאיתור ליקויי בנייה ולחוות דעת נגדית, בהסמכת איגוד המהנדסים וברישיון משרד העבודה.",
+      inLanguage: "he",
+      isPartOf: { "@id": `${BASE}/#website` },
+      about: { "@id": `${BASE}/#organization` },
+      mainEntity: { "@id": `${BASE}/#yigal-bensky` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "דף הבית", item: BASE },
+        { "@type": "ListItem", position: 2, name: "אודות", item: `${BASE}/about` },
+      ],
+    },
+  ],
+}
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white" dir="rtl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-8 md:py-12">
         <div className="container mx-auto px-4 text-center">

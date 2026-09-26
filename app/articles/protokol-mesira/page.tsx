@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleFaq } from "@/components/article-faq"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "פרוטוקול מסירה לדירה חדשה: מה חייב להופיע ואיך לא להיתקע | בדק בית Legal",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/protokol-mesira" },
   openGraph: {
+    images: OG_IMAGE,
     title: "פרוטוקול מסירה לדירה חדשה: מה חייב להופיע ואיך לא להיתקע",
     description:
       "מה זה פרוטוקול מסירה, מה חייב להופיע בו, מתי לבצע בדק בית ואילו טעויות בחתימה עלולות לעלות ביוקר.",

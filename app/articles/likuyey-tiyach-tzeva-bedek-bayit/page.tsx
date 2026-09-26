@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_TIYACH_TZEVA } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789) | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/likuyey-tiyach-tzeva-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789)",
     description: "כך מאתרים ומתעדים קירות עקומים, סדקים, גלים בטיח ופגמי צבע בבדק בית מול הסטיות המותרות בת״י 789.",
     type: "article",

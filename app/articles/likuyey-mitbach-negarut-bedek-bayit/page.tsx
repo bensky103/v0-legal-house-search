@@ -8,6 +8,7 @@ import { LiteYouTube } from "@/components/lite-youtube"
 import { DEFECTS_MITBACH_NEGARUT } from "@/lib/article-images"
 import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "ליקויי מטבח ונגרות בבדק בית — ארונות, משטח ואיטום | בדק בית Legal",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/likuyey-mitbach-negarut-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "ליקויי מטבח ונגרות בבדק בית — ארונות, משטח ואיטום",
     description: "כך בודקים בבדק בית פילוס ארונות, מישוריות משטח, איטום כיור ואיכות נגרות במטבח ובחדרי הרחצה.",
     type: "article",

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { contractors } from "@/lib/seo-locations"
 import { SiteIndex } from "@/components/site-index"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדק בית לפי קבלן | בדיקת דירה בפרויקטים של קבלני הבנייה המובילים",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "שירותי בדק בית הנדסי לדירות בפרויקטים של קבלני הבנייה המובילים בישראל. איתור ליקויי בנייה לפני מסירה, בהתבסס על מחקר הטכניון. בחרו את הקבלן שלכם וקבלו שירות מקצועי.",
   alternates: { canonical: "https://www.legalbedek.co.il/bedek-bayit/kablan" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדק בית לפי קבלן | בדיקת דירה בפרויקטים של קבלני הבנייה המובילים",
     description:
       "שירותי בדק בית הנדסי לדירות בפרויקטים של קבלני הבנייה המובילים בישראל. איתור ליקויי בנייה לפני מסירה.",

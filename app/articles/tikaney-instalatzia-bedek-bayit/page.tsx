@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_INSTALATZIA_FIELD } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "תקני אינסטלציה בבדק בית: מים, ביוב וניקוז (ת״י 1205) | בדק בית Legal",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/tikaney-instalatzia-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "תקני אינסטלציה בבדק בית: מים, ביוב וניקוז (ת״י 1205)",
     description: "ליקויי צנרת נפוצים — נזילות, סתימות, לחץ מים נמוך וריח ביוב — ואיך מאתרים אותם בבדק בית לפי תקני ת״י 1205.",
     type: "article",

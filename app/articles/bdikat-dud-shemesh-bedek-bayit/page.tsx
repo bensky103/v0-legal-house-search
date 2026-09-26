@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleFaq } from "@/components/article-faq"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_DUD_SHEMESH } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת״י 579) | בדק בית Legal",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-dud-shemesh-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת דוד שמש בבדק בית — מערכת סולארית (ת״י 579)",
     description: "כך נבדקים דוד השמש והמערכת הסולארית בבדק בית לפי ת״י 579 — דוד, קולטים, בידוד וחיבורים.",
     type: "article",

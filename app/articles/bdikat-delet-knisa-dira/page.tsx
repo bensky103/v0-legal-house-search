@@ -6,6 +6,7 @@ import { ArticlePriceSection } from "@/components/article-price-section"
 import { LiteYouTube } from "@/components/lite-youtube"
 import { videos } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת דלת כניסה בדירה — משקוף, נעילה, פרזול ואטימות | בדק בית Legal",
@@ -25,6 +26,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-delet-knisa-dira" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת דלת כניסה בדירה — משקוף, נעילה, פרזול ואטימות",
     description:
       "כך בודקים דלת כניסה בבדק בית — ישרות המשקוף, פעולת המנעולים והפרזול, אטימות ההיקף והסף וליקויי התקנה, בדירה חדשה מקבלן וביד שנייה.",

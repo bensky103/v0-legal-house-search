@@ -12,6 +12,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { ConsultationBox } from "@/components/consultation-box"
 
 import { DEFECTS_DIRA_HADASHA } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 // Without this export the page inherited the root layout's metadata wholesale —
 // the homepage title, the homepage description AND the homepage canonical — so it
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bedek-bayit-nofei-ben-shemen" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדק בית בפרויקט נופי בן שמן בלוד (שיכון ובינוי): מדריך לרוכשי דירה",
     description:
       "מה בודקים בבדק בית בפרויקט נופי בן שמן בלוד, מתי לבצע את הבדיקה, ואיך מחייבים את הקבלן לתקן את הליקויים לפי חוק המכר.",

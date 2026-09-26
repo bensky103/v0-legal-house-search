@@ -4,6 +4,7 @@ import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layo
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleFaq } from "@/components/article-faq"
 import { BDIKAT_ZCHUCHIT } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת זכוכית וזיגוג בבדק בית — עובי, מרווח אוויר וזכוכית בטיחות | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-zchuchit-zigug-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת זכוכית וזיגוג בבדק בית — עובי, מרווח אוויר וזכוכית בטיחות",
     description:
       "כך מודדים בשטח את עובי הזגוגית, את מרווח האוויר ואת סוג זכוכית הבטיחות, ומשווים אל מול מפרט המכר — בלי לפרק את החלון.",

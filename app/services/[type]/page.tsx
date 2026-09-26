@@ -8,6 +8,7 @@ import { getVideosForTopic } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
 import { defects } from "@/lib/defects"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export function generateStaticParams() {
   return [...services.map((s) => ({ type: s.slug })), ...projectTypes.map((p) => ({ type: p.slug }))]
@@ -22,6 +23,7 @@ export function generateMetadata({ params }: { params: { type: string } }): Meta
       keywords: [...service.keywords, "בדק בית", "מומחה בדק בית", "איתור ליקויי בנייה"],
       authors: [{ name: "יגאל בנסקי" }],
       openGraph: {
+        images: OG_IMAGE,
         title: service.title,
         description: service.metaDescription,
         type: "website",
@@ -43,6 +45,7 @@ export function generateMetadata({ params }: { params: { type: string } }): Meta
     keywords: [...project.keywords, "בדק בית", "מומחה בדק בית", "איתור ליקויי בנייה"],
     authors: [{ name: "יגאל בנסקי" }],
     openGraph: {
+      images: OG_IMAGE,
       title: project.title,
       description: project.description,
       type: "website",

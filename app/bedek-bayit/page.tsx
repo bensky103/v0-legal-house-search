@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { cities } from "@/lib/seo-locations"
 import { SiteIndex } from "@/components/site-index"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדק בית לפי עיר | מומחה בדק בית בכל הארץ - Legal",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "שירותי בדק בית הנדסי בכל הערים בישראל. איתור ליקויי בנייה, בדיקת דירה חדשה ויד שניה. בחרו את העיר שלכם וקבלו שירות מקצועי ממומחה מוסמך.",
   alternates: { canonical: "https://www.legalbedek.co.il/bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדק בית לפי עיר | מומחה בדק בית בכל הארץ",
     description:
       "שירותי בדק בית הנדסי בכל הערים בישראל. בחרו את העיר שלכם וקבלו שירות מקצועי ממומחה מוסמך.",

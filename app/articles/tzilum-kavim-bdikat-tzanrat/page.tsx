@@ -4,6 +4,7 @@ import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layo
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleFaq } from "@/components/article-faq"
 import { BDIKAT_TZILUM_KAVIM } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "צילום קווים בבדק בית: בדיקת צנרת נסתרת במצלמה | בדק בית Legal",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/tzilum-kavim-bdikat-tzanrat" },
   openGraph: {
+    images: OG_IMAGE,
     title: "צילום קווים בבדק בית: בדיקת צנרת נסתרת במצלמה",
     description:
       "מה מגלה צילום קווים בצנרת ניקוז ודלוחין, מתי כדאי לבצע אותו, ואיך הממצא הופך לראיה מול הקבלן.",

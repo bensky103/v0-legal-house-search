@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_RETIVUT_KAPILARIT, DEVICES_RETIVUT } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "רטיבות מעלייה קפילרית — מלחים והתקלפות טיח בהיקף הבית | בדק בית Legal",
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/retivut-eliya-kapilarit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "רטיבות מעלייה קפילרית — מלחים והתקלפות טיח בהיקף הבית",
     description:
       "לחות שמצטברת במצע הרצפה ועולה מעל האחוזים המותרים מתבטאת בהתקלפות טיח, התנפחות ומלחים בהיקף הבית. כך מאתרים את המקור בבדק בית — מצלמה תרמית, מד לחות, מצלמה אנדוסקופית ובדיקת מעבדה.",

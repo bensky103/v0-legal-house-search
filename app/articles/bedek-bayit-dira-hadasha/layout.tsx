@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדק בית בדירה חדשה: למה זה קריטי ואיך זה עוזר במשא ומתן | Legal בדק בית",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "יגאל בנסקי" }],
   openGraph: {
+    images: OG_IMAGE,
     title: "בדק בית בדירה חדשה: למה זה קריטי ואיך זה עוזר במשא ומתן",
     description: "מדריך מקיף על בדק בית בדירה חדשה - למה חשוב לא לקנות חתול בשק ואיך זה עוזר במשא ומתן על המחיר",
     type: "article",

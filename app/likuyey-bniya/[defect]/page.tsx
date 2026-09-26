@@ -9,6 +9,7 @@ import { getDefectImages } from "@/lib/topic-images"
 import { getVideosForTopic } from "@/lib/videos"
 import { videoSlug } from "@/lib/video-pages"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export function generateStaticParams() {
   return defects.map((d) => ({ defect: d.slug }))
@@ -31,6 +32,7 @@ export function generateMetadata({ params }: { params: { defect: string } }): Me
     ],
     authors: [{ name: "יגאל בנסקי" }],
     openGraph: {
+      images: OG_IMAGE,
       title: defect.title,
       description: defect.metaDescription,
       type: "article",

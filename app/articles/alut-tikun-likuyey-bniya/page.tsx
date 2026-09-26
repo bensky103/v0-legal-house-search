@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleFaq } from "@/components/article-faq"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "כמה עולה תיקון ליקויי בנייה? עלויות אמיתיות וכלי למשא ומתן | בדק בית Legal",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/alut-tikun-likuyey-bniya" },
   openGraph: {
+    images: OG_IMAGE,
     title: "כמה עולה תיקון ליקויי בנייה? עלויות אמיתיות וכלי למשא ומתן",
     description:
       "איך מחושבת עלות תיקון ליקויי בנייה, דוגמה אמיתית מדוח בדק בית, ולמה עלות הבדיקה זניחה מול הליקויים ומול ההנחה שאפשר להשיג במשא ומתן.",

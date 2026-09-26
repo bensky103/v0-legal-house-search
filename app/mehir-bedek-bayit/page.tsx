@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+import { OG_IMAGE } from "@/lib/og-image"
 
 const URL = "https://www.legalbedek.co.il/mehir-bedek-bayit"
 
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: URL },
   openGraph: {
+    images: OG_IMAGE,
     title: "כמה עולה בדק בית? מחיר בדק בית והגורמים שקובעים אותו",
     description: "מה משפיע על מחיר בדק בית, מה כלול בבדיקה, ולמה היא מחזירה את עצמה. הצעת מחיר ללא התחייבות.",
     type: "article",

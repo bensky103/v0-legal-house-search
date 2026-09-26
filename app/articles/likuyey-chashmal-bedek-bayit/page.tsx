@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_CHASHMAL } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "ליקויי חשמל ותקשורת בבדק בית — לוח, נקודות ובדיקה תרמית | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/likuyey-chashmal-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "ליקויי חשמל ותקשורת בבדק בית — לוח, נקודות ובדיקה תרמית",
     description: "כך נבדקים לוח חשמל, נקודות ותשתית תקשורת בבדק בית — כולל מצלמה תרמית לאיתור התחממות יתר.",
     type: "article",

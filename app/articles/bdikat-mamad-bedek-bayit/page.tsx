@@ -5,6 +5,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MAMAD } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת ממ״ד בבדק בית — דלת וחלון הדף, איטום ואוורור | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-mamad-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת ממ״ד בבדק בית — דלת וחלון הדף, איטום ואוורור",
     description: "כך בודקים בבדק בית את דלת ההדף, חלון ההדף, האיטום ומערכת האוויר בממ״ד לפי הנחיות פיקוד העורף.",
     type: "article",

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { defects } from "@/lib/defects"
 import { SiteIndex } from "@/components/site-index"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "ליקויי בנייה נפוצים בדירות - מדריך מקצועי | בדק בית Legal",
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
     "מדריך מקצועי לליקויי הבנייה הנפוצים בדירות בישראל - רטיבות, סדקים, איטום, חשמל, ריצוף, אינסטלציה ועוד. למדו לזהות ליקויים ומתי לבצע בדק בית.",
   alternates: { canonical: "https://www.legalbedek.co.il/likuyey-bniya" },
   openGraph: {
+    images: OG_IMAGE,
     title: "ליקויי בנייה נפוצים בדירות - מדריך מקצועי",
     description:
       "מדריך מקצועי לליקויי הבנייה הנפוצים בדירות בישראל - רטיבות, סדקים, איטום, חשמל, ריצוף ואינסטלציה.",

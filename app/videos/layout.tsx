@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "סרטוני בדק בית - תיעוד בדיקות ואיתור ליקויי בנייה | Legal בדק בית",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "יגאל בנסקי" }],
   openGraph: {
+    images: OG_IMAGE,
     title: "סרטוני בדק בית - תיעוד בדיקות ואיתור ליקויי בנייה",
     description:
       "סרטוני וידאו אמיתיים של בדיקות בדק בית ואיתור ליקויי בנייה בדירות חדשות, יד שניה ובתים פרטיים.",

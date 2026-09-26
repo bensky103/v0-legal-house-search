@@ -5,6 +5,7 @@ import { getCityProjectIndex } from "@/lib/projects"
 import { getCityProjects, type CityProject } from "@/lib/city-projects"
 import { getCityProfile } from "@/lib/city-profiles"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+import { OG_IMAGE } from "@/lib/og-image"
 
 /**
  * Project names and building areas for a city.
@@ -90,7 +91,8 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
     description,
     alternates: { canonical: `https://www.legalbedek.co.il/projects/${city.slug}` },
     ...(hasOwnContent ? {} : { robots: { index: false, follow: true } }),
-    openGraph: { title, description, url: `https://www.legalbedek.co.il/projects/${city.slug}`, type: "website" },
+    openGraph: {
+  images: OG_IMAGE, title, description, url: `https://www.legalbedek.co.il/projects/${city.slug}`, type: "website" },
   }
 }
 

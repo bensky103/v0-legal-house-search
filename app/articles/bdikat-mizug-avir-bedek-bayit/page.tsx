@@ -5,6 +5,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_MIZUG } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "בדיקת מיזוג אוויר בבדק בית — בדיקה תרמית של המערכת | בדק בית Legal",
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/bdikat-mizug-avir-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "בדיקת מיזוג אוויר בבדק בית — בדיקה תרמית של המערכת",
     description: "כך נבדקת מערכת המיזוג בבדק בית באמצעות מצלמה תרמית — פיזור אוויר, דליפות ובידוד תעלות.",
     type: "article",

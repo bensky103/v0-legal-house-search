@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
+import { OG_IMAGE } from "@/lib/og-image"
 
 const URL = "https://www.legalbedek.co.il/mediniyut-pratiyut"
 
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     "מדיניות הפרטיות של בדק בית Legal — איזה מידע נאסף באתר, כיצד נעשה בו שימוש, שימוש בעוגיות וכלי מדידה, וזכויות המשתמש לפי חוק הגנת הפרטיות התשמ״א-1981.",
   alternates: { canonical: URL },
   openGraph: {
+    images: OG_IMAGE,
     title: "מדיניות פרטיות | בדק בית Legal",
     description:
       "מדיניות הפרטיות של בדק בית Legal — מידע שנאסף, שימוש בעוגיות וכלי מדידה, וזכויות המשתמש לפי חוק הגנת הפרטיות.",

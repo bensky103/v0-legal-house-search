@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_RITZUF_MISHAKIM } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "מישקים ורווחים בריצוף — למה הם מונעים התרוממות והתנתקות אריחים | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/likuyey-ritzuf-mishakim" },
   openGraph: {
+    images: OG_IMAGE,
     title: "מישקים ורווחים בריצוף — למה הם מונעים התרוממות והתנתקות אריחים",
     description:
       "מישקים ומרווחים תקינים בין המרצפות מונעים לחצי התפשטות שגורמים עם השנים להתרוממות ולהתנתקות הריצוף. כך נבדקים המישקים בבדק בית לפי ת״י 1555.",

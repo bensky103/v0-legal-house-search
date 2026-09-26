@@ -5,6 +5,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { DEFECTS_GIBENET } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "תופעת הגיבנת בריצוף — כללי ההנחה וההדבקה הנכונה של אריחים | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/gibenet-ritzuf-hadbakat-ariachim" },
   openGraph: {
+    images: OG_IMAGE,
     title: "תופעת הגיבנת בריצוף — כללי ההנחה וההדבקה הנכונה של אריחים",
     description:
       "גיבנת בריצוף נובעת מכשל בהדבקת האריחים לתשתית בשילוב מישקים חסרים. כך נבדקת תקינות ההדבקה — כיסוי דבק 85%, כיסוי מלא בפינות ובמישקים, מריחה כפולה — לפי ת״י 1551 חלק 1.",

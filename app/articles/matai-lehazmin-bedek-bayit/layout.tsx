@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "מתי כדאי להזמין בדק בית? המדריך המלא לעיתוי נכון | Legal בדק בית",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "יגאל בנסקי" }],
   openGraph: {
+    images: OG_IMAGE,
     title: "מתי כדאי להזמין בדק בית? המדריך המלא לעיתוי נכון",
     description: "מתי הזמן הנכון להזמין בדק בית? מדריך מקצועי לעיתוי הנכון של בדיקה הנדסית שיחסוך לכם כסף רב",
     type: "article",

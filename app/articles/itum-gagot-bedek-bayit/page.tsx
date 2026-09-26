@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_ITUM_GAGOT } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "איטום גגות ומרפסות בבדק בית — איך מאתרים נזילות | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/itum-gagot-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "איטום גגות ומרפסות בבדק בית — איך מאתרים נזילות וכשלי איטום",
     description: "כך מאתרים חדירת מים, סדקים ורטיבות סמויה בגגות ובמרפסות בבדק בית — כולל מצלמה תרמית.",
     type: "article",

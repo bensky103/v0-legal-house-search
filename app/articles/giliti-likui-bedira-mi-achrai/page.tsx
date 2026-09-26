@@ -3,6 +3,7 @@ import Link from "next/link"
 import { ArticleLayout, ArticleH2, ArticleLead } from "@/components/article-layout"
 import { ArticleFaq } from "@/components/article-faq"
 import { ArticleDefectGallery, type DefectItem } from "@/components/article-defect-gallery"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים | בדק בית Legal",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/giliti-likui-bedira-mi-achrai" },
   openGraph: {
+    images: OG_IMAGE,
     title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים",
     description:
       "מדריך פעולה מעשי למי שגילה ליקוי בדירה מקבלן: מי אחראי לפי חוק המכר, לכמה זמן, ואיך מחייבים את הקבלן לתקן.",

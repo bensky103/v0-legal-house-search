@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { contractors, cities, getContractorCitySlugs } from "@/lib/seo-locations"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export function generateStaticParams() {
   return contractors.map((c) => ({ contractor: c.slug }))
@@ -33,6 +34,7 @@ export function generateMetadata({ params }: { params: { contractor: string } })
     ],
     authors: [{ name: "יגאל בנסקי" }],
     openGraph: {
+      images: OG_IMAGE,
       title,
       description,
       type: "website",

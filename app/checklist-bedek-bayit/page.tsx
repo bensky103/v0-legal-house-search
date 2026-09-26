@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { PrintButton } from "@/components/print-button"
 import { SiteIndex } from "@/components/site-index"
+import { OG_IMAGE } from "@/lib/og-image"
 
 const URL = "https://www.legalbedek.co.il/checklist-bedek-bayit"
 
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: URL },
   openGraph: {
+    images: OG_IMAGE,
     title: "צ׳קליסט בדק בית להורדה - רשימת בדיקה עצמית לפני מסירה",
     description:
       "רשימת בדיקה עצמית מלאה לרוכשי דירה לפני מסירה מהקבלן. כלי עזר חינמי להורדה והדפסה — ולצד בדיקה מקצועית של מומחה.",

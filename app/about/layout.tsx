@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "אודות ליגל בדק בית | Legal Bedek - מומחים לאיתור ליקויי בנייה",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     "בדק בית מוסמך"
   ],
   openGraph: {
+    images: OG_IMAGE,
     title: "אודות ליגל בדק בית | Legal Bedek",
     description: "מומחים מוסמכים לאיתור ליקויי בנייה וחוות דעת נגדית - הסמכת איגוד המהנדסים ורישיון משרד העבודה",
     type: "website",

@@ -5,6 +5,7 @@ import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticlePriceSection } from "@/components/article-price-section"
 import { ArticleFaq } from "@/components/article-faq"
 import { DEFECTS_RITZUF } from "@/lib/article-images"
+import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
   title: "ליקויי ריצוף בבדק בית — מישוריות, שיפוע ופוגות (ת״י 1555) | בדק בית Legal",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   authors: [{ name: "יגאל בנסקי" }],
   alternates: { canonical: "https://www.legalbedek.co.il/articles/likuyey-ritzuf-bedek-bayit" },
   openGraph: {
+    images: OG_IMAGE,
     title: "ליקויי ריצוף בבדק בית — מישוריות, שיפוע ופוגות (ת״י 1555)",
     description: "כך מאתרים ומתעדים שקיעות, 'שן' בין אריחים, שיפוע לקוי וסדקים בריצוף בבדק בית לפי ת״י 1555.",
     type: "article",

@@ -7,6 +7,7 @@ import { getCityProjects } from "@/lib/city-projects"
 import { defects } from "@/lib/defects"
 import { services } from "@/lib/services"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
+import { OG_IMAGE } from "@/lib/og-image"
 
 // Real defect photos from actual inspections, shown on every city page so the
 // landing page carries genuine visual evidence (and keyword-rich image alt text
@@ -89,6 +90,7 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
     ],
     authors: [{ name: "יגאל בנסקי" }],
     openGraph: {
+      images: OG_IMAGE,
       title,
       description,
       type: "website",

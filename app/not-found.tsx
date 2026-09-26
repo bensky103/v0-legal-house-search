@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { SiteIndex } from "@/components/site-index"
 
 export const metadata: Metadata = {
@@ -24,7 +23,6 @@ export default function NotFound() {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.webp" alt="בדק בית Legal" width={56} height={56} className="object-contain w-12 h-12 md:w-14 md:h-14" />
             <span className="text-lg md:text-xl font-bold text-gray-900">בדק בית Legal</span>
           </Link>
         </div>

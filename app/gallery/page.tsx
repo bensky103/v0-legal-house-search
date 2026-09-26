@@ -48,13 +48,6 @@ export default function GalleryPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/logo.webp"
-                alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
-                width={64}
-                height={64}
-                className="object-contain w-12 h-12 md:w-16 md:h-16"
-              />
               <div>
                 <h1 className="text-base md:text-xl font-bold text-gray-900 leading-tight">
                   גלריית בדק בית - Legal

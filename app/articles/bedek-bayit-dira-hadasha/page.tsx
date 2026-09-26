@@ -3,7 +3,6 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import Link from "next/link"
 import { SiteIndex } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
@@ -29,13 +28,6 @@ export default function ArticleBedekBayitDiraHadasha() {
         <div className="container mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/logo.webp"
-                alt="Legal בדק בית - לוגו"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
               <div className="text-right">
                 <span className="block text-lg font-bold text-gray-900">
                   בדק בית ואיתור ליקויי בניה

@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import Script from "next/script"
 import { articles } from "@/lib/articles"
@@ -26,13 +25,6 @@ export default function BlogPage() {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <Link href="/" className="flex items-center gap-4">
-            <Image
-              src="/logo.webp"
-              alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית"
-              width={80}
-              height={80}
-              className="object-contain w-12 h-12 md:w-16 md:h-16"
-            />
             <div>
               <span className="block text-lg md:text-2xl font-bold text-gray-900 leading-tight">בדק בית Legal</span>
               <span className="block text-sm md:text-base text-slate-700 font-medium">בלוג מאמרים מקצועי</span>

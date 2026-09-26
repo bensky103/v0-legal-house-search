@@ -409,14 +409,6 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4 space-x-reverse">
-              <Image
-                src="/logo.webp"
-                alt="בדק בית Legal - מומחה מוסמך לאיתור ליקויי בנייה וחוות דעת הנדסית נגדית"
-                title="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
-                width={80}
-                height={80}
-                className="object-contain w-12 h-12 md:w-20 md:h-20"
-              />
               <div>
                 <h1 className="text-lg md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight">
                   <T k="site.title" />
@@ -1669,7 +1661,7 @@ export default function HomePage() {
                   href="https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 rounded-lg transition-colors ring-2 ring-white/90 shadow-md"
                   aria-label="ערוץ היוטיוב שלנו - סרטוני בדק בית"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -1681,7 +1673,7 @@ export default function HomePage() {
                   href="https://www.google.com/maps?cid=4458373169061596905" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2.5 rounded-lg transition-colors ring-2 ring-white/90 shadow-md"
                   aria-label="ביקורות גוגל - בדק בית Legal"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -1693,7 +1685,7 @@ export default function HomePage() {
                   href="https://www.tiktok.com/@.legalbedek.co.il"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-4 py-2.5 rounded-lg transition-colors ring-2 ring-white/90 shadow-md"
                   aria-label="ערוץ הטיקטוק שלנו - סרטוני בדק בית"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

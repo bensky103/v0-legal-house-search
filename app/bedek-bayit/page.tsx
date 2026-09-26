@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { cities } from "@/lib/seo-locations"
 import { SiteIndex } from "@/components/site-index"
 
@@ -56,13 +55,6 @@ export default function CitiesIndexPage() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-4 space-x-reverse">
-              <Image
-                src="/logo.webp"
-                alt="בדק בית Legal"
-                width={64}
-                height={64}
-                className="object-contain w-12 h-12 md:w-16 md:h-16"
-              />
               <div>
                 <span className="text-lg md:text-xl font-bold text-gray-900">בדק בית Legal</span>
                 <p className="text-xs md:text-sm text-slate-600">מומחה לאיתור ליקויי בנייה</p>

@@ -146,7 +146,7 @@ gtag('config', 'AW-17703305821');`}
               sameAs: [
                 "https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw",
                 "https://www.tiktok.com/@.legalbedek.co.il",
-                "https://share.google/Xs39vbL4NPtrMLrFZ"
+                "https://www.google.com/maps?cid=4458373169061596905"
               ],
               address: {
                 "@type": "PostalAddress",

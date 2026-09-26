@@ -363,7 +363,7 @@ export default function HomePage() {
                 sameAs: [
                   "https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw",
                   "https://www.tiktok.com/@.legalbedek.co.il",
-                  "https://share.google/Xs39vbL4NPtrMLrFZ",
+                  "https://www.google.com/maps?cid=4458373169061596905",
                 ],
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
@@ -1085,7 +1085,7 @@ export default function HomePage() {
           {/* Google Reviews Badge */}
           <div className="flex flex-col items-center gap-3 mb-8 md:mb-12">
             <a
-              href="https://share.google/UEfYIc6AgM0BAcvgS"
+              href="https://www.google.com/maps?cid=4458373169061596905"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-white border border-gray-200 rounded-xl px-6 py-4 shadow-md hover:shadow-lg transition-shadow"
@@ -1678,7 +1678,7 @@ export default function HomePage() {
                   YouTube
                 </a>
                 <a 
-                  href="https://share.google/Xs39vbL4NPtrMLrFZ" 
+                  href="https://www.google.com/maps?cid=4458373169061596905" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-lg transition-colors"

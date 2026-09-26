@@ -145,6 +145,7 @@ gtag('config', 'AW-17703305821');`}
               email: "yigalbensky@gmail.com",
               sameAs: [
                 "https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw",
+                "https://www.tiktok.com/@.legalbedek.co.il",
                 "https://share.google/Xs39vbL4NPtrMLrFZ"
               ],
               address: {

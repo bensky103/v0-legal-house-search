@@ -361,7 +361,7 @@ export default function HomePage() {
                   reviewBody: r.body,
                 })),
                 sameAs: [
-                  "https://www.youtube.com/@LegalBedekBayit",
+                  "https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw",
                   "https://share.google/Xs39vbL4NPtrMLrFZ",
                 ],
                 hasOfferCatalog: {
@@ -1665,7 +1665,7 @@ export default function HomePage() {
               </div>
               <div className="mt-4 flex flex-wrap items-center gap-3">
                 <a 
-                  href="https://www.youtube.com/@LegalBedekBayit" 
+                  href="https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
@@ -1688,18 +1688,12 @@ export default function HomePage() {
                   </svg>
                   Google Maps
                 </a>
-                <a 
-                  href="https://autocoachapp.com/autocoachapp-heb-lp/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-black hover:bg-gray-800 text-white px-4 py-2 rounded-lg transition-colors"
-                  aria-label="TikTok - בדק בית Legal"
-                >
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-                  </svg>
-                  TikTok
-                </a>
+                {/* The TikTok button pointed at autocoachapp.com - an unrelated
+                    commercial landing page, not a TikTok account at all - so a
+                    visitor who clicked it left the site for a stranger. Pulled
+                    until the real channel URL is known. To restore it: put the
+                    channel URL in the href and drop this comment back to an <a>,
+                    styling as bg-black hover:bg-gray-800 like the others. */}
               </div>
             </div>
 

@@ -144,7 +144,7 @@ gtag('config', 'AW-17703305821');`}
               telephone: "+972-50-627-7858",
               email: "yigalbensky@gmail.com",
               sameAs: [
-                "https://www.youtube.com/@LegalBedekBayit",
+                "https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw",
                 "https://share.google/Xs39vbL4NPtrMLrFZ"
               ],
               address: {

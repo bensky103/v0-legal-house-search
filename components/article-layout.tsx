@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { SiteIndex } from "@/components/site-index"
@@ -44,26 +43,6 @@ export function ArticleLayout({
           dateModified={dateModified}
         />
       )}
-      {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-3">
-              <Image src="/logo.webp" alt="Legal בדק בית - לוגו" width={50} height={50} className="object-contain" />
-              <div className="text-right">
-                <span className="text-lg font-bold text-gray-900">בדק בית ואיתור ליקויי בניה</span>
-              </div>
-            </Link>
-            <a
-              href="tel:+972506277858"
-              className="inline-flex items-center rounded-md bg-green-700 hover:bg-green-800 text-white px-4 py-2 text-sm font-semibold transition-colors"
-            >
-              התקשרו עכשיו
-            </a>
-          </div>
-        </div>
-      </header>
-
       <article className="py-12 md:py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Article header */}

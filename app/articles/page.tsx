@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { articles } from "@/lib/articles"
 import { SiteIndex } from "@/components/site-index"
 
@@ -40,20 +39,6 @@ export default function ArticlesIndexPage() {
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-
-      <header className="bg-white shadow-sm border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-4 space-x-reverse">
-              <Image src="/logo.webp" alt="בדק בית Legal" width={56} height={56} className="object-contain w-12 h-12 md:w-14 md:h-14" />
-              <span className="text-lg md:text-xl font-bold text-gray-900">בדק בית Legal</span>
-            </Link>
-            <Link href="/" className="text-sm md:text-base text-blue-600 hover:text-blue-700 hover:underline font-medium">
-              חזרה לדף הבית
-            </Link>
-          </div>
-        </div>
-      </header>
 
       <nav aria-label="breadcrumb" className="bg-white border-b border-gray-100">
         <div className="container mx-auto px-4 py-3">

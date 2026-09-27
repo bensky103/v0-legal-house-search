@@ -26,9 +26,41 @@ export const metadata: Metadata = {
 // Last review date, kept in a single place so the page and any future audit share one source.
 const LAST_UPDATED = "16 ביולי 2026"
 
+// A policy page, so a plain WebPage and a breadcrumb is the honest description -
+// there is no richer type to claim here. dateModified reuses the review date
+// shown on the page rather than introducing a second source for it.
+const privacySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${URL}#webpage`,
+      url: URL,
+      name: "מדיניות פרטיות",
+      description:
+        "איזה מידע נאסף באתר, כיצד נעשה בו שימוש, שימוש בעוגיות וזכויות המשתמש.",
+      inLanguage: "he",
+      dateModified: "2026-07-16",
+      isPartOf: { "@id": "https://www.legalbedek.co.il/#website" },
+      about: { "@id": "https://www.legalbedek.co.il/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "דף הבית", item: "https://www.legalbedek.co.il" },
+        { "@type": "ListItem", position: 2, name: "מדיניות פרטיות", item: URL },
+      ],
+    },
+  ],
+}
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white" dir="rtl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
+      />
       <header className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-8 md:py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">מדיניות פרטיות</h1>

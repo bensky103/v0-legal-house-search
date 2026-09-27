@@ -1,6 +1,5 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { cities } from "@/lib/seo-locations"
 
 export const metadata: Metadata = {
@@ -27,20 +26,57 @@ const serviceAreas = [
 // מיפוי שם עיר -> slug של עמוד ייעודי קיים
 const citySlugByName = new Map(cities.map((c) => [c.nameSimple, c.slug]))
 
+const BASE = "https://www.legalbedek.co.il"
+
+// The page lists every city served; the ones with a page of their own are the
+// ones worth naming as items, since an ItemList entry that points nowhere adds
+// nothing. The rest stay as text on the page.
+const areasSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${BASE}/ezorei-sherut#webpage`,
+      url: `${BASE}/ezorei-sherut`,
+      name: "אזורי שירות - בדק בית בכל הארץ",
+      description:
+        "הערים והאזורים שבהם ניתן שירות בדק בית, איתור ליקויי בנייה וחוות דעת הנדסית.",
+      inLanguage: "he",
+      isPartOf: { "@id": `${BASE}/#website` },
+      about: { "@id": `${BASE}/#organization` },
+      mainEntity: {
+        "@type": "ItemList",
+        name: "ערים שבהן ניתן שירות בדק בית",
+        numberOfItems: cities.length,
+        itemListElement: cities.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: `בדק בית ב${c.name}`,
+          url: `${BASE}/bedek-bayit/${c.slug}`,
+        })),
+      },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "דף הבית", item: BASE },
+        { "@type": "ListItem", position: 2, name: "אזורי שירות", item: `${BASE}/ezorei-sherut` },
+      ],
+    },
+  ],
+}
+
 export default function ServiceAreasPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(areasSchema) }}
+      />
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center space-x-4 space-x-reverse">
-              <Image
-                src="/logo.png"
-                alt="בדק בית Legal - מומחה לאיתור ליקויי בנייה"
-                width={64}
-                height={64}
-                className="object-contain w-12 h-12 md:w-16 md:h-16"
-              />
               <div>
                 <span className="text-lg md:text-xl font-bold text-gray-900">בדק בית Legal</span>
                 <p className="text-xs md:text-sm text-slate-600">מומחה לאיתור ליקויי בנייה</p>

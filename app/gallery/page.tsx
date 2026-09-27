@@ -34,6 +34,37 @@ const sections: { key: GalleryImage["category"]; heading: string; description: s
   },
 ]
 
+const BASE = "https://www.legalbedek.co.il"
+
+// ImageGallery is the collection type that matches what this page is. The photos
+// themselves are already declared, with captions and dimensions, in the image
+// sitemap built from lib/gallery-images.ts, so they are not repeated here - this
+// names the page as a gallery and ties it to the business.
+const gallerySchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ImageGallery",
+      "@id": `${BASE}/gallery#webpage`,
+      url: `${BASE}/gallery`,
+      name: "גלריית בדק בית - תיעוד בדיקות וליקויי בנייה",
+      description:
+        "תמונות מבדיקות בדק בית שבוצעו בשטח - ליקויי בנייה שאותרו, הציוד המקצועי ותיעוד הבדיקות עצמן.",
+      inLanguage: "he",
+      isPartOf: { "@id": `${BASE}/#website` },
+      about: { "@id": `${BASE}/#organization` },
+      numberOfItems: galleryImages.length,
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "דף הבית", item: BASE },
+        { "@type": "ListItem", position: 2, name: "גלריה", item: `${BASE}/gallery` },
+      ],
+    },
+  ],
+}
+
 export default function GalleryPage() {
   const heroImage = galleryImages.find((img) => img.category === "hero")
   const grouped = galleryImages.reduce<Record<string, GalleryImage[]>>((acc, img) => {
@@ -43,6 +74,10 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(gallerySchema) }}
+      />
       {/* Header */}
       <header className="bg-white shadow-sm border-b relative z-10">
         <div className="container mx-auto px-4 py-4">

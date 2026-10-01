@@ -22,7 +22,7 @@ export interface FeaturedProject {
 }
 
 // תאריך העדכון האחרון של הרשימה (חודש/שנה) - לתצוגה ולנתוני dateModified.
-export const featuredProjectsUpdated = "2026-06"
+export const featuredProjectsUpdated = "2026-10"
 
 export const featuredProjects: FeaturedProject[] = [
   { id: 1, name: "רובע שדה דב", city: "תל אביב", status: "בנייה מתקדמת / לקראת מסירה", citySlug: "tel-aviv" },
@@ -35,4 +35,6 @@ export const featuredProjects: FeaturedProject[] = [
   { id: 8, name: "שכונת בצוותא", city: "חריש", status: "שלבי אכלוס אחרונים" },
   { id: 9, name: "פארק איילון", city: "אור יהודה", status: "לקראת מסירה", citySlug: "or-yehuda" },
   { id: 10, name: "אגמים מזרח", city: "נתניה", status: "בנייה מתקדמת", citySlug: "netanya" },
+  // לדימונה אין עמוד עיר ייעודי, ולכן הרשומה ללא citySlug.
+  { id: 11, name: "תורן בלב השחר", city: "דימונה", status: "בשלבי מסירה" },
 ]

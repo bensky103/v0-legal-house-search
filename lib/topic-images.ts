@@ -280,6 +280,7 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     G("bedikat-chozek-maake-mirpeset"),
   ],
   maakot: [
+    GF("bedek-bayit-maake-zchuchit-mirpeset-dimona.webp"),
     G("bedek-bayit-maake-mirpeset-briha-govah"),
     G("bedek-bayit-medidat-maake-zchuchit-madregot"),
     GF("bedek-bayit-maakot-betichut-01.jpg"),

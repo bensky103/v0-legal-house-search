@@ -387,6 +387,16 @@ export const galleryImages: GalleryImage[] = [
     keywords: ["בדק בית", "פלס דיגיטלי", "ציוד בדק בית", "בדיקת שיפועים", "מדידת מפלסים", "ציוד מקצועי"],
   },
   {
+    src: "/gallery/bedek-bayit-maake-zchuchit-mirpeset-dimona.webp",
+    width: 473,
+    height: 475,
+    category: "field",
+    title: "בדיקת מעקה זכוכית במרפסת - פרויקט תורן בלב השחר, דימונה",
+    alt: "מומחה בדק בית בודק מעקה זכוכית ומאחז עליון במרפסת בית חדש בפרויקט תורן בלב השחר בדימונה - בדיקת חוזק, גובה ועיגון לפני מסירה",
+    caption: "בדיקת מעקה הזכוכית והמאחז העליון במרפסת בית חדש בפרויקט תורן בלב השחר בדימונה",
+    keywords: ["בדק בית", "מעקה זכוכית", "בדיקת מעקה", "דימונה", "תורן בלב השחר", "בית פרטי"],
+  },
+  {
     src: "/gallery/mad-nekudat-tal-gesher-termi-tziyud-bedek-bayit.webp",
     width: 960,
     height: 1072,

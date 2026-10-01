@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { getProjectCities } from "@/lib/projects"
 import { featuredProjects, featuredProjectsUpdated } from "@/lib/featured-projects"
 import { SiteIndex } from "@/components/site-index"
@@ -143,6 +144,25 @@ export default function ProjectsHubPage() {
                 )
               })}
             </ul>
+
+            {/* One photo from an actual inspection in a project on the list, so the
+                page shows the work and not only the names. */}
+            <figure className="mt-8 max-w-xl mx-auto">
+              <div className="overflow-hidden rounded-xl ring-1 ring-blue-100 shadow-sm">
+                <Image
+                  src="/gallery/bedek-bayit-maake-zchuchit-mirpeset-dimona.webp"
+                  alt="מומחה בדק בית בודק מעקה זכוכית ומאחז עליון במרפסת בית חדש בפרויקט תורן בלב השחר בדימונה"
+                  title="בדיקת מעקה זכוכית בפרויקט תורן בלב השחר, דימונה"
+                  width={473}
+                  height={475}
+                  loading="lazy"
+                  className="w-full h-auto"
+                />
+              </div>
+              <figcaption className="mt-2 text-sm text-gray-600 text-center text-pretty">
+                בדיקת מעקה הזכוכית והמאחז העליון במרפסת בית חדש בפרויקט תורן בלב השחר, דימונה.
+              </figcaption>
+            </figure>
 
             <p className="text-sm text-gray-600 leading-relaxed mt-6 text-center text-pretty">
               לא מצאתם את הפרויקט שלכם ברשימה? אנו מבצעים בדק בית בכל הפרויקטים החדשים בישראל.{" "}

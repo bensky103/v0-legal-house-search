@@ -37,4 +37,8 @@ export const featuredProjects: FeaturedProject[] = [
   { id: 10, name: "אגמים מזרח", city: "נתניה", status: "בנייה מתקדמת", citySlug: "netanya" },
   // לדימונה אין עמוד עיר ייעודי, ולכן הרשומה ללא citySlug.
   { id: 11, name: "תורן בלב השחר", city: "דימונה", status: "בשלבי מסירה" },
+  { id: 12, name: "בן סרוק 22-24", city: "תל אביב", status: "בשלבי סיום לקראת מסירה", citySlug: "tel-aviv" },
+  { id: 13, name: "בן סרוק 26", city: "תל אביב", status: "בשלבי סיום לקראת מסירה", citySlug: "tel-aviv" },
+  { id: 14, name: "בן סרוק 18-20", city: "תל אביב", status: "בשלבי סיום לקראת מסירה", citySlug: "tel-aviv" },
+  { id: 15, name: "בלוך 22", city: "תל אביב", status: "בשלבי סיום לקראת מסירה", citySlug: "tel-aviv" },
 ]

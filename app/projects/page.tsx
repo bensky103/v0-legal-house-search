@@ -28,6 +28,40 @@ const hebrewMonths = [
   "דצמבר",
 ]
 
+// Field photos shown under the project list. The building and the slope
+// measurement name no project: they come from an inspection covered by a
+// non-disclosure agreement, so they are published without saying where.
+const FIELD_PHOTOS = [
+  {
+    src: "/gallery/bedek-bayit-binyan-boutique-chadash-tel-aviv.webp",
+    width: 1600,
+    height: 900,
+    wide: true,
+    title: "בניין מגורים בוטיק חדש בתל אביב לקראת מסירה",
+    alt: "בניין מגורים בוטיק חדש בתל אביב בשלבי סיום - מרפסות עם מעקה זכוכית וחלונות עטופים לפני מסירת הדירות מהקבלן",
+    caption:
+      "בניין מגורים בוטיק חדש בתל אביב בשלבי סיום, לקראת מסירת הדירות מהקבלן.",
+  },
+  {
+    src: "/gallery/bedek-bayit-medidat-shipua-mirpeset-peles.webp",
+    width: 474,
+    height: 392,
+    title: "מדידת שיפוע במרפסת בפלס",
+    alt: "מדידת שיפוע ריצוף המרפסת בפלס ארוך לאורך מעקה הבטון - בדיקת ניקוז ומים עומדים בבדק בית",
+    caption:
+      "מדידת שיפוע הריצוף במרפסת לכיוון הניקוז. שיפוע חסר משאיר מים עומדים ומוביל לרטיבות.",
+  },
+  {
+    src: "/gallery/bedek-bayit-maake-zchuchit-mirpeset-dimona.webp",
+    width: 473,
+    height: 475,
+    title: "בדיקת מעקה זכוכית בפרויקט תורן בלב השחר, דימונה",
+    alt: "מומחה בדק בית בודק מעקה זכוכית ומאחז עליון במרפסת בית חדש בפרויקט תורן בלב השחר בדימונה",
+    caption:
+      "בדיקת מעקה הזכוכית והמאחז העליון במרפסת בית חדש בפרויקט תורן בלב השחר, דימונה.",
+  },
+]
+
 function formatUpdatedLabel(value: string): string {
   const [year, month] = value.split("-")
   const monthIndex = Number(month) - 1
@@ -145,24 +179,30 @@ export default function ProjectsHubPage() {
               })}
             </ul>
 
-            {/* One photo from an actual inspection in a project on the list, so the
-                page shows the work and not only the names. */}
-            <figure className="mt-8 max-w-xl mx-auto">
-              <div className="overflow-hidden rounded-xl ring-1 ring-blue-100 shadow-sm">
-                <Image
-                  src="/gallery/bedek-bayit-maake-zchuchit-mirpeset-dimona.webp"
-                  alt="מומחה בדק בית בודק מעקה זכוכית ומאחז עליון במרפסת בית חדש בפרויקט תורן בלב השחר בדימונה"
-                  title="בדיקת מעקה זכוכית בפרויקט תורן בלב השחר, דימונה"
-                  width={473}
-                  height={475}
-                  loading="lazy"
-                  className="w-full h-auto"
-                />
-              </div>
-              <figcaption className="mt-2 text-sm text-gray-600 text-center text-pretty">
-                בדיקת מעקה הזכוכית והמאחז העליון במרפסת בית חדש בפרויקט תורן בלב השחר, דימונה.
-              </figcaption>
-            </figure>
+            {/* Photos from inspections in projects on this list, so the page shows
+                the work and not only the names. Two of the three carry no project
+                name on purpose: the inspection they came from is under an NDA, so
+                the building and the measurement are shown without saying where. */}
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {FIELD_PHOTOS.map((photo) => (
+                <figure key={photo.src} className={photo.wide ? "sm:col-span-2" : undefined}>
+                  <div className="overflow-hidden rounded-xl ring-1 ring-blue-100 shadow-sm">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      title={photo.title}
+                      width={photo.width}
+                      height={photo.height}
+                      loading="lazy"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <figcaption className="mt-2 text-sm text-gray-600 text-center text-pretty">
+                    {photo.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
 
             <p className="text-sm text-gray-600 leading-relaxed mt-6 text-center text-pretty">
               לא מצאתם את הפרויקט שלכם ברשימה? אנו מבצעים בדק בית בכל הפרויקטים החדשים בישראל.{" "}

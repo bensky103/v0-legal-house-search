@@ -254,6 +254,8 @@ const DEFECT_IMAGES: Record<string, string[]> = {
     GF("bedek-bayit-likui-mamad-02.jpg"),
   ],
   mirpasot: [
+    GF("bedek-bayit-medidat-shipua-mirpeset-peles.webp"),
+    GF("bedek-bayit-binyan-boutique-chadash-tel-aviv.webp"),
     G("bedek-bayit-medidat-shipua-mirpeset-lekivun-nakez"),
     G("bedek-bayit-medidat-shipua-mirpeset-shemesh"),
     G("bedek-bayit-medidat-shipua-mirpeset-peles"),

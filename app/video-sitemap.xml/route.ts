@@ -15,7 +15,7 @@ const SITE = "https://www.legalbedek.co.il"
 // 2026-09-13: one VideoObject per page, plus a duration.
 // 2026-09-19: the player moved off youtube-nocookie.com onto youtube.com and the
 // declared thumbnail went from 480x360 to 1280x720.
-const MARKUP_REVISED = "2026-09-19"
+const MARKUP_REVISED = "2026-10-08"
 
 // Each video has its own dedicated landing page.
 function pageUrl(v: (typeof videos)[number]): string {

@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { LiteYouTube } from "@/components/lite-youtube"
 
 interface SeoFeature {
@@ -456,7 +456,7 @@ export function SeoLandingTemplate({
       </main>
 
       {/* Site index (HTML sitemap) - internal links to every page so this landing page is not a dead-end */}
-      <SiteIndex />
+      <SiteFooterLinks />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">

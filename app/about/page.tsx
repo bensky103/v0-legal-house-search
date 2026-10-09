@@ -1,10 +1,10 @@
-// Server component (no hooks / no event handlers here): keeps SiteIndex and its
-// large data files (cities, defects, services) out of the client bundle.
+// Server component: no hooks or event handlers here, so nothing on this page
+// reaches the client bundle.
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 
 const BASE = "https://www.legalbedek.co.il"
 
@@ -432,7 +432,7 @@ export default function AboutPage() {
         </Link>
       </section>
 
-      <SiteIndex />
+      <SiteFooterLinks />
     </main>
   )
 }

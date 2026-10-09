@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { ReactNode } from "react"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ConsultationBox } from "@/components/consultation-box"
 
@@ -108,7 +108,7 @@ export function ArticleLayout({
         </div>
       </article>
 
-      <SiteIndex />
+      <SiteFooterLinks />
 
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">

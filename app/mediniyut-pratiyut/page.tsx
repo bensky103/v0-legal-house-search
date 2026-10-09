@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { OG_IMAGE } from "@/lib/og-image"
 
 const URL = "https://www.legalbedek.co.il/mediniyut-pratiyut"
@@ -168,7 +168,7 @@ export default function PrivacyPolicyPage() {
         </div>
       </article>
 
-      <SiteIndex />
+      <SiteFooterLinks />
     </main>
   )
 }

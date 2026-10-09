@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ArticleFaq } from "@/components/article-faq"
@@ -443,7 +443,7 @@ export default function BedekBayitDiraYadShniyaArticle() {
         </div>
       </main>
 
-      <SiteIndex />
+      <SiteFooterLinks />
     </article>
   )
 }

@@ -1,11 +1,11 @@
 // Server component: the CTA buttons are real <a> links now, so nothing on this
-// page needs hooks. Keeps SiteIndex's data tables out of the client bundle.
+// page needs hooks and none of its markup reaches the client bundle.
 
 import type { Metadata } from "next"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { ArticleDefectGallery } from "@/components/article-defect-gallery"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ArticleFaq } from "@/components/article-faq"
@@ -282,7 +282,7 @@ export default function ArticleBedekBayitNofeiBenShemen() {
         </div>
       </article>
 
-      <SiteIndex />
+      <SiteFooterLinks />
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">

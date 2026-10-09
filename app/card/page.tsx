@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { CardEmbed } from "@/components/card-embed"
 
 export const metadata: Metadata = {
@@ -56,7 +56,7 @@ export default function CardPage() {
         </div>
       </section>
 
-      <SiteIndex />
+      <SiteFooterLinks />
     </main>
   )
 }

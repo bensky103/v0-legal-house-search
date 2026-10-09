@@ -12,9 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // were near-orphaned), to prompt Google to re-crawl and re-evaluate pages stuck in
   // "discovered/crawled - currently not indexed". Bumped again 2026-08-14 with the
   // report-anatomy article and its field photos, 2026-08-27 with the hidden-mold
-  // detection article and its field photos, and 2026-09-21 with the thermal-bridge
-  // article and its field photos.
-  const LAST_UPDATED = new Date("2026-09-21")
+  // detection article and its field photos, 2026-09-21 with the thermal-bridge
+  // article and its field photos, and 2026-10-09 when the 510-word site index came
+  // off every leaf page - that one genuinely did change the body of every page on
+  // the site, which is the case this date exists for.
+  const LAST_UPDATED = new Date("2026-10-09")
 
   // Video pages carry their own, later date: they were last crawled 2026-06-29 —
   // before the de-duplication fix (2026-07-21) and before the depth content in

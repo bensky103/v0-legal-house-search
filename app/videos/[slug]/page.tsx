@@ -7,7 +7,7 @@ import { getVideoExtra } from "@/lib/video-content"
 import { getDefect } from "@/lib/defects"
 import { cities } from "@/lib/seo-locations"
 import { LiteYouTube } from "@/components/lite-youtube"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 
 const BASE = "https://www.legalbedek.co.il"
 
@@ -265,7 +265,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
       </article>
       </main>
 
-      <SiteIndex />
+      <SiteFooterLinks />
     </div>
   )
 }

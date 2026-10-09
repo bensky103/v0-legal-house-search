@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { PrintButton } from "@/components/print-button"
-import { SiteIndex } from "@/components/site-index"
+import { SiteFooterLinks } from "@/components/site-index"
 import { OG_IMAGE } from "@/lib/og-image"
 
 const URL = "https://www.legalbedek.co.il/doch-ledugma-mefurat"
@@ -576,7 +576,7 @@ export default function DetailedSampleReportPage() {
       </main>
 
       <div className="no-print">
-        <SiteIndex />
+        <SiteFooterLinks />
       </div>
 
       <footer className="bg-gray-900 text-white py-8 no-print">

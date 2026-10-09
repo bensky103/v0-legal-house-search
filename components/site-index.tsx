@@ -4,36 +4,53 @@ import { defects } from "@/lib/defects"
 import { services } from "@/lib/services"
 import { getProjectCities } from "@/lib/projects"
 
+/** The hub pages. Shared by the full index and by the compact leaf footer. */
+const MAIN_PAGES: { label: string; href: string }[] = [
+    { label: "דף הבית", href: "/" },
+  { label: "אודות", href: "/about" },
+  { label: "שירותי בדק בית", href: "/services" },
+  { label: "כמה עולה בדק בית", href: "/mehir-bedek-bayit" },
+  { label: "צ׳קליסט בדק בית להורדה", href: "/checklist-bedek-bayit" },
+  { label: "דוח בדק בית לדוגמה", href: "/doch-ledugma" },
+  { label: "דוח בדק בית מפורט לדוגמה", href: "/doch-ledugma-mefurat" },
+  { label: "אזורי שירות", href: "/ezorei-sherut" },
+  { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
+  { label: "בדק בית לפי קבלן", href: "/bedek-bayit/kablan" },
+  { label: "ליקויי בנייה", href: "/likuyey-bniya" },
+  { label: "פרויקטים חדשים", href: "/projects" },
+  { label: "מאמרים ומדריכים", href: "/articles" },
+  { label: "גלריית בדק בית", href: "/gallery" },
+  { label: "סרטוני בדק בית", href: "/videos" },
+  { label: "בלוג", href: "/blog" },
+  { label: "כרטיס ביקור דיגיטלי", href: "/card" },
+]
+
 /**
- * SiteIndex - אינדקס HTML גלוי של כל עמודי האתר (מפת אתר).
+ * A visible, crawlable index of every page on the site. Real anchors, nothing
+ * hidden from either a visitor or a crawler.
  *
- * נועד להופיע בתחתית כל עמוד כדי:
- * 1. למנוע "עמודים יתומים"/נסתרים שאינם מקושרים פנימית (בהתאם למדיניות גוגל).
- * 2. לאפשר לגולש שנחת על עמוד נחיתה עמוק להמשיך לכל שאר עמודי האתר.
+ * HUB PAGES ONLY. It renders about 510 words, identical on every page that
+ * carries it. On a hub that is a small share of a long listing, but on a leaf
+ * page it was the larger half of the document: a video page has 280-430 words
+ * of its own, so more than half of what Google read there was a block it had
+ * already read on a thousand other URLs. Those pages were being reported as
+ * "crawled - currently not indexed", and as near-copies of each other.
  *
- * האינדקס גלוי לחלוטין (ללא הסתרה/cloaking) ומקושר בקישורי <a> אמיתיים.
+ * Dropping it from leaf pages orphans nothing. SiteNav sits in the root layout,
+ * so every page links to all fourteen hubs, and each hub links to its own
+ * leaves from its own content: /bedek-bayit to 47 city pages, /bedek-bayit/kablan
+ * to 45 contractors, /videos to 45 video pages, /likuyey-bniya to 40 defect
+ * guides, /articles to 38 articles, /projects to 33 cities, /services to 15.
+ * Pages outside SiteNav - /card, the privacy page - are reachable through this
+ * index on the hubs that still carry it.
+ *
+ * Render it on: the home page, /articles, /blog, /bedek-bayit,
+ * /bedek-bayit/kablan, /likuyey-bniya, /projects, /services, /videos, /gallery,
+ * and the 404 page, where a full index is the most useful thing to offer.
  */
 export function SiteIndex() {
   const projectCities = getProjectCities()
 
-  const mainPages: { label: string; href: string }[] = [
-    { label: "דף הבית", href: "/" },
-    { label: "אודות", href: "/about" },
-    { label: "שירותי בדק בית", href: "/services" },
-    { label: "כמה עולה בדק בית", href: "/mehir-bedek-bayit" },
-    { label: "צ׳קליסט בדק בית להורדה", href: "/checklist-bedek-bayit" },
-    { label: "דוח בדק בית לדוגמה", href: "/doch-ledugma" },
-    { label: "דוח בדק בית מפורט לדוגמה", href: "/doch-ledugma-mefurat" },
-    { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
-    { label: "בדק בית לפי קבלן", href: "/bedek-bayit/kablan" },
-    { label: "ליקויי בנייה", href: "/likuyey-bniya" },
-    { label: "פרויקטים חדשים", href: "/projects" },
-    { label: "מאמרים ומדריכים", href: "/articles" },
-    { label: "גלריית בדק בית", href: "/gallery" },
-    { label: "סרטוני בדק בית", href: "/videos" },
-    { label: "בלוג", href: "/blog" },
-    { label: "כרטיס ביקור דיגיטלי", href: "/card" },
-  ]
 
   const articles: { label: string; href: string }[] = [
     { label: "בדק בית בדירה חדשה", href: "/articles/bedek-bayit-dira-hadasha" },
@@ -59,7 +76,7 @@ export function SiteIndex() {
           <div>
             <h3 className="text-sm font-bold text-white uppercase tracking-wide mb-3">עמודים ראשיים</h3>
             <ul className="space-y-2">
-              {mainPages.map((p) => (
+              {MAIN_PAGES.map((p) => (
                 <li key={p.href}>
                   <Link href={p.href} className="text-sm text-gray-400 hover:text-blue-400 hover:underline">
                     {p.label}
@@ -179,6 +196,40 @@ export function SiteIndex() {
             )}
           </div>
         </div>
+      </div>
+    </nav>
+  )
+}
+
+
+/**
+ * The hub links on their own, for leaf pages: a defect guide, an article, a
+ * video page, a city or contractor page.
+ *
+ * SiteIndex used to sit on those too, and at ~510 words it was the larger half
+ * of a short page. Dropping it outright went too far the other way: SiteNav is
+ * a client component whose dropdowns only mount once opened, so a leaf page was
+ * left with no crawlable link to /articles, /bedek-bayit, /likuyey-bniya or
+ * /blog at all. This is the middle: about forty words, every hub reachable in
+ * one hop, and nothing enumerated that the hub itself already lists.
+ */
+export function SiteFooterLinks() {
+  return (
+    <nav aria-label="עמודי האתר" className="bg-gray-950 text-gray-300 border-t border-gray-800">
+      <div className="container mx-auto px-4 py-8">
+        <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2">
+          {MAIN_PAGES.map((p) => (
+            <li key={p.href}>
+              <Link
+                href={p.href}
+                prefetch={false}
+                className="text-sm text-gray-400 hover:text-blue-400 hover:underline"
+              >
+                {p.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   )

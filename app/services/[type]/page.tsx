@@ -11,7 +11,11 @@ import { SeoLandingTemplate } from "@/components/seo-landing-template"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export function generateStaticParams() {
-  return [...services.map((s) => ({ type: s.slug })), ...projectTypes.map((p) => ({ type: p.slug }))]
+  // The four urban-renewal types now have full entries in lib/services.ts, while
+  // lib/seo-locations.ts still lists them for the nav, the sitemap and the city
+  // pages. Dedupe so a slug present in both is not generated twice.
+  const slugs = new Set([...services.map((s) => s.slug), ...projectTypes.map((p) => p.slug)])
+  return [...slugs].map((type) => ({ type }))
 }
 
 export function generateMetadata({ params }: { params: { type: string } }): Metadata {

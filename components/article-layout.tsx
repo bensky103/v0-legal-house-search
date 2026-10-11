@@ -3,6 +3,8 @@ import type { ReactNode } from "react"
 import { SiteFooterLinks } from "@/components/site-index"
 import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ConsultationBox } from "@/components/consultation-box"
+import { articles } from "@/lib/articles"
+import { getServiceBySlug, getServiceAnchor } from "@/lib/services"
 
 /**
  * Shared chrome for long-form article pages (server component, SEO-friendly).
@@ -31,6 +33,10 @@ export function ArticleLayout({
   datePublished?: string
   dateModified?: string
 }) {
+  const relatedServices = (articles.find((a) => a.slug === slug)?.relatedServices ?? [])
+    .map((serviceSlug) => getServiceBySlug(serviceSlug))
+    .filter((service) => service !== undefined)
+
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       {slug && (
@@ -65,6 +71,33 @@ export function ArticleLayout({
 
           {/* Body */}
           <div className="space-y-6 text-gray-800 leading-relaxed text-base md:text-lg">{children}</div>
+
+          {/* The services this article is about, linked from inside the article.
+              lib/articles.ts has carried relatedServices all along and only the
+              service pages were reading it, in the other direction. The result was
+              that the commercial pages took almost no links out of article bodies -
+              /services/bdikat-dira-yad-shniya, tama-38, pinui-binui and
+              mehir-lamishtaken each had exactly zero - while the checklist download
+              and the projects index took 38 apiece. The anchor is the phrase the
+              page is trying to rank for, not the short internal name. */}
+          {relatedServices.length > 0 && (
+            <aside className="mt-10 rounded-xl border border-slate-200 bg-slate-50 p-5 md:p-6">
+              <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-3">השירות שמטפל בזה</h2>
+              <ul className="space-y-2">
+                {relatedServices.map((service) => (
+                  <li key={service.slug}>
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="font-semibold text-blue-700 hover:text-blue-900 hover:underline"
+                    >
+                      {getServiceAnchor(service.slug)}
+                    </Link>
+                    <span className="text-gray-600"> - {service.badge}</span>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
 
           {/* CTA */}
           <div className="mt-12 bg-gradient-to-l from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white">

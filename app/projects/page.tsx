@@ -5,10 +5,16 @@ import { getProjectCities } from "@/lib/projects"
 import { featuredProjects, featuredProjectsUpdated } from "@/lib/featured-projects"
 import { SiteIndex } from "@/components/site-index"
 
+// This is the index of projects by city, and that is what the title now says.
+// It used to claim "בדיקת דירה מקבלן" head-on while holding 385 inbound internal
+// links - five times what /services/bedek-bayit-lifnei-mesira had - so the page
+// Google saw carrying the most weight for that query was a city list rather than
+// the service page that answers it. The service keeps the query; this page keeps
+// the browse-by-city intent, and links to the service with the exact anchor.
 export const metadata: Metadata = {
-  title: "בדק בית בפרויקטים חדשים | בדיקת דירה מקבלן לפי עיר",
+  title: "פרויקטים חדשים בבנייה לפי עיר | בדק בית Legal",
   description:
-    "בדק בית לדירות חדשות בפרויקטים בכל הארץ. בדיקה הנדסית לפני מסירת דירה מקבלן, איתור ליקויי בנייה ופרוטוקול מסירה מקצועי לפי עיר.",
+    "רשימת פרויקטי מגורים חדשים בבנייה לפי עיר, עם בדק בית לדירות הנמסרות בהם. בחרו עיר כדי לראות את הפרויקטים בה ואת הבדיקה המתאימה להם.",
   alternates: { canonical: "https://www.legalbedek.co.il/projects" },
 }
 

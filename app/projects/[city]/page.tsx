@@ -262,7 +262,11 @@ export default function CityProjectsPage({ params }: { params: { city: string } 
           label: `בדק בית בפרויקטים של ${c.name}`,
           href: `/bedek-bayit/kablan/${c.slug}`,
         })),
-        { label: "בדק בית לפני מסירה", href: "/services/shechunot-hadashot" },
+        // These two were one link whose anchor said "בדק בית לפני מסירה" while the
+        // href went to /services/shechunot-hadashot - 46 city pages telling Google
+        // that one page's phrase belongs to another. Each now points where it says.
+        { label: "בדק בית בשכונות חדשות", href: "/services/shechunot-hadashot" },
+        { label: "בדק בית לפני מסירה", href: "/services/bedek-bayit-lifnei-mesira" },
         { label: "ליקויי רטיבות", href: "/likuyey-bniya/retivut" },
       ]}
     />

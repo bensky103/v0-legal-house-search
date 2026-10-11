@@ -5,7 +5,7 @@ import { getCityProfile } from "@/lib/city-profiles"
 import { getCityProjectIndex } from "@/lib/projects"
 import { getCityProjects } from "@/lib/city-projects"
 import { defects } from "@/lib/defects"
-import { services } from "@/lib/services"
+import { services, getServiceAnchor } from "@/lib/services"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 import { OG_IMAGE } from "@/lib/og-image"
 
@@ -153,9 +153,12 @@ export default function CityPage({ params }: { params: { city: string } }) {
     .slice(0, 4)
     .map((d) => ({ label: `ליקויי ${d.name}`, href: `/likuyey-bniya/${d.slug}` }))
 
+  // The anchor is the phrase the target page is trying to rank for, not its short
+  // internal name: 46 city pages were linking the second-hand service as
+  // "בדיקת דירה יד שנייה" while the page itself targets "בדק בית דירה יד שניה".
   const serviceLinks = services
     .slice(0, 3)
-    .map((s) => ({ label: s.name, href: `/services/${s.slug}` }))
+    .map((s) => ({ label: getServiceAnchor(s.slug) ?? s.name, href: `/services/${s.slug}` }))
 
   // Project-specific article referrals: internal links from the city page to a
   // dedicated project guide, so the article gains inbound equity for long-tail

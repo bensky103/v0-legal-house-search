@@ -20,7 +20,7 @@ export const articles: ArticleMeta[] = [
     description:
       "מדריך מקיף לבדק בית בדירה חדשה מקבלן: למה לא לקנות חתול בשק, איך הבדיקה עוזרת במשא ומתן על המחיר, ומה היא חושפת.",
     datePublished: "2026-06-16",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "bedek-bayit-lifnei-kniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "bedek-bayit-lifnei-kniya", "mehir-lamishtaken"],
     relatedDefects: ["itum", "ritzuf"],
   },
   {
@@ -38,7 +38,7 @@ export const articles: ArticleMeta[] = [
     description:
       "לפני מסירה, ביום המסירה או אחריה? מדריך מקצועי לעיתוי הנכון של בדק בית שיחסוך לכם עשרות אלפי שקלים.",
     datePublished: "2026-06-16",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "mehir-lamishtaken"],
   },
   {
     slug: "chok-hamkar-dirot",
@@ -46,7 +46,7 @@ export const articles: ArticleMeta[] = [
     description:
       "כמה זמן אחראי הקבלן לכל ליקוי לפי חוק המכר (דירות), תשל״ג-1973, ואיך בדק בית במועד הופך את הזכויות לתיקון בפועל.",
     datePublished: "2026-06-28",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat", "pinui-binui"],
     relatedDefects: ["i-hatama-lemifrat", "itum"],
   },
   {
@@ -74,7 +74,7 @@ export const articles: ArticleMeta[] = [
       "מה מגלה צילום קווים בצנרת הניקוז והדלוחין, מתי כדאי לבצע אותו, ואיך הממצא המצולם הופך לדרישת תיקון מהקבלן.",
     datePublished: "2026-08-11",
     relatedDefects: ["instalatzia", "nikuz"],
-    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "tama-38"],
   },
   {
     slug: "giliti-likui-bedira-mi-achrai",
@@ -91,7 +91,7 @@ export const articles: ArticleMeta[] = [
     description:
       "מדריך מלא לפרוטוקול מסירת דירה מקבלן: מה חייב להופיע בו, מתי לבצע בדק בית, ואילו טעויות בחתימה עלולות לעלות עשרות אלפי שקלים.",
     datePublished: "2026-06-29",
-    relatedServices: ["bedek-bayit-lifnei-mesira"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "pinui-binui"],
     relatedDefects: ["i-hatama-lemifrat"],
   },
   {
@@ -100,7 +100,7 @@ export const articles: ArticleMeta[] = [
     description:
       "כשל איטום בגג, במרפסת ובחיבורי החיפוי הוא מהליקויים היקרים ביותר. כך מאתרים חדירת מים, סדקים ורטיבות סמויה בבדק בית — כולל מצלמה תרמית.",
     datePublished: "2026-07-12",
-    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "tama-38"],
     relatedDefects: ["itum", "gagot", "retivut"],
   },
   {
@@ -127,7 +127,7 @@ export const articles: ArticleMeta[] = [
     description:
       "הממ״ד הוא רכיב מגן קריטי. כך בודקים בבדק בית את דלת ההדף, חלון ההדף, האיטום ומערכת האוויר לפי הנחיות פיקוד העורף בדירה חדשה מקבלן.",
     datePublished: "2026-07-12",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "tama-38"],
     relatedDefects: ["mamad"],
   },
   {
@@ -181,7 +181,7 @@ export const articles: ArticleMeta[] = [
     description:
       "איך מחושבת עלות תיקון ליקויי בנייה לפי מחירונים מקובלים, דוגמה אמיתית מדוח בדק בית, ולמה עלות הבדיקה זניחה מול הליקויים ומול ההנחה במשא ומתן.",
     datePublished: "2026-07-13",
-    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat"],
+    relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "chavat-daat-beit-mishpat", "mehir-lamishtaken"],
     relatedDefects: ["tiyach", "tzeva", "i-hatama-lemifrat"],
   },
   {
@@ -199,7 +199,7 @@ export const articles: ArticleMeta[] = [
     description:
       "מעקה הוא רכיב בטיחות מציל חיים. כך בודקים מעקה זכוכית ומעקה בכלל בדירה חדשה מקבלן ביום המסירה — גובה, מרווחים, חוזק עיגון, זכוכית בטיחות ורפידות גומי לפי ת״י 1142 ות״י 1099.",
     datePublished: "2026-07-13",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "tama-38"],
     relatedDefects: ["maakot", "mirpasot"],
   },
   {
@@ -208,7 +208,7 @@ export const articles: ArticleMeta[] = [
     description:
       "המרפסת חשופה לגשם ולשמש והיא מהאזורים הרגישים ביותר לחדירת מים. כך בודקים מרפסת בדירה חדשה מקבלן ביום המסירה — איטום הרצפה, שיפועים לניקוז, איכות הריצוף ותפקוד נקודת הניקוז.",
     datePublished: "2026-07-13",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "shechunot-hadashot"],
     relatedDefects: ["mirpasot", "itum", "ritzuf"],
   },
   {
@@ -271,7 +271,7 @@ export const articles: ArticleMeta[] = [
     description:
       "רכשתם דירה בפרויקט נופי בן שמן בלוד של שיכון ובינוי? מדריך לבדק בית ובדיקת מסירה בפרויקט — מה בודקים, מתי, ואיך מחייבים את הקבלן לתקן ליקויים לפי חוק המכר.",
     datePublished: "2026-07-20",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "bedek-bayit-lifnei-kniya", "itur-likuyey-bniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "bedek-bayit-lifnei-kniya", "itur-likuyey-bniya", "shechunot-hadashot"],
     relatedDefects: ["itum", "ritzuf", "i-hatama-lemifrat"],
   },
   {
@@ -316,7 +316,7 @@ export const articles: ArticleMeta[] = [
     description:
       "קרקע שטוחה או משופעת אל המבנה ומעברי צנרת שלא נאטמו הם הגורם השכיח לנפיחויות, עובש וטחב בחצי המטר התחתון של הקירות. מה דורש ת״י 1555 חלק 3, איך בודקים ומה מתקנים.",
     datePublished: "2026-08-21",
-    relatedServices: ["bdikat-bayit-prati", "itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
+    relatedServices: ["bdikat-bayit-prati", "itur-likuyey-bniya", "bedek-bayit-lifnei-mesira", "shechunot-hadashot"],
     relatedDefects: ["itum", "retivut", "ovesh", "nikuz"],
   },
   {
@@ -334,7 +334,7 @@ export const articles: ArticleMeta[] = [
     description:
       "בזמן הבנייה ובניקיון שלפני המסירה נשטפות שאריות מלט, רובה ופסולת אל קווי הניקוז. החומר מתקשה בצינור ויוצר סתימה חלקית שאינה מתגלה בבדיקת מים קצרה — כך מאתרים אותה לפני החתימה.",
     datePublished: "2026-08-27",
-    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "bedek-bayit-lifnei-kniya"],
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "bedek-bayit-lifnei-kniya", "shechunot-hadashot"],
     relatedDefects: ["biyuv", "instalatzia", "nikuz", "klim-sanitariim"],
   },
   {

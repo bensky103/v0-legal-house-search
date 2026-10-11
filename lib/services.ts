@@ -7,6 +7,12 @@ export interface ServiceData {
   slug: string
   /** Short name used in links and breadcrumbs. */
   name: string
+  /**
+   * Anchor text for contextual links pointing at this page, when the short name
+   * is not the phrase people search. "תמ״א 38" is the name; "בדק בית תמ״א 38" is
+   * the query, and an internal link is worth most when it reads as the query.
+   */
+  linkAnchor?: string
   /** Meta title / H1. */
   title: string
   metaDescription: string
@@ -231,6 +237,7 @@ export const services: ServiceData[] = [
   {
     slug: "bdikat-dira-yad-shniya",
     name: "בדיקת דירה יד שנייה",
+    linkAnchor: "בדק בית דירה יד שניה",
     title: "בדק בית דירה יד שניה - בדיקת נכס משומש לפני קנייה",
     metaDescription:
       "בדק בית לדירה יד שניה לפני קנייה: איתור בלאי, נזקי רטיבות מצטברים, שיפוצים רשלניים וכשלים נסתרים. מומחה בדק בית בוחן את הנכס המשומש ומספק דוח מפורט.",
@@ -1106,6 +1113,7 @@ export const services: ServiceData[] = [
   {
     slug: "tama-38",
     name: "תמ״א 38",
+    linkAnchor: "בדק בית תמ״א 38",
     title: "בדק בית תמ״א 38 - בדיקת דירה אחרי חיזוק מבנה ותוספות",
     metaDescription:
       "בדק בית לדירה בפרויקט תמ״א 38: התפר בין המבנה הישן לבנייה החדשה, סדקים אחרי החיזוק, איטום תוספות, צנרת שהוחלפה בחלקה, ממ״ד ומעלית. דוח הנדסי מול היזם.",
@@ -1205,6 +1213,7 @@ export const services: ServiceData[] = [
   {
     slug: "pinui-binui",
     name: "פינוי בינוי",
+    linkAnchor: "בדק בית פינוי בינוי",
     title: "בדק בית פינוי בינוי - בדיקת דירה חדשה בהתחדשות עירונית",
     metaDescription:
       "בדק בית לדירה בפרויקט פינוי בינוי: התאמה להסכם שנחתם שנים קודם, בדיקת הדירה החדשה והרכוש המשותף - לובי, חניון ומעליות. דוח הנדסי מול היזם לפני המסירה.",
@@ -1303,6 +1312,7 @@ export const services: ServiceData[] = [
   {
     slug: "mehir-lamishtaken",
     name: "מחיר למשתכן",
+    linkAnchor: "בדק בית מחיר למשתכן",
     title: "בדק בית מחיר למשתכן - בדיקת דירה מסובסדת לפני מסירה",
     metaDescription:
       "בדק בית לדירת מחיר למשתכן: בדיקת רמת הגמר מול המפרט שצורף לחוזה, איתור ליקויי בנייה חוזרים בפרויקטים גדולים וליווי מול הקבלן במעמד המסירה.",
@@ -1401,6 +1411,7 @@ export const services: ServiceData[] = [
   {
     slug: "shechunot-hadashot",
     name: "שכונות חדשות",
+    linkAnchor: "בדק בית בשכונות חדשות",
     title: "בדק בית בשכונות חדשות - בדיקת דירה באזור בבנייה",
     metaDescription:
       "בדק בית לדירה בשכונה חדשה: בדיקת הדירה והבניין כשסביבם עדיין עובדים. ניקוז ופיתוח השטח, רכוש משותף שטרם הושלם וליקויים שמתגלים בחורף הראשון.",
@@ -1500,4 +1511,10 @@ export const services: ServiceData[] = [
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
   return services.find((s) => s.slug === slug)
+}
+
+/** Anchor text to use when linking to a service from body copy. */
+export function getServiceAnchor(slug: string): string | undefined {
+  const service = getServiceBySlug(slug)
+  return service && (service.linkAnchor ?? service.name)
 }

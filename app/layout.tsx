@@ -108,7 +108,11 @@ gtag('config', 'AW-17703305821');`}
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "@id": "https://www.legalbedek.co.il/#organization",
-              name: "בדק בית Legal",
+              // Exactly as the Google Business Profile spells it. Google matches a site
+              // to a listing on name, phone and the sameAs link together, so this is
+              // the profile name verbatim and the short brand sits in alternateName.
+              name: "Legal בדק בית הנדסי - איתור ליקויי בניה",
+              alternateName: "בדק בית Legal",
               description: "מומחה מוסמך לבדיקת ליקויי בנייה וחוו״ד נגדית",
               url: "https://www.legalbedek.co.il",
               logo: {
@@ -142,7 +146,10 @@ gtag('config', 'AW-17703305821');`}
                   encodingFormat: "image/webp",
                 },
               ],
-              telephone: "+972-50-627-7858",
+              // The profile lists 073-374-5044 as its number; the mobile is the one on
+              // the call buttons. Both are carried, profile number first, so the
+              // listing and the markup agree.
+              telephone: ["+972-73-374-5044", "+972-50-627-7858"],
               email: "yigalbensky@gmail.com",
               sameAs: [
                 "https://www.youtube.com/channel/UCyQleCrMA0G9Ol5pfIFCOXw",

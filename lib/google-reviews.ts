@@ -16,9 +16,9 @@
 // A count that overstates the profile is a structured-data violation, not an
 // optimisation.
 
-/** Verified against the live Google Business Profile on 2026-09-01. */
+/** Verified against the live Google Business Profile on 2026-10-11. */
 const FALLBACK_RATING_VALUE = "5.0"
-const FALLBACK_REVIEW_COUNT = 47
+const FALLBACK_REVIEW_COUNT = 48
 
 function positiveNumber(raw: string | undefined, fallback: number): number {
   const parsed = Number(raw)

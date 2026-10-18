@@ -355,6 +355,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["bidud-termi", "retivut", "ovesh"],
   },
+  {
+    slug: "techulat-retivut-ritzuf-taken-1555",
+    title: "תכולת רטיבות במצע הריצוף - מה מתיר ת״י 1555 חלק 3",
+    description:
+      "ת״י 1555 חלק 3 בסעיף 2.1.4.3 קובע כמה רטיבות מותר שתישאר במצע אחרי הנחת האריחים: 6% בחול, 3% בסומסום ובאגרגאטים ממוחזרים, 26% רטיבות כלואה באגרגאטים קלים. איך רטיבות כלואה הופכת לעלייה קפילרית ולהתקלפות צבע, ואיך עוברים ממד לחות בשטח לבדיקת מעבדה.",
+    datePublished: "2026-10-18",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "bedek-bayit-lifnei-kniya"],
+    relatedDefects: ["retivut", "ritzuf", "itum"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

@@ -971,6 +971,25 @@ export const GSHARIM_TERMIIM_1045: ArticleImage[] = [
       "מכשיר יעודי לאיתור גשרים תרמיים ונקודת טל. הוא מודד את טמפרטורת המשטח עצמו, מחשב את נקודת הטל מטמפרטורת האוויר ומהלחות היחסית, ומשווה ביניהם — משטח שנמצא בנקודת הטל או מתחתיה יתעבה.",
   },
 ]
+export const TECHULAT_RETIVUT_1555: ArticleImage[] = [
+  {
+    src: "/articles/likuyim/mad-lachut-protimeter-bdikat-retivut-ritzuf.webp",
+    standard: "ת״י 1555 חלק 3 - תכולת רטיבות במצע",
+    title: "מדידת לחות בתחתית הקיר במד לחות",
+    alt: "מומחה בדק בית מודד לחות בתחתית קיר מעל הריצוף במד לחות פרוטימטר, לאיתור רטיבות כלואה במצע ועלייה קפילרית בדירה חדשה",
+    caption:
+      "מד לחות (פרוטימטר) בתחתית הקיר, בדיוק מעל קו הריצוף. הקריאה כאן היא אינדיקציה בלבד ולא מספר שניתן להשוות לתקן - היא מצביעה על האזור החשוד ועל הצורך בדגימה ובבדיקת מעבדה.",
+  },
+  {
+    src: "/articles/likuyim/bdikat-mavada-techulat-retivut-ritzuf-taken-1555.webp",
+    standard: "ת״י 1555 חלק 3, סעיף 2.1.4.3",
+    title: "תוצאת מעבדה לתכולת רטיבות במצע הריצוף",
+    alt: "טבלת תוצאות בדיקת מעבדה לתכולת רטיבות משקלית במצע ריצוף, מול דרישות ת״י 1555 חלק 3 - דגימה במטבח חורגת מהמותר ודגימה במרחב המוגן תקינה",
+    caption:
+      "תוצאת מעבדה משתי דגימות באותה דירה. במצע סומסום התקן מתיר עד 3%: הדגימה במטבח הראתה 3.91% וסומנה כלא מתאימה, והדגימה במרחב המוגן הראתה 1.43% וסומנה כמתאימה. פרטי הלקוח והמעבדה הוסרו מהצילום.",
+  },
+]
+
 export const articleSitemapImages = [
   ...DEFECTS_DIRA_HADASHA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-hadasha" })),
   ...DEFECTS_YAD_SHNIYA.map((img) => ({ ...img, articleSlug: "bedek-bayit-dira-yad-shniya" })),
@@ -1001,6 +1020,7 @@ export const articleSitemapImages = [
   ...STIMOT_PESOLET_BNIYA.map((img) => ({ ...img, articleSlug: "stimot-biyuv-pesolet-bniya-bedek-bayit" })),
   ...MEDIDAT_TIYACH_1920.map((img) => ({ ...img, articleSlug: "taken-1920-tiyach-stiyot-mutarot" })),
   ...GSHARIM_TERMIIM_1045.map((img) => ({ ...img, articleSlug: "gsharim-termiim-taken-1045-ovesh" })),
+  ...TECHULAT_RETIVUT_1555.map((img) => ({ ...img, articleSlug: "techulat-retivut-ritzuf-taken-1555" })),
 ].map((img) => ({
   loc: `${SITE_URL}${img.src}`,
   title: img.title,

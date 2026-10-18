@@ -15,8 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // detection article and its field photos, 2026-09-21 with the thermal-bridge
   // article and its field photos, and 2026-10-09 when the 510-word site index came
   // off every leaf page - that one genuinely did change the body of every page on
-  // the site, which is the case this date exists for.
-  const LAST_UPDATED = new Date("2026-10-09")
+  // the site, which is the case this date exists for. Bumped again 2026-10-18 with
+  // the IS 1555 substrate-moisture article, its lab result and its field photo.
+  const LAST_UPDATED = new Date("2026-10-18")
 
   // Video pages carry their own, later date: they were last crawled 2026-06-29 —
   // before the de-duplication fix (2026-07-21) and before the depth content in
@@ -420,5 +421,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: "https://www.legalbedek.co.il/articles/techulat-retivut-ritzuf-taken-1555",
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    // NOTE: the article list above is written out by hand while lib/articles.ts is
+    // the registry everything else reads. An article added to the registry does not
+    // reach this file on its own - this entry was missing until the built sitemap was
+    // diffed against the registry. Worth generating from `articles` here, except that
+    // the entries carry two different priorities (0.8 and 0.7) that a plain map would
+    // flatten.
   ]
 }

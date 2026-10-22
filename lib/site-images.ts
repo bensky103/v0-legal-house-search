@@ -109,6 +109,14 @@ export const siteImages = {
     caption: "ביקורת לקוחה בוואטסאפ - תודה על בדיקה מהירה ועל קבלת הדוח במהירות",
     page: "/",
   },
+  reviewChavatDaat: {
+    src: "/images/bikoret-bedek-bayit-doli.webp",
+    width: 1220,
+    height: 715,
+    alt: "ביקורת בדק בית בוואטסאפ מלקוח מרוצה - תודה על חוות דעת מעמיקה ויסודית לאיתור ליקויי בנייה",
+    caption: "ביקורת לקוח בוואטסאפ - תודה על חוות דעת מעמיקה ויסודית",
+    page: "/",
+  },
 } as const satisfies Record<string, SiteImage>
 
 export const allSiteImages: SiteImage[] = Object.values(siteImages)

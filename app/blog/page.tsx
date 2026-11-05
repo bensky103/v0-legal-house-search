@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Script from "next/script"
+import { permanentRedirect } from "next/navigation"
 import { articles } from "@/lib/articles"
 import { SiteIndex } from "@/components/site-index"
 
@@ -18,7 +19,30 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BlogPage() {
+// /blog?post=<slug> URLs are left over from the previous site. They all render this
+// same list, so Google files them as duplicates of one another whatever the canonical
+// says. Each one now 301s to the page that covers its topic; an unknown slug goes to
+// the article index. Redirecting from the page (not next.config) keeps the old ?post=
+// query from being carried onto the destination URL.
+const legacyPostRedirects: Record<string, string> = {
+  "8-electrical-defects-in-new-apartments": "/articles/likuyey-chashmal-bedek-bayit",
+  "chavat-daat-mumche-likuyey-bniya": "/services/chavat-daat-mumche",
+  "lemi-meyuadim-sherutei-bdikat-bniya": "/articles/matai-lehazmin-bedek-bayit",
+  "eich-bodkim-beayot-itum-badira": "/articles/itum-gagot-bedek-bayit",
+  "eich-mezahim-likuyey-bniya": "/likuyey-bniya",
+  "betichut-mivnim-lifnei-kniya-mesira-shiputz": "/services/bedek-bayit-lifnei-kniya",
+  "pitzui-al-likuyei-bniya": "/articles/giliti-likui-bedira-mi-achrai",
+  "likuyei-bniya-badira-matai-bodkim": "/articles/matai-lehazmin-bedek-bayit",
+  "professional-building-inspections-before-purchase": "/services/bedek-bayit-lifnei-kniya",
+}
+
+export default function BlogPage({ searchParams }: { searchParams: { post?: string | string[] } }) {
+  const post = searchParams.post
+  if (post !== undefined) {
+    const slug = Array.isArray(post) ? post[0] : post
+    permanentRedirect(legacyPostRedirects[slug] ?? "/articles")
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" dir="rtl">
       {/* Header */}

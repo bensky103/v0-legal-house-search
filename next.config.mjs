@@ -33,6 +33,13 @@ const nextConfig = {
         destination: "/videos/ma-livdok-aluminium-chalonot-dira-hadasha",
         permanent: true,
       },
+      // A link somewhere outside the site points at "/card-" (trailing hyphen),
+      // which Search Console reports as a 404.
+      {
+        source: "/card-",
+        destination: "/card",
+        permanent: true,
+      },
     ]
   },
   async headers() {

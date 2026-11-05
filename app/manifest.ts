@@ -14,14 +14,14 @@ export default function manifest(): MetadataRoute.Manifest {
     dir: "rtl",
     icons: [
       {
-        src: "/icon.svg",
-        type: "image/svg+xml",
-        sizes: "any",
+        src: "/icon-192.png",
+        type: "image/png",
+        sizes: "192x192",
       },
       {
-        src: "/apple-icon.png",
+        src: "/icon-512.png",
         type: "image/png",
-        sizes: "180x180",
+        sizes: "512x512",
       },
     ],
   }

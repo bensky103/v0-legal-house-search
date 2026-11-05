@@ -118,7 +118,7 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
     <SeoLandingTemplate
       badge="מדריך ליקויי בנייה"
-      title={`ליקויי ${defect.name} בדירה - מדריך מקצועי`}
+      title={defect.h1 ?? `ליקויי ${defect.name} בדירה - מדריך מקצועי`}
       subtitle={defect.summary}
       intro={defect.intro}
       featuresHeading="איך אנחנו מטפלים בליקוי הזה?"

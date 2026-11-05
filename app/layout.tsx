@@ -67,10 +67,20 @@ export const metadata: Metadata = {
   // Google drops such a page from the index entirely. The homepage now carries its own
   // canonical in app/page.tsx. A page missing one emits none, which merely lets Google
   // choose; it no longer points at the wrong URL.
+  // Until this was set no page declared an icon, and the files in /public were the
+  // v0 starter's placeholders, so search results showed a generic globe beside the
+  // site. Google wants a square icon in a multiple of 48px; these are cut from the logo.
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
   verification: {
     google: "CMIAgCXv6V9ZyaL206bc7tU3VNWXMArFrtydXSnTMQY",
   },
-  generator: "v0.app",
 }
 
 export default function RootLayout({

@@ -337,7 +337,7 @@ export default function HomePage() {
                 description:
                   "שירותי בדק בית מקצועיים בכל הארץ: בדיקת דירות חדשות ויד שנייה, בתים פרטיים ורכוש משותף, איתור ליקויי בנייה וחוות דעת הנדסית קבילה בבית משפט.",
                 url: "https://www.legalbedek.co.il",
-                logo: "https://www.legalbedek.co.il/logo.webp",
+                logo: "https://www.legalbedek.co.il/images/logo-legal-bedek-emblem.webp",
                 image: "https://www.legalbedek.co.il/gallery/yigal-bensky-mumche-bedek-bayit.webp",
                 // The profile lists 073-374-5044 as its number; the mobile is the one on
                 // the call buttons. Both are carried, profile number first, so the

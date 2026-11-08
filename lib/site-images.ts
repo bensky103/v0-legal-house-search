@@ -29,9 +29,9 @@ export interface SiteImage {
 
 export const siteImages = {
   logo: {
-    src: "/logo.webp",
-    width: 1124,
-    height: 901,
+    src: "/images/logo-legal-bedek.webp",
+    width: 848,
+    height: 159,
     alt: "בדק בית Legal - מומחה מוסמך לאיתור ליקויי בנייה וחוות דעת הנדסית נגדית",
     caption: "בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
     page: "/",

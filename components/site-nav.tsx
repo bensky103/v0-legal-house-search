@@ -142,8 +142,7 @@ export function SiteNav() {
         <div className="flex items-center justify-between gap-4 h-16">
           {/* Brand */}
           <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="בדק בית Legal - לדף הבית">
-            <Image src="/logo.webp" alt="בדק בית Legal" width={40} height={40} className="object-contain w-9 h-9" />
-            <span className="font-bold text-gray-900 text-base whitespace-nowrap">בדק בית Legal</span>
+            <Image src="/images/logo-legal-bedek.webp" alt="בדק בית Legal" width={192} height={36} className="h-9 lg:h-7 xl:h-9 w-auto" />
           </Link>
 
           {/* Desktop menu */}

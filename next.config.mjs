@@ -40,6 +40,13 @@ const nextConfig = {
         destination: "/card",
         permanent: true,
       },
+      // The logo was replaced under a new filename, because the optimizer and the CDN
+      // cache by URL for 30 days. Anything still holding the old address gets the new mark.
+      {
+        source: "/logo.webp",
+        destination: "/images/logo-legal-bedek-emblem.webp",
+        permanent: true,
+      },
     ]
   },
   async headers() {
@@ -66,10 +73,6 @@ const nextConfig = {
       },
       {
         source: "/images/:path+",
-        headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
-      },
-      {
-        source: "/logo.webp",
         headers: [{ key: "Cache-Control", value: "public, max-age=2592000, stale-while-revalidate=86400" }],
       },
       // Assets Google crawls because every page links to them, and then files under

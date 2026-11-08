@@ -127,11 +127,11 @@ gtag('config', 'AW-17703305821');`}
               url: "https://www.legalbedek.co.il",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.legalbedek.co.il/logo.webp",
-                contentUrl: "https://www.legalbedek.co.il/logo.webp",
+                url: "https://www.legalbedek.co.il/images/logo-legal-bedek-emblem.webp",
+                contentUrl: "https://www.legalbedek.co.il/images/logo-legal-bedek-emblem.webp",
                 caption: "בדק בית Legal - מומחה לאיתור ליקויי בנייה וחוות דעת נגדית",
-                width: 1124,
-                height: 901,
+                width: 400,
+                height: 400,
                 encodingFormat: "image/webp",
               },
               image: [

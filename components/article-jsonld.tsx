@@ -58,9 +58,9 @@ export function ArticleJsonLd({
       name: "בדק בית Legal",
       logo: {
         "@type": "ImageObject",
-        url: `${BASE_URL}/logo.webp`,
-        width: 1124,
-        height: 901,
+        url: `${BASE_URL}/images/logo-legal-bedek-emblem.webp`,
+        width: 400,
+        height: 400,
       },
     },
   }

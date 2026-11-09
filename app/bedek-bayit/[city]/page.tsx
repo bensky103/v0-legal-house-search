@@ -66,7 +66,7 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   if (!city) return {}
 
   const title = `בדק בית ב${city.name} | מומחה בדק בית לדירות חדשות ויד שניה`
-  const description = `בדק בית הנדסי ב${city.name} - איתור ליקויי בנייה, בדיקת דירה לפני מסירה ובדיקת נכס יד שניה. מומחה מוסמך באיגוד המהנדסים, שירות מקצועי ב${city.region}. חייגו עכשיו!`
+  const description = `בדק בית הנדסי ב${city.name} - איתור ליקויי בנייה, בדיקת דירה לפני מסירה ובדיקת נכס יד שניה. מומחה בהסמכת איגוד המהנדסים, שירות מקצועי ב${city.region}. חייגו עכשיו!`
 
   // Real project names become keywords so "<project> בדק בית" searches match this page.
   const projectKeywords = getCityProjects(city.slug).flatMap((p) => [
@@ -202,7 +202,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
     },
     {
       title: "חוות דעת הנדסית",
-      description: "דוח מפורט וחוות דעת מקצועית הקבילה משפטית, שתשמש אתכם מול הקבלן או המוכר.",
+      description: "דוח מפורט וחוות דעת מקצועית, שניתן להגישם כראיה בבית המשפט ושישמשו אתכם מול הקבלן או המוכר.",
     },
     {
       title: "חוות דעת נגדית",
@@ -245,8 +245,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
       answer: "בדיקה ממוצעת של דירה אורכת בין שעתיים לשלוש שעות, ודוח מפורט נמסר תוך מספר ימים.",
     },
     {
-      question: "האם הדוח קביל משפטית?",
-      answer: "כן, הדוח נערך על ידי מומחה מוסמך באיגוד המהנדסים וברישיון משרד העבודה, והוא קביל לשימוש משפטי מול קבלנים ובתי משפט.",
+      question: "האם ניתן להגיש את הדוח כראיה בבית המשפט?",
+      answer: "כן, הדוח נערך על ידי מומחה בהסמכת איגוד המהנדסים וברישיון משרד העבודה. את דוח המומחה ניתן להגיש כראיה בבית המשפט לפי סעיף 20 לפקודת הראיות.",
     },
     {
       question: `האם אתם מבצעים בדק בית גם בערים סמוכות ל${city.name}?`,
@@ -273,7 +273,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
     "@type": "Service",
     name: `בדק בית ב${city.name}`,
     serviceType: "בדק בית ואיתור ליקויי בנייה",
-    description: `בדק בית הנדסי מקצועי ב${city.name} — בדיקת דירות חדשות ויד שנייה, איתור ליקויי בנייה וחוות דעת קבילה.`,
+    description: `בדק בית הנדסי מקצועי ב${city.name} — בדיקת דירות חדשות ויד שנייה, איתור ליקויי בנייה וחוות דעת מומחה.`,
     url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
     areaServed: { "@type": "City", name: city.nameSimple },
     provider: {

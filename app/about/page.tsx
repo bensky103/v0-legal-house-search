@@ -156,7 +156,7 @@ export default function AboutPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">&#x2713;</span>
-                    <span>חוות דעת משפטית מוכרת בבתי משפט</span>
+                    <span>דוח מומחה שניתן להגיש כראיה בבית המשפט</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">&#x2713;</span>
@@ -324,7 +324,7 @@ export default function AboutPage() {
                 <td className="py-3 px-4 text-center text-red-600">נדיר</td>
               </tr>
               <tr>
-                <td className="py-3 px-4 text-gray-700">חוות דעת משפטית מוכרת</td>
+                <td className="py-3 px-4 text-gray-700">דוח מומחה להגשה כראיה בבית משפט</td>
                 <td className="py-3 px-4 text-center text-green-600 font-bold text-xl">&#x2713;</td>
                 <td className="py-3 px-4 text-center text-yellow-600">לעיתים</td>
                 <td className="py-3 px-4 text-center text-green-600 font-bold text-xl">&#x2713;</td>
@@ -344,6 +344,12 @@ export default function AboutPage() {
             </tbody>
           </table>
         </div>
+        <p className="mt-6 text-center text-gray-700">
+          מתלבטים בין מהנדס למומחה בדק בית?{" "}
+          <Link href="/articles/mehandes-bedek-bayit" className="text-blue-700 hover:underline font-medium">
+            כך בוחרים את מי להזמין
+          </Link>
+        </p>
       </section>
 
       {/* Expert Profile */}

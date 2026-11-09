@@ -87,7 +87,7 @@ export default function ServicesHubPage() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4 text-balance">שירותי בדק בית</h1>
           <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed text-pretty">
-            מומחה בדק בית מוסמך לכל צורך — מבדיקה לפני רכישה ועד חוות דעת קבילה בבית משפט. בחרו את השירות המתאים לכם.
+            מומחה בדק בית מוסמך לכל צורך — מבדיקה לפני רכישה ועד דוח מומחה שניתן להגיש כראיה בבית המשפט. בחרו את השירות המתאים לכם.
           </p>
         </div>
       </section>

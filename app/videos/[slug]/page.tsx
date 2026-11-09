@@ -253,7 +253,7 @@ export default function VideoPage({ params }: { params: { slug: string } }) {
         <section className="mt-10 rounded-2xl bg-gray-900 text-white p-6 md:p-8 text-center">
           <h2 className="text-xl md:text-2xl font-bold mb-3">צריכים בדק בית מקצועי?</h2>
           <p className="text-gray-200 mb-6 leading-relaxed">
-            מומחה מוסמך, ציוד מתקדם וחוות דעת הנדסית הקבילה משפטית - בדירות חדשות, יד שנייה ובתים פרטיים בכל הארץ.
+            מומחה מוסמך, ציוד מתקדם וחוות דעת מומחה שניתן להגיש כראיה בבית המשפט - בדירות חדשות, יד שנייה ובתים פרטיים בכל הארץ.
           </p>
           <a
             href="tel:073-3745044"

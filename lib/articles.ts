@@ -364,6 +364,15 @@ export const articles: ArticleMeta[] = [
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "bedek-bayit-lifnei-kniya"],
     relatedDefects: ["retivut", "ritzuf", "itum"],
   },
+  {
+    slug: "mehandes-bedek-bayit",
+    title: "מהנדס בדק בית או מומחה מוסמך — את מי כדאי להזמין?",
+    description:
+      "מה ההבדל בין מהנדס רשום למומחה בדק בית מוסמך, מתי באמת צריך מהנדס קונסטרוקציה, ואילו שאלות לשאול לפני שמזמינים בדיקה.",
+    datePublished: "2026-11-08",
+    relatedServices: ["bedek-bayit-lifnei-mesira", "bdikat-dira-yad-shniya", "bedek-bayit-lifnei-kniya"],
+    relatedDefects: ["sdakim"],
+  },
 ]
 
 export function getArticlesForDefect(defectSlug: string): ArticleMeta[] {

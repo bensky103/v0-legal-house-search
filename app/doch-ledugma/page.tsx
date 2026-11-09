@@ -225,7 +225,7 @@ export default function SampleReportPage() {
             <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-4">
               לפניכם דוגמה אמיתית לחוות דעת מומחה, שנערכה לאחר בדק בית לדירה חדשה מקבלן. כך תוכלו לראות
               בדיוק מה מקבלים: תיעוד שיטתי של כל ליקוי, ציטוט התקן הישראלי הרלוונטי, הסבר מה נדרש לתקן ומסקנה ברורה —
-              מסמך הקביל כראיה מול הקבלן ובבית משפט.
+              דוח מומחה שניתן להגיש כראיה בבית המשפט לפי סעיף 20 לפקודת הראיות.
             </p>
             <div className="rounded-xl bg-amber-50 border border-amber-200 p-4 md:p-5 text-sm md:text-base text-amber-900 leading-relaxed">
               <strong>הבהרה:</strong> זהו דוח אמיתי שהוסתרו בו כל פרטיו האישיים של הלקוח — שם, כתובת מדויקת ומזהי נכס —
@@ -366,7 +366,7 @@ export default function SampleReportPage() {
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">רוצים דוח כזה לנכס שלכם?</h2>
             <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-              כל בדיקה מסתכמת בדוח מפורט, מצולם וקביל — שמחייב את הקבלן לתקן. צרו קשר לתיאום בדק בית מקצועי בכל הארץ,
+              כל בדיקה מסתכמת בדוח מפורט ומצולם — שמחייב את הקבלן לתקן. צרו קשר לתיאום בדק בית מקצועי בכל הארץ,
               וקבלו הצעת מחיר ללא התחייבות.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

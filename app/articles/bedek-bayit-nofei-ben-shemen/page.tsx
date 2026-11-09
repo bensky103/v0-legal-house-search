@@ -203,7 +203,7 @@ export default function ArticleBedekBayitNofeiBenShemen() {
                   <svg className="w-6 h-6 text-green-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span><strong>הגנה על ההשקעה</strong> - חוות דעת קבילה לפי חוק המכר (דירות)</span>
+                  <span><strong>הגנה על ההשקעה</strong> - דוח מומחה לדרישת תיקונים לפי חוק המכר (דירות)</span>
                 </li>
               </ul>
             </CardContent>

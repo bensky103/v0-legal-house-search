@@ -133,7 +133,7 @@ export default function DefectPage({ params }: { params: { defect: string } }) {
         },
         {
           title: "תיעוד בדוח מקצועי",
-          description: "תיעוד מסודר של הליקוי בדוח הקביל משפטית מול הקבלן או המוכר.",
+          description: "תיעוד מסודר של הליקוי בדוח שניתן להגיש כראיה בבית המשפט.",
         },
         {
           title: "ליווי עד לתיקון",

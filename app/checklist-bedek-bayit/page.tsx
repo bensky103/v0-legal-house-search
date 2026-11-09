@@ -229,7 +229,7 @@ export default function ChecklistPage() {
             <div className="rounded-xl bg-amber-50 border border-amber-200 p-4 md:p-5 text-sm md:text-base text-amber-900 leading-relaxed">
               <strong>חשוב לדעת:</strong> בדיקה עצמית אינה מחליפה בדק בית מקצועי. ליקויים רבים — רטיבות נסתרת, כשלי
               איטום, בעיות קונסטרוקציה וחריגות מהתקן — מתגלים רק בעזרת ציוד הנדסי וניסיון. השתמשו ברשימה כהכנה, ולצידה
-              הזמינו בדיקה של מומחה מוסמך שתפיק דוח קביל מול הקבלן.
+              הזמינו בדיקה של מומחה מוסמך שתפיק דוח מפורט מול הקבלן.
             </div>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <PrintButton />
@@ -280,7 +280,7 @@ export default function ChecklistPage() {
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">רוצים שהבדיקה תיעשה כמו שצריך?</h2>
             <p className="text-lg text-blue-100 mb-8 leading-relaxed">
-              הצ׳קליסט הוא התחלה טובה — אבל דוח קביל שמחייב את הקבלן לתקן דורש מומחה וציוד הנדסי. צרו קשר לתיאום בדק בית
+              הצ׳קליסט הוא התחלה טובה — אבל דוח מפורט שמחייב את הקבלן לתקן דורש מומחה וציוד הנדסי. צרו קשר לתיאום בדק בית
               מקצועי בכל הארץ, וקבלו הצעת מחיר ללא התחייבות.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

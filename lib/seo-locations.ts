@@ -790,6 +790,37 @@ export function getContractorCitySlugs(contractor: ContractorData): string[] {
   return [...slugs]
 }
 
+// Contractor pages that earned at least one click in Search Console (export of
+// 2026-11-09). These stay in the index and the sitemap. The rest run about 66%
+// identical to each other with nothing of their own, and are noindex.
+export const contractorsWithSearchClicks = new Set([
+  "afi-capital", "africa-israel", "almogim", "ashdar", "ashtrom", "aura", "avisror", "avney-derech",
+  "barel", "bst", "danya-cebus", "dunietz", "electra", "etz-hashaked", "geshem", "ihdmari", "ken-hator",
+  "minrav", "mitzlawi", "mordechai-aviv", "omer", "oron", "prashkovsky", "rami-shbiro", "rotstein",
+  "shapir", "stern-group", "tzarfati", "zemach-hammerman",
+])
+
+// Cities whose "בדק בית ב<city>" query sat just below page one, at positions 11-20, in
+// the same export. Their inbound links came almost entirely from sibling city pages;
+// the service pages and articles, the pages with the most standing, linked none of them.
+const PRIORITY_CITY_SLUGS = [
+  "holon", "petah-tikva", "hadera", "hod-hasharon", "ashkelon", "netivot", "nahariya", "raanana",
+  "modiin", "yavne", "rosh-haayin", "nof-hagalil", "kiryat-gat", "givat-shmuel", "akko", "beer-yaakov",
+  "or-akiva", "kfar-saba", "ofakim", "ramla",
+]
+
+/**
+ * A few priority-city links for one page. Windows are advanced by the seed (a page's
+ * position in its list) so each page links different cities and all of them get links,
+ * rather than one block repeated site-wide. The anchor is the phrase being searched.
+ */
+export function getPriorityCityLinks(seed: number, count = 4): { label: string; href: string }[] {
+  return Array.from({ length: count }, (_, i) => PRIORITY_CITY_SLUGS[(seed * count + i) % PRIORITY_CITY_SLUGS.length])
+    .map((slug) => cities.find((c) => c.slug === slug))
+    .filter((c): c is CityData => Boolean(c))
+    .map((c) => ({ label: `בדק בית ב${c.name}`, href: `/bedek-bayit/${c.slug}` }))
+}
+
 /** Contractors with known projects in the given city. */
 export function getContractorsForCity(citySlug: string): ContractorData[] {
   const city = cities.find((c) => c.slug === citySlug)

@@ -111,7 +111,14 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
   const profile = getCityProfile(city.slug)
   const projectIndex = getCityProjectIndex(city.slug)
-  const cityProjectList = getCityProjects(city.slug)
+  // A few real project names live only in lib/projects.ts; they belong in the same list.
+  const ownerProjects = getCityProjects(city.slug)
+  const cityProjectList = [
+    ...ownerProjects,
+    ...(projectIndex?.projects ?? [])
+      .filter((name) => !ownerProjects.some((p) => p.name.includes(name) || name.includes(p.name)))
+      .map((name) => ({ name, area: `פרויקט מגורים ב${city.name}` })),
+  ]
 
   // Named real projects rendered as H3 sub-headings (the site owner's data) — targets
   // "<project name> בדק בית" long-tail searches by residents of those projects.

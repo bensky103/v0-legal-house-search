@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { contractors, cities, getContractorCitySlugs } from "@/lib/seo-locations"
+import { contractors, contractorsWithSearchClicks, cities, getContractorCitySlugs } from "@/lib/seo-locations"
 import { SeoLandingTemplate } from "@/components/seo-landing-template"
 import { OG_IMAGE } from "@/lib/og-image"
 
@@ -16,7 +16,7 @@ export function generateMetadata({ params }: { params: { contractor: string } })
     ? ` ביניהם ${contractor.projects.slice(0, 3).map((p) => p.split(",")[0].trim()).join(", ")}.`
     : ""
   const title = `בדק בית לפרויקטים של ${contractor.name} | איתור ליקויי בנייה`
-  const description = `בדק בית הנדסי לדירות בפרויקטים של ${contractor.name} - בדיקת מסירה, איתור ליקויי בנייה וחוות דעת מקצועית.${projectsHint} מומחה בהסמכת איגוד המהנדסים.`
+  const description = `בדק בית הנדסי לדירות בפרויקטים של ${contractor.name} - בדיקת מסירה ואיתור ליקויי בנייה.${projectsHint}`
 
   return {
     title,
@@ -47,11 +47,11 @@ export function generateMetadata({ params }: { params: { contractor: string } })
     },
     // Measured against each other these pages run 66% identical on average, and all
     // that is theirs alone is one general sentence and a public project list flagged
-    // as unverified. Kept for visitors and for the links they carry, not for the index;
-    // the /bedek-bayit/kablan hub stands for them there. As on the thin /projects
-    // pages, the canonical stays on the page itself alongside noindex. A contractor
-    // that gets first-hand content (real inspections, real findings) can come back.
-    robots: { index: false, follow: true },
+    // as unverified. Even so, 29 of them brought 18% of the site's search clicks, often
+    // from people with a defect in that contractor's building, so a page that has earned
+    // a click stays indexed. The others are kept for visitors and for the links they carry.
+    // As on the thin /projects pages, the canonical stays on the page alongside noindex.
+    robots: contractorsWithSearchClicks.has(contractor.slug) ? "index, follow" : { index: false, follow: true },
   }
 }
 

@@ -3,6 +3,7 @@ import Link from "next/link"
 import { PrintButton } from "@/components/print-button"
 import { SiteFooterLinks } from "@/components/site-index"
 import { OG_IMAGE } from "@/lib/og-image"
+import { getPriorityCityLinks } from "@/lib/seo-locations"
 
 const URL = "https://www.legalbedek.co.il/checklist-bedek-bayit"
 
@@ -274,6 +275,18 @@ export default function ChecklistPage() {
             </div>
           </div>
         </section>
+
+        <nav aria-label="בדק בית לפי אזור" className="container mx-auto px-4 max-w-3xl pb-10 text-gray-700 no-print">
+          <span className="font-semibold text-gray-900">בדק בית באזור שלכם: </span>
+          {getPriorityCityLinks(0, 8).map((link, i) => (
+            <span key={link.href}>
+              {i > 0 && " · "}
+              <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
+                {link.label}
+              </Link>
+            </span>
+          ))}
+        </nav>
 
         {/* CTA */}
         <section className="py-12 md:py-16 bg-gradient-to-l from-blue-700 to-blue-900 text-white no-print">

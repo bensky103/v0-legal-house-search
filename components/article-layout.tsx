@@ -5,6 +5,7 @@ import { ArticleJsonLd } from "@/components/article-jsonld"
 import { ConsultationBox } from "@/components/consultation-box"
 import { articles } from "@/lib/articles"
 import { getServiceBySlug, getServiceAnchor } from "@/lib/services"
+import { getPriorityCityLinks } from "@/lib/seo-locations"
 
 /**
  * Shared chrome for long-form article pages (server component, SEO-friendly).
@@ -33,6 +34,7 @@ export function ArticleLayout({
   datePublished?: string
   dateModified?: string
 }) {
+  const priorityCityLinks = slug ? getPriorityCityLinks(articles.findIndex((a) => a.slug === slug)) : []
   const relatedServices = (articles.find((a) => a.slug === slug)?.relatedServices ?? [])
     .map((serviceSlug) => getServiceBySlug(serviceSlug))
     .filter((service) => service !== undefined)
@@ -97,6 +99,20 @@ export function ArticleLayout({
                 ))}
               </ul>
             </aside>
+          )}
+
+          {priorityCityLinks.length > 0 && (
+            <nav aria-label="בדק בית לפי אזור" className="mt-6 text-sm md:text-base text-gray-700">
+              <span className="font-semibold text-gray-900">בדק בית באזור שלכם: </span>
+              {priorityCityLinks.map((link, i) => (
+                <span key={link.href}>
+                  {i > 0 && " · "}
+                  <Link href={link.href} className="text-blue-700 hover:text-blue-900 hover:underline">
+                    {link.label}
+                  </Link>
+                </span>
+              ))}
+            </nav>
           )}
 
           {/* CTA */}

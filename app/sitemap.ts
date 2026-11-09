@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { cities, projectTypes } from "@/lib/seo-locations"
+import { cities, projectTypes, contractors, contractorsWithSearchClicks } from "@/lib/seo-locations"
 import { defects } from "@/lib/defects"
 import { services } from "@/lib/services"
 import { getProjectCities } from "@/lib/projects"
@@ -47,12 +47,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Project-type pages also live under /services
-  const servicePages: MetadataRoute.Sitemap = projectTypes.map((p) => ({
+  // Four project types are also dedicated services; listing them twice repeats the URL.
+  const servicePages: MetadataRoute.Sitemap = projectTypes.filter((p) => !services.some((s) => s.slug === p.slug)).map((p) => ({
     url: `https://www.legalbedek.co.il/services/${p.slug}`,
     lastModified: LAST_UPDATED,
     changeFrequency: "monthly",
     priority: 0.8,
   }))
+
+  const contractorPages: MetadataRoute.Sitemap = contractors
+    .filter((c) => contractorsWithSearchClicks.has(c.slug))
+    .map((c) => ({
+      url: `https://www.legalbedek.co.il/bedek-bayit/kablan/${c.slug}`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }))
 
   const defectPages: MetadataRoute.Sitemap = defects.map((d) => ({
     url: `https://www.legalbedek.co.il/likuyey-bniya/${d.slug}`,
@@ -120,6 +130,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cityPages,
     ...dedicatedServicePages,
     ...servicePages,
+    ...contractorPages,
     ...defectPages,
     ...projectCityPages,
     ...videoPages,

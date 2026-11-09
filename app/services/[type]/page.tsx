@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { projectTypes } from "@/lib/seo-locations"
+import { projectTypes, getPriorityCityLinks } from "@/lib/seo-locations"
 import { services, getServiceBySlug } from "@/lib/services"
 import { getArticlesForService } from "@/lib/articles"
 import { getServiceImages } from "@/lib/topic-images"
@@ -174,6 +174,7 @@ function DedicatedService({ slug }: { slug: string }) {
     ...relatedServiceLinks,
     ...articleLinks,
     ...relatedDefectLinks,
+    ...getPriorityCityLinks(services.findIndex((s) => s.slug === service.slug)),
     { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
     { label: "מאגר ליקויי הבנייה", href: "/likuyey-bniya" },
   ]

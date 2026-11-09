@@ -52,7 +52,7 @@ export default function AboutPage() {
           <p className="text-xl md:text-2xl mb-2">ליגל בדק בית</p>
           <p className="text-lg md:text-xl text-blue-200">מומחים לאיתור ליקויי בנייה וחוות דעת נגדית מוסמכת</p>
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm md:text-base">
-            <span className="bg-blue-700/50 px-4 py-2 rounded-full">מומחה מטעם איגוד המהנדסים: 17253030</span>
+            <span className="bg-blue-700/50 px-4 py-2 rounded-full">מומחה מטעם איגוד המהנדסים ת.ז. 17253030</span>
             <span className="bg-blue-700/50 px-4 py-2 rounded-full">רישיון משרד העבודה: 1641507</span>
           </div>
         </div>
@@ -363,7 +363,7 @@ export default function AboutPage() {
             <h3 className="text-2xl font-bold mb-2">יגאל בנסקי</h3>
             <p className="text-blue-300 mb-4">מומחה בדק בית מוסמך</p>
             <div className="space-y-2 text-gray-300 mb-6">
-              <p>הסמכת איגוד המהנדסים הישראלי: 17253030</p>
+              <p>הסמכת איגוד המהנדסים הישראלי ת.ז. 17253030</p>
               <p>רישיון משרד העבודה: 1641507</p>
               <p>ניסיון רב באיתור ליקויי בנייה</p>
               <p>מומחיות בחוות דעת משפטיות</p>

@@ -568,7 +568,7 @@ export default function HomePage() {
                   </span>
                   <span className="text-xs font-bold leading-tight">
                     איגוד המהנדסים
-                    <span className="block font-mono text-[0.7rem] text-slate-500">17253030</span>
+                    <span className="block font-mono text-[0.7rem] text-slate-500">ת.ז. 17253030</span>
                   </span>
                 </div>
                 {/* ministry-of-labor chip */}
@@ -603,7 +603,7 @@ export default function HomePage() {
               {/* Credentials */}
               <ul className="mt-6 space-y-2.5 text-start max-w-xl mx-auto lg:mx-0">
                 {[
-                  "מומחה מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל (מס׳ 17253030)",
+                  "מומחה מוסמך מטעם איגוד המהנדסים והאדריכלים בישראל (ת.ז. 17253030)",
                   "בעל רישיון בודק ממשרד העבודה (1641507)",
                   "דוח מומחה שניתן להגיש כראיה בבית המשפט לפי סעיף 20 לפקודת הראיות",
                   "ציוד מדידה ובדיקה הנדסי מתקדם — מצלמה תרמית, מד לחות, אנדוסקופ ועוד",
@@ -974,7 +974,7 @@ export default function HomePage() {
               <dl className="mt-4 space-y-3">
                 <div className="flex items-center justify-between gap-3 rounded-lg bg-slate-50 px-3.5 py-2.5 ring-1 ring-slate-200">
                   <dt className="text-sm font-semibold text-slate-700">איגוד המהנדסים והאדריכלים</dt>
-                  <dd className="font-mono text-sm font-bold text-blue-700">17253030</dd>
+                  <dd className="font-mono text-sm font-bold text-blue-700">ת.ז. 17253030</dd>
                 </div>
                 <div className="flex items-center justify-between gap-3 rounded-lg bg-slate-50 px-3.5 py-2.5 ring-1 ring-slate-200">
                   <dt className="text-sm font-semibold text-slate-700">רישיון משרד העבודה</dt>

@@ -8,7 +8,7 @@ import { DEFECTS_RITZUF } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "ליקויי ריצוף בבדק בית — מישוריות, שיפוע ופוגות (ת״י 1555) | בדק בית Legal",
+  title: "ליקויי ריצוף בבדק בית — מישוריות, שיפוע ופוגות (ת״י 1555)",
   description:
     "שקיעות, 'שן' בין אריחים, שיפוע לקוי וסדקים בריצוף נבדקים לפי ת״י 1555. כך מאתרים ומתעדים ליקויי ריצוף בבדק בית לפני מסירה מהקבלן.",
   keywords: [

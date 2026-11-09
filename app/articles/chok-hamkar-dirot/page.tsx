@@ -5,7 +5,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "חוק המכר (דירות): תקופות בדק ואחריות לליקויי בנייה | בדק בית Legal",
+  title: "חוק המכר (דירות): תקופות בדק ואחריות לליקויי בנייה",
   description:
     "מדריך מלא לחוק המכר (דירות), תשל״ג-1973: תקופות הבדק והאחריות לכל סוג ליקוי — ריצוף, רטיבות, איטום, צנרת, סדקים וחיפוי חוץ. כך מחייבים את הקבלן לתקן.",
   keywords: [

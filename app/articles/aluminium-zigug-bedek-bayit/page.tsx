@@ -11,7 +11,7 @@ import { videoSlug } from "@/lib/video-pages"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "ליקויי אלומיניום, חלונות ותריסים בבדק בית (ת״י 1068) | בדק בית Legal",
+  title: "ליקויי אלומיניום, חלונות ותריסים בבדק בית (ת״י 1068)",
   description:
     "חלונות, דלתות הזזה ותריסים מאלומיניום הם מקור נפוץ לליקויי אטימה, ניקוז ותפעול. כך בודקים אותם בבדק בית לפי ת״י 1068 לפני מסירה מקבלן.",
   keywords: [

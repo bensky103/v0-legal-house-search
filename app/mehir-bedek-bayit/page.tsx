@@ -5,7 +5,7 @@ import { OG_IMAGE } from "@/lib/og-image"
 const URL = "https://www.legalbedek.co.il/mehir-bedek-bayit"
 
 export const metadata: Metadata = {
-  title: "כמה עולה בדק בית? מחיר בדק בית והגורמים שקובעים אותו | בדק בית Legal",
+  title: "כמה עולה בדק בית? מחיר בדק בית והגורמים שקובעים אותו",
   description:
     "כמה עולה בדק בית? מדריך למחיר בדק בית: מה משפיע על העלות, מה כלול בבדיקה, ההבדל בין דירה לבית פרטי, ולמה הבדיקה מחזירה את עצמה. קבלו הצעת מחיר ללא התחייבות.",
   keywords: [

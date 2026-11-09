@@ -14,7 +14,7 @@ const QUICK_LINKS = [
   { label: "בדק בית לפי עיר", href: "/bedek-bayit" },
   { label: "מאגר ליקויי הבנייה", href: "/likuyey-bniya" },
   { label: "פרויקטים חדשים", href: "/projects" },
-  { label: "מאמרים", href: "/blog" },
+  { label: "מאמרים", href: "/articles" },
 ]
 
 export default function NotFound() {

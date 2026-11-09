@@ -8,7 +8,7 @@ import { DEFECTS_CHASHMAL } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "ליקויי חשמל ותקשורת בבדק בית — לוח, נקודות ובדיקה תרמית | בדק בית Legal",
+  title: "ליקויי חשמל ותקשורת בבדק בית — לוח, נקודות ובדיקה תרמית",
   description:
     "לוח חשמל, נקודות, שקעים ותשתית תקשורת נבדקים בבדק בית — כולל מצלמה תרמית לאיתור התחממות יתר וחיבורים רופפים המהווים סכנת בטיחות.",
   keywords: [

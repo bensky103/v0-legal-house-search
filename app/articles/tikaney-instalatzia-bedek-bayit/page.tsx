@@ -8,7 +8,7 @@ import { DEFECTS_INSTALATZIA_FIELD } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "תקני אינסטלציה בבדק בית: מים, ביוב וניקוז (ת״י 1205) | בדק בית Legal",
+  title: "תקני אינסטלציה בבדק בית: מים, ביוב וניקוז (ת״י 1205)",
   description:
     "מדריך לתקני האינסטלציה ת״י 1205 — מים חמים וקרים, נקזים, כלים סניטריים וביוב. ליקויי צנרת נפוצים: נזילות, סתימות, לחץ מים נמוך וריח ביוב, ואיך מאתרים אותם בבדק בית.",
   keywords: [

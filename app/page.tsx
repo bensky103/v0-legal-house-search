@@ -1804,8 +1804,8 @@ export default function HomePage() {
                   </a>
                 </li>
                 <li className="pt-2">
-                  <a href="/blog" className="text-blue-400 hover:text-blue-300 hover:underline">
-                    בלוג בדק בית
+                  <a href="/articles" className="text-blue-400 hover:text-blue-300 hover:underline">
+                    מאמרים ומדריכים
                   </a>
                 </li>
                 <li>

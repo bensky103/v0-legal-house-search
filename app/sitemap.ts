@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { cities, projectTypes, contractors } from "@/lib/seo-locations"
+import { cities, projectTypes } from "@/lib/seo-locations"
 import { defects } from "@/lib/defects"
 import { services } from "@/lib/services"
 import { getProjectCities } from "@/lib/projects"
@@ -16,8 +16,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // article and its field photos, and 2026-10-09 when the 510-word site index came
   // off every leaf page - that one genuinely did change the body of every page on
   // the site, which is the case this date exists for. Bumped again 2026-10-18 with
-  // the IS 1555 substrate-moisture article, its lab result and its field photo.
-  const LAST_UPDATED = new Date("2026-10-18")
+  // the IS 1555 substrate-moisture article, its lab result and its field photo, and
+  // 2026-11-09 when the credential and court-evidence wording changed on every page.
+  const LAST_UPDATED = new Date("2026-11-09")
 
   // Video pages carry their own, later date: they were last crawled 2026-06-29 —
   // before the de-duplication fix (2026-07-21) and before the depth content in
@@ -26,9 +27,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // re-crawl and re-evaluate them. Bumped again 2026-09-13 (one VideoObject per
   // page, plus a duration), 2026-09-19 (player domain and thumbnail size) and
   // 2026-10-08 (the last two videos standing on an intro alone got their checks
-  // and FAQ), as Google re-reads markup on a page it already has only once
-  // lastmod says it moved.
-  const VIDEOS_UPDATED = new Date("2026-10-08")
+  // and FAQ) and 2026-11-09 (credential and court-evidence wording), as Google
+  // re-reads markup on a page it already has only once lastmod says it moved.
+  const VIDEOS_UPDATED = new Date("2026-11-09")
 
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `https://www.legalbedek.co.il/bedek-bayit/${city.slug}`,
@@ -48,13 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Project-type pages also live under /services
   const servicePages: MetadataRoute.Sitemap = projectTypes.map((p) => ({
     url: `https://www.legalbedek.co.il/services/${p.slug}`,
-    lastModified: LAST_UPDATED,
-    changeFrequency: "monthly",
-    priority: 0.8,
-  }))
-
-  const contractorPages: MetadataRoute.Sitemap = contractors.map((c) => ({
-    url: `https://www.legalbedek.co.il/bedek-bayit/kablan/${c.slug}`,
     lastModified: LAST_UPDATED,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -126,7 +120,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cityPages,
     ...dedicatedServicePages,
     ...servicePages,
-    ...contractorPages,
     ...defectPages,
     ...projectCityPages,
     ...videoPages,
@@ -243,7 +236,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: "https://www.legalbedek.co.il/articles/mehandes-bedek-bayit",
-      lastModified: new Date("2026-11-08"),
+      lastModified: LAST_UPDATED,
       changeFrequency: "monthly",
       priority: 0.8,
     },

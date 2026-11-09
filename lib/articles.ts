@@ -197,7 +197,7 @@ export const articles: ArticleMeta[] = [
     slug: "bdikat-maake-dira-hadasha",
     title: "בדיקת מעקה זכוכית ומעקה בכלל בדירה חדשה — מה בודקים ביום המסירה",
     description:
-      "מעקה הוא רכיב בטיחות מציל חיים. כך בודקים מעקה זכוכית ומעקה בכלל בדירה חדשה מקבלן ביום המסירה — גובה, מרווחים, חוזק עיגון, זכוכית בטיחות ורפידות גומי לפי ת״י 1142 ות״י 1099.",
+      "מעקה הוא רכיב בטיחות מציל חיים. כך בודקים מעקה בדירה חדשה מקבלן ביום המסירה: גובה, מרווחים, חוזק עיגון וזכוכית בטיחות, לפי ת״י 1142 ות״י 1099.",
     datePublished: "2026-07-13",
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "tama-38"],
     relatedDefects: ["maakot", "mirpasot"],
@@ -206,7 +206,7 @@ export const articles: ArticleMeta[] = [
     slug: "bdikat-mirpeset-dira-hadasha",
     title: "בדיקת מרפסת בדירה חדשה — איטום, שיפועים, ריצוף וניקוז ביום המסירה",
     description:
-      "המרפסת חשופה לגשם ולשמש והיא מהאזורים הרגישים ביותר לחדירת מים. כך בודקים מרפסת בדירה חדשה מקבלן ביום המסירה — איטום הרצפה, שיפועים לניקוז, איכות הריצוף ותפקוד נקודת הניקוז.",
+      "המרפסת מהאזורים הרגישים ביותר לחדירת מים. כך בודקים מרפסת בדירה חדשה מקבלן ביום המסירה: איטום, שיפועים, ריצוף ותפקוד נקודת הניקוז.",
     datePublished: "2026-07-13",
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya", "shechunot-hadashot"],
     relatedDefects: ["mirpasot", "itum", "ritzuf"],
@@ -215,7 +215,7 @@ export const articles: ArticleMeta[] = [
     slug: "bdikat-chipuyey-chutz-dira-hadasha",
     title: "בדיקת חיפויי חוץ בדירה חדשה — מה בודקים ביום המסירה",
     description:
-      "חיפוי חוץ שמתנתק או נופל הוא סכנת בטיחות, לא רק ליקוי אסתטי. כך בודקים חיפויי חוץ בדירה חדשה מקבלן ביום המסירה — נקישה חלולה, פוגות, סדקים, עיגון אבן ורטיבות, לפי ת״י 2378 ות״י 1555.",
+      "חיפוי חוץ שמתנתק הוא סכנת בטיחות. כך בודקים חיפויי חוץ בדירה חדשה מקבלן ביום המסירה: נקישה חלולה, פוגות, סדקים, עיגון אבן ורטיבות.",
     datePublished: "2026-07-13",
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["chipuyim"],
@@ -224,7 +224,7 @@ export const articles: ArticleMeta[] = [
     slug: "bdikat-delet-knisa-dira",
     title: "בדיקת דלת כניסה בדירה — משקוף, נעילה, פרזול ואטימות",
     description:
-      "דלת הכניסה היא קו ההגנה הראשון של הדירה. כך בודקים אותה בבדק בית — ישרות המשקוף, פעולת המנעולים והפרזול, אטימות ההיקף והסף וליקויי התקנה, בדירה חדשה מקבלן וביד שנייה.",
+      "דלת הכניסה היא קו ההגנה הראשון של הדירה. כך בודקים אותה בבדק בית: ישרות המשקוף, מנעולים ופרזול, אטימות וליקויי התקנה, בדירה חדשה וביד שנייה.",
     datePublished: "2026-07-14",
     relatedServices: ["bedek-bayit-lifnei-mesira", "itur-likuyey-bniya"],
     relatedDefects: ["delet-knisa", "dlatot"],
@@ -251,7 +251,7 @@ export const articles: ArticleMeta[] = [
     slug: "gibenet-ritzuf-hadbakat-ariachim",
     title: "תופעת הגיבנת בריצוף — כללי ההנחה וההדבקה הנכונה של אריחים",
     description:
-      "גיבנת בריצוף נובעת מכשל בהדבקת האריחים לתשתית בשילוב מישקים חסרים. כך נבדקת תקינות ההדבקה — כיסוי דבק 85%, כיסוי מלא בפינות ובמישקים, מריחה כפולה — לפי ת״י 1551 חלק 1.",
+      "גיבנת בריצוף נובעת מכשל בהדבקת האריחים לתשתית ומישקים חסרים. כך נבדקת תקינות ההדבקה — כיסוי דבק, פינות ומישקים — לפי ת״י 1551 חלק 1.",
     datePublished: "2026-07-15",
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["ritzuf"],
@@ -287,7 +287,7 @@ export const articles: ArticleMeta[] = [
     slug: "hefreshey-govah-bein-ariachim",
     title: "הפרשי גובה בין אריחי ריצוף — כמה מותר, ולמה אי אפשר לשטוף את הרצפה",
     description:
-      "הפרש גובה בין אריחים סמוכים (״שן״) מותר עד 1 מ״מ בדירה חדשה ועד 1.5 מ״מ בדירה ישנה. מעבר לכך המגב נתקע, הלכלוך נאגר בקו המישק והמראה אינו אחיד. כך מודדים את הליקוי בבדק בית.",
+      "הפרש גובה בין אריחים סמוכים מותר עד 1 מ״מ בדירה חדשה ועד 1.5 מ״מ בדירה ישנה. מעבר לכך המגב נתקע והלכלוך נאגר. כך מודדים את הליקוי בבדק בית.",
     datePublished: "2026-08-12",
     relatedServices: ["itur-likuyey-bniya", "bedek-bayit-lifnei-mesira"],
     relatedDefects: ["ritzuf"],

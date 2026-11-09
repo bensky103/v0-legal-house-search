@@ -5,7 +5,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "פרוטוקול מסירה לדירה חדשה: מה חייב להופיע ואיך לא להיתקע | בדק בית Legal",
+  title: "פרוטוקול מסירה לדירה חדשה: מה חייב להופיע ואיך לא להיתקע",
   description:
     "מדריך מלא לפרוטוקול מסירת דירה מקבלן: מה זה, מה חייב להופיע בו, מתי לבצע את בדק הבית, ואילו טעויות בחתימה עלולות לעלות לכם עשרות אלפי שקלים.",
   keywords: [

@@ -5,7 +5,7 @@ import { ArticleFaq } from "@/components/article-faq"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "כמה עולה תיקון ליקויי בנייה? עלויות אמיתיות וכלי למשא ומתן | בדק בית Legal",
+  title: "כמה עולה תיקון ליקויי בנייה? עלויות אמיתיות וכלי למשא ומתן",
   description:
     "כמה עולה לתקן ליקויי בנייה בדירה? איך מחושבת עלות התיקון לפי מחירונים מקובלים, דוגמה אמיתית מדוח בדק בית, ולמה עלות הבדיקה זניחה מול הליקויים ומול ההנחה במשא ומתן.",
   keywords: [

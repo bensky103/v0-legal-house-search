@@ -8,7 +8,7 @@ import { DEFECTS_TIYACH_TZEVA } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789) | בדק בית Legal",
+  title: "ליקויי טיח וצבע בבדק בית — מישוריות, סדקים וגמר (ת״י 789)",
   description:
     "קירות עקומים, סדקים, גלים בטיח ופגמי צבע נבדקים מול הסטיות המותרות בת״י 789. כך מאתרים ומתעדים ליקויי טיח וצבע בבדק בית לדירה חדשה.",
   keywords: [

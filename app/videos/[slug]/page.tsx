@@ -21,7 +21,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const defect = video.topic !== "general" ? getDefect(video.topic) : undefined
   const url = `${BASE}/videos/${params.slug}`
   return {
-    title: `${video.title} | בדק בית Legal`,
+    // The brand suffix is dropped when it would push the title past what Google shows.
+    title: video.title.length > 48 ? video.title : `${video.title} | בדק בית Legal`,
     description: video.description,
     keywords: [
       ...(defect?.keywords ?? []),

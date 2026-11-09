@@ -7,7 +7,7 @@ import { BDIKAT_ZCHUCHIT } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "בדיקת זכוכית וזיגוג בבדק בית — עובי, מרווח אוויר וזכוכית בטיחות | בדק בית Legal",
+  title: "בדיקת זכוכית וזיגוג בבדק בית — עובי, מרווח אוויר וזכוכית בטיחות",
   description:
     "מה שהותקן בפועל לא תמיד תואם למפרט המכר. כך בודקים בבדק בית את עובי הזגוגית, את מרווח האוויר ואת סוג זכוכית הבטיחות — במדידה בשטח, בלי לפרק את החלון.",
   keywords: [

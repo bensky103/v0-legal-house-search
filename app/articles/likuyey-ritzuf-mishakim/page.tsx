@@ -8,7 +8,7 @@ import { DEFECTS_RITZUF_MISHAKIM } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "מישקים ורווחים בריצוף — למה הם מונעים התרוממות והתנתקות אריחים | בדק בית Legal",
+  title: "מישקים ורווחים בריצוף — למה הם מונעים התרוממות והתנתקות אריחים",
   description:
     "מישקים ומרווחים תקינים בין המרצפות אינם קישוט — הם מונעים לחצי התפשטות שגורמים עם השנים להתרוממות ולהתנתקות הריצוף מהרצפה. כך נבדקים המישקים בבדק בית לפי ת״י 1555.",
   keywords: [

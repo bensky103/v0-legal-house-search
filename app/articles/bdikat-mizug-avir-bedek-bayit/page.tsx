@@ -8,7 +8,7 @@ import { DEFECTS_MIZUG } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "בדיקת מיזוג אוויר בבדק בית — בדיקה תרמית של המערכת | בדק בית Legal",
+  title: "בדיקת מיזוג אוויר בבדק בית — בדיקה תרמית של המערכת",
   description:
     "מערכת המיזוג נבדקת בבדק בית באמצעות מצלמה תרמית לאיתור פיזור אוויר לקוי, דליפות ובידוד תעלות. כך מזהים ליקויי מיזוג אוויר בדירה חדשה.",
   keywords: [

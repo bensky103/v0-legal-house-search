@@ -8,7 +8,7 @@ import { DEFECTS_MAMAD } from "@/lib/article-images"
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "בדיקת ממ״ד בבדק בית — דלת וחלון הדף, איטום ואוורור | בדק בית Legal",
+  title: "בדיקת ממ״ד בבדק בית — דלת וחלון הדף, איטום ואוורור",
   description:
     "הממ״ד הוא רכיב מגן קריטי. כך בודקים בבדק בית את דלת ההדף, חלון ההדף, האיטום ומערכת האוויר לפי הנחיות פיקוד העורף בדירה חדשה מקבלן.",
   keywords: [

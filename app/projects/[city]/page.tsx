@@ -59,7 +59,7 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   const projectsHint = projects.length ? ` ביניהם ${projects.slice(0, 3).join(", ")}.` : ""
 
   const title = `בדק בית בפרויקטים חדשים ב${city.name} | בדיקת דירה מקבלן`
-  const description = `בדק בית לדירות חדשות בפרויקטים ב${city.name}.${projectsHint} בדיקה הנדסית לפני מסירת דירה מקבלן, איתור ליקויי בנייה ופרוטוקול מסירה מקצועי.`
+  const description = `בדק בית לדירות חדשות בפרויקטים ב${city.name}.${projectsHint} בדיקה לפני מסירת דירה מקבלן ואיתור ליקויי בנייה.`
 
   // A city with a curated index (lib/projects.ts) gets a genuinely distinct page —
   // its own intro, its own project list — and stands on its own in the index.

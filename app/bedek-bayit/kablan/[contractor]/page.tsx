@@ -45,7 +45,13 @@ export function generateMetadata({ params }: { params: { contractor: string } })
     alternates: {
       canonical: `https://www.legalbedek.co.il/bedek-bayit/kablan/${contractor.slug}`,
     },
-    robots: "index, follow",
+    // Measured against each other these pages run 66% identical on average, and all
+    // that is theirs alone is one general sentence and a public project list flagged
+    // as unverified. Kept for visitors and for the links they carry, not for the index;
+    // the /bedek-bayit/kablan hub stands for them there. As on the thin /projects
+    // pages, the canonical stays on the page itself alongside noindex. A contractor
+    // that gets first-hand content (real inspections, real findings) can come back.
+    robots: { index: false, follow: true },
   }
 }
 

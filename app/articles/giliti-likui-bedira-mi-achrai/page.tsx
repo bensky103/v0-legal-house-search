@@ -6,7 +6,7 @@ import { ArticleDefectGallery, type DefectItem } from "@/components/article-defe
 import { OG_IMAGE } from "@/lib/og-image"
 
 export const metadata: Metadata = {
-  title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים | בדק בית Legal",
+  title: "גיליתם ליקוי בדירה אחרי המסירה? מי אחראי ומה עושים",
   description:
     "מצאתם רטיבות, סדק או ריצוף שקוע בדירה חדשה מקבלן אחרי שקיבלתם מפתח? מדריך פעולה: מי אחראי לפי חוק המכר, לכמה זמן, איך מודיעים לקבלן נכון ומתי צריך חוות דעת הנדסית.",
   keywords: [

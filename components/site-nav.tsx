@@ -71,7 +71,6 @@ const MENU: Section[] = [
     label: "מדריכים ומידע",
     items: [
       { label: "מאמרים מקצועיים", href: "/articles" },
-      { label: "בלוג", href: "/blog" },
       { label: "סרטוני בדיקות", href: "/videos" },
       { label: "גלריית בדיקות", href: "/gallery" },
       { label: "צ׳קליסט לפני מסירה", href: "/checklist-bedek-bayit" },

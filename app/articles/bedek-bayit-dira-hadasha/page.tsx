@@ -272,7 +272,7 @@ export default function ArticleBedekBayitDiraHadasha() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-bold text-gray-900">יגא�� בנסקי</h3>
+                <h3 className="text-lg font-bold text-gray-900">יגאל בנסקי</h3>
                 <p className="text-gray-600 mb-2">מומחה בדק בית מוסמך על ידי איגוד המהנדסים | רישיון משרד העבודה: 1641507</p>
                 <p className="text-gray-700">
                   בעל ניסיון רב שנים באיתור ליקויי בנייה, הכנת חוות דעת מקצועיות וליווי לקוחות בהליכים מול קבלנים. מספק שירותי בדק בית מקצועיים בכל הארץ.

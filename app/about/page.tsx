@@ -287,7 +287,7 @@ export default function AboutPage() {
 
       {/* Competitive Comparison */}
       <section className="py-12 md:py-16 container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">השוו��ה תחרותית</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8">השוואה תחרותית</h2>
         <div className="overflow-x-auto max-w-4xl mx-auto">
           <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
             <thead className="bg-blue-900 text-white">

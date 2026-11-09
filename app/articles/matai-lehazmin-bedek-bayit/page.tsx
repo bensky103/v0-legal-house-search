@@ -418,7 +418,7 @@ export default function MataiLehazminBedekBayitPage() {
             </div>
             <div className="text-center md:text-right">
               <h3 className="text-xl font-bold text-gray-900">יגאל בנסקי</h3>
-              <p className="text-blue-600 font-medium mb-3">מומחה בדק בית מוסמ�� על ידי איגוד המהנדסים | רישיון משרד העבודה 1641507</p>
+              <p className="text-blue-600 font-medium mb-3">מומחה בדק בית מוסמך על ידי איגוד המהנדסים | רישיון משרד העבודה 1641507</p>
               <p className="text-gray-600">
                 מומחה בדק בית עם ניסיון רב בבדיקת דירות חדשות ויד שניה. מספק שירותי בדיקה הנדסית מקצועית, חוות דעת משפטית וליווי מלא מול קבלנים ומוכרים בכל הארץ.
               </p>

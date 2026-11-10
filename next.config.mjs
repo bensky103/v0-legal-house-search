@@ -4,11 +4,14 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    // Vercel's free plan allows 5,000 image transformations, and ~400 photos in several
-    // sizes and two formats used them up: further variants returned 402 and the photos
-    // did not load. Files in /public are already compressed WebP/JPEG, so they are served
-    // as they are. Keep new photos under about 300 KB (see scripts/convert-images.mjs).
-    unoptimized: true,
+    // Image optimization ON: Next/Vercel generates a responsive srcset + modern formats,
+    // so mobile devices no longer download desktop-size images (improves LCP / Core Web Vitals).
+    formats: ["image/avif", "image/webp"],
+    deviceSizes: [360, 640, 750, 828, 1080, 1200, 1920],
+    // Optimized variants are expensive to generate (AVIF especially). The default
+    // TTL is 60s, which makes the CDN re-encode constantly; photos here are added
+    // under new filenames rather than replaced, so a 30-day TTL is safe.
+    minimumCacheTTL: 2592000,
   },
 
   eslint: {
